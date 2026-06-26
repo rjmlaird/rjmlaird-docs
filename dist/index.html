@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <base href="/rjmlaird-docs/" />
   <title>Ryan Laird Docs</title>
   <style>
     body { font-family: system-ui, sans-serif; margin: 0; padding: 2rem; max-width: 1100px; }
@@ -19,16 +20,22 @@
   <div id="app">Loading…</div>
   <script>
     const icon = t => t === 'folder' ? '📁' : '📄';
+
+    function fileHref(relPath) {
+      return new URL(relPath, document.baseURI).pathname;
+    }
+
     function renderNode(node) {
       if (node.type === 'file') {
-        return '<a href="' + encodeURI(node.path) + '" target="_blank" rel="noopener">' + icon('file') + ' ' + node.name + '</a>';
+        return '<a href="' + fileHref(node.path) + '" target="_blank" rel="noopener">' + icon('file') + ' ' + node.name + '</a>';
       }
       return '<details open><summary>' + icon('folder') + ' ' + node.name + '</summary><div class="path">' + node.path + '</div>' + node.children.map(renderNode).join('') + '</details>';
     }
+
     fetch('files.json')
       .then(r => r.json())
       .then(data => {
-        document.getElementById('meta').textContent = 'Source: ' + data.sourceRoot;
+        document.getElementById('meta').textContent = 'Source: ' + data.sourceRoot + ' | Base: ' + data.siteBase;
         document.getElementById('app').innerHTML = data.tree.map(renderNode).join('');
       })
       .catch(err => document.getElementById('app').textContent = err.message);

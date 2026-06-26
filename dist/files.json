@@ -1,6 +1,7 @@
 {
   "title": "Ryan Laird Docs",
   "sourceRoot": "docs",
+  "siteBase": "/rjmlaird-docs/",
   "tree": [
     {
       "type": "folder",
@@ -478,11 +479,6 @@
         },
         {
           "type": "file",
-          "name": "Ryan Laird.png",
-          "path": "docs/certificates/Ryan Laird.png"
-        },
-        {
-          "type": "file",
           "name": "Ryan-Nationwide March 2024-Certificate.pdf",
           "path": "docs/certificates/Ryan-Nationwide March 2024-Certificate.pdf"
         },
@@ -495,6 +491,11 @@
           "type": "file",
           "name": "U101_1_statement.pdf",
           "path": "docs/certificates/U101_1_statement.pdf"
+        },
+        {
+          "type": "file",
+          "name": "uksa_accelerator.png",
+          "path": "docs/certificates/uksa_accelerator.png"
         }
       ]
     }
