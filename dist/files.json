@@ -14,70 +14,6 @@
       "publicPath": "/certificates",
       "children": [
         {
-          "type": "folder",
-          "name": "(ISC)^2",
-          "path": "certificates/(ISC)^2",
-          "publicPath": "/certificates/(ISC)%5E2",
-          "children": [
-            {
-              "type": "file",
-              "name": "Data Privacy & Protection An Introduction to Compliance Requirements_Data Privacy & Protection An Introduction to Compliance Requirements_Laird.pdf",
-              "path": "certificates/(ISC)^2/Data Privacy & Protection An Introduction to Compliance Requirements_Data Privacy & Protection An Introduction to Compliance Requirements_Laird.pdf",
-              "publicPath": "/certificates/(ISC)%5E2/Data%20Privacy%20%26%20Protection%20An%20Introduction%20to%20Compliance%20Requirements_Data%20Privacy%20%26%20Protection%20An%20Introduction%20to%20Compliance%20Requirements_Laird.pdf",
-              "sourcePath": "docs/certificates/(ISC)^2/Data Privacy & Protection An Introduction to Compliance Requirements_Data Privacy & Protection An Introduction to Compliance Requirements_Laird.pdf"
-            },
-            {
-              "type": "file",
-              "name": "digitalcert.pdf",
-              "path": "certificates/(ISC)^2/digitalcert.pdf",
-              "publicPath": "/certificates/(ISC)%5E2/digitalcert.pdf",
-              "sourcePath": "docs/certificates/(ISC)^2/digitalcert.pdf"
-            },
-            {
-              "type": "file",
-              "name": "First Steps for Supply Chain Security_First Steps for Supply Chain Security_Laird.pdf",
-              "path": "certificates/(ISC)^2/First Steps for Supply Chain Security_First Steps for Supply Chain Security_Laird.pdf",
-              "publicPath": "/certificates/(ISC)%5E2/First%20Steps%20for%20Supply%20Chain%20Security_First%20Steps%20for%20Supply%20Chain%20Security_Laird.pdf",
-              "sourcePath": "docs/certificates/(ISC)^2/First Steps for Supply Chain Security_First Steps for Supply Chain Security_Laird.pdf"
-            },
-            {
-              "type": "file",
-              "name": "Introduction to Denial of Service Attacks_Introduction to Denial of Service Attacks_Laird.pdf",
-              "path": "certificates/(ISC)^2/Introduction to Denial of Service Attacks_Introduction to Denial of Service Attacks_Laird.pdf",
-              "publicPath": "/certificates/(ISC)%5E2/Introduction%20to%20Denial%20of%20Service%20Attacks_Introduction%20to%20Denial%20of%20Service%20Attacks_Laird.pdf",
-              "sourcePath": "docs/certificates/(ISC)^2/Introduction to Denial of Service Attacks_Introduction to Denial of Service Attacks_Laird.pdf"
-            },
-            {
-              "type": "file",
-              "name": "Official CC Course Completion Certificate_Official ISC2 Certified in Cybersecurity (CC) Self-Paced Training - 1M_Laird.jpg",
-              "path": "certificates/(ISC)^2/Official CC Course Completion Certificate_Official ISC2 Certified in Cybersecurity (CC) Self-Paced Training - 1M_Laird.jpg",
-              "publicPath": "/certificates/(ISC)%5E2/Official%20CC%20Course%20Completion%20Certificate_Official%20ISC2%20Certified%20in%20Cybersecurity%20(CC)%20Self-Paced%20Training%20-%201M_Laird.jpg",
-              "sourcePath": "docs/certificates/(ISC)^2/Official CC Course Completion Certificate_Official ISC2 Certified in Cybersecurity (CC) Self-Paced Training - 1M_Laird.jpg"
-            },
-            {
-              "type": "file",
-              "name": "Official CC Course Completion Certificate_Official ISC2 Certified in Cybersecurity (CC) Self-Paced Training - 1M_Laird.pdf",
-              "path": "certificates/(ISC)^2/Official CC Course Completion Certificate_Official ISC2 Certified in Cybersecurity (CC) Self-Paced Training - 1M_Laird.pdf",
-              "publicPath": "/certificates/(ISC)%5E2/Official%20CC%20Course%20Completion%20Certificate_Official%20ISC2%20Certified%20in%20Cybersecurity%20(CC)%20Self-Paced%20Training%20-%201M_Laird.pdf",
-              "sourcePath": "docs/certificates/(ISC)^2/Official CC Course Completion Certificate_Official ISC2 Certified in Cybersecurity (CC) Self-Paced Training - 1M_Laird.pdf"
-            },
-            {
-              "type": "file",
-              "name": "Open Systems Intelligence_Open Systems Intelligence_Laird.pdf",
-              "path": "certificates/(ISC)^2/Open Systems Intelligence_Open Systems Intelligence_Laird.pdf",
-              "publicPath": "/certificates/(ISC)%5E2/Open%20Systems%20Intelligence_Open%20Systems%20Intelligence_Laird.pdf",
-              "sourcePath": "docs/certificates/(ISC)^2/Open Systems Intelligence_Open Systems Intelligence_Laird.pdf"
-            },
-            {
-              "type": "file",
-              "name": "Security in the IoT Ecosystem What is IoT and the IoT Ecosystem_Security in the IoT Ecosystem What is IoT and the IoT Ecosystem_Laird.pdf",
-              "path": "certificates/(ISC)^2/Security in the IoT Ecosystem What is IoT and the IoT Ecosystem_Security in the IoT Ecosystem What is IoT and the IoT Ecosystem_Laird.pdf",
-              "publicPath": "/certificates/(ISC)%5E2/Security%20in%20the%20IoT%20Ecosystem%20What%20is%20IoT%20and%20the%20IoT%20Ecosystem_Security%20in%20the%20IoT%20Ecosystem%20What%20is%20IoT%20and%20the%20IoT%20Ecosystem_Laird.pdf",
-              "sourcePath": "docs/certificates/(ISC)^2/Security in the IoT Ecosystem What is IoT and the IoT Ecosystem_Security in the IoT Ecosystem What is IoT and the IoT Ecosystem_Laird.pdf"
-            }
-          ]
-        },
-        {
           "type": "file",
           "name": "20101125_epigeum.pdf",
           "path": "certificates/20101125_epigeum.pdf",
@@ -363,6 +299,70 @@
         },
         {
           "type": "folder",
+          "name": "ISC2",
+          "path": "certificates/ISC2",
+          "publicPath": "/certificates/ISC2",
+          "children": [
+            {
+              "type": "file",
+              "name": "Data Privacy & Protection An Introduction to Compliance Requirements_Data Privacy & Protection An Introduction to Compliance Requirements_Laird.pdf",
+              "path": "certificates/ISC2/Data Privacy & Protection An Introduction to Compliance Requirements_Data Privacy & Protection An Introduction to Compliance Requirements_Laird.pdf",
+              "publicPath": "/certificates/ISC2/Data%20Privacy%20%26%20Protection%20An%20Introduction%20to%20Compliance%20Requirements_Data%20Privacy%20%26%20Protection%20An%20Introduction%20to%20Compliance%20Requirements_Laird.pdf",
+              "sourcePath": "docs/certificates/ISC2/Data Privacy & Protection An Introduction to Compliance Requirements_Data Privacy & Protection An Introduction to Compliance Requirements_Laird.pdf"
+            },
+            {
+              "type": "file",
+              "name": "digitalcert.pdf",
+              "path": "certificates/ISC2/digitalcert.pdf",
+              "publicPath": "/certificates/ISC2/digitalcert.pdf",
+              "sourcePath": "docs/certificates/ISC2/digitalcert.pdf"
+            },
+            {
+              "type": "file",
+              "name": "First Steps for Supply Chain Security_First Steps for Supply Chain Security_Laird.pdf",
+              "path": "certificates/ISC2/First Steps for Supply Chain Security_First Steps for Supply Chain Security_Laird.pdf",
+              "publicPath": "/certificates/ISC2/First%20Steps%20for%20Supply%20Chain%20Security_First%20Steps%20for%20Supply%20Chain%20Security_Laird.pdf",
+              "sourcePath": "docs/certificates/ISC2/First Steps for Supply Chain Security_First Steps for Supply Chain Security_Laird.pdf"
+            },
+            {
+              "type": "file",
+              "name": "Introduction to Denial of Service Attacks_Introduction to Denial of Service Attacks_Laird.pdf",
+              "path": "certificates/ISC2/Introduction to Denial of Service Attacks_Introduction to Denial of Service Attacks_Laird.pdf",
+              "publicPath": "/certificates/ISC2/Introduction%20to%20Denial%20of%20Service%20Attacks_Introduction%20to%20Denial%20of%20Service%20Attacks_Laird.pdf",
+              "sourcePath": "docs/certificates/ISC2/Introduction to Denial of Service Attacks_Introduction to Denial of Service Attacks_Laird.pdf"
+            },
+            {
+              "type": "file",
+              "name": "Official CC Course Completion Certificate_Official ISC2 Certified in Cybersecurity (CC) Self-Paced Training - 1M_Laird.jpg",
+              "path": "certificates/ISC2/Official CC Course Completion Certificate_Official ISC2 Certified in Cybersecurity (CC) Self-Paced Training - 1M_Laird.jpg",
+              "publicPath": "/certificates/ISC2/Official%20CC%20Course%20Completion%20Certificate_Official%20ISC2%20Certified%20in%20Cybersecurity%20(CC)%20Self-Paced%20Training%20-%201M_Laird.jpg",
+              "sourcePath": "docs/certificates/ISC2/Official CC Course Completion Certificate_Official ISC2 Certified in Cybersecurity (CC) Self-Paced Training - 1M_Laird.jpg"
+            },
+            {
+              "type": "file",
+              "name": "Official CC Course Completion Certificate_Official ISC2 Certified in Cybersecurity (CC) Self-Paced Training - 1M_Laird.pdf",
+              "path": "certificates/ISC2/Official CC Course Completion Certificate_Official ISC2 Certified in Cybersecurity (CC) Self-Paced Training - 1M_Laird.pdf",
+              "publicPath": "/certificates/ISC2/Official%20CC%20Course%20Completion%20Certificate_Official%20ISC2%20Certified%20in%20Cybersecurity%20(CC)%20Self-Paced%20Training%20-%201M_Laird.pdf",
+              "sourcePath": "docs/certificates/ISC2/Official CC Course Completion Certificate_Official ISC2 Certified in Cybersecurity (CC) Self-Paced Training - 1M_Laird.pdf"
+            },
+            {
+              "type": "file",
+              "name": "Open Systems Intelligence_Open Systems Intelligence_Laird.pdf",
+              "path": "certificates/ISC2/Open Systems Intelligence_Open Systems Intelligence_Laird.pdf",
+              "publicPath": "/certificates/ISC2/Open%20Systems%20Intelligence_Open%20Systems%20Intelligence_Laird.pdf",
+              "sourcePath": "docs/certificates/ISC2/Open Systems Intelligence_Open Systems Intelligence_Laird.pdf"
+            },
+            {
+              "type": "file",
+              "name": "Security in the IoT Ecosystem What is IoT and the IoT Ecosystem_Security in the IoT Ecosystem What is IoT and the IoT Ecosystem_Laird.pdf",
+              "path": "certificates/ISC2/Security in the IoT Ecosystem What is IoT and the IoT Ecosystem_Security in the IoT Ecosystem What is IoT and the IoT Ecosystem_Laird.pdf",
+              "publicPath": "/certificates/ISC2/Security%20in%20the%20IoT%20Ecosystem%20What%20is%20IoT%20and%20the%20IoT%20Ecosystem_Security%20in%20the%20IoT%20Ecosystem%20What%20is%20IoT%20and%20the%20IoT%20Ecosystem_Laird.pdf",
+              "sourcePath": "docs/certificates/ISC2/Security in the IoT Ecosystem What is IoT and the IoT Ecosystem_Security in the IoT Ecosystem What is IoT and the IoT Ecosystem_Laird.pdf"
+            }
+          ]
+        },
+        {
+          "type": "folder",
           "name": "LinkedIn",
           "path": "certificates/LinkedIn",
           "publicPath": "/certificates/LinkedIn",
@@ -623,23 +623,23 @@
         },
         {
           "type": "folder",
-          "name": "MPhys (Hons)",
-          "path": "certificates/MPhys (Hons)",
-          "publicPath": "/certificates/MPhys%20(Hons)",
+          "name": "MPhys",
+          "path": "certificates/MPhys",
+          "publicPath": "/certificates/MPhys",
           "children": [
             {
               "type": "file",
               "name": "Epson_23052023171207.pdf",
-              "path": "certificates/MPhys (Hons)/Epson_23052023171207.pdf",
-              "publicPath": "/certificates/MPhys%20(Hons)/Epson_23052023171207.pdf",
-              "sourcePath": "docs/certificates/MPhys (Hons)/Epson_23052023171207.pdf"
+              "path": "certificates/MPhys/Epson_23052023171207.pdf",
+              "publicPath": "/certificates/MPhys/Epson_23052023171207.pdf",
+              "sourcePath": "docs/certificates/MPhys/Epson_23052023171207.pdf"
             },
             {
               "type": "file",
               "name": "MPhys.pdf",
-              "path": "certificates/MPhys (Hons)/MPhys.pdf",
-              "publicPath": "/certificates/MPhys%20(Hons)/MPhys.pdf",
-              "sourcePath": "docs/certificates/MPhys (Hons)/MPhys.pdf"
+              "path": "certificates/MPhys/MPhys.pdf",
+              "publicPath": "/certificates/MPhys/MPhys.pdf",
+              "sourcePath": "docs/certificates/MPhys/MPhys.pdf"
             }
           ]
         },
