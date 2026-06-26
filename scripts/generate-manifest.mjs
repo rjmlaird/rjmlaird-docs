@@ -5,6 +5,7 @@ const root = process.cwd();
 const outDir = path.join(root, 'dist');
 
 const repoBase = '/rjmlaird-docs/';
+const contentRootName = process.env.CONTENT_ROOT || 'docs';
 
 const ignore = new Set([
   '.git',
@@ -40,18 +41,11 @@ function encodePathSegments(relPath) {
     .join('/');
 }
 
-async function findContentRoot() {
-  const candidates = ['certificates', 'docs', 'public', '.'];
-
-  for (const name of candidates) {
-    const candidate = path.join(root, name);
-    try {
-      const stat = await fs.stat(candidate);
-      if (stat.isDirectory()) return candidate;
-    } catch {}
+async function assertDir(p, label) {
+  const stat = await fs.stat(p);
+  if (!stat.isDirectory()) {
+    throw new Error(`${label} is not a directory: ${p}`);
   }
-
-  return root;
 }
 
 async function walk(dir) {
@@ -78,13 +72,13 @@ async function walk(dir) {
     }
 
     const ext = path.extname(entry.name).toLowerCase();
-    if (!allowedExt.has(ext)) continue;
-
-    items.push({
-      type: 'file',
-      name: entry.name,
-      path: rel
-    });
+    if (allowedExt.has(ext)) {
+      items.push({
+        type: 'file',
+        name: entry.name,
+        path: rel
+      });
+    }
   }
 
   return items;
@@ -96,19 +90,20 @@ function countNodes(nodes) {
 
   for (const node of nodes) {
     if (node.type === 'file') files += 1;
-
     if (node.type === 'folder') {
       folders += 1;
-      const childCounts = countNodes(node.children || []);
-      files += childCounts.files;
-      folders += childCounts.folders;
+      const c = countNodes(node.children || []);
+      files += c.files;
+      folders += c.folders;
     }
   }
 
   return { files, folders };
 }
 
-const contentRoot = await findContentRoot();
+const contentRoot = path.join(root, contentRootName);
+await assertDir(contentRoot, 'CONTENT_ROOT');
+
 const tree = await walk(contentRoot);
 const siteBase = getSiteBase();
 const counts = countNodes(tree);
@@ -155,9 +150,7 @@ const html = `<!doctype html>
       color: var(--fg);
     }
 
-    h1 {
-      margin: 0 0 0.5rem;
-    }
+    h1 { margin: 0 0 0.5rem; }
 
     .meta {
       color: var(--muted);
@@ -214,9 +207,7 @@ const html = `<!doctype html>
       word-break: break-word;
     }
 
-    a.file:hover {
-      text-decoration: underline;
-    }
+    a.file:hover { text-decoration: underline; }
 
     .path {
       opacity: 0.7;
@@ -227,9 +218,7 @@ const html = `<!doctype html>
       word-break: break-all;
     }
 
-    .hidden {
-      display: none !important;
-    }
+    .hidden { display: none !important; }
   </style>
 </head>
 <body>
@@ -248,19 +237,14 @@ const html = `<!doctype html>
   <script>
     const icon = t => t === 'folder' ? '📁' : '📄';
 
-    function encodePathSegments(relPath) {
-      return relPath.split('/').map(segment => encodeURIComponent(segment)).join('/');
-    }
-
     function fileHref(relPath) {
-      return new URL(encodePathSegments(relPath), document.baseURI).pathname;
+      return new URL(relPath.split('/').map(encodeURIComponent).join('/'), document.baseURI).pathname;
     }
 
     function renderNode(node) {
       if (node.type === 'file') {
         return '<a class="file" data-name="' + node.name.toLowerCase() + '" data-path="' + node.path.toLowerCase() + '" href="' + fileHref(node.path) + '" target="_blank" rel="noopener">' + icon('file') + ' ' + node.name + '</a>';
       }
-
       const children = (node.children || []).map(renderNode).join('');
       return '<details open data-name="' + node.name.toLowerCase() + '" data-path="' + node.path.toLowerCase() + '"><summary>' + icon('folder') + ' ' + node.name + '</summary><div class="path">' + node.path + '</div>' + children + '</details>';
     }

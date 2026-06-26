@@ -24,9 +24,7 @@
       color: var(--fg);
     }
 
-    h1 {
-      margin: 0 0 0.5rem;
-    }
+    h1 { margin: 0 0 0.5rem; }
 
     .meta {
       color: var(--muted);
@@ -83,9 +81,7 @@
       word-break: break-word;
     }
 
-    a.file:hover {
-      text-decoration: underline;
-    }
+    a.file:hover { text-decoration: underline; }
 
     .path {
       opacity: 0.7;
@@ -96,9 +92,7 @@
       word-break: break-all;
     }
 
-    .hidden {
-      display: none !important;
-    }
+    .hidden { display: none !important; }
   </style>
 </head>
 <body>
@@ -117,19 +111,14 @@
   <script>
     const icon = t => t === 'folder' ? '📁' : '📄';
 
-    function encodePathSegments(relPath) {
-      return relPath.split('/').map(segment => encodeURIComponent(segment)).join('/');
-    }
-
     function fileHref(relPath) {
-      return new URL(encodePathSegments(relPath), document.baseURI).pathname;
+      return new URL(relPath.split('/').map(encodeURIComponent).join('/'), document.baseURI).pathname;
     }
 
     function renderNode(node) {
       if (node.type === 'file') {
         return '<a class="file" data-name="' + node.name.toLowerCase() + '" data-path="' + node.path.toLowerCase() + '" href="' + fileHref(node.path) + '" target="_blank" rel="noopener">' + icon('file') + ' ' + node.name + '</a>';
       }
-
       const children = (node.children || []).map(renderNode).join('');
       return '<details open data-name="' + node.name.toLowerCase() + '" data-path="' + node.path.toLowerCase() + '"><summary>' + icon('folder') + ' ' + node.name + '</summary><div class="path">' + node.path + '</div>' + children + '</details>';
     }

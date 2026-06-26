@@ -199,11 +199,6 @@
           "path": "docs/certificates/GA4-cert.pdf"
         },
         {
-          "type": "file",
-          "name": "gds.pdf",
-          "path": "docs/certificates/gds.pdf"
-        },
-        {
           "type": "folder",
           "name": "Google",
           "path": "docs/certificates/Google",
@@ -229,6 +224,11 @@
               "path": "docs/certificates/Google/IMG_20230706_224841.jpg"
             }
           ]
+        },
+        {
+          "type": "file",
+          "name": "green-digital-skills.pdf",
+          "path": "docs/certificates/green-digital-skills.pdf"
         },
         {
           "type": "file",
