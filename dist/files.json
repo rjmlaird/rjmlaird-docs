@@ -2,6 +2,10 @@
   "title": "Ryan Laird Docs",
   "sourceRoot": "docs",
   "siteBase": "/rjmlaird-docs/",
+  "counts": {
+    "files": 88,
+    "folders": 8
+  },
   "tree": [
     {
       "type": "folder",
