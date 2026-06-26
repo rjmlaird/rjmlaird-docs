@@ -3,9 +3,8 @@ import path from 'path';
 
 const root = process.cwd();
 const outDir = path.join(root, 'dist');
-
-const repoBase = '/rjmlaird-docs/';
-const contentRootName = process.env.CONTENT_ROOT || 'docs';
+const contentRoot = path.join(root, 'docs');
+const siteBase = '/rjmlaird-docs/';
 
 const ignore = new Set([
   '.git',
@@ -28,10 +27,11 @@ const allowedExt = new Set([
   '.svg'
 ]);
 
-function getSiteBase() {
-  if (process.env.SITE_BASE) return process.env.SITE_BASE;
-  if (process.env.CUSTOM_DOMAIN) return '/';
-  return repoBase;
+async function assertDir(p, label) {
+  const stat = await fs.stat(p);
+  if (!stat.isDirectory()) {
+    throw new Error(`${label} is not a directory: ${p}`);
+  }
 }
 
 function encodePathSegments(relPath) {
@@ -39,13 +39,6 @@ function encodePathSegments(relPath) {
     .split('/')
     .map(segment => encodeURIComponent(segment))
     .join('/');
-}
-
-async function assertDir(p, label) {
-  const stat = await fs.stat(p);
-  if (!stat.isDirectory()) {
-    throw new Error(`${label} is not a directory: ${p}`);
-  }
 }
 
 async function walk(dir) {
@@ -101,18 +94,15 @@ function countNodes(nodes) {
   return { files, folders };
 }
 
-const contentRoot = path.join(root, contentRootName);
 await assertDir(contentRoot, 'CONTENT_ROOT');
-
 const tree = await walk(contentRoot);
-const siteBase = getSiteBase();
 const counts = countNodes(tree);
 
 await fs.mkdir(outDir, { recursive: true });
 
 const manifest = {
   title: 'Ryan Laird Docs',
-  sourceRoot: path.relative(root, contentRoot).split(path.sep).join('/'),
+  sourceRoot: 'docs',
   siteBase,
   counts,
   tree
@@ -238,13 +228,17 @@ const html = `<!doctype html>
     const icon = t => t === 'folder' ? '📁' : '📄';
 
     function fileHref(relPath) {
-      return new URL(relPath.split('/').map(encodeURIComponent).join('/'), document.baseURI).pathname;
+      return new URL(
+        relPath.split('/').map(encodeURIComponent).join('/'),
+        document.baseURI
+      ).pathname;
     }
 
     function renderNode(node) {
       if (node.type === 'file') {
         return '<a class="file" data-name="' + node.name.toLowerCase() + '" data-path="' + node.path.toLowerCase() + '" href="' + fileHref(node.path) + '" target="_blank" rel="noopener">' + icon('file') + ' ' + node.name + '</a>';
       }
+
       const children = (node.children || []).map(renderNode).join('');
       return '<details open data-name="' + node.name.toLowerCase() + '" data-path="' + node.path.toLowerCase() + '"><summary>' + icon('folder') + ' ' + node.name + '</summary><div class="path">' + node.path + '</div>' + children + '</details>';
     }
