@@ -5,7 +5,6 @@ const root = process.cwd();
 const outDir = path.join(root, 'dist');
 
 const repoBase = '/rjmlaird-docs/';
-const customDomain = 'docs.rjmlaird.co.uk';
 
 const ignore = new Set([
   '.git',
@@ -28,30 +27,30 @@ const allowedExt = new Set([
   '.svg'
 ]);
 
-function siteBase() {
-  return process.env.SITE_BASE || (process.env.CUSTOM_DOMAIN ? '/' : repoBase);
+function getSiteBase() {
+  if (process.env.SITE_BASE) return process.env.SITE_BASE;
+  if (process.env.CUSTOM_DOMAIN) return '/';
+  return repoBase;
 }
 
-function encodePath(relPath) {
+function encodePathSegments(relPath) {
   return relPath
     .split('/')
     .map(segment => encodeURIComponent(segment))
     .join('/');
 }
 
-function safeHref(relPath, base) {
-  return new URL(encodePath(relPath), base).pathname;
-}
-
 async function findContentRoot() {
   const candidates = ['certificates', 'docs', 'public', '.'];
+
   for (const name of candidates) {
-    const p = path.join(root, name);
+    const candidate = path.join(root, name);
     try {
-      const stat = await fs.stat(p);
-      if (stat.isDirectory()) return p;
+      const stat = await fs.stat(candidate);
+      if (stat.isDirectory()) return candidate;
     } catch {}
   }
+
   return root;
 }
 
@@ -79,13 +78,13 @@ async function walk(dir) {
     }
 
     const ext = path.extname(entry.name).toLowerCase();
-    if (allowedExt.has(ext)) {
-      items.push({
-        type: 'file',
-        name: entry.name,
-        path: rel
-      });
-    }
+    if (!allowedExt.has(ext)) continue;
+
+    items.push({
+      type: 'file',
+      name: entry.name,
+      path: rel
+    });
   }
 
   return items;
@@ -97,6 +96,7 @@ function countNodes(nodes) {
 
   for (const node of nodes) {
     if (node.type === 'file') files += 1;
+
     if (node.type === 'folder') {
       folders += 1;
       const childCounts = countNodes(node.children || []);
@@ -110,24 +110,22 @@ function countNodes(nodes) {
 
 const contentRoot = await findContentRoot();
 const tree = await walk(contentRoot);
-const base = siteBase();
+const siteBase = getSiteBase();
 const counts = countNodes(tree);
 
 await fs.mkdir(outDir, { recursive: true });
 
+const manifest = {
+  title: 'Ryan Laird Docs',
+  sourceRoot: path.relative(root, contentRoot).split(path.sep).join('/'),
+  siteBase,
+  counts,
+  tree
+};
+
 await fs.writeFile(
   path.join(outDir, 'files.json'),
-  JSON.stringify(
-    {
-      title: 'Ryan Laird Docs',
-      sourceRoot: path.relative(root, contentRoot).split(path.sep).join('/'),
-      siteBase: base,
-      counts,
-      tree
-    },
-    null,
-    2
-  ),
+  JSON.stringify(manifest, null, 2),
   'utf8'
 );
 
@@ -136,7 +134,7 @@ const html = `<!doctype html>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <base href="${base}" />
+  <base href="${siteBase}" />
   <title>Ryan Laird Docs</title>
   <style>
     :root {
@@ -147,6 +145,7 @@ const html = `<!doctype html>
       --line: color-mix(in oklab, canvastext 15%, canvas 85%);
       --card: color-mix(in oklab, canvastext 3%, canvas 97%);
     }
+
     body {
       font-family: system-ui, sans-serif;
       margin: 0;
@@ -155,12 +154,17 @@ const html = `<!doctype html>
       background: var(--bg);
       color: var(--fg);
     }
-    h1 { margin: 0 0 0.5rem; }
+
+    h1 {
+      margin: 0 0 0.5rem;
+    }
+
     .meta {
       color: var(--muted);
       margin-bottom: 1rem;
       font-size: 0.95rem;
     }
+
     .toolbar {
       display: flex;
       gap: 1rem;
@@ -171,12 +175,14 @@ const html = `<!doctype html>
       border-radius: 12px;
       background: var(--card);
     }
+
     .toolbar label {
       display: flex;
       flex-direction: column;
       gap: 0.35rem;
       font-size: 0.9rem;
     }
+
     input[type="search"] {
       min-width: min(420px, 90vw);
       padding: 0.7rem 0.85rem;
@@ -186,24 +192,32 @@ const html = `<!doctype html>
       background: var(--bg);
       color: var(--fg);
     }
+
     details {
       margin-left: 1rem;
       padding-left: 0.5rem;
       border-left: 1px solid var(--line);
     }
+
     summary {
       cursor: pointer;
       user-select: none;
       padding: 0.2rem 0;
     }
+
     a.file {
       text-decoration: none;
       display: block;
       margin-left: 1.5rem;
       line-height: 1.65;
       color: inherit;
+      word-break: break-word;
     }
-    a.file:hover { text-decoration: underline; }
+
+    a.file:hover {
+      text-decoration: underline;
+    }
+
     .path {
       opacity: 0.7;
       font-size: 0.9rem;
@@ -212,16 +226,9 @@ const html = `<!doctype html>
       margin-bottom: 0.35rem;
       word-break: break-all;
     }
-    .hidden { display: none !important; }
-    .badge {
-      display: inline-block;
-      padding: 0.15rem 0.45rem;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      font-size: 0.82rem;
-      margin-left: 0.35rem;
-      vertical-align: middle;
-      color: var(--muted);
+
+    .hidden {
+      display: none !important;
     }
   </style>
 </head>
@@ -241,12 +248,12 @@ const html = `<!doctype html>
   <script>
     const icon = t => t === 'folder' ? '📁' : '📄';
 
-    function encodePath(relPath) {
+    function encodePathSegments(relPath) {
       return relPath.split('/').map(segment => encodeURIComponent(segment)).join('/');
     }
 
     function fileHref(relPath) {
-      return new URL(encodePath(relPath), document.baseURI).pathname;
+      return new URL(encodePathSegments(relPath), document.baseURI).pathname;
     }
 
     function renderNode(node) {
@@ -307,9 +314,13 @@ const html = `<!doctype html>
     fetch('files.json')
       .then(r => r.json())
       .then(data => {
+        const counts = data.counts || { files: 0, folders: 0 };
         document.getElementById('meta').textContent =
-          'Source: ' + data.sourceRoot + ' | Files: ' + data.counts.files + ' | Folders: ' + data.counts.folders + ' | Base: ' + data.siteBase;
-        document.getElementById('app').innerHTML = data.tree.map(renderNode).join('');
+          'Source: ' + (data.sourceRoot || '') +
+          ' | Files: ' + counts.files +
+          ' | Folders: ' + counts.folders +
+          ' | Base: ' + (data.siteBase || '');
+        document.getElementById('app').innerHTML = (data.tree || []).map(renderNode).join('');
         document.getElementById('search').addEventListener('input', e => filterTree(e.target.value));
       })
       .catch(err => {
