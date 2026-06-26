@@ -76,11 +76,6 @@
         },
         {
           "type": "file",
-          "name": "Certificate_for_Ryan_Laird.pdf",
-          "path": "docs/certificates/Certificate_for_Ryan_Laird.pdf"
-        },
-        {
-          "type": "file",
           "name": "certificate-1699360675275.jpg",
           "path": "docs/certificates/certificate-1699360675275.jpg"
         },
@@ -187,6 +182,11 @@
               "path": "docs/certificates/CIPR/MembershipCertificate.jpg"
             }
           ]
+        },
+        {
+          "type": "file",
+          "name": "ecodemy_Ryan_Laird.pdf",
+          "path": "docs/certificates/ecodemy_Ryan_Laird.pdf"
         },
         {
           "type": "file",
