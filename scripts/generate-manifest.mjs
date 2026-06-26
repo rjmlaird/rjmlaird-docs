@@ -61,8 +61,8 @@ async function walk(dir) {
     if (ignore.has(entry.name)) continue;
 
     const full = path.join(dir, entry.name);
-    const relFromRoot = path.relative(root, full).split(path.sep).join('/');
     const relFromDocs = path.relative(contentRoot, full).split(path.sep).join('/');
+    const relFromRoot = path.relative(root, full).split(path.sep).join('/');
 
     if (entry.isDirectory()) {
       const children = await walk(full);
@@ -71,7 +71,7 @@ async function walk(dir) {
           type: 'folder',
           name: entry.name,
           path: relFromDocs,
-          publicPath: toPublicPath(relFromDocs),
+          publicPath: '/' + relFromDocs.split('/').map(encodeURIComponent).join('/'),
           children
         });
       }
