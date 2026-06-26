@@ -34,11 +34,21 @@ async function assertDir(p, label) {
   }
 }
 
-function encodePathSegments(relPath) {
-  return relPath
-    .split('/')
-    .map(segment => encodeURIComponent(segment))
-    .join('/');
+function countNodes(nodes) {
+  let files = 0;
+  let folders = 0;
+
+  for (const node of nodes) {
+    if (node.type === 'file') files += 1;
+    if (node.type === 'folder') {
+      folders += 1;
+      const c = countNodes(node.children || []);
+      files += c.files;
+      folders += c.folders;
+    }
+  }
+
+  return { files, folders };
 }
 
 async function walk(dir) {
@@ -77,40 +87,26 @@ async function walk(dir) {
   return items;
 }
 
-function countNodes(nodes) {
-  let files = 0;
-  let folders = 0;
-
-  for (const node of nodes) {
-    if (node.type === 'file') files += 1;
-    if (node.type === 'folder') {
-      folders += 1;
-      const c = countNodes(node.children || []);
-      files += c.files;
-      folders += c.folders;
-    }
-  }
-
-  return { files, folders };
-}
-
 await assertDir(contentRoot, 'CONTENT_ROOT');
+
 const tree = await walk(contentRoot);
 const counts = countNodes(tree);
 
 await fs.mkdir(outDir, { recursive: true });
 
-const manifest = {
-  title: 'Ryan Laird Docs',
-  sourceRoot: 'docs',
-  siteBase,
-  counts,
-  tree
-};
-
 await fs.writeFile(
   path.join(outDir, 'files.json'),
-  JSON.stringify(manifest, null, 2),
+  JSON.stringify(
+    {
+      title: 'Ryan Laird Docs',
+      sourceRoot: 'docs',
+      siteBase,
+      counts,
+      tree
+    },
+    null,
+    2
+  ),
   'utf8'
 );
 
