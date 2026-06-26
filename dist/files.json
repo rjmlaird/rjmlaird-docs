@@ -1,5 +1,6 @@
 {
   "title": "Ryan Laird Docs",
+  "sourceRoot": "docs",
   "tree": [
     {
       "type": "folder",
