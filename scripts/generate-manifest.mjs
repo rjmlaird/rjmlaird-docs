@@ -4,7 +4,7 @@ import path from 'path';
 const root = process.cwd();
 const outDir = path.join(root, 'dist');
 const contentRoot = path.join(root, 'docs');
-const siteBase = '/rjmlaird-docs/';
+const siteBase = '/';
 const manifestPath = path.join(outDir, 'files.json');
 const htmlPath = path.join(outDir, 'index.html');
 
@@ -49,6 +49,10 @@ function countNodes(nodes) {
   return { files, folders };
 }
 
+function toPublicPath(relFromDocs) {
+  return '/' + relFromDocs.split('/').map(encodeURIComponent).join('/');
+}
+
 async function walk(dir) {
   const entries = await fs.readdir(dir, { withFileTypes: true });
   const items = [];
@@ -57,19 +61,32 @@ async function walk(dir) {
     if (ignore.has(entry.name)) continue;
 
     const full = path.join(dir, entry.name);
-    const rel = path.relative(root, full).split(path.sep).join('/');
+    const relFromRoot = path.relative(root, full).split(path.sep).join('/');
+    const relFromDocs = path.relative(contentRoot, full).split(path.sep).join('/');
 
     if (entry.isDirectory()) {
       const children = await walk(full);
       if (children.length) {
-        items.push({ type: 'folder', name: entry.name, path: rel, children });
+        items.push({
+          type: 'folder',
+          name: entry.name,
+          path: relFromDocs,
+          publicPath: toPublicPath(relFromDocs),
+          children
+        });
       }
       continue;
     }
 
     const ext = path.extname(entry.name).toLowerCase();
     if (allowedExt.has(ext)) {
-      items.push({ type: 'file', name: entry.name, path: rel });
+      items.push({
+        type: 'file',
+        name: entry.name,
+        path: relFromDocs,
+        publicPath: toPublicPath(relFromDocs),
+        sourcePath: relFromRoot
+      });
     }
   }
 
@@ -112,7 +129,6 @@ const html = `<!doctype html>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <base href="${siteBase}" />
   <title>Ryan Laird Docs</title>
   <style>
     :root {
@@ -218,19 +234,18 @@ const html = `<!doctype html>
   <div id="app">Loading…</div>
 
   <script>
-    const icon = t => t === 'folder' ? '📁' : '📄';
-    const jsonUrl = '/rjmlaird-docs/files.json';
+    const jsonUrl = '/files.json';
 
-    function fileHref(relPath) {
-      return new URL(relPath.split('/').map(encodeURIComponent).join('/'), document.baseURI).pathname;
+    function fileHref(publicPath) {
+      return publicPath;
     }
 
     function renderNode(node) {
       if (node.type === 'file') {
-        return '<a class="file" data-name="' + node.name.toLowerCase() + '" data-path="' + node.path.toLowerCase() + '" href="' + fileHref(node.path) + '" target="_blank" rel="noopener">' + icon('file') + ' ' + node.name + '</a>';
+        return '<a class="file" data-name="' + node.name.toLowerCase() + '" data-path="' + node.path.toLowerCase() + '" href="' + fileHref(node.publicPath) + '" target="_blank" rel="noopener">📄 ' + node.name + '</a>';
       }
       const children = (node.children || []).map(renderNode).join('');
-      return '<details open data-name="' + node.name.toLowerCase() + '" data-path="' + node.path.toLowerCase() + '"><summary>' + icon('folder') + ' ' + node.name + '</summary><div class="path">' + node.path + '</div>' + children + '</details>';
+      return '<details open data-name="' + node.name.toLowerCase() + '" data-path="' + node.path.toLowerCase() + '"><summary>📁 ' + node.name + '</summary><div class="path">' + node.path + '</div>' + children + '</details>';
     }
 
     function setVisible(el, visible) {
@@ -277,7 +292,7 @@ const html = `<!doctype html>
       });
     }
 
-    fetch('/files.json')
+    fetch(jsonUrl)
       .then(async r => {
         const text = await r.text();
         const ct = r.headers.get('content-type') || '';

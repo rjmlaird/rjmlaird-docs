@@ -1,7 +1,7 @@
 {
   "title": "Ryan Laird Docs",
   "sourceRoot": "docs",
-  "siteBase": "/rjmlaird-docs/",
+  "siteBase": "/",
   "counts": {
     "files": 88,
     "folders": 8
@@ -10,496 +10,680 @@
     {
       "type": "folder",
       "name": "certificates",
-      "path": "docs/certificates",
+      "path": "certificates",
+      "publicPath": "/certificates",
       "children": [
         {
           "type": "folder",
           "name": "(ISC)^2",
-          "path": "docs/certificates/(ISC)^2",
+          "path": "certificates/(ISC)^2",
+          "publicPath": "/certificates/(ISC)%5E2",
           "children": [
             {
               "type": "file",
               "name": "Data Privacy & Protection An Introduction to Compliance Requirements_Data Privacy & Protection An Introduction to Compliance Requirements_Laird.pdf",
-              "path": "docs/certificates/(ISC)^2/Data Privacy & Protection An Introduction to Compliance Requirements_Data Privacy & Protection An Introduction to Compliance Requirements_Laird.pdf"
+              "path": "certificates/(ISC)^2/Data Privacy & Protection An Introduction to Compliance Requirements_Data Privacy & Protection An Introduction to Compliance Requirements_Laird.pdf",
+              "publicPath": "/certificates/(ISC)%5E2/Data%20Privacy%20%26%20Protection%20An%20Introduction%20to%20Compliance%20Requirements_Data%20Privacy%20%26%20Protection%20An%20Introduction%20to%20Compliance%20Requirements_Laird.pdf",
+              "sourcePath": "docs/certificates/(ISC)^2/Data Privacy & Protection An Introduction to Compliance Requirements_Data Privacy & Protection An Introduction to Compliance Requirements_Laird.pdf"
             },
             {
               "type": "file",
               "name": "digitalcert.pdf",
-              "path": "docs/certificates/(ISC)^2/digitalcert.pdf"
+              "path": "certificates/(ISC)^2/digitalcert.pdf",
+              "publicPath": "/certificates/(ISC)%5E2/digitalcert.pdf",
+              "sourcePath": "docs/certificates/(ISC)^2/digitalcert.pdf"
             },
             {
               "type": "file",
               "name": "First Steps for Supply Chain Security_First Steps for Supply Chain Security_Laird.pdf",
-              "path": "docs/certificates/(ISC)^2/First Steps for Supply Chain Security_First Steps for Supply Chain Security_Laird.pdf"
+              "path": "certificates/(ISC)^2/First Steps for Supply Chain Security_First Steps for Supply Chain Security_Laird.pdf",
+              "publicPath": "/certificates/(ISC)%5E2/First%20Steps%20for%20Supply%20Chain%20Security_First%20Steps%20for%20Supply%20Chain%20Security_Laird.pdf",
+              "sourcePath": "docs/certificates/(ISC)^2/First Steps for Supply Chain Security_First Steps for Supply Chain Security_Laird.pdf"
             },
             {
               "type": "file",
               "name": "Introduction to Denial of Service Attacks_Introduction to Denial of Service Attacks_Laird.pdf",
-              "path": "docs/certificates/(ISC)^2/Introduction to Denial of Service Attacks_Introduction to Denial of Service Attacks_Laird.pdf"
+              "path": "certificates/(ISC)^2/Introduction to Denial of Service Attacks_Introduction to Denial of Service Attacks_Laird.pdf",
+              "publicPath": "/certificates/(ISC)%5E2/Introduction%20to%20Denial%20of%20Service%20Attacks_Introduction%20to%20Denial%20of%20Service%20Attacks_Laird.pdf",
+              "sourcePath": "docs/certificates/(ISC)^2/Introduction to Denial of Service Attacks_Introduction to Denial of Service Attacks_Laird.pdf"
             },
             {
               "type": "file",
               "name": "Official CC Course Completion Certificate_Official ISC2 Certified in Cybersecurity (CC) Self-Paced Training - 1M_Laird.jpg",
-              "path": "docs/certificates/(ISC)^2/Official CC Course Completion Certificate_Official ISC2 Certified in Cybersecurity (CC) Self-Paced Training - 1M_Laird.jpg"
+              "path": "certificates/(ISC)^2/Official CC Course Completion Certificate_Official ISC2 Certified in Cybersecurity (CC) Self-Paced Training - 1M_Laird.jpg",
+              "publicPath": "/certificates/(ISC)%5E2/Official%20CC%20Course%20Completion%20Certificate_Official%20ISC2%20Certified%20in%20Cybersecurity%20(CC)%20Self-Paced%20Training%20-%201M_Laird.jpg",
+              "sourcePath": "docs/certificates/(ISC)^2/Official CC Course Completion Certificate_Official ISC2 Certified in Cybersecurity (CC) Self-Paced Training - 1M_Laird.jpg"
             },
             {
               "type": "file",
               "name": "Official CC Course Completion Certificate_Official ISC2 Certified in Cybersecurity (CC) Self-Paced Training - 1M_Laird.pdf",
-              "path": "docs/certificates/(ISC)^2/Official CC Course Completion Certificate_Official ISC2 Certified in Cybersecurity (CC) Self-Paced Training - 1M_Laird.pdf"
+              "path": "certificates/(ISC)^2/Official CC Course Completion Certificate_Official ISC2 Certified in Cybersecurity (CC) Self-Paced Training - 1M_Laird.pdf",
+              "publicPath": "/certificates/(ISC)%5E2/Official%20CC%20Course%20Completion%20Certificate_Official%20ISC2%20Certified%20in%20Cybersecurity%20(CC)%20Self-Paced%20Training%20-%201M_Laird.pdf",
+              "sourcePath": "docs/certificates/(ISC)^2/Official CC Course Completion Certificate_Official ISC2 Certified in Cybersecurity (CC) Self-Paced Training - 1M_Laird.pdf"
             },
             {
               "type": "file",
               "name": "Open Systems Intelligence_Open Systems Intelligence_Laird.pdf",
-              "path": "docs/certificates/(ISC)^2/Open Systems Intelligence_Open Systems Intelligence_Laird.pdf"
+              "path": "certificates/(ISC)^2/Open Systems Intelligence_Open Systems Intelligence_Laird.pdf",
+              "publicPath": "/certificates/(ISC)%5E2/Open%20Systems%20Intelligence_Open%20Systems%20Intelligence_Laird.pdf",
+              "sourcePath": "docs/certificates/(ISC)^2/Open Systems Intelligence_Open Systems Intelligence_Laird.pdf"
             },
             {
               "type": "file",
               "name": "Security in the IoT Ecosystem What is IoT and the IoT Ecosystem_Security in the IoT Ecosystem What is IoT and the IoT Ecosystem_Laird.pdf",
-              "path": "docs/certificates/(ISC)^2/Security in the IoT Ecosystem What is IoT and the IoT Ecosystem_Security in the IoT Ecosystem What is IoT and the IoT Ecosystem_Laird.pdf"
+              "path": "certificates/(ISC)^2/Security in the IoT Ecosystem What is IoT and the IoT Ecosystem_Security in the IoT Ecosystem What is IoT and the IoT Ecosystem_Laird.pdf",
+              "publicPath": "/certificates/(ISC)%5E2/Security%20in%20the%20IoT%20Ecosystem%20What%20is%20IoT%20and%20the%20IoT%20Ecosystem_Security%20in%20the%20IoT%20Ecosystem%20What%20is%20IoT%20and%20the%20IoT%20Ecosystem_Laird.pdf",
+              "sourcePath": "docs/certificates/(ISC)^2/Security in the IoT Ecosystem What is IoT and the IoT Ecosystem_Security in the IoT Ecosystem What is IoT and the IoT Ecosystem_Laird.pdf"
             }
           ]
         },
         {
           "type": "file",
           "name": "20101125_epigeum.pdf",
-          "path": "docs/certificates/20101125_epigeum.pdf"
+          "path": "certificates/20101125_epigeum.pdf",
+          "publicPath": "/certificates/20101125_epigeum.pdf",
+          "sourcePath": "docs/certificates/20101125_epigeum.pdf"
         },
         {
           "type": "file",
           "name": "6211014952RL.pdf",
-          "path": "docs/certificates/6211014952RL.pdf"
+          "path": "certificates/6211014952RL.pdf",
+          "publicPath": "/certificates/6211014952RL.pdf",
+          "sourcePath": "docs/certificates/6211014952RL.pdf"
         },
         {
           "type": "file",
           "name": "c10af4a6-21b7-41ba-ba62-0317c6e7b548.pdf",
-          "path": "docs/certificates/c10af4a6-21b7-41ba-ba62-0317c6e7b548.pdf"
+          "path": "certificates/c10af4a6-21b7-41ba-ba62-0317c6e7b548.pdf",
+          "publicPath": "/certificates/c10af4a6-21b7-41ba-ba62-0317c6e7b548.pdf",
+          "sourcePath": "docs/certificates/c10af4a6-21b7-41ba-ba62-0317c6e7b548.pdf"
         },
         {
           "type": "file",
           "name": "certificate-1699360675275.jpg",
-          "path": "docs/certificates/certificate-1699360675275.jpg"
+          "path": "certificates/certificate-1699360675275.jpg",
+          "publicPath": "/certificates/certificate-1699360675275.jpg",
+          "sourcePath": "docs/certificates/certificate-1699360675275.jpg"
         },
         {
           "type": "file",
           "name": "certificate.pdf",
-          "path": "docs/certificates/certificate.pdf"
+          "path": "certificates/certificate.pdf",
+          "publicPath": "/certificates/certificate.pdf",
+          "sourcePath": "docs/certificates/certificate.pdf"
         },
         {
           "type": "folder",
           "name": "CIM",
-          "path": "docs/certificates/CIM",
+          "path": "certificates/CIM",
+          "publicPath": "/certificates/CIM",
           "children": [
             {
               "type": "file",
               "name": "certificate (2).pdf",
-              "path": "docs/certificates/CIM/certificate (2).pdf"
+              "path": "certificates/CIM/certificate (2).pdf",
+              "publicPath": "/certificates/CIM/certificate%20(2).pdf",
+              "sourcePath": "docs/certificates/CIM/certificate (2).pdf"
             },
             {
               "type": "file",
               "name": "certificate (3).pdf",
-              "path": "docs/certificates/CIM/certificate (3).pdf"
+              "path": "certificates/CIM/certificate (3).pdf",
+              "publicPath": "/certificates/CIM/certificate%20(3).pdf",
+              "sourcePath": "docs/certificates/CIM/certificate (3).pdf"
             },
             {
               "type": "file",
               "name": "certificate (4).pdf",
-              "path": "docs/certificates/CIM/certificate (4).pdf"
+              "path": "certificates/CIM/certificate (4).pdf",
+              "publicPath": "/certificates/CIM/certificate%20(4).pdf",
+              "sourcePath": "docs/certificates/CIM/certificate (4).pdf"
             },
             {
               "type": "file",
               "name": "certificate (5).pdf",
-              "path": "docs/certificates/CIM/certificate (5).pdf"
+              "path": "certificates/CIM/certificate (5).pdf",
+              "publicPath": "/certificates/CIM/certificate%20(5).pdf",
+              "sourcePath": "docs/certificates/CIM/certificate (5).pdf"
             },
             {
               "type": "file",
               "name": "certificate (6).pdf",
-              "path": "docs/certificates/CIM/certificate (6).pdf"
+              "path": "certificates/CIM/certificate (6).pdf",
+              "publicPath": "/certificates/CIM/certificate%20(6).pdf",
+              "sourcePath": "docs/certificates/CIM/certificate (6).pdf"
             },
             {
               "type": "file",
               "name": "certificate CMktr.pdf",
-              "path": "docs/certificates/CIM/certificate CMktr.pdf"
+              "path": "certificates/CIM/certificate CMktr.pdf",
+              "publicPath": "/certificates/CIM/certificate%20CMktr.pdf",
+              "sourcePath": "docs/certificates/CIM/certificate CMktr.pdf"
             },
             {
               "type": "file",
               "name": "Certificate_of_completion-Masterclass.pdf",
-              "path": "docs/certificates/CIM/Certificate_of_completion-Masterclass.pdf"
+              "path": "certificates/CIM/Certificate_of_completion-Masterclass.pdf",
+              "publicPath": "/certificates/CIM/Certificate_of_completion-Masterclass.pdf",
+              "sourcePath": "docs/certificates/CIM/Certificate_of_completion-Masterclass.pdf"
             },
             {
               "type": "file",
               "name": "Certificate_of_completion-websites.pdf",
-              "path": "docs/certificates/CIM/Certificate_of_completion-websites.pdf"
+              "path": "certificates/CIM/Certificate_of_completion-websites.pdf",
+              "publicPath": "/certificates/CIM/Certificate_of_completion-websites.pdf",
+              "sourcePath": "docs/certificates/CIM/Certificate_of_completion-websites.pdf"
             },
             {
               "type": "file",
               "name": "Certificate_of_completion.jpg",
-              "path": "docs/certificates/CIM/Certificate_of_completion.jpg"
+              "path": "certificates/CIM/Certificate_of_completion.jpg",
+              "publicPath": "/certificates/CIM/Certificate_of_completion.jpg",
+              "sourcePath": "docs/certificates/CIM/Certificate_of_completion.jpg"
             },
             {
               "type": "file",
               "name": "Certificate_of_completion.pdf",
-              "path": "docs/certificates/CIM/Certificate_of_completion.pdf"
+              "path": "certificates/CIM/Certificate_of_completion.pdf",
+              "publicPath": "/certificates/CIM/Certificate_of_completion.pdf",
+              "sourcePath": "docs/certificates/CIM/Certificate_of_completion.pdf"
             },
             {
               "type": "file",
               "name": "certificate.jpg",
-              "path": "docs/certificates/CIM/certificate.jpg"
+              "path": "certificates/CIM/certificate.jpg",
+              "publicPath": "/certificates/CIM/certificate.jpg",
+              "sourcePath": "docs/certificates/CIM/certificate.jpg"
             },
             {
               "type": "file",
               "name": "certificate.pdf",
-              "path": "docs/certificates/CIM/certificate.pdf"
+              "path": "certificates/CIM/certificate.pdf",
+              "publicPath": "/certificates/CIM/certificate.pdf",
+              "sourcePath": "docs/certificates/CIM/certificate.pdf"
             },
             {
               "type": "file",
               "name": "ChMktr-certificate.jpg",
-              "path": "docs/certificates/CIM/ChMktr-certificate.jpg"
+              "path": "certificates/CIM/ChMktr-certificate.jpg",
+              "publicPath": "/certificates/CIM/ChMktr-certificate.jpg",
+              "sourcePath": "docs/certificates/CIM/ChMktr-certificate.jpg"
             },
             {
               "type": "file",
               "name": "Qualification Transcript - 27 February 2022 210155.pdf",
-              "path": "docs/certificates/CIM/Qualification Transcript - 27 February 2022 210155.pdf"
+              "path": "certificates/CIM/Qualification Transcript - 27 February 2022 210155.pdf",
+              "publicPath": "/certificates/CIM/Qualification%20Transcript%20-%2027%20February%202022%20210155.pdf",
+              "sourcePath": "docs/certificates/CIM/Qualification Transcript - 27 February 2022 210155.pdf"
             },
             {
               "type": "file",
               "name": "Qualification Transcript - 28 April 2023 184723.pdf",
-              "path": "docs/certificates/CIM/Qualification Transcript - 28 April 2023 184723.pdf"
+              "path": "certificates/CIM/Qualification Transcript - 28 April 2023 184723.pdf",
+              "publicPath": "/certificates/CIM/Qualification%20Transcript%20-%2028%20April%202023%20184723.pdf",
+              "sourcePath": "docs/certificates/CIM/Qualification Transcript - 28 April 2023 184723.pdf"
             }
           ]
         },
         {
           "type": "folder",
           "name": "CIPR",
-          "path": "docs/certificates/CIPR",
+          "path": "certificates/CIPR",
+          "publicPath": "/certificates/CIPR",
           "children": [
             {
               "type": "file",
               "name": "MembershipCard.pdf",
-              "path": "docs/certificates/CIPR/MembershipCard.pdf"
+              "path": "certificates/CIPR/MembershipCard.pdf",
+              "publicPath": "/certificates/CIPR/MembershipCard.pdf",
+              "sourcePath": "docs/certificates/CIPR/MembershipCard.pdf"
             },
             {
               "type": "file",
               "name": "MembershipCertificate.jpg",
-              "path": "docs/certificates/CIPR/MembershipCertificate.jpg"
+              "path": "certificates/CIPR/MembershipCertificate.jpg",
+              "publicPath": "/certificates/CIPR/MembershipCertificate.jpg",
+              "sourcePath": "docs/certificates/CIPR/MembershipCertificate.jpg"
             }
           ]
         },
         {
           "type": "file",
           "name": "ecodemy_Ryan_Laird.pdf",
-          "path": "docs/certificates/ecodemy_Ryan_Laird.pdf"
+          "path": "certificates/ecodemy_Ryan_Laird.pdf",
+          "publicPath": "/certificates/ecodemy_Ryan_Laird.pdf",
+          "sourcePath": "docs/certificates/ecodemy_Ryan_Laird.pdf"
         },
         {
           "type": "file",
           "name": "GA4-cert.pdf",
-          "path": "docs/certificates/GA4-cert.pdf"
+          "path": "certificates/GA4-cert.pdf",
+          "publicPath": "/certificates/GA4-cert.pdf",
+          "sourcePath": "docs/certificates/GA4-cert.pdf"
         },
         {
           "type": "folder",
           "name": "Google",
-          "path": "docs/certificates/Google",
+          "path": "certificates/Google",
+          "publicPath": "/certificates/Google",
           "children": [
             {
               "type": "file",
               "name": "a8c0f282-4a26-44fb-8674-142c188a9110.pdf",
-              "path": "docs/certificates/Google/a8c0f282-4a26-44fb-8674-142c188a9110.pdf"
+              "path": "certificates/Google/a8c0f282-4a26-44fb-8674-142c188a9110.pdf",
+              "publicPath": "/certificates/Google/a8c0f282-4a26-44fb-8674-142c188a9110.pdf",
+              "sourcePath": "docs/certificates/Google/a8c0f282-4a26-44fb-8674-142c188a9110.pdf"
             },
             {
               "type": "file",
               "name": "digitalgarage_certificate.pdf",
-              "path": "docs/certificates/Google/digitalgarage_certificate.pdf"
+              "path": "certificates/Google/digitalgarage_certificate.pdf",
+              "publicPath": "/certificates/Google/digitalgarage_certificate.pdf",
+              "sourcePath": "docs/certificates/Google/digitalgarage_certificate.pdf"
             },
             {
               "type": "file",
               "name": "Google-News-Initiative.pdf",
-              "path": "docs/certificates/Google/Google-News-Initiative.pdf"
+              "path": "certificates/Google/Google-News-Initiative.pdf",
+              "publicPath": "/certificates/Google/Google-News-Initiative.pdf",
+              "sourcePath": "docs/certificates/Google/Google-News-Initiative.pdf"
             },
             {
               "type": "file",
               "name": "IMG_20230706_224841.jpg",
-              "path": "docs/certificates/Google/IMG_20230706_224841.jpg"
+              "path": "certificates/Google/IMG_20230706_224841.jpg",
+              "publicPath": "/certificates/Google/IMG_20230706_224841.jpg",
+              "sourcePath": "docs/certificates/Google/IMG_20230706_224841.jpg"
             }
           ]
         },
         {
           "type": "file",
           "name": "green-digital-skills.pdf",
-          "path": "docs/certificates/green-digital-skills.pdf"
+          "path": "certificates/green-digital-skills.pdf",
+          "publicPath": "/certificates/green-digital-skills.pdf",
+          "sourcePath": "docs/certificates/green-digital-skills.pdf"
         },
         {
           "type": "file",
           "name": "GreenDigitalSkills.jpg",
-          "path": "docs/certificates/GreenDigitalSkills.jpg"
+          "path": "certificates/GreenDigitalSkills.jpg",
+          "publicPath": "/certificates/GreenDigitalSkills.jpg",
+          "sourcePath": "docs/certificates/GreenDigitalSkills.jpg"
         },
         {
           "type": "file",
           "name": "Help-to-Grow-Management-Essentials-Help-To-Grow-Essentials.pdf",
-          "path": "docs/certificates/Help-to-Grow-Management-Essentials-Help-To-Grow-Essentials.pdf"
+          "path": "certificates/Help-to-Grow-Management-Essentials-Help-To-Grow-Essentials.pdf",
+          "publicPath": "/certificates/Help-to-Grow-Management-Essentials-Help-To-Grow-Essentials.pdf",
+          "sourcePath": "docs/certificates/Help-to-Grow-Management-Essentials-Help-To-Grow-Essentials.pdf"
         },
         {
           "type": "folder",
           "name": "Hubspot",
-          "path": "docs/certificates/Hubspot",
+          "path": "certificates/Hubspot",
+          "publicPath": "/certificates/Hubspot",
           "children": [
             {
               "type": "file",
               "name": "62c3712d9f844ccda68d60e087e7a393.png",
-              "path": "docs/certificates/Hubspot/62c3712d9f844ccda68d60e087e7a393.png"
+              "path": "certificates/Hubspot/62c3712d9f844ccda68d60e087e7a393.png",
+              "publicPath": "/certificates/Hubspot/62c3712d9f844ccda68d60e087e7a393.png",
+              "sourcePath": "docs/certificates/Hubspot/62c3712d9f844ccda68d60e087e7a393.png"
             },
             {
               "type": "file",
               "name": "99c82ef963654d4d87e4fc9a3f51ae7d.png",
-              "path": "docs/certificates/Hubspot/99c82ef963654d4d87e4fc9a3f51ae7d.png"
+              "path": "certificates/Hubspot/99c82ef963654d4d87e4fc9a3f51ae7d.png",
+              "publicPath": "/certificates/Hubspot/99c82ef963654d4d87e4fc9a3f51ae7d.png",
+              "sourcePath": "docs/certificates/Hubspot/99c82ef963654d4d87e4fc9a3f51ae7d.png"
             },
             {
               "type": "file",
               "name": "Hubspot-contentmarketing.png",
-              "path": "docs/certificates/Hubspot/Hubspot-contentmarketing.png"
+              "path": "certificates/Hubspot/Hubspot-contentmarketing.png",
+              "publicPath": "/certificates/Hubspot/Hubspot-contentmarketing.png",
+              "sourcePath": "docs/certificates/Hubspot/Hubspot-contentmarketing.png"
             },
             {
               "type": "file",
               "name": "Hubspot-Inbound.pdf",
-              "path": "docs/certificates/Hubspot/Hubspot-Inbound.pdf"
+              "path": "certificates/Hubspot/Hubspot-Inbound.pdf",
+              "publicPath": "/certificates/Hubspot/Hubspot-Inbound.pdf",
+              "sourcePath": "docs/certificates/Hubspot/Hubspot-Inbound.pdf"
             },
             {
               "type": "file",
               "name": "Hubspot-social.png",
-              "path": "docs/certificates/Hubspot/Hubspot-social.png"
+              "path": "certificates/Hubspot/Hubspot-social.png",
+              "publicPath": "/certificates/Hubspot/Hubspot-social.png",
+              "sourcePath": "docs/certificates/Hubspot/Hubspot-social.png"
             }
           ]
         },
         {
           "type": "folder",
           "name": "LinkedIn",
-          "path": "docs/certificates/LinkedIn",
+          "path": "certificates/LinkedIn",
+          "publicPath": "/certificates/LinkedIn",
           "children": [
             {
               "type": "file",
               "name": "CertificateOfCompletion_After Effects 2020 New Features.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_After Effects 2020 New Features.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_After Effects 2020 New Features.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_After%20Effects%202020%20New%20Features.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_After Effects 2020 New Features.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Agile Project Leadership.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Agile Project Leadership.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Agile Project Leadership.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Agile%20Project%20Leadership.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Agile Project Leadership.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Avoiding New Manager Mistakes.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Avoiding New Manager Mistakes.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Avoiding New Manager Mistakes.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Avoiding%20New%20Manager%20Mistakes.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Avoiding New Manager Mistakes.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Becoming the Manager that Your Team Wants.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Becoming the Manager that Your Team Wants.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Becoming the Manager that Your Team Wants.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Becoming%20the%20Manager%20that%20Your%20Team%20Wants.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Becoming the Manager that Your Team Wants.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Coaching Yourself to Career Success.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Coaching Yourself to Career Success.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Coaching Yourself to Career Success.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Coaching%20Yourself%20to%20Career%20Success.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Coaching Yourself to Career Success.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Communicating Across Cultures.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Communicating Across Cultures.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Communicating Across Cultures.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Communicating%20Across%20Cultures.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Communicating Across Cultures.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Communication Foundations.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Communication Foundations.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Communication Foundations.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Communication%20Foundations.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Communication Foundations.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Creating Your Personal Brand.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Creating Your Personal Brand.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Creating Your Personal Brand.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Creating%20Your%20Personal%20Brand.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Creating Your Personal Brand.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Defining and Achieving Professional Goals.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Defining and Achieving Professional Goals.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Defining and Achieving Professional Goals.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Defining%20and%20Achieving%20Professional%20Goals.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Defining and Achieving Professional Goals.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Digital Transformation.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Digital Transformation.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Digital Transformation.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Digital%20Transformation.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Digital Transformation.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Facilitation Skills for Managers and Leaders.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Facilitation Skills for Managers and Leaders.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Facilitation Skills for Managers and Leaders.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Facilitation%20Skills%20for%20Managers%20and%20Leaders.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Facilitation Skills for Managers and Leaders.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Getting Things Done.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Getting Things Done.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Getting Things Done.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Getting%20Things%20Done.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Getting Things Done.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_How to Be More Strategic in Six Steps.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_How to Be More Strategic in Six Steps.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_How to Be More Strategic in Six Steps.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_How%20to%20Be%20More%20Strategic%20in%20Six%20Steps.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_How to Be More Strategic in Six Steps.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_How to Develop your Career Plan.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_How to Develop your Career Plan.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_How to Develop your Career Plan.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_How%20to%20Develop%20your%20Career%20Plan.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_How to Develop your Career Plan.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Humble Leadership The Power of Relationships Openness and Trust getAbstract Summary.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Humble Leadership The Power of Relationships Openness and Trust getAbstract Summary.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Humble Leadership The Power of Relationships Openness and Trust getAbstract Summary.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Humble%20Leadership%20The%20Power%20of%20Relationships%20Openness%20and%20Trust%20getAbstract%20Summary.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Humble Leadership The Power of Relationships Openness and Trust getAbstract Summary.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Improve Your Sustainability Skills.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Improve Your Sustainability Skills.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Improve Your Sustainability Skills.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Improve%20Your%20Sustainability%20Skills.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Improve Your Sustainability Skills.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Interpersonal Communication.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Interpersonal Communication.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Interpersonal Communication.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Interpersonal%20Communication.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Interpersonal Communication.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Introduction to ESG Environmental Social and Governance.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Introduction to ESG Environmental Social and Governance.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Introduction to ESG Environmental Social and Governance.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Introduction%20to%20ESG%20Environmental%20Social%20and%20Governance.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Introduction to ESG Environmental Social and Governance.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Job Interview Tips for Marketing Managers.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Job Interview Tips for Marketing Managers.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Job Interview Tips for Marketing Managers.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Job%20Interview%20Tips%20for%20Marketing%20Managers.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Job Interview Tips for Marketing Managers.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Leadership Foundations Leadership Styles and Models.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Leadership Foundations Leadership Styles and Models.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Leadership Foundations Leadership Styles and Models.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Leadership%20Foundations%20Leadership%20Styles%20and%20Models.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Leadership Foundations Leadership Styles and Models.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Lean Technology Strategy Starting Your Business Transformation.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Lean Technology Strategy Starting Your Business Transformation.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Lean Technology Strategy Starting Your Business Transformation.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Lean%20Technology%20Strategy%20Starting%20Your%20Business%20Transformation.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Lean Technology Strategy Starting Your Business Transformation.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Learning Personal Branding.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Learning Personal Branding.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Learning Personal Branding.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Learning%20Personal%20Branding.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Learning Personal Branding.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_LinkedIn Creator Mode.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_LinkedIn Creator Mode.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_LinkedIn Creator Mode.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_LinkedIn%20Creator%20Mode.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_LinkedIn Creator Mode.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_LinkedIn Creator Posting Strategy.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_LinkedIn Creator Posting Strategy.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_LinkedIn Creator Posting Strategy.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_LinkedIn%20Creator%20Posting%20Strategy.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_LinkedIn Creator Posting Strategy.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Managing Innovation.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Managing Innovation.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Managing Innovation.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Managing%20Innovation.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Managing Innovation.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Mentorship Sponsorship and Lifting Others as You Climb.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Mentorship Sponsorship and Lifting Others as You Climb.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Mentorship Sponsorship and Lifting Others as You Climb.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Mentorship%20Sponsorship%20and%20Lifting%20Others%20as%20You%20Climb.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Mentorship Sponsorship and Lifting Others as You Climb.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Pitching Your Ideas Strategically.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Pitching Your Ideas Strategically.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Pitching Your Ideas Strategically.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Pitching%20Your%20Ideas%20Strategically.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Pitching Your Ideas Strategically.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Powerful Prioritization with the 8020 Rule.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Powerful Prioritization with the 8020 Rule.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Powerful Prioritization with the 8020 Rule.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Powerful%20Prioritization%20with%20the%208020%20Rule.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Powerful Prioritization with the 8020 Rule.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Project Leadership.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Project Leadership.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Project Leadership.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Project%20Leadership.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Project Leadership.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Project Management Foundations Integration.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Project Management Foundations Integration.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Project Management Foundations Integration.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Project%20Management%20Foundations%20Integration.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Project Management Foundations Integration.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Project Management Foundations.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Project Management Foundations.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Project Management Foundations.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Project%20Management%20Foundations.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Project Management Foundations.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Rapid Ideation.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Rapid Ideation.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Rapid Ideation.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Rapid%20Ideation.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Rapid Ideation.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Strategic Planning Foundations.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Strategic Planning Foundations.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Strategic Planning Foundations.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Strategic%20Planning%20Foundations.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Strategic Planning Foundations.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Taking Charge of Your Career.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Taking Charge of Your Career.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Taking Charge of Your Career.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Taking%20Charge%20of%20Your%20Career.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Taking Charge of Your Career.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_Video Strategies for High Engagement.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_Video Strategies for High Engagement.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_Video Strategies for High Engagement.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_Video%20Strategies%20for%20High%20Engagement.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_Video Strategies for High Engagement.pdf"
             },
             {
               "type": "file",
               "name": "CertificateOfCompletion_You Need a Career Development Plan.pdf",
-              "path": "docs/certificates/LinkedIn/CertificateOfCompletion_You Need a Career Development Plan.pdf"
+              "path": "certificates/LinkedIn/CertificateOfCompletion_You Need a Career Development Plan.pdf",
+              "publicPath": "/certificates/LinkedIn/CertificateOfCompletion_You%20Need%20a%20Career%20Development%20Plan.pdf",
+              "sourcePath": "docs/certificates/LinkedIn/CertificateOfCompletion_You Need a Career Development Plan.pdf"
             }
           ]
         },
         {
           "type": "folder",
           "name": "MPhys (Hons)",
-          "path": "docs/certificates/MPhys (Hons)",
+          "path": "certificates/MPhys (Hons)",
+          "publicPath": "/certificates/MPhys%20(Hons)",
           "children": [
             {
               "type": "file",
               "name": "Epson_23052023171207.pdf",
-              "path": "docs/certificates/MPhys (Hons)/Epson_23052023171207.pdf"
+              "path": "certificates/MPhys (Hons)/Epson_23052023171207.pdf",
+              "publicPath": "/certificates/MPhys%20(Hons)/Epson_23052023171207.pdf",
+              "sourcePath": "docs/certificates/MPhys (Hons)/Epson_23052023171207.pdf"
             },
             {
               "type": "file",
               "name": "MPhys.pdf",
-              "path": "docs/certificates/MPhys (Hons)/MPhys.pdf"
+              "path": "certificates/MPhys (Hons)/MPhys.pdf",
+              "publicPath": "/certificates/MPhys%20(Hons)/MPhys.pdf",
+              "sourcePath": "docs/certificates/MPhys (Hons)/MPhys.pdf"
             }
           ]
         },
         {
           "type": "file",
           "name": "PAN-STARRS-asteroid.pdf",
-          "path": "docs/certificates/PAN-STARRS-asteroid.pdf"
+          "path": "certificates/PAN-STARRS-asteroid.pdf",
+          "publicPath": "/certificates/PAN-STARRS-asteroid.pdf",
+          "sourcePath": "docs/certificates/PAN-STARRS-asteroid.pdf"
         },
         {
           "type": "file",
           "name": "ResearchProjectManagementCert_RL.pdf",
-          "path": "docs/certificates/ResearchProjectManagementCert_RL.pdf"
+          "path": "certificates/ResearchProjectManagementCert_RL.pdf",
+          "publicPath": "/certificates/ResearchProjectManagementCert_RL.pdf",
+          "sourcePath": "docs/certificates/ResearchProjectManagementCert_RL.pdf"
         },
         {
           "type": "file",
           "name": "Ryan-Nationwide March 2024-Certificate.pdf",
-          "path": "docs/certificates/Ryan-Nationwide March 2024-Certificate.pdf"
+          "path": "certificates/Ryan-Nationwide March 2024-Certificate.pdf",
+          "publicPath": "/certificates/Ryan-Nationwide%20March%202024-Certificate.pdf",
+          "sourcePath": "docs/certificates/Ryan-Nationwide March 2024-Certificate.pdf"
         },
         {
           "type": "file",
           "name": "SpaceAwareness-cert.pdf",
-          "path": "docs/certificates/SpaceAwareness-cert.pdf"
+          "path": "certificates/SpaceAwareness-cert.pdf",
+          "publicPath": "/certificates/SpaceAwareness-cert.pdf",
+          "sourcePath": "docs/certificates/SpaceAwareness-cert.pdf"
         },
         {
           "type": "file",
           "name": "U101_1_statement.pdf",
-          "path": "docs/certificates/U101_1_statement.pdf"
+          "path": "certificates/U101_1_statement.pdf",
+          "publicPath": "/certificates/U101_1_statement.pdf",
+          "sourcePath": "docs/certificates/U101_1_statement.pdf"
         },
         {
           "type": "file",
           "name": "uksa_accelerator.png",
-          "path": "docs/certificates/uksa_accelerator.png"
+          "path": "certificates/uksa_accelerator.png",
+          "publicPath": "/certificates/uksa_accelerator.png",
+          "sourcePath": "docs/certificates/uksa_accelerator.png"
         }
       ]
     }

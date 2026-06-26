@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <base href="/rjmlaird-docs/" />
   <title>Ryan Laird Docs</title>
   <style>
     :root {
@@ -109,19 +108,18 @@
   <div id="app">Loading…</div>
 
   <script>
-    const icon = t => t === 'folder' ? '📁' : '📄';
-    const jsonUrl = '/rjmlaird-docs/files.json';
+    const jsonUrl = '/files.json';
 
-    function fileHref(relPath) {
-      return new URL(relPath.split('/').map(encodeURIComponent).join('/'), document.baseURI).pathname;
+    function fileHref(publicPath) {
+      return publicPath;
     }
 
     function renderNode(node) {
       if (node.type === 'file') {
-        return '<a class="file" data-name="' + node.name.toLowerCase() + '" data-path="' + node.path.toLowerCase() + '" href="' + fileHref(node.path) + '" target="_blank" rel="noopener">' + icon('file') + ' ' + node.name + '</a>';
+        return '<a class="file" data-name="' + node.name.toLowerCase() + '" data-path="' + node.path.toLowerCase() + '" href="' + fileHref(node.publicPath) + '" target="_blank" rel="noopener">📄 ' + node.name + '</a>';
       }
       const children = (node.children || []).map(renderNode).join('');
-      return '<details open data-name="' + node.name.toLowerCase() + '" data-path="' + node.path.toLowerCase() + '"><summary>' + icon('folder') + ' ' + node.name + '</summary><div class="path">' + node.path + '</div>' + children + '</details>';
+      return '<details open data-name="' + node.name.toLowerCase() + '" data-path="' + node.path.toLowerCase() + '"><summary>📁 ' + node.name + '</summary><div class="path">' + node.path + '</div>' + children + '</details>';
     }
 
     function setVisible(el, visible) {
@@ -168,7 +166,7 @@
       });
     }
 
-    fetch('/files.json')
+    fetch(jsonUrl)
       .then(async r => {
         const text = await r.text();
         const ct = r.headers.get('content-type') || '';
