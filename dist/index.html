@@ -112,13 +112,17 @@
     const icon = t => t === 'folder' ? '📁' : '📄';
 
     function fileHref(relPath) {
-      return new URL(relPath.split('/').map(encodeURIComponent).join('/'), document.baseURI).pathname;
+      return new URL(
+        relPath.split('/').map(encodeURIComponent).join('/'),
+        document.baseURI
+      ).pathname;
     }
 
     function renderNode(node) {
       if (node.type === 'file') {
         return '<a class="file" data-name="' + node.name.toLowerCase() + '" data-path="' + node.path.toLowerCase() + '" href="' + fileHref(node.path) + '" target="_blank" rel="noopener">' + icon('file') + ' ' + node.name + '</a>';
       }
+
       const children = (node.children || []).map(renderNode).join('');
       return '<details open data-name="' + node.name.toLowerCase() + '" data-path="' + node.path.toLowerCase() + '"><summary>' + icon('folder') + ' ' + node.name + '</summary><div class="path">' + node.path + '</div>' + children + '</details>';
     }
