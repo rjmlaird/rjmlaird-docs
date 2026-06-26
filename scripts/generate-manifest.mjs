@@ -285,7 +285,7 @@ const html = `<!doctype html>
       });
     }
 
-    fetch('files.json')
+    fetch(new URL('files.json', document.baseURI).pathname)
       .then(r => r.json())
       .then(data => {
         const counts = data.counts || { files: 0, folders: 0 };
