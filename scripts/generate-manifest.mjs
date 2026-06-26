@@ -222,6 +222,7 @@ const html = `<!doctype html>
 
   <script>
     const icon = t => t === 'folder' ? '📁' : '📄';
+    const jsonUrl = new URL('files.json', document.baseURI).pathname;
 
     function fileHref(relPath) {
       return new URL(
@@ -285,8 +286,12 @@ const html = `<!doctype html>
       });
     }
 
-    fetch(new URL('files.json', document.baseURI).pathname)
-      .then(r => r.json())
+    fetch(jsonUrl)
+      .then(async r => {
+        const text = await r.text();
+        if (!r.ok) throw new Error('files.json request failed: ' + r.status + ' ' + r.statusText + ' :: ' + text.slice(0, 120));
+        return JSON.parse(text);
+      })
       .then(data => {
         const counts = data.counts || { files: 0, folders: 0 };
         document.getElementById('meta').textContent =
