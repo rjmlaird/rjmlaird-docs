@@ -1,8 +1,14 @@
 {
   "name": "rjmlaird-docs",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
+  "description": "Static index for Ryan Laird documents and certificates",
   "scripts": {
-    "build": "node scripts/generate-manifest.mjs"
+    "build": "node scripts/generate-manifest.mjs",
+    "start": "npm run build"
+  },
+  "engines": {
+    "node": ">=22"
   }
 }
