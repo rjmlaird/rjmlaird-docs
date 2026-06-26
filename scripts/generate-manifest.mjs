@@ -5,6 +5,7 @@ const root = process.cwd();
 const outDir = path.join(root, 'dist');
 const contentRoot = path.join(root, 'docs');
 const siteBase = '/rjmlaird-docs/';
+const jsonUrl = '/rjmlaird-docs/files.json';
 
 const ignore = new Set([
   '.git',
@@ -222,7 +223,7 @@ const html = `<!doctype html>
 
   <script>
     const icon = t => t === 'folder' ? '📁' : '📄';
-    const jsonUrl = new URL('files.json', document.baseURI).pathname;
+    const jsonUrl = ${JSON.stringify(jsonUrl)};
 
     function fileHref(relPath) {
       return new URL(
@@ -289,7 +290,13 @@ const html = `<!doctype html>
     fetch(jsonUrl)
       .then(async r => {
         const text = await r.text();
-        if (!r.ok) throw new Error('files.json request failed: ' + r.status + ' ' + r.statusText + ' :: ' + text.slice(0, 120));
+        const ct = r.headers.get('content-type') || '';
+        if (!r.ok) {
+          throw new Error('files.json request failed: ' + r.status + ' ' + r.statusText + ' :: ' + text.slice(0, 120));
+        }
+        if (!ct.includes('application/json')) {
+          throw new Error('Expected JSON but got ' + ct + ' :: ' + text.slice(0, 120));
+        }
         return JSON.parse(text);
       })
       .then(data => {
