@@ -1,0 +1,8 @@
+{
+  "name": "rjmlaird-docs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/generate-manifest.mjs"
+  }
+}
