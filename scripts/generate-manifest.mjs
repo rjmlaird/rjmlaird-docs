@@ -5,7 +5,8 @@ const root = process.cwd();
 const outDir = path.join(root, 'dist');
 const contentRoot = path.join(root, 'docs');
 const siteBase = '/rjmlaird-docs/';
-const jsonUrl = '/rjmlaird-docs/files.json';
+const manifestPath = path.join(outDir, 'files.json');
+const htmlPath = path.join(outDir, 'index.html');
 
 const ignore = new Set([
   '.git',
@@ -30,15 +31,12 @@ const allowedExt = new Set([
 
 async function assertDir(p, label) {
   const stat = await fs.stat(p);
-  if (!stat.isDirectory()) {
-    throw new Error(`${label} is not a directory: ${p}`);
-  }
+  if (!stat.isDirectory()) throw new Error(`${label} is not a directory: ${p}`);
 }
 
 function countNodes(nodes) {
   let files = 0;
   let folders = 0;
-
   for (const node of nodes) {
     if (node.type === 'file') files += 1;
     if (node.type === 'folder') {
@@ -48,7 +46,6 @@ function countNodes(nodes) {
       folders += c.folders;
     }
   }
-
   return { files, folders };
 }
 
@@ -65,51 +62,50 @@ async function walk(dir) {
     if (entry.isDirectory()) {
       const children = await walk(full);
       if (children.length) {
-        items.push({
-          type: 'folder',
-          name: entry.name,
-          path: rel,
-          children
-        });
+        items.push({ type: 'folder', name: entry.name, path: rel, children });
       }
       continue;
     }
 
     const ext = path.extname(entry.name).toLowerCase();
     if (allowedExt.has(ext)) {
-      items.push({
-        type: 'file',
-        name: entry.name,
-        path: rel
-      });
+      items.push({ type: 'file', name: entry.name, path: rel });
     }
   }
 
   return items;
 }
 
+function buildManifest(tree) {
+  return {
+    title: 'Ryan Laird Docs',
+    sourceRoot: 'docs',
+    siteBase,
+    counts: countNodes(tree),
+    tree
+  };
+}
+
+function safeJsonStringify(value) {
+  const text = JSON.stringify(value, null, 2);
+  JSON.parse(text);
+  return text;
+}
+
 await assertDir(contentRoot, 'CONTENT_ROOT');
 
 const tree = await walk(contentRoot);
-const counts = countNodes(tree);
+const manifest = buildManifest(tree);
+const manifestText = safeJsonStringify(manifest);
 
 await fs.mkdir(outDir, { recursive: true });
+await fs.writeFile(manifestPath, manifestText, 'utf8');
 
-await fs.writeFile(
-  path.join(outDir, 'files.json'),
-  JSON.stringify(
-    {
-      title: 'Ryan Laird Docs',
-      sourceRoot: 'docs',
-      siteBase,
-      counts,
-      tree
-    },
-    null,
-    2
-  ),
-  'utf8'
-);
+const reread = await fs.readFile(manifestPath, 'utf8');
+const parsed = JSON.parse(reread);
+if (!parsed || typeof parsed !== 'object' || !Array.isArray(parsed.tree)) {
+  throw new Error('Manifest validation failed after write');
+}
 
 const html = `<!doctype html>
 <html lang="en">
@@ -223,20 +219,16 @@ const html = `<!doctype html>
 
   <script>
     const icon = t => t === 'folder' ? '📁' : '📄';
-    const jsonUrl = ${JSON.stringify(jsonUrl)};
+    const jsonUrl = '/rjmlaird-docs/files.json';
 
     function fileHref(relPath) {
-      return new URL(
-        relPath.split('/').map(encodeURIComponent).join('/'),
-        document.baseURI
-      ).pathname;
+      return new URL(relPath.split('/').map(encodeURIComponent).join('/'), document.baseURI).pathname;
     }
 
     function renderNode(node) {
       if (node.type === 'file') {
         return '<a class="file" data-name="' + node.name.toLowerCase() + '" data-path="' + node.path.toLowerCase() + '" href="' + fileHref(node.path) + '" target="_blank" rel="noopener">' + icon('file') + ' ' + node.name + '</a>';
       }
-
       const children = (node.children || []).map(renderNode).join('');
       return '<details open data-name="' + node.name.toLowerCase() + '" data-path="' + node.path.toLowerCase() + '"><summary>' + icon('folder') + ' ' + node.name + '</summary><div class="path">' + node.path + '</div>' + children + '</details>';
     }
@@ -264,7 +256,6 @@ const html = `<!doctype html>
       }
 
       nodes.forEach(el => setVisible(el, false));
-
       const files = [...document.querySelectorAll('a.file')];
       const matchedFiles = files.filter(el => matches(el, q));
 
@@ -280,8 +271,7 @@ const html = `<!doctype html>
         }
       });
 
-      const detailNodes = [...document.querySelectorAll('details')];
-      detailNodes.forEach(d => {
+      [...document.querySelectorAll('details')].forEach(d => {
         const hasVisibleChild = [...d.querySelectorAll(':scope > a.file, :scope > details')].some(el => !el.classList.contains('hidden'));
         if (hasVisibleChild) setVisible(d, true);
       });
@@ -291,12 +281,8 @@ const html = `<!doctype html>
       .then(async r => {
         const text = await r.text();
         const ct = r.headers.get('content-type') || '';
-        if (!r.ok) {
-          throw new Error('files.json request failed: ' + r.status + ' ' + r.statusText + ' :: ' + text.slice(0, 120));
-        }
-        if (!ct.includes('application/json')) {
-          throw new Error('Expected JSON but got ' + ct + ' :: ' + text.slice(0, 120));
-        }
+        if (!r.ok) throw new Error('files.json request failed: ' + r.status + ' ' + r.statusText + ' :: ' + text.slice(0, 120));
+        if (!ct.includes('application/json')) throw new Error('Expected JSON but got ' + ct + ' :: ' + text.slice(0, 120));
         return JSON.parse(text);
       })
       .then(data => {
@@ -316,4 +302,4 @@ const html = `<!doctype html>
 </body>
 </html>`;
 
-await fs.writeFile(path.join(outDir, 'index.html'), html, 'utf8');
+await fs.writeFile(htmlPath, html, 'utf8');
