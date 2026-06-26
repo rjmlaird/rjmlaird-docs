@@ -277,7 +277,7 @@ const html = `<!doctype html>
       });
     }
 
-    fetch(jsonUrl)
+    fetch('/files.json')
       .then(async r => {
         const text = await r.text();
         const ct = r.headers.get('content-type') || '';
