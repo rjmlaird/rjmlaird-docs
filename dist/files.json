@@ -61,8 +61,8 @@
         },
         {
           "type": "file",
-          "name": "20101125_C_r_f_c_0245430013_2.pdf",
-          "path": "docs/certificates/20101125_C_r_f_c_0245430013_2.pdf"
+          "name": "20101125_epigeum.pdf",
+          "path": "docs/certificates/20101125_epigeum.pdf"
         },
         {
           "type": "file",
@@ -190,11 +190,6 @@
         },
         {
           "type": "file",
-          "name": "fd31fcf4-ebfd-48df-87f3-2c3aac28ad21-Final-Survey-Help-to-Grow-Management-Essentials-Help-To-Grow-Essentials.pdf",
-          "path": "docs/certificates/fd31fcf4-ebfd-48df-87f3-2c3aac28ad21-Final-Survey-Help-to-Grow-Management-Essentials-Help-To-Grow-Essentials.pdf"
-        },
-        {
-          "type": "file",
           "name": "GA4-cert.pdf",
           "path": "docs/certificates/GA4-cert.pdf"
         },
@@ -234,6 +229,11 @@
           "type": "file",
           "name": "GreenDigitalSkills.jpg",
           "path": "docs/certificates/GreenDigitalSkills.jpg"
+        },
+        {
+          "type": "file",
+          "name": "Help-to-Grow-Management-Essentials-Help-To-Grow-Essentials.pdf",
+          "path": "docs/certificates/Help-to-Grow-Management-Essentials-Help-To-Grow-Essentials.pdf"
         },
         {
           "type": "folder",
