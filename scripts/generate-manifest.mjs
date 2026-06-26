@@ -71,7 +71,7 @@ async function walk(dir) {
           type: 'folder',
           name: entry.name,
           path: relFromDocs,
-          publicPath: '/' + relFromDocs.split('/').map(encodeURIComponent).join('/'),
+          publicPath: toPublicPath(relFromDocs),
           children
         });
       }
