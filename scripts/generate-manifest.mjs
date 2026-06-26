@@ -111,11 +111,15 @@ function safeJsonStringify(value) {
 
 await assertDir(contentRoot, 'CONTENT_ROOT');
 
+await fs.rm(outDir, { recursive: true, force: true });
+await fs.mkdir(outDir, { recursive: true });
+
+await fs.cp(contentRoot, outDir, { recursive: true });
+
 const tree = await walk(contentRoot);
 const manifest = buildManifest(tree);
 const manifestText = safeJsonStringify(manifest);
 
-await fs.mkdir(outDir, { recursive: true });
 await fs.writeFile(manifestPath, manifestText, 'utf8');
 
 const reread = await fs.readFile(manifestPath, 'utf8');
