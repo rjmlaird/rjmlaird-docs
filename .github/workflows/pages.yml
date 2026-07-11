@@ -1,18 +1,14 @@
 name: Deploy
-
 on:
   push:
     branches:
       - main
   workflow_dispatch:
-
 permissions:
   contents: read
-
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
-
 jobs:
   deploy-gateway:
     name: Deploy gateway
@@ -23,19 +19,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: pnpm
-
+          cache-dependency-path: apps/gateway/pnpm-lock.yaml
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
@@ -43,7 +36,6 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           workingDirectory: apps/gateway
           command: deploy
-
   deploy-docs:
     name: Deploy docs
     runs-on: ubuntu-latest
@@ -53,19 +45,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: pnpm
-
+          cache-dependency-path: apps/docs/pnpm-lock.yaml
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
@@ -73,7 +62,6 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           workingDirectory: apps/docs
           command: deploy
-
   deploy-media:
     name: Deploy media
     runs-on: ubuntu-latest
@@ -83,19 +71,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: pnpm
-
+          cache-dependency-path: apps/media/pnpm-lock.yaml
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
