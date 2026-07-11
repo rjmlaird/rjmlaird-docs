@@ -1,0 +1,43 @@
+---
+import { getCollection, getEntry, render } from "astro:content";
+import DocsLayout from "../../layouts/DocsLayout.astro";
+
+export async function getStaticPaths() {
+  const docs = await getCollection("docs");
+  return docs
+    .filter((doc) => !doc.data.draft)
+    .map((doc) => ({
+      params: { slug: doc.slug },
+      props: { doc }
+    }));
+}
+
+const { doc } = Astro.props;
+const { Content } = await render(doc);
+const canonical = doc.data.canonical || `https://docs.rjmlaird.co.uk/docs/${doc.slug}/`;
+
+let hero = null;
+if (doc.data.media?.hero) {
+  hero = await getEntry("media", doc.data.media.hero);
+}
+---
+
+<DocsLayout
+  title={doc.data.title}
+  description={doc.data.description}
+  canonical={canonical}
+  ogImage={doc.data.ogImage || hero?.data.url}
+>
+  <article class="doc">
+    <h1>{doc.data.title}</h1>
+    <p class="lede">{doc.data.description}</p>
+
+    {hero && (
+      <figure class="hero">
+        <img src={hero.data.url} alt={hero.data.alt || doc.data.title} />
+      </figure>
+    )}
+
+    <Content />
+  </article>
+</DocsLayout>

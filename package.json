@@ -1,14 +1,13 @@
 {
-  "name": "rjmlaird-docs",
-  "version": "1.0.0",
+  "name": "rjmlaird-sites",
   "private": true,
-  "type": "module",
-  "description": "Static index for Ryan Laird documents and certificates",
+  "packageManager": "pnpm@9.0.0",
   "scripts": {
-    "build": "node scripts/generate-manifest.mjs",
-    "start": "npm run build"
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint"
   },
-  "engines": {
-    "node": ">=22"
+  "devDependencies": {
+    "turbo": "^2.1.0"
   }
 }

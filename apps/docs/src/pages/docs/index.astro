@@ -1,0 +1,23 @@
+---
+import { getCollection } from "astro:content";
+import DocsLayout from "../layouts/DocsLayout.astro";
+
+const docs = (await getCollection("docs"))
+  .filter((doc) => !doc.data.draft)
+  .sort((a, b) => (a.data.order ?? 999) - (b.data.order ?? 999));
+---
+
+<DocsLayout
+  title="Docs"
+  description="Documentation for Ryan Laird projects."
+  canonical="https://docs.rjmlaird.co.uk/"
+>
+  <h1>Docs</h1>
+  <p>Browse project documentation, guides, and metadata.</p>
+
+  <ul class="doc-list">
+    {docs.map((doc) => (
+      <li><a href={`/docs/${doc.slug}/`}>{doc.data.title}</a></li>
+    ))}
+  </ul>
+</DocsLayout>

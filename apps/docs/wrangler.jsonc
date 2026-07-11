@@ -1,0 +1,15 @@
+{
+  "name": "docs-worker",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-07-09",
+  "routes": [
+    {
+      "pattern": "cdn.rjmlaird.co.uk/docs/*",
+      "custom_domain": true
+    }
+  ],
+  "vars": {
+    "PUBLIC_BASE_URL": "https://cdn.rjmlaird.co.uk",
+    "APP_BASE_PATH": "/docs"
+  }
+}

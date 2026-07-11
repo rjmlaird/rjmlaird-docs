@@ -1,0 +1,109 @@
+---
+const message = Astro.url.searchParams.get("message");
+const error = Astro.url.searchParams.get("error");
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Upload to Docs or Media</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: canvas;
+        --fg: canvastext;
+        --muted: color-mix(in oklab, canvastext 50%, canvas 50%);
+        --line: color-mix(in oklab, canvastext 18%, canvas 82%);
+        --card: color-mix(in oklab, canvastext 4%, canvas 96%);
+        --accent: #4f46e5;
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--fg);
+      }
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 2rem 1rem 3rem;
+      }
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: var(--card);
+        padding: 1.25rem;
+      }
+      form {
+        display: grid;
+        gap: 1rem;
+      }
+      label {
+        display: grid;
+        gap: 0.4rem;
+        font-weight: 600;
+      }
+      input,
+      select,
+      button {
+        font: inherit;
+        padding: 0.75rem 0.9rem;
+        border-radius: 10px;
+        border: 1px solid var(--line);
+        background: var(--bg);
+        color: var(--fg);
+      }
+      button {
+        background: var(--accent);
+        color: white;
+        border: none;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .hint,
+      .status {
+        color: var(--muted);
+      }
+      .status.ok {
+        color: #0f766e;
+      }
+      .status.err {
+        color: #b91c1c;
+      }
+      code {
+        background: color-mix(in oklab, var(--fg) 8%, var(--bg) 92%);
+        padding: 0.15rem 0.35rem;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Upload</h1>
+      <p class="hint">Choose a destination, then upload a file. The gateway routes it to <code>docs</code> or <code>media</code>.</p>
+
+      {message && <p class="status ok">{message}</p>}
+      {error && <p class="status err">{error}</p>}
+
+      <section class="card">
+        <form method="post" action="/upload" enctype="multipart/form-data">
+          <label>
+            Destination
+            <select name="target" required>
+              <option value="docs">Docs</option>
+              <option value="media">Media</option>
+            </select>
+          </label>
+
+          <label>
+            File
+            <input type="file" name="file" required />
+          </label>
+
+          <button type="submit">Upload</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

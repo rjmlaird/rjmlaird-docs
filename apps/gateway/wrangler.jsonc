@@ -1,0 +1,20 @@
+{
+  "name": "cdn-gateway",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-07-09",
+  "routes": [
+    {
+      "pattern": "cdn.rjmlaird.co.uk/*",
+      "custom_domain": true
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "ASSETS",
+      "bucket_name": "rjmlaird-assets"
+    }
+  ],
+  "vars": {
+    "PUBLIC_BASE_URL": "https://cdn.rjmlaird.co.uk"
+  }
+}

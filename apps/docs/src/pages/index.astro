@@ -1,0 +1,54 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const base = import.meta.env.PUBLIC_MEDIA_BASE || "https://media.rjmlaird.co.uk";
+const res = await fetch(new URL("/assets.json", base));
+
+if (!res.ok) {
+  throw new Error(`assets.json request failed: ${res.status} ${res.statusText}`);
+}
+
+const data = await res.json();
+const assets = data.assets || [];
+---
+
+<Layout title={data.title || "Ryan Laird Media"} description="Browse approved media assets">
+  <h1>{data.title || "Ryan Laird Media"}</h1>
+  <div class="meta">Assets: {data.count ?? assets.length}</div>
+
+  <div class="toolbar">
+    <label>
+      Search
+      <input id="search" type="search" placeholder="Filter titles and keys…" />
+    </label>
+  </div>
+
+  <div id="app">
+    {assets.map((asset) => (
+      <article class="asset" data-title={asset.title.toLowerCase()} data-key={asset.key.toLowerCase()}>
+        <a class="asset-link" href={asset.url} target="_blank" rel="noopener">
+          <img class="asset-thumb" src={asset.thumbUrl || asset.url} alt={asset.title} loading="lazy" />
+          <div class="asset-meta">
+            <h2>{asset.title}</h2>
+            <p>{asset.description}</p>
+            <code>{asset.key}</code>
+          </div>
+        </a>
+      </article>
+    ))}
+  </div>
+
+  <script>
+    const input = document.getElementById("search");
+    const items = [...document.querySelectorAll(".asset")];
+
+    input?.addEventListener("input", (e) => {
+      const q = e.target.value.trim().toLowerCase();
+      items.forEach((item) => {
+        const title = item.dataset.title || "";
+        const key = item.dataset.key || "";
+        item.style.display = !q || title.includes(q) || key.includes(q) ? "" : "none";
+      });
+    });
+  </script>
+</Layout>

@@ -1,0 +1,23 @@
+---
+import "../styles/global.css";
+
+const {
+  title = "Ryan Laird Media",
+  description = "Media gallery and upload tools"
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body>
+    <main class="page">
+      <slot />
+    </main>
+  </body>
+</html>
