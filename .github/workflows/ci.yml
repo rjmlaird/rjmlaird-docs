@@ -1,0 +1,20 @@
+name: ci
+on:
+  push: { branches: [main] }
+  pull_request:
+  schedule: [{ cron: "0 6 * * 1" }]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: pnpm install
+      - run: pnpm validate
+      - run: pnpm build:registry
+      - uses: actions/upload-artifact@v4
+        with: { name: sites-registry, path: dist/sites.json }
+      - if: github.event_name == 'schedule'
+        run: pnpm links
