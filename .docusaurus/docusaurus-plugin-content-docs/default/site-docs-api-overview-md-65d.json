@@ -1,0 +1,30 @@
+{
+  "id": "api/overview",
+  "title": "API overview",
+  "description": "Document the public interface here. For each endpoint or function, list the purpose, parameters, response and errors.",
+  "source": "@site/docs/api/overview.md",
+  "sourceDirName": "api",
+  "slug": "/api/overview",
+  "permalink": "/docs/api/overview",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/api/overview.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1791550336000,
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "overview",
+    "title": "API overview",
+    "sidebar_position": 1
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Your first tutorial",
+    "permalink": "/docs/tutorials/first-tutorial"
+  },
+  "next": {
+    "title": "Configuration",
+    "permalink": "/docs/guides/configuration"
+  }
+}

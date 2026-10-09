@@ -1,0 +1,30 @@
+{
+  "id": "tutorials/first-tutorial",
+  "title": "Your first tutorial",
+  "description": "A tutorial teaches by doing. State the goal, list what the reader needs, then give numbered steps that each produce a visible result.",
+  "source": "@site/docs/tutorials/first-tutorial.md",
+  "sourceDirName": "tutorials",
+  "slug": "/tutorials/first-tutorial",
+  "permalink": "/docs/tutorials/first-tutorial",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/tutorials/first-tutorial.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1791550336000,
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "first-tutorial",
+    "title": "Your first tutorial",
+    "sidebar_position": 1
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Architecture overview",
+    "permalink": "/docs/architecture/overview"
+  },
+  "next": {
+    "title": "API overview",
+    "permalink": "/docs/api/overview"
+  }
+}

@@ -1,20 +1,63 @@
-name: ci
+name: CI
+
 on:
-  push: { branches: [main] }
+  push:
+    branches:
+      - main
   pull_request:
-  schedule: [{ cron: "0 6 * * 1" }]
+  schedule:
+    - cron: "0 6 * * 1"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   validate:
+    name: Validate and build
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
-        with: { node-version: 22 }
-      - run: pnpm install
-      - run: pnpm validate
-      - run: pnpm build:registry
-      - uses: actions/upload-artifact@v4
-        with: { name: sites-registry, path: dist/sites.json }
-      - if: github.event_name == 'schedule'
-        run: pnpm links
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+          run_install: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Validate content and configuration
+        run: pnpm run validate
+
+      - name: Build sites registry
+        run: pnpm run build:registry
+
+      - name: Build Docusaurus site
+        run: pnpm run build
+
+      - name: Upload sites registry
+        uses: actions/upload-artifact@v4
+        with:
+          name: sites-registry
+          path: dist/sites.json
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Check external links
+        if: github.event_name == 'schedule'
+        run: pnpm run links

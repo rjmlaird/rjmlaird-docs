@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkrjmlaird_docs||=[]).push([[9647],{9956(r,e,s){s.r(e),s.d(e,{default:()=>i});s(2990);var a=s(3526),c=s(3614),u=s(3369),d=s(6341),l=s(8372),t=s(4686);function i(r){return(0,t.jsx)(u.e3,{className:(0,a.A)(c.G.wrapper.docsPages),children:(0,t.jsx)(l.A,{children:(0,d.v)(r.route.routes)})})}}}]);

@@ -1,0 +1,30 @@
+{
+  "id": "guides/deployment",
+  "title": "Deployment",
+  "description": "Build",
+  "source": "@site/docs/guides/deployment.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/deployment",
+  "permalink": "/docs/guides/deployment",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/guides/deployment.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1791550336000,
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "deployment",
+    "title": "Deployment",
+    "sidebar_position": 2
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Configuration",
+    "permalink": "/docs/guides/configuration"
+  },
+  "next": {
+    "title": "Writing and versioning docs",
+    "permalink": "/docs/contributing/writing-docs"
+  }
+}

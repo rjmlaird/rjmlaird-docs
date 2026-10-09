@@ -1,0 +1,30 @@
+{
+  "id": "getting-started/quickstart",
+  "title": "Quickstart",
+  "description": "This page takes you from a fresh install to a working result in a few minutes.",
+  "source": "@site/docs/getting-started/quickstart.md",
+  "sourceDirName": "getting-started",
+  "slug": "/getting-started/quickstart",
+  "permalink": "/docs/getting-started/quickstart",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/getting-started/quickstart.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1791550336000,
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "quickstart",
+    "title": "Quickstart",
+    "sidebar_position": 2
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Installation",
+    "permalink": "/docs/getting-started/installation"
+  },
+  "next": {
+    "title": "Architecture overview",
+    "permalink": "/docs/architecture/overview"
+  }
+}

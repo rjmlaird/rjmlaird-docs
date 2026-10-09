@@ -1,0 +1,26 @@
+{
+  "id": "contributing/writing-docs",
+  "title": "Writing and versioning docs",
+  "description": "Local preview",
+  "source": "@site/docs/contributing/writing-docs.md",
+  "sourceDirName": "contributing",
+  "slug": "/contributing/writing-docs",
+  "permalink": "/docs/contributing/writing-docs",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/contributing/writing-docs.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1791551294000,
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "writing-docs",
+    "title": "Writing and versioning docs",
+    "sidebar_position": 1
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Deployment",
+    "permalink": "/docs/guides/deployment"
+  }
+}

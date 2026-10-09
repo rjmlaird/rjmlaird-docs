@@ -1,0 +1,27 @@
+{
+  "id": "intro",
+  "title": "Introduction",
+  "description": "Welcome to the documentation for my projects and tools. These docs are written for developers, integrators and collaborators who need to learn a tool and rely on it.",
+  "source": "@site/docs/intro.md",
+  "sourceDirName": ".",
+  "slug": "/intro",
+  "permalink": "/docs/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/intro.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1791550336000,
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "intro",
+    "title": "Introduction",
+    "slug": "/intro",
+    "sidebar_position": 1
+  },
+  "sidebar": "docs",
+  "next": {
+    "title": "Installation",
+    "permalink": "/docs/getting-started/installation"
+  }
+}

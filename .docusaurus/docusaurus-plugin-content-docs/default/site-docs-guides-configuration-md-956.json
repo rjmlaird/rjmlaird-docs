@@ -1,0 +1,30 @@
+{
+  "id": "guides/configuration",
+  "title": "Configuration",
+  "description": "Config file",
+  "source": "@site/docs/guides/configuration.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/configuration",
+  "permalink": "/docs/guides/configuration",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/guides/configuration.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1791550336000,
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "configuration",
+    "title": "Configuration",
+    "sidebar_position": 1
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "API overview",
+    "permalink": "/docs/api/overview"
+  },
+  "next": {
+    "title": "Deployment",
+    "permalink": "/docs/guides/deployment"
+  }
+}
