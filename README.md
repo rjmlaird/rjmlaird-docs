@@ -4,11 +4,13 @@ Source for **docs.rjmlaird.co.uk**, built with [Docusaurus](https://docusaurus.i
 
 ## Develop
 
+Uses pnpm (version pinned in `package.json` via `packageManager`; enable with `corepack enable`).
+
 ```bash
-npm install
-npm start          # live preview at http://localhost:3000
-npm run build      # production build; fails on broken links
-npm run typecheck
+pnpm install
+pnpm start         # live preview at http://localhost:3000
+pnpm run build     # production build; fails on broken links
+pnpm run typecheck
 ```
 
 ## Structure
@@ -26,7 +28,7 @@ npm run typecheck
 ## Release a docs version
 
 ```bash
-npm run version:cut -- 1.0
+pnpm run version:cut 1.0
 ```
 
 ## Deploy (GitHub Pages)

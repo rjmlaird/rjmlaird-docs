@@ -7,8 +7,8 @@ sidebar_position: 1
 ## Local preview
 
 ```bash
-npm install
-npm start
+pnpm install
+pnpm start
 ```
 
 ## Where things live
@@ -20,7 +20,7 @@ npm start
 ## Cutting a version at release time
 
 ```bash
-npm run version:cut -- 1.0
+pnpm run version:cut 1.0
 ```
 
 This copies the current `docs/` into `versioned_docs/version-1.0`. Commit the result alongside the release tag. The version dropdown updates automatically.
