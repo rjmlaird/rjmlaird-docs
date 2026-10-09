@@ -2,13 +2,12 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-// Update these two if the repository lives elsewhere.
 const GITHUB_ORG = 'rjmlaird';
 const GITHUB_REPO = 'rjmlaird-docs';
 
 const config: Config = {
   title: 'RJM Laird Docs',
-  tagline: 'Guides, references and architecture notes for my projects and tools',
+  tagline: 'Guides, references, and architecture notes for RJM Laird projects and tools.',
   favicon: 'img/favicon.svg',
 
   url: 'https://docs.rjmlaird.co.uk',
@@ -20,12 +19,18 @@ const config: Config = {
 
   onBrokenLinks: 'throw',
   onBrokenAnchors: 'warn',
+
   markdown: {
     mermaid: true,
-    hooks: {onBrokenMarkdownLinks: 'throw'},
+    hooks: {
+      onBrokenMarkdownLinks: 'throw',
+    },
   },
 
-  i18n: {defaultLocale: 'en-GB', locales: ['en-GB']},
+  i18n: {
+    defaultLocale: 'en-GB',
+    locales: ['en-GB'],
+  },
 
   stylesheets: [
     {
@@ -43,6 +48,7 @@ const config: Config = {
         indexBlog: false,
         docsRouteBasePath: '/docs',
         highlightSearchTermsOnTargetPage: true,
+        searchBarPosition: 'right',
       },
     ],
   ],
@@ -57,31 +63,65 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           editUrl: `https://github.com/${GITHUB_ORG}/${GITHUB_REPO}/edit/main/`,
           showLastUpdateTime: true,
-          // Versioning: run `npm run version:cut -- 1.0` at release time.
-          // `current` is the unreleased "Next" docs; cut versions are frozen snapshots.
           lastVersion: 'current',
           versions: {
-            current: {label: 'Next', badge: true},
+            current: {
+              label: 'Next',
+              badge: true,
+            },
           },
         },
         blog: false,
-        theme: {customCss: './src/css/custom.css'},
-        sitemap: {changefreq: 'weekly', priority: 0.5},
+        theme: {
+          customCss: './src/css/custom.css',
+        },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+        },
       } satisfies Preset.Options,
     ],
   ],
 
   themeConfig: {
-    colorMode: {defaultMode: 'dark', respectPrefersColorScheme: true},
+    colorMode: {
+      defaultMode: 'dark',
+      respectPrefersColorScheme: true,
+    },
+
     navbar: {
       title: 'RJM Laird Docs',
-      logo: {alt: 'RJM Laird', src: 'img/logo.svg'},
+      logo: {
+        alt: 'RJM Laird',
+        src: 'img/logo.svg',
+      },
       items: [
-        {type: 'docSidebar', sidebarId: 'docs', position: 'left', label: 'Documentation'},
-        {to: '/docs/api/overview', label: 'API', position: 'left'},
-        {type: 'docsVersionDropdown', position: 'right', dropdownActiveClassDisabled: true},
-        {href: 'https://rjmlaird.co.uk', label: 'Main site', position: 'right'},
-        {href: 'https://labs.rjmlaird.co.uk', label: 'Labs', position: 'right'},
+        {
+          type: 'docSidebar',
+          sidebarId: 'docs',
+          position: 'left',
+          label: 'Documentation',
+        },
+        {
+          to: '/docs/api/overview',
+          label: 'API',
+          position: 'left',
+        },
+        {
+          type: 'docsVersionDropdown',
+          position: 'right',
+          dropdownActiveClassDisabled: true,
+        },
+        {
+          href: 'https://rjmlaird.co.uk',
+          label: 'Main site',
+          position: 'right',
+        },
+        {
+          href: 'https://labs.rjmlaird.co.uk',
+          label: 'Labs',
+          position: 'right',
+        },
         {
           href: `https://github.com/${GITHUB_ORG}`,
           position: 'right',
@@ -90,36 +130,72 @@ const config: Config = {
         },
       ],
     },
+
     footer: {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Documentation',
           items: [
-            {label: 'Getting started', to: '/docs/getting-started/installation'},
-            {label: 'Architecture', to: '/docs/architecture/overview'},
-            {label: 'Deployment', to: '/docs/guides/deployment'},
+            {
+              label: 'Getting started',
+              to: '/docs/getting-started/installation',
+            },
+            {
+              label: 'Architecture',
+              to: '/docs/architecture/overview',
+            },
+            {
+              label: 'Deployment',
+              to: '/docs/guides/deployment',
+            },
           ],
         },
         {
           title: 'Elsewhere',
           items: [
-            {label: 'rjmlaird.co.uk', href: 'https://rjmlaird.co.uk'},
-            {label: 'Labs', href: 'https://labs.rjmlaird.co.uk'},
-            {label: 'GitHub', href: `https://github.com/${GITHUB_ORG}`},
+            {
+              label: 'Main site',
+              href: 'https://rjmlaird.co.uk',
+            },
+            {
+              label: 'Labs',
+              href: 'https://labs.rjmlaird.co.uk',
+            },
+            {
+              label: 'GitHub',
+              href: `https://github.com/${GITHUB_ORG}`,
+            },
           ],
         },
       ],
       copyright: `© ${new Date().getFullYear()} Ryan Laird. Documentation licensed under CC BY 4.0.`,
     },
+
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
       additionalLanguages: ['bash', 'json', 'yaml', 'toml', 'python', 'diff'],
     },
-    docs: {sidebar: {hideable: true, autoCollapseCategories: true}},
-    tableOfContents: {minHeadingLevel: 2, maxHeadingLevel: 3},
-    mermaid: {theme: {light: 'neutral', dark: 'dark'}},
+
+    docs: {
+      sidebar: {
+        hideable: true,
+        autoCollapseCategories: true,
+      },
+    },
+
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 3,
+    },
+
+    mermaid: {
+      theme: {
+        light: 'neutral',
+        dark: 'dark',
+      },
+    },
   } satisfies Preset.ThemeConfig,
 };
 
