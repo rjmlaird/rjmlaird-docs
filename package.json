@@ -10,7 +10,8 @@
     "serve": "docusaurus serve",
     "clear": "docusaurus clear",
     "typecheck": "tsc",
-    "version:cut": "docusaurus docs:version"
+    "version:cut": "docusaurus docs:version",
+    "validate": "pnpm run typecheck && pnpm run build"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.2",

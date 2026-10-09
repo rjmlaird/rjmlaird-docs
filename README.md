@@ -11,6 +11,7 @@ pnpm install
 pnpm start         # live preview at http://localhost:3000
 pnpm run build     # production build; fails on broken links
 pnpm run typecheck
+pnpm validate      # typecheck + build; what CI runs
 ```
 
 ## Structure
