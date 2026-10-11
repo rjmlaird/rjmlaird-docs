@@ -31,3 +31,7 @@ This copies the current `docs/` into `versioned_docs/version-1.0`. Commit the re
 - One idea per page; link rather than repeat
 - Every code block states its language; add a `title` when it is a file
 - Use admonitions (`:::tip`, `:::warning`) sparingly
+
+## Architecture pages
+
+Pages under `docs/architecture/` follow extra rules: a status and confidence in the front matter, **To confirm** callouts for anything unverified, and ADRs for significant decisions. See [Naming conventions and standards](../architecture/standards.md).

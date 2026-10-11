@@ -27,6 +27,11 @@
       "name": "@docusaurus/theme-classic",
       "version": "3.10.2"
     },
+    "docusaurus-plugin-mermaid-pan-zoom": {
+      "type": "package",
+      "name": "docusaurus-plugin-mermaid-pan-zoom",
+      "version": "1.7.0"
+    },
     "docusaurus-theme-mermaid": {
       "type": "package",
       "name": "@docusaurus/theme-mermaid",

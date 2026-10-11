@@ -26,6 +26,12 @@ importers:
       clsx:
         specifier: ^2.0.0
         version: 2.1.1
+      docusaurus-plugin-mermaid-pan-zoom:
+        specifier: ^1.7.0
+        version: 1.7.0(@docusaurus/core@3.10.2(@mdx-js/react@3.1.1(@types/react@19.3.0)(react@19.3.0))(postcss@8.5.29)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(typescript@5.6.3))(@docusaurus/theme-mermaid@3.10.2(@docusaurus/plugin-content-docs@3.10.2(@mdx-js/react@3.1.1(@types/react@19.3.0)(react@19.3.0))(postcss@8.5.29)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(typescript@5.6.3))(@mdx-js/react@3.1.1(@types/react@19.3.0)(react@19.3.0))(postcss@8.5.29)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(typescript@5.6.3))
+      mermaid-diagram-pan-zoom:
+        specifier: ^1.7.0
+        version: 1.7.0
       prism-react-renderer:
         specifier: ^2.3.0
         version: 2.4.1(react@19.3.0)
@@ -2890,6 +2896,13 @@ packages:
     resolution: {integrity: sha512-l4gcSouhcgIKRvyy99RNVOgxXiicE+2jZoNmaNmZ6JXiGajBOJAesk1OBlJuM5k2c+eudGdLxDqXuPCKIj6kpw==}
     engines: {node: '>=6'}
 
+  docusaurus-plugin-mermaid-pan-zoom@1.7.0:
+    resolution: {integrity: sha512-QxBswKG7zCVOxmf2SFaB9626iC4NpTU7b8VjGAQ9z+BYUcPkep2AF+OYfbZ/mb5ZsA4Mt70EhtCb7aLEnGGRhA==}
+    engines: {node: '>=18.0'}
+    peerDependencies:
+      '@docusaurus/core': '>=3.0.0'
+      '@docusaurus/theme-mermaid': '>=3.0.0'
+
   dom-converter@0.2.0:
     resolution: {integrity: sha512-gd3ypIPfOMr9h5jIKq8E3sHOTCjeirnl0WK5ZdS1AW0Odt0b1PaWaHdJ4Qk4klv+YB9aJBS7mESXjFoDQPu6DA==}
 
@@ -3854,6 +3867,9 @@ packages:
   merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
+
+  mermaid-diagram-pan-zoom@1.7.0:
+    resolution: {integrity: sha512-Oed34u4kBHsrZFiGN5KXn3dzamaLDAm7sOOkqVmFZMIDt19Jh0bZM9rJoBPcyC4Buf4in+6tO5htbLm32Va7gg==}
 
   mermaid@12.1.0:
     resolution: {integrity: sha512-wlVCp+8eTupfCeeFvoZNNiTuHrvag0P2jz/ILgb/f/6jkVokUefOcujefi8qUe/j2asHiSePncVsz/xzzA80LQ==}
@@ -5264,6 +5280,9 @@ packages:
   supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+
+  svg-pan-zoom@3.6.2:
+    resolution: {integrity: sha512-JwnvRWfVKw/Xzfe6jriFyfey/lWJLq4bUh2jwoR5ChWQuQoOH8FEh1l/bEp46iHHKHEJWIyFJETbazraxNWECg==}
 
   svg-parser@2.1.0:
     resolution: {integrity: sha512-bwLf38YmY+TDYHJw1Ex0Co8c4yeXuJAo8YnXGZrscxrvYoVVIvLeniEkV1Ks/54VteMnL4FtyN1+P+TZJdUPmQ==}
@@ -9879,6 +9898,12 @@ snapshots:
     dependencies:
       '@leichtgewicht/ip-codec': 2.0.5
 
+  docusaurus-plugin-mermaid-pan-zoom@1.7.0(@docusaurus/core@3.10.2(@mdx-js/react@3.1.1(@types/react@19.3.0)(react@19.3.0))(postcss@8.5.29)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(typescript@5.6.3))(@docusaurus/theme-mermaid@3.10.2(@docusaurus/plugin-content-docs@3.10.2(@mdx-js/react@3.1.1(@types/react@19.3.0)(react@19.3.0))(postcss@8.5.29)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(typescript@5.6.3))(@mdx-js/react@3.1.1(@types/react@19.3.0)(react@19.3.0))(postcss@8.5.29)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(typescript@5.6.3)):
+    dependencies:
+      '@docusaurus/core': 3.10.2(@mdx-js/react@3.1.1(@types/react@19.3.0)(react@19.3.0))(debug@4.4.3)(postcss@8.5.29)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(typescript@5.6.3)
+      '@docusaurus/theme-mermaid': 3.10.2(@docusaurus/plugin-content-docs@3.10.2(@mdx-js/react@3.1.1(@types/react@19.3.0)(react@19.3.0))(postcss@8.5.29)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(typescript@5.6.3))(@mdx-js/react@3.1.1(@types/react@19.3.0)(react@19.3.0))(postcss@8.5.29)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(typescript@5.6.3)
+      mermaid-diagram-pan-zoom: 1.7.0
+
   dom-converter@0.2.0:
     dependencies:
       utila: 0.4.0
@@ -11049,6 +11074,10 @@ snapshots:
   merge-stream@2.0.0: {}
 
   merge2@1.4.1: {}
+
+  mermaid-diagram-pan-zoom@1.7.0:
+    dependencies:
+      svg-pan-zoom: 3.6.2
 
   mermaid@12.1.0:
     dependencies:
@@ -12763,6 +12792,8 @@ snapshots:
       has-flag: 4.0.0
 
   supports-preserve-symlinks-flag@1.0.0: {}
+
+  svg-pan-zoom@3.6.2: {}
 
   svg-parser@2.1.0: {}
 

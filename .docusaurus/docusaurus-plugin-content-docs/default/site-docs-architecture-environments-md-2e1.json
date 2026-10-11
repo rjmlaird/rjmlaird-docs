@@ -1,0 +1,34 @@
+{
+  "id": "architecture/environments",
+  "title": "Environments and deployment model",
+  "description": "How code moves from a local machine to production for the docs site and the Cloudflare Workers services, with the verified CI/CD pipeline, branching rules and known gaps.",
+  "source": "@site/docs/architecture/environments.md",
+  "sourceDirName": "architecture",
+  "slug": "/architecture/environments",
+  "permalink": "/docs/architecture/environments",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/architecture/environments.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "id": "environments",
+    "title": "Environments and deployment model",
+    "description": "How code moves from a local machine to production for the docs site and the Cloudflare Workers services, with the verified CI/CD pipeline, branching rules and known gaps.",
+    "sidebar_position": 4,
+    "status": "Draft",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-11T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Subdomain catalogue",
+    "permalink": "/docs/architecture/subdomain-catalogue"
+  },
+  "next": {
+    "title": "Content platform architecture",
+    "permalink": "/docs/architecture/content-platform"
+  }
+}

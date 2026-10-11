@@ -53,6 +53,8 @@ const config: Config = {
     ],
   ],
 
+  plugins: ['docusaurus-plugin-mermaid-pan-zoom'],
+
   presets: [
     [
       'classic',

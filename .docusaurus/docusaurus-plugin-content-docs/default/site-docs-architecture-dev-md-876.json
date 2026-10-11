@@ -1,0 +1,21 @@
+{
+  "id": "architecture/dev",
+  "title": "Dev",
+  "description": "High-level architecture for the RJM Laird digital estate, including public websites, protected services, Cloudflare platform components, and data stores.",
+  "source": "@site/docs/architecture/dev.md",
+  "sourceDirName": "architecture",
+  "slug": "/architecture/dev",
+  "permalink": "/docs/architecture/dev",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/architecture/dev.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055000,
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "Dev",
+    "description": "High-level architecture for the RJM Laird digital estate, including public websites, protected services, Cloudflare platform components, and data stores."
+  }
+}

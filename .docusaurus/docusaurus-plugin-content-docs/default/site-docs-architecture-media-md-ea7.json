@@ -1,0 +1,21 @@
+{
+  "id": "architecture/media",
+  "title": "Media",
+  "description": "High-level architecture for the RJM Laird digital estate, including public websites, protected services, Cloudflare platform components, and data stores.",
+  "source": "@site/docs/architecture/media.md",
+  "sourceDirName": "architecture",
+  "slug": "/architecture/media",
+  "permalink": "/docs/architecture/media",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/architecture/media.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055000,
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "Media",
+    "description": "High-level architecture for the RJM Laird digital estate, including public websites, protected services, Cloudflare platform components, and data stores."
+  }
+}

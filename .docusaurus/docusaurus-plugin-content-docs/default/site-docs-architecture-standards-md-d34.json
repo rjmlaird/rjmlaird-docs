@@ -1,0 +1,34 @@
+{
+  "id": "architecture/standards",
+  "title": "Naming conventions and standards",
+  "description": "Naming rules for hostnames, repositories, Workers and routes, plus the page template, front matter, status labels and callout conventions for architecture documentation.",
+  "source": "@site/docs/architecture/standards.md",
+  "sourceDirName": "architecture",
+  "slug": "/architecture/standards",
+  "permalink": "/docs/architecture/standards",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/architecture/standards.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "id": "standards",
+    "title": "Naming conventions and standards",
+    "description": "Naming rules for hostnames, repositories, Workers and routes, plus the page template, front matter, status labels and callout conventions for architecture documentation.",
+    "sidebar_position": 11,
+    "status": "Draft",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-11T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Observability, status and incident response",
+    "permalink": "/docs/architecture/observability-status"
+  },
+  "next": {
+    "title": "Roadmap and decision log",
+    "permalink": "/docs/architecture/roadmap"
+  }
+}

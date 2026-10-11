@@ -16,8 +16,83 @@
               "sidebar": "docs"
             },
             {
+              "id": "architecture/adrs/ADR-0001-docusaurus-on-github-pages",
+              "path": "/docs/architecture/adrs/ADR-0001-docusaurus-on-github-pages",
+              "sidebar": "docs"
+            },
+            {
+              "id": "architecture/adrs/ADR-0002-justify-subdomains-before-creating-them",
+              "path": "/docs/architecture/adrs/ADR-0002-justify-subdomains-before-creating-them",
+              "sidebar": "docs"
+            },
+            {
+              "id": "architecture/adrs/ADR-0003-separate-public-api-from-webhook-services",
+              "path": "/docs/architecture/adrs/ADR-0003-separate-public-api-from-webhook-services",
+              "sidebar": "docs"
+            },
+            {
+              "id": "architecture/adrs/index",
+              "path": "/docs/architecture/adrs/",
+              "sidebar": "docs"
+            },
+            {
+              "id": "architecture/apis-integrations",
+              "path": "/docs/architecture/apis-integrations",
+              "sidebar": "docs"
+            },
+            {
+              "id": "architecture/automation-workflows",
+              "path": "/docs/architecture/automation-workflows",
+              "sidebar": "docs"
+            },
+            {
+              "id": "architecture/content-platform",
+              "path": "/docs/architecture/content-platform",
+              "sidebar": "docs"
+            },
+            {
+              "id": "architecture/domain-model",
+              "path": "/docs/architecture/domain-model",
+              "sidebar": "docs"
+            },
+            {
+              "id": "architecture/environments",
+              "path": "/docs/architecture/environments",
+              "sidebar": "docs"
+            },
+            {
+              "id": "architecture/media-assets-cdn",
+              "path": "/docs/architecture/media-assets-cdn",
+              "sidebar": "docs"
+            },
+            {
+              "id": "architecture/observability-status",
+              "path": "/docs/architecture/observability-status",
+              "sidebar": "docs"
+            },
+            {
               "id": "architecture/overview",
               "path": "/docs/architecture/overview",
+              "sidebar": "docs"
+            },
+            {
+              "id": "architecture/roadmap",
+              "path": "/docs/architecture/roadmap",
+              "sidebar": "docs"
+            },
+            {
+              "id": "architecture/security-privacy-access",
+              "path": "/docs/architecture/security-privacy-access",
+              "sidebar": "docs"
+            },
+            {
+              "id": "architecture/standards",
+              "path": "/docs/architecture/standards",
+              "sidebar": "docs"
+            },
+            {
+              "id": "architecture/subdomain-catalogue",
+              "path": "/docs/architecture/subdomain-catalogue",
               "sidebar": "docs"
             },
             {

@@ -1,0 +1,21 @@
+{
+  "id": "architecture/dam",
+  "title": "DAM",
+  "description": "High-level architecture for the RJM Laird digital estate, including public websites, protected services, Cloudflare platform components, and data stores.",
+  "source": "@site/docs/architecture/dam.md",
+  "sourceDirName": "architecture",
+  "slug": "/architecture/dam",
+  "permalink": "/docs/architecture/dam",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/architecture/dam.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055000,
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "DAM",
+    "description": "High-level architecture for the RJM Laird digital estate, including public websites, protected services, Cloudflare platform components, and data stores."
+  }
+}

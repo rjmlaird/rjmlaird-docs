@@ -1,0 +1,21 @@
+{
+  "id": "architecture/labs",
+  "title": "Labs",
+  "description": "High-level architecture for the RJM Laird digital estate, including public websites, protected services, Cloudflare platform components, and data stores.",
+  "source": "@site/docs/architecture/labs.md",
+  "sourceDirName": "architecture",
+  "slug": "/architecture/labs",
+  "permalink": "/docs/architecture/labs",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/architecture/labs.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055000,
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "Labs",
+    "description": "High-level architecture for the RJM Laird digital estate, including public websites, protected services, Cloudflare platform components, and data stores."
+  }
+}

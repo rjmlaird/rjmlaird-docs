@@ -1,0 +1,21 @@
+{
+  "id": "architecture/hooks",
+  "title": "Hooks",
+  "description": "High-level architecture for the RJM Laird digital estate, including public websites, protected services, Cloudflare platform components, and data stores.",
+  "source": "@site/docs/architecture/hooks.md",
+  "sourceDirName": "architecture",
+  "slug": "/architecture/hooks",
+  "permalink": "/docs/architecture/hooks",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/architecture/hooks.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055000,
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "Hooks",
+    "description": "High-level architecture for the RJM Laird digital estate, including public websites, protected services, Cloudflare platform components, and data stores."
+  }
+}

@@ -1,7 +1,7 @@
 {
   "id": "architecture/overview",
   "title": "Architecture overview",
-  "description": "Describe the system at three levels: context (who and what it talks to), containers (the deployable parts) and components (the main modules inside each part).",
+  "description": "A map of the rjmlaird.co.uk ecosystem, showing what is live, what is being built and what is only planned, plus the principles that govern how the pieces fit together.",
   "source": "@site/docs/architecture/overview.md",
   "sourceDirName": "architecture",
   "slug": "/architecture/overview",
@@ -16,7 +16,11 @@
   "frontMatter": {
     "id": "overview",
     "title": "Architecture overview",
-    "sidebar_position": 1
+    "description": "A map of the rjmlaird.co.uk ecosystem, showing what is live, what is being built and what is only planned, plus the principles that govern how the pieces fit together.",
+    "sidebar_position": 1,
+    "status": "Draft",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-11T00:00:00.000Z"
   },
   "sidebar": "docs",
   "previous": {
@@ -24,7 +28,7 @@
     "permalink": "/docs/getting-started/quickstart"
   },
   "next": {
-    "title": "Your first tutorial",
-    "permalink": "/docs/tutorials/first-tutorial"
+    "title": "Domain and DNS model",
+    "permalink": "/docs/architecture/domain-model"
   }
 }

@@ -5,7 +5,7 @@
  */
 export default {
   "title": "RJM Laird Docs",
-  "tagline": "Guides, references and architecture notes for my projects and tools",
+  "tagline": "Guides, references, and architecture notes for RJM Laird projects and tools.",
   "favicon": "img/favicon.svg",
   "url": "https://docs.rjmlaird.co.uk",
   "baseUrl": "/",
@@ -53,9 +53,13 @@ export default {
         "hashed": true,
         "indexBlog": false,
         "docsRouteBasePath": "/docs",
-        "highlightSearchTermsOnTargetPage": true
+        "highlightSearchTermsOnTargetPage": true,
+        "searchBarPosition": "right"
       }
     ]
+  ],
+  "plugins": [
+    "docusaurus-plugin-mermaid-pan-zoom"
   ],
   "presets": [
     [
@@ -140,7 +144,7 @@ export default {
       "style": "dark",
       "links": [
         {
-          "title": "Docs",
+          "title": "Documentation",
           "items": [
             {
               "label": "Getting started",
@@ -160,7 +164,7 @@ export default {
           "title": "Elsewhere",
           "items": [
             {
-              "label": "rjmlaird.co.uk",
+              "label": "Main site",
               "href": "https://rjmlaird.co.uk"
             },
             {
@@ -444,7 +448,6 @@ export default {
     "static"
   ],
   "customFields": {},
-  "plugins": [],
   "scripts": [],
   "headTags": [],
   "clientModules": [],

@@ -20,8 +20,8 @@
   },
   "sidebar": "docs",
   "previous": {
-    "title": "Architecture overview",
-    "permalink": "/docs/architecture/overview"
+    "title": "ADR-0003: Separate the public API from the webhook services",
+    "permalink": "/docs/architecture/adrs/ADR-0003-separate-public-api-from-webhook-services"
   },
   "next": {
     "title": "API overview",

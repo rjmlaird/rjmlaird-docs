@@ -1,0 +1,34 @@
+{
+  "id": "architecture/subdomain-catalogue",
+  "title": "Subdomain catalogue",
+  "description": "The register of every planned, live and deferred subdomain of rjmlaird.co.uk, with status, purpose, hosting pattern, priority and a recommendation to keep, merge, defer or avoid each one.",
+  "source": "@site/docs/architecture/subdomain-catalogue.md",
+  "sourceDirName": "architecture",
+  "slug": "/architecture/subdomain-catalogue",
+  "permalink": "/docs/architecture/subdomain-catalogue",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/architecture/subdomain-catalogue.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "subdomain-catalogue",
+    "title": "Subdomain catalogue",
+    "description": "The register of every planned, live and deferred subdomain of rjmlaird.co.uk, with status, purpose, hosting pattern, priority and a recommendation to keep, merge, defer or avoid each one.",
+    "sidebar_position": 3,
+    "status": "Draft",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-11T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Domain and DNS model",
+    "permalink": "/docs/architecture/domain-model"
+  },
+  "next": {
+    "title": "Environments and deployment model",
+    "permalink": "/docs/architecture/environments"
+  }
+}

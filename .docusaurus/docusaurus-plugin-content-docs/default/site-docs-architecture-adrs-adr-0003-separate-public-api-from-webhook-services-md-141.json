@@ -1,0 +1,32 @@
+{
+  "id": "architecture/adrs/ADR-0003-separate-public-api-from-webhook-services",
+  "title": "ADR-0003: Separate the public API from the webhook services",
+  "description": "The public portfolio API and the commercial webhook and workflow services are separate systems with separate repositories and hostnames.",
+  "source": "@site/docs/architecture/adrs/ADR-0003-separate-public-api-from-webhook-services.md",
+  "sourceDirName": "architecture/adrs",
+  "slug": "/architecture/adrs/ADR-0003-separate-public-api-from-webhook-services",
+  "permalink": "/docs/architecture/adrs/ADR-0003-separate-public-api-from-webhook-services",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/architecture/adrs/ADR-0003-separate-public-api-from-webhook-services.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "ADR-0003-separate-public-api-from-webhook-services",
+    "title": "ADR-0003: Separate the public API from the webhook services",
+    "description": "The public portfolio API and the commercial webhook and workflow services are separate systems with separate repositories and hostnames.",
+    "status": "Accepted",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-11T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "ADR-0002: Justify subdomains before creating them",
+    "permalink": "/docs/architecture/adrs/ADR-0002-justify-subdomains-before-creating-them"
+  },
+  "next": {
+    "title": "Your first tutorial",
+    "permalink": "/docs/tutorials/first-tutorial"
+  }
+}

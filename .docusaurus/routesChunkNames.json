@@ -5,26 +5,86 @@
       "plugin": "138e0e15"
     }
   },
-  "/docs-259": {
+  "/docs-ab4": {
     "__comp": "5e95c892",
     "__context": {
       "plugin": "aba21aa0"
     }
   },
-  "/docs-83e": {
+  "/docs-e00": {
     "__comp": "a7bd4aaa",
     "__props": "0058b4c6"
   },
-  "/docs-86d": {
+  "/docs-ede": {
     "__comp": "a94703ab"
   },
   "/docs/api/overview-393": {
     "__comp": "17896441",
     "content": "65df3d35"
   },
+  "/docs/architecture/adrs-39b": {
+    "__comp": "17896441",
+    "content": "766aa199"
+  },
+  "/docs/architecture/adrs/ADR-0001-docusaurus-on-github-pages-d1f": {
+    "__comp": "17896441",
+    "content": "55345192"
+  },
+  "/docs/architecture/adrs/ADR-0002-justify-subdomains-before-creating-them-4a4": {
+    "__comp": "17896441",
+    "content": "33dbdad4"
+  },
+  "/docs/architecture/adrs/ADR-0003-separate-public-api-from-webhook-services-8ab": {
+    "__comp": "17896441",
+    "content": "141024ce"
+  },
+  "/docs/architecture/apis-integrations-ff6": {
+    "__comp": "17896441",
+    "content": "0576c1a7"
+  },
+  "/docs/architecture/automation-workflows-d0c": {
+    "__comp": "17896441",
+    "content": "0cd74d9f"
+  },
+  "/docs/architecture/content-platform-6d6": {
+    "__comp": "17896441",
+    "content": "89b739cc"
+  },
+  "/docs/architecture/domain-model-600": {
+    "__comp": "17896441",
+    "content": "814e758b"
+  },
+  "/docs/architecture/environments-91e": {
+    "__comp": "17896441",
+    "content": "2e137ac4"
+  },
+  "/docs/architecture/media-assets-cdn-e4b": {
+    "__comp": "17896441",
+    "content": "5493c590"
+  },
+  "/docs/architecture/observability-status-d73": {
+    "__comp": "17896441",
+    "content": "f7cbf2ba"
+  },
   "/docs/architecture/overview-243": {
     "__comp": "17896441",
     "content": "0b1ac180"
+  },
+  "/docs/architecture/roadmap-850": {
+    "__comp": "17896441",
+    "content": "df71b374"
+  },
+  "/docs/architecture/security-privacy-access-fbe": {
+    "__comp": "17896441",
+    "content": "314f3103"
+  },
+  "/docs/architecture/standards-b7e": {
+    "__comp": "17896441",
+    "content": "d342cbde"
+  },
+  "/docs/architecture/subdomain-catalogue-6e6": {
+    "__comp": "17896441",
+    "content": "e31cbed1"
   },
   "/docs/contributing/writing-docs-5a4": {
     "__comp": "17896441",

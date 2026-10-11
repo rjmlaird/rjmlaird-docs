@@ -1,0 +1,34 @@
+{
+  "id": "architecture/media-assets-cdn",
+  "title": "Media, assets and CDN strategy",
+  "description": "How images, files and other static assets are stored, served and cached across rjmlaird.co.uk, with a proposal to use one asset host instead of several.",
+  "source": "@site/docs/architecture/media-assets-cdn.md",
+  "sourceDirName": "architecture",
+  "slug": "/architecture/media-assets-cdn",
+  "permalink": "/docs/architecture/media-assets-cdn",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/architecture/media-assets-cdn.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "id": "media-assets-cdn",
+    "title": "Media, assets and CDN strategy",
+    "description": "How images, files and other static assets are stored, served and cached across rjmlaird.co.uk, with a proposal to use one asset host instead of several.",
+    "sidebar_position": 6,
+    "status": "Proposed",
+    "confidence": "Unverified",
+    "last_reviewed": "2026-10-11T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Content platform architecture",
+    "permalink": "/docs/architecture/content-platform"
+  },
+  "next": {
+    "title": "APIs and integrations",
+    "permalink": "/docs/architecture/apis-integrations"
+  }
+}

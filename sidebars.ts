@@ -12,7 +12,30 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Architecture',
-      items: ['architecture/overview'],
+      items: [
+        'architecture/overview',
+        'architecture/domain-model',
+        'architecture/subdomain-catalogue',
+        'architecture/environments',
+        'architecture/content-platform',
+        'architecture/media-assets-cdn',
+        'architecture/apis-integrations',
+        'architecture/automation-workflows',
+        'architecture/security-privacy-access',
+        'architecture/observability-status',
+        'architecture/standards',
+        'architecture/roadmap',
+        {
+          type: 'category',
+          label: 'Decision records',
+          link: {type: 'doc', id: 'architecture/adrs/index'},
+          items: [
+            'architecture/adrs/ADR-0001-docusaurus-on-github-pages',
+            'architecture/adrs/ADR-0002-justify-subdomains-before-creating-them',
+            'architecture/adrs/ADR-0003-separate-public-api-from-webhook-services',
+          ],
+        },
+      ],
     },
     {
       type: 'category',

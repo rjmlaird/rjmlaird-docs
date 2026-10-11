@@ -1,0 +1,32 @@
+{
+  "id": "architecture/adrs/ADR-0001-docusaurus-on-github-pages",
+  "title": "ADR-0001: Docusaurus on GitHub Pages for the docs",
+  "description": "The documentation site is built with Docusaurus and deployed to GitHub Pages through GitHub Actions.",
+  "source": "@site/docs/architecture/adrs/ADR-0001-docusaurus-on-github-pages.md",
+  "sourceDirName": "architecture/adrs",
+  "slug": "/architecture/adrs/ADR-0001-docusaurus-on-github-pages",
+  "permalink": "/docs/architecture/adrs/ADR-0001-docusaurus-on-github-pages",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/architecture/adrs/ADR-0001-docusaurus-on-github-pages.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "ADR-0001-docusaurus-on-github-pages",
+    "title": "ADR-0001: Docusaurus on GitHub Pages for the docs",
+    "description": "The documentation site is built with Docusaurus and deployed to GitHub Pages through GitHub Actions.",
+    "status": "Accepted",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-11T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Architecture decision records",
+    "permalink": "/docs/architecture/adrs/"
+  },
+  "next": {
+    "title": "ADR-0002: Justify subdomains before creating them",
+    "permalink": "/docs/architecture/adrs/ADR-0002-justify-subdomains-before-creating-them"
+  }
+}

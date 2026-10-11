@@ -1,0 +1,34 @@
+{
+  "id": "architecture/roadmap",
+  "title": "Roadmap and decision log",
+  "description": "The sequence in which planned parts of the rjmlaird.co.uk ecosystem should be built or documented, the decisions still open and where decisions are recorded.",
+  "source": "@site/docs/architecture/roadmap.md",
+  "sourceDirName": "architecture",
+  "slug": "/architecture/roadmap",
+  "permalink": "/docs/architecture/roadmap",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/architecture/roadmap.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "id": "roadmap",
+    "title": "Roadmap and decision log",
+    "description": "The sequence in which planned parts of the rjmlaird.co.uk ecosystem should be built or documented, the decisions still open and where decisions are recorded.",
+    "sidebar_position": 12,
+    "status": "Proposed",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-11T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Naming conventions and standards",
+    "permalink": "/docs/architecture/standards"
+  },
+  "next": {
+    "title": "Architecture decision records",
+    "permalink": "/docs/architecture/adrs/"
+  }
+}
