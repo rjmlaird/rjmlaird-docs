@@ -1,0 +1,25 @@
+{
+  "id": "services/integrations/stripe",
+  "title": "Stripe",
+  "description": "How Stripe Checkout and webhooks are set up for the services system, how signatures are verified, how duplicates are handled and how to recover missed events.",
+  "source": "@site/docs/services/integrations/stripe.md",
+  "sourceDirName": "services/integrations",
+  "slug": "/services/integrations/stripe",
+  "permalink": "/docs/services/integrations/stripe",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/services/integrations/stripe.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "stripe",
+    "title": "Stripe",
+    "description": "How Stripe Checkout and webhooks are set up for the services system, how signatures are verified, how duplicates are handled and how to recover missed events.",
+    "sidebar_position": 1,
+    "status": "In development",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  }
+}

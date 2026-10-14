@@ -1,0 +1,25 @@
+{
+  "id": "services/reference/events",
+  "title": "Internal events",
+  "description": "The Zod-defined event envelope, the event types carried on the queues, money and CRM rules, and the versioning policy for backward compatibility.",
+  "source": "@site/docs/services/reference/events.md",
+  "sourceDirName": "services/reference",
+  "slug": "/services/reference/events",
+  "permalink": "/docs/services/reference/events",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/services/reference/events.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "events",
+    "title": "Internal events",
+    "description": "The Zod-defined event envelope, the event types carried on the queues, money and CRM rules, and the versioning policy for backward compatibility.",
+    "sidebar_position": 2,
+    "status": "In development",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  }
+}

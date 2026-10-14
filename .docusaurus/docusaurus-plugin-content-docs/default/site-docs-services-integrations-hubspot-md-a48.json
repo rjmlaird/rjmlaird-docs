@@ -1,0 +1,25 @@
+{
+  "id": "services/integrations/hubspot",
+  "title": "HubSpot",
+  "description": "How contacts are synchronised one way to HubSpot, the private app and properties required, retry behaviour and data minimisation rules.",
+  "source": "@site/docs/services/integrations/hubspot.md",
+  "sourceDirName": "services/integrations",
+  "slug": "/services/integrations/hubspot",
+  "permalink": "/docs/services/integrations/hubspot",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/services/integrations/hubspot.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "hubspot",
+    "title": "HubSpot",
+    "description": "How contacts are synchronised one way to HubSpot, the private app and properties required, retry behaviour and data minimisation rules.",
+    "sidebar_position": 3,
+    "status": "In development",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  }
+}

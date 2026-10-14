@@ -16,6 +16,7 @@ Welcome to the documentation for my projects and tools. These docs are written f
 | [Tutorials](tutorials/first-tutorial.md) | Follow a worked example end to end |
 | [API reference](api/overview.md) | Look up endpoints, parameters and responses |
 | [Guides](guides/configuration.md) | Configure and deploy a project |
+| [Services](services/index.md) | Understand, configure and operate the booking, payment and webhook services |
 | [Contributing](contributing/writing-docs.md) | Add or change documentation |
 
 ## Versions

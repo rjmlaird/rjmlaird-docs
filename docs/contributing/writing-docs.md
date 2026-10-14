@@ -35,3 +35,7 @@ This copies the current `docs/` into `versioned_docs/version-1.0`. Commit the re
 ## Architecture pages
 
 Pages under `docs/architecture/` follow extra rules: a status and confidence in the front matter, **To confirm** callouts for anything unverified, and ADRs for significant decisions. See [Naming conventions and standards](../architecture/standards.md).
+
+## Services pages
+
+Pages under `docs/services/` follow the same front matter, **To confirm** callouts and **Related pages** convention as architecture pages. Runbooks and the launch checklist are operational pages: keep them short, action-first and free of secret values.

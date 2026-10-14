@@ -18,7 +18,7 @@ Several parts of the ecosystem run without anyone pressing a button: a documenta
 | Stripe event processing | Verified webhook, then queue | Records payment events | In development |
 | Cal.com event processing | Verified webhook, then queue | Records booking events | In development |
 | HubSpot sync | Queue consumer | Updates the CRM; HubSpot stays authoritative | In development |
-| Client-delivery follow-ups | Queue consumer | Triggers follow-up steps after a booking or payment | In development |
+| Client-delivery follow-ups | Queue consumer | Records a durable workflow once per confirmed payment and calls a handover adapter (the default adapter only logs) | In development |
 | Wiki sync | Daily schedule | Pulls the chosen Notion page tree into D1 | Proposed (architecture agreed) |
 | Zotero research ingest | Request to `/v1/research` | Stores library data in R2 under `papers/` | In development |
 | Local scripts (data parsing, metadata extraction) | Manual | To confirm | To confirm |
@@ -62,7 +62,7 @@ sequenceDiagram
 ## To confirm
 
 1. Do any local scripts run on the owner's machine (for example for Zotero or metadata extraction), and what do they depend on?
-2. What happens to a message that keeps failing: is there a dead-letter queue?
+2. Each services queue has a dead-letter queue (see the [webhook failures runbook](../services/runbooks/webhook-failures.md)). Who is alerted when one receives a message?
 3. Who is told when a scheduled job fails?
 
 ## Related pages
@@ -70,3 +70,4 @@ sequenceDiagram
 - [APIs and integrations](./apis-integrations.md)
 - [Observability, status and incident response](./observability-status.md)
 - [Security, privacy and access control](./security-privacy-access.md)
+- [Services](../services/index.md)

@@ -11,7 +11,7 @@
   "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/architecture/adrs/ADR-0001-docusaurus-on-github-pages.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedAt": null,
+  "lastUpdatedAt": 1791731429000,
   "frontMatter": {
     "id": "ADR-0001-docusaurus-on-github-pages",
     "title": "ADR-0001: Docusaurus on GitHub Pages for the docs",

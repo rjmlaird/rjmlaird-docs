@@ -47,6 +47,10 @@ These choices have already been made, or need making, but are not yet written do
 6. Astro for the main site and Docusaurus for the docs.
 7. How brand tokens are shared between sites.
 8. Whether architecture docs are included in versioned snapshots.
+9. `booking` and `billing` as dedicated subdomains, against the catalogue's earlier recommendation to merge `booking` into a path.
+10. At-least-once queues with idempotent consumers, enqueuing downstream messages before the database commit.
+11. Hand-rolled Stripe signature verification instead of the Stripe SDK.
+12. Manual quote-to-payment for enquiry-only routes in the MVP.
 
 ## Related pages
 

@@ -1,0 +1,25 @@
+{
+  "id": "services/index",
+  "title": "Services overview",
+  "description": "What the rjmlaird-services system does, which Workers and hostnames it uses, how this section is organised and what is not built yet.",
+  "source": "@site/docs/services/index.md",
+  "sourceDirName": "services",
+  "slug": "/services/",
+  "permalink": "/docs/services/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/services/index.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "index",
+    "title": "Services overview",
+    "description": "What the rjmlaird-services system does, which Workers and hostnames it uses, how this section is organised and what is not built yet.",
+    "sidebar_position": 1,
+    "status": "In development",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  }
+}

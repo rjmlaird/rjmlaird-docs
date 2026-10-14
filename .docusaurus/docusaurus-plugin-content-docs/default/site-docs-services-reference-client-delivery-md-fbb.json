@@ -1,0 +1,25 @@
+{
+  "id": "services/reference/client-delivery",
+  "title": "Client delivery Worker",
+  "description": "How the client-delivery consumer records workflows and hands new clients over, and how to add a real handover adapter.",
+  "source": "@site/docs/services/reference/client-delivery.md",
+  "sourceDirName": "services/reference",
+  "slug": "/services/reference/client-delivery",
+  "permalink": "/docs/services/reference/client-delivery",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/services/reference/client-delivery.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "id": "client-delivery",
+    "title": "Client delivery Worker",
+    "description": "How the client-delivery consumer records workflows and hands new clients over, and how to add a real handover adapter.",
+    "sidebar_position": 5,
+    "status": "In development",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  }
+}

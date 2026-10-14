@@ -19,7 +19,7 @@ No monitoring, error-tracking, analytics or status tooling is confirmed. Candida
 | Capability | Status |
 | --- | --- |
 | Build failure notification for the docs | GitHub Actions run status only |
-| Worker logs and metrics | Cloudflare provides these for Workers; whether and how they are used is to confirm |
+| Worker logs and metrics | Cloudflare provides these for Workers. The services Workers emit structured JSON logs with request, correlation and event identifiers and redact emails and tokens; where the logs are read is to confirm |
 | Uptime monitoring | To confirm |
 | Error tracking | To confirm |
 | Public status page | Proposed (`status`); no confirmed implementation |
@@ -67,4 +67,5 @@ A pragmatic process for a single maintainer:
 
 - [Environments and deployment model](./environments.md)
 - [Automation and workflows](./automation-workflows.md)
+- [Webhook failures runbook](../services/runbooks/webhook-failures.md)
 - [Security, privacy and access control](./security-privacy-access.md)

@@ -82,7 +82,7 @@ Everything else becomes a path on the main site. Paths share one certificate, on
 
 | Subdomain | Status | Purpose | Visibility | Category | Candidate pattern and dependencies | Priority | Risks and to confirm |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `booking` | Proposed (none) | Bookings and scheduling | Public | Services | Path `/book` linking to or embedding Cal.com (owner-stated as the booking tool) | Merge | Whether Cal.com supports a custom domain on the current plan |
+| `booking` | Proposed (none) | Bookings and scheduling | Public | Services | Path `/book` linking to or embedding Cal.com (owner-stated as the booking tool) | Merge | **Conflict:** the [services documentation](../services/index.md) treats `booking.rjmlaird.co.uk` as a dedicated portal and API Worker, not a path. Decide and record it in an ADR. Also whether Cal.com supports a custom domain on the current plan |
 | `home` | Proposed (none) | Personal home-page concept | Public | Content | Duplicates the root | Avoid | Pure duplication |
 | `bio` | Proposed (none) | Short bio, link-in-bio page | Public | Content | Path `/about` or `/links` | Merge | None significant |
 | `physics` | Proposed (none) | Physics tutoring or content | Public | Services | Path under `/services/tutoring` or `/resources` | Merge | Fragmented search authority |
@@ -120,6 +120,7 @@ These hostnames were not in the planning inventory but have real work behind the
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | `auth` | In development (owner-stated) | Central GitHub sign-in for the ecosystem | Shared | Infrastructure | Worker, Hono and KV; Custom Domain route; optional client package; other Workers call it through a service binding | Now | Deployment pending; cookie scope; admin allow-list |
 | `hooks` | In development (owner-stated) | Verified webhook ingress for Stripe, Cal.com and HubSpot | Machine-facing | Infrastructure | Workers, Queues and D1 in the private `rjmlaird-services` repository | Now | Signature verification; replay and idempotency; secrets |
+| `billing` | In development (services documentation) | Stripe Checkout Session creation for paid services | Public | Services | Worker in the private `rjmlaird-services` repository | Now | Not yet justified under [ADR-0002](./adrs/ADR-0002-justify-subdomains-before-creating-them.md); exact hostname to confirm |
 | `wiki` | Proposed (owner-stated) | Private, read-only, Notion-backed wiki | Internal | Application | Astro SSR Worker, a separate sync Worker on a daily schedule, D1, behind Cloudflare Access | Next | Notion token handling; Workers plan limits |
 
 ## Recommended simplification

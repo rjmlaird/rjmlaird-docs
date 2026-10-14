@@ -1,0 +1,25 @@
+{
+  "id": "services/architecture/customer-journeys",
+  "title": "Customer journeys",
+  "description": "How each service route moves from first contact to payment, which steps are manual, how return pages work and what is still to build.",
+  "source": "@site/docs/services/architecture/customer-journeys.md",
+  "sourceDirName": "services/architecture",
+  "slug": "/services/architecture/customer-journeys",
+  "permalink": "/docs/services/architecture/customer-journeys",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/services/architecture/customer-journeys.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "customer-journeys",
+    "title": "Customer journeys",
+    "description": "How each service route moves from first contact to payment, which steps are manual, how return pages work and what is still to build.",
+    "sidebar_position": 2,
+    "status": "In development",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  }
+}

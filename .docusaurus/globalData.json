@@ -126,6 +126,62 @@
               "sidebar": "docs"
             },
             {
+              "id": "services/architecture/customer-journeys",
+              "path": "/docs/services/architecture/customer-journeys"
+            },
+            {
+              "id": "services/architecture/overview",
+              "path": "/docs/services/architecture/overview"
+            },
+            {
+              "id": "services/index",
+              "path": "/docs/services/"
+            },
+            {
+              "id": "services/integrations/calcom",
+              "path": "/docs/services/integrations/calcom"
+            },
+            {
+              "id": "services/integrations/hubspot",
+              "path": "/docs/services/integrations/hubspot"
+            },
+            {
+              "id": "services/integrations/stripe",
+              "path": "/docs/services/integrations/stripe"
+            },
+            {
+              "id": "services/launch-checklist",
+              "path": "/docs/services/launch-checklist"
+            },
+            {
+              "id": "services/reference/client-delivery",
+              "path": "/docs/services/reference/client-delivery"
+            },
+            {
+              "id": "services/reference/configuration",
+              "path": "/docs/services/reference/configuration"
+            },
+            {
+              "id": "services/reference/data-model",
+              "path": "/docs/services/reference/data-model"
+            },
+            {
+              "id": "services/reference/events",
+              "path": "/docs/services/reference/events"
+            },
+            {
+              "id": "services/reference/http-contracts",
+              "path": "/docs/services/reference/http-contracts"
+            },
+            {
+              "id": "services/runbooks/secret-rotation",
+              "path": "/docs/services/runbooks/secret-rotation"
+            },
+            {
+              "id": "services/runbooks/webhook-failures",
+              "path": "/docs/services/runbooks/webhook-failures"
+            },
+            {
               "id": "tutorials/first-tutorial",
               "path": "/docs/tutorials/first-tutorial",
               "sidebar": "docs"

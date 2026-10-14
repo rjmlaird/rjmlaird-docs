@@ -1,0 +1,25 @@
+{
+  "id": "services/reference/configuration",
+  "title": "Configuration reference",
+  "description": "Every secret, variable and per-environment setting of the services Workers, grouped by Worker, with the rules for setting them.",
+  "source": "@site/docs/services/reference/configuration.md",
+  "sourceDirName": "services/reference",
+  "slug": "/services/reference/configuration",
+  "permalink": "/docs/services/reference/configuration",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/services/reference/configuration.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "id": "configuration",
+    "title": "Configuration reference",
+    "description": "Every secret, variable and per-environment setting of the services Workers, grouped by Worker, with the rules for setting them.",
+    "sidebar_position": 4,
+    "status": "In development",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  }
+}

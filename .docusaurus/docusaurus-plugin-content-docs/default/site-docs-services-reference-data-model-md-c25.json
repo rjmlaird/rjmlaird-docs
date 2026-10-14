@@ -1,0 +1,25 @@
+{
+  "id": "services/reference/data-model",
+  "title": "Data model",
+  "description": "The D1 tables used by the services system, their key constraints and status values, and what is deliberately never stored.",
+  "source": "@site/docs/services/reference/data-model.md",
+  "sourceDirName": "services/reference",
+  "slug": "/services/reference/data-model",
+  "permalink": "/docs/services/reference/data-model",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/services/reference/data-model.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "data-model",
+    "title": "Data model",
+    "description": "The D1 tables used by the services system, their key constraints and status values, and what is deliberately never stored.",
+    "sidebar_position": 3,
+    "status": "In development",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  }
+}

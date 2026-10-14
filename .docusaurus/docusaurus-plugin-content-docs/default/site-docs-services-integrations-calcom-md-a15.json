@@ -1,0 +1,25 @@
+{
+  "id": "services/integrations/calcom",
+  "title": "Cal.com",
+  "description": "How Cal.com booking webhooks are configured and verified for the services system, including the values to enter, the assumptions made and known gaps.",
+  "source": "@site/docs/services/integrations/calcom.md",
+  "sourceDirName": "services/integrations",
+  "slug": "/services/integrations/calcom",
+  "permalink": "/docs/services/integrations/calcom",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/services/integrations/calcom.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "calcom",
+    "title": "Cal.com",
+    "description": "How Cal.com booking webhooks are configured and verified for the services system, including the values to enter, the assumptions made and known gaps.",
+    "sidebar_position": 2,
+    "status": "In development",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  }
+}

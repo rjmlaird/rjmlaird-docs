@@ -11,7 +11,7 @@
   "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/architecture/adrs/ADR-0003-separate-public-api-from-webhook-services.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedAt": null,
+  "lastUpdatedAt": 1791731429000,
   "frontMatter": {
     "id": "ADR-0003-separate-public-api-from-webhook-services",
     "title": "ADR-0003: Separate the public API from the webhook services",

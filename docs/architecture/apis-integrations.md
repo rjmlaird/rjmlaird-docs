@@ -19,7 +19,7 @@ Everything here is owner-stated. None of it has been checked against deployed co
 | Service | Hostname | Purpose | Visibility | Status |
 | --- | --- | --- | --- | --- |
 | `rjmlaird-api` | `api` | Public portfolio and content data | Public | Proposed (deployment to confirm) |
-| `rjmlaird-services` | `hooks` | Verified webhook ingress; payment, booking and CRM workflows | Machine-facing; private repository | In development |
+| `rjmlaird-services` | `hooks`, `booking`, `billing` | Verified webhook ingress; booking and checkout APIs; payment, booking and CRM workflows. See [Services](../services/index.md) | Machine-facing and browser-facing; private repository | In development |
 | `rjmlaird-auth` | `auth` | GitHub sign-in with a user allow-list | Browser-facing | In development |
 | Wiki | `wiki` | Private, read-only Notion-backed wiki | Private | Proposed |
 | Zotero WebDAV | Mount point to confirm | File sync for Zotero, plus a research ingest route | Authenticated clients | In development |
@@ -45,7 +45,9 @@ The public portfolio API and the commercial webhook service are deliberately **d
 | --- | --- | --- |
 | `/v1/webhooks/stripe` | `hooks` | Verified payment events |
 | `/v1/webhooks/calcom` | `hooks` | Verified booking events |
-| `/v1/webhooks/hubspot` | `hooks` | Verified CRM events |
+| `/v1/webhooks/hubspot` | `hooks` | Verified and acknowledged; enqueues nothing in the MVP |
+| `/v1/services`, `/v1/booking-intents` | `booking` | See [HTTP contracts](../services/reference/http-contracts.md) |
+| `/v1/checkout-sessions`, `/v1/customer-portal-sessions` | `billing` | The portal route returns `501` |
 | `/webdav` and `/v1/webdav` | WebDAV service | OPTIONS, GET, PUT and DELETE, tagged "WebDAV" in OpenAPI |
 | `/v1/research` | WebDAV service codebase | Zotero API ingest into R2 under `papers/` |
 
@@ -68,7 +70,7 @@ See [Security, privacy and access control](./security-privacy-access.md) for the
 | GitHub | OAuth identity; hosting and CI for the docs | Both |
 | Stripe | Payment events | Inbound webhooks |
 | Cal.com | Booking events | Inbound webhooks |
-| HubSpot | CRM; authority for contact records | Inbound webhooks and outbound sync |
+| HubSpot | CRM; authority for contact records | Outbound contact sync; the inbound webhook route only verifies and acknowledges |
 | Notion | Source content for the wiki | Outbound pull on a daily schedule |
 | Zotero | File sync and library ingest | Inbound from clients |
 
@@ -125,10 +127,10 @@ Which Worker uses which store is the intended design, not a verified deployment.
 2. Where is the WebDAV service mounted: its own hostname, or under `api`?
 3. Is the OpenAPI specification published, and if so, where?
 4. What authentication and rate limiting apply to the public API?
-5. Which HubSpot scopes does the integration use?
 
 ## Related pages
 
 - [Automation and workflows](./automation-workflows.md)
 - [Security, privacy and access control](./security-privacy-access.md)
+- [Services](../services/index.md)
 - [API reference](../api/overview.md)

@@ -1,0 +1,25 @@
+{
+  "id": "services/reference/http-contracts",
+  "title": "HTTP contracts",
+  "description": "The public HTTP endpoints of the booking, billing and webhook Workers, with request and response shapes, status codes and error format.",
+  "source": "@site/docs/services/reference/http-contracts.md",
+  "sourceDirName": "services/reference",
+  "slug": "/services/reference/http-contracts",
+  "permalink": "/docs/services/reference/http-contracts",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/services/reference/http-contracts.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "http-contracts",
+    "title": "HTTP contracts",
+    "description": "The public HTTP endpoints of the booking, billing and webhook Workers, with request and response shapes, status codes and error format.",
+    "sidebar_position": 1,
+    "status": "In development",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  }
+}

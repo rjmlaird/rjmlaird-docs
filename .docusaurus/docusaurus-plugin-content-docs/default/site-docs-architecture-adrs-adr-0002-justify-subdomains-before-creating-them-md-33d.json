@@ -11,7 +11,7 @@
   "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/architecture/adrs/ADR-0002-justify-subdomains-before-creating-them.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedAt": null,
+  "lastUpdatedAt": 1791731429000,
   "frontMatter": {
     "id": "ADR-0002-justify-subdomains-before-creating-them",
     "title": "ADR-0002: Justify subdomains before creating them",

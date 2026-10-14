@@ -53,7 +53,7 @@ The cookie's exact attributes, its lifetime, and how an administrator is revoked
 - The docs workflow needs no custom secrets.
 - Dependencies are installed with `--frozen-lockfile` in CI, so builds use exactly the versions committed.
 
-Not yet documented: secret rotation, who holds recovery access, and where API tokens for HubSpot, Stripe and Cal.com are stored. These belong here once confirmed.
+The services Workers hold their Stripe, Cal.com and HubSpot credentials as Worker secrets, split so that each Worker holds only what it needs (see the [configuration reference](../services/reference/configuration.md)). Rotation is documented in the [secret rotation runbook](../services/runbooks/secret-rotation.md). Not yet documented: who holds recovery access.
 
 ## Edge security and headers
 

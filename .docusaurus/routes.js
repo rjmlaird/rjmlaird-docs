@@ -9,15 +9,15 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', 'ab4'),
+    component: ComponentCreator('/docs', 'e8e'),
     routes: [
       {
         path: '/docs',
-        component: ComponentCreator('/docs', 'e00'),
+        component: ComponentCreator('/docs', '88c'),
         routes: [
           {
             path: '/docs',
-            component: ComponentCreator('/docs', 'ede'),
+            component: ComponentCreator('/docs', '15b'),
             routes: [
               {
                 path: '/docs/api/overview',
@@ -27,103 +27,103 @@ export default [
               },
               {
                 path: '/docs/architecture/adrs',
-                component: ComponentCreator('/docs/architecture/adrs', '39b'),
+                component: ComponentCreator('/docs/architecture/adrs', '145'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/architecture/adrs/ADR-0001-docusaurus-on-github-pages',
-                component: ComponentCreator('/docs/architecture/adrs/ADR-0001-docusaurus-on-github-pages', 'd1f'),
+                component: ComponentCreator('/docs/architecture/adrs/ADR-0001-docusaurus-on-github-pages', '85c'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/architecture/adrs/ADR-0002-justify-subdomains-before-creating-them',
-                component: ComponentCreator('/docs/architecture/adrs/ADR-0002-justify-subdomains-before-creating-them', '4a4'),
+                component: ComponentCreator('/docs/architecture/adrs/ADR-0002-justify-subdomains-before-creating-them', '2d9'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/architecture/adrs/ADR-0003-separate-public-api-from-webhook-services',
-                component: ComponentCreator('/docs/architecture/adrs/ADR-0003-separate-public-api-from-webhook-services', '8ab'),
+                component: ComponentCreator('/docs/architecture/adrs/ADR-0003-separate-public-api-from-webhook-services', '6c3'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/architecture/apis-integrations',
-                component: ComponentCreator('/docs/architecture/apis-integrations', 'ff6'),
+                component: ComponentCreator('/docs/architecture/apis-integrations', '826'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/architecture/automation-workflows',
-                component: ComponentCreator('/docs/architecture/automation-workflows', 'd0c'),
+                component: ComponentCreator('/docs/architecture/automation-workflows', '7fa'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/architecture/content-platform',
-                component: ComponentCreator('/docs/architecture/content-platform', '6d6'),
+                component: ComponentCreator('/docs/architecture/content-platform', '658'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/architecture/domain-model',
-                component: ComponentCreator('/docs/architecture/domain-model', '600'),
+                component: ComponentCreator('/docs/architecture/domain-model', '8a4'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/architecture/environments',
-                component: ComponentCreator('/docs/architecture/environments', '91e'),
+                component: ComponentCreator('/docs/architecture/environments', 'b31'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/architecture/media-assets-cdn',
-                component: ComponentCreator('/docs/architecture/media-assets-cdn', 'e4b'),
+                component: ComponentCreator('/docs/architecture/media-assets-cdn', 'a98'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/architecture/observability-status',
-                component: ComponentCreator('/docs/architecture/observability-status', 'd73'),
+                component: ComponentCreator('/docs/architecture/observability-status', 'ced'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/architecture/overview',
-                component: ComponentCreator('/docs/architecture/overview', '243'),
+                component: ComponentCreator('/docs/architecture/overview', '963'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/architecture/roadmap',
-                component: ComponentCreator('/docs/architecture/roadmap', '850'),
+                component: ComponentCreator('/docs/architecture/roadmap', '590'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/architecture/security-privacy-access',
-                component: ComponentCreator('/docs/architecture/security-privacy-access', 'fbe'),
+                component: ComponentCreator('/docs/architecture/security-privacy-access', 'e3d'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/architecture/standards',
-                component: ComponentCreator('/docs/architecture/standards', 'b7e'),
+                component: ComponentCreator('/docs/architecture/standards', '8ae'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/architecture/subdomain-catalogue',
-                component: ComponentCreator('/docs/architecture/subdomain-catalogue', '6e6'),
+                component: ComponentCreator('/docs/architecture/subdomain-catalogue', '662'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/contributing/writing-docs',
-                component: ComponentCreator('/docs/contributing/writing-docs', '5a4'),
+                component: ComponentCreator('/docs/contributing/writing-docs', 'e8a'),
                 exact: true,
                 sidebar: "docs"
               },
@@ -156,6 +156,76 @@ export default [
                 component: ComponentCreator('/docs/intro', 'c51'),
                 exact: true,
                 sidebar: "docs"
+              },
+              {
+                path: '/docs/services',
+                component: ComponentCreator('/docs/services', 'e5f'),
+                exact: true
+              },
+              {
+                path: '/docs/services/architecture/customer-journeys',
+                component: ComponentCreator('/docs/services/architecture/customer-journeys', 'c64'),
+                exact: true
+              },
+              {
+                path: '/docs/services/architecture/overview',
+                component: ComponentCreator('/docs/services/architecture/overview', 'fc6'),
+                exact: true
+              },
+              {
+                path: '/docs/services/integrations/calcom',
+                component: ComponentCreator('/docs/services/integrations/calcom', '5f4'),
+                exact: true
+              },
+              {
+                path: '/docs/services/integrations/hubspot',
+                component: ComponentCreator('/docs/services/integrations/hubspot', '338'),
+                exact: true
+              },
+              {
+                path: '/docs/services/integrations/stripe',
+                component: ComponentCreator('/docs/services/integrations/stripe', '344'),
+                exact: true
+              },
+              {
+                path: '/docs/services/launch-checklist',
+                component: ComponentCreator('/docs/services/launch-checklist', '89c'),
+                exact: true
+              },
+              {
+                path: '/docs/services/reference/client-delivery',
+                component: ComponentCreator('/docs/services/reference/client-delivery', 'b68'),
+                exact: true
+              },
+              {
+                path: '/docs/services/reference/configuration',
+                component: ComponentCreator('/docs/services/reference/configuration', '22a'),
+                exact: true
+              },
+              {
+                path: '/docs/services/reference/data-model',
+                component: ComponentCreator('/docs/services/reference/data-model', 'cfc'),
+                exact: true
+              },
+              {
+                path: '/docs/services/reference/events',
+                component: ComponentCreator('/docs/services/reference/events', 'aa9'),
+                exact: true
+              },
+              {
+                path: '/docs/services/reference/http-contracts',
+                component: ComponentCreator('/docs/services/reference/http-contracts', '31a'),
+                exact: true
+              },
+              {
+                path: '/docs/services/runbooks/secret-rotation',
+                component: ComponentCreator('/docs/services/runbooks/secret-rotation', '6c8'),
+                exact: true
+              },
+              {
+                path: '/docs/services/runbooks/webhook-failures',
+                component: ComponentCreator('/docs/services/runbooks/webhook-failures', '098'),
+                exact: true
               },
               {
                 path: '/docs/tutorials/first-tutorial',

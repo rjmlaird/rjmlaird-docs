@@ -1,0 +1,25 @@
+{
+  "id": "services/runbooks/webhook-failures",
+  "title": "Webhook failures",
+  "description": "How to find, diagnose and safely replay failed or missed webhook events in the services system, and when not to replay them.",
+  "source": "@site/docs/services/runbooks/webhook-failures.md",
+  "sourceDirName": "services/runbooks",
+  "slug": "/services/runbooks/webhook-failures",
+  "permalink": "/docs/services/runbooks/webhook-failures",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/services/runbooks/webhook-failures.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "webhook-failures",
+    "title": "Webhook failures",
+    "description": "How to find, diagnose and safely replay failed or missed webhook events in the services system, and when not to replay them.",
+    "sidebar_position": 1,
+    "status": "In development",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  }
+}
