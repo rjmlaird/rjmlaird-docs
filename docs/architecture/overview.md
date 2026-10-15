@@ -57,17 +57,7 @@ The ecosystem exists to do five jobs:
 
 ## Ecosystem summary
 
-This table lists the surfaces with some evidence behind them. The full list, including purely planned subdomains, is in the [subdomain catalogue](./subdomain-catalogue.md).
-
-| Surface | Role | Status | Evidence | Platform |
-| --- | --- | --- | --- | --- |
-| `rjmlaird.co.uk` / `www` | Canonical site and brand hub | Live | Owner-stated | Astro; hosting to confirm |
-| `docs.rjmlaird.co.uk` | This documentation | Live | Repository | Docusaurus on GitHub Pages |
-| `labs.rjmlaird.co.uk` | Experiments and data pieces | Live (to confirm) | Linked from the docs navbar | To confirm |
-| `auth.rjmlaird.co.uk` | Central GitHub sign-in | In development | Owner-stated | Cloudflare Worker, Hono, KV |
-| `hooks.rjmlaird.co.uk` | Webhook ingress for Stripe, Cal.com and HubSpot | In development | Owner-stated (private repo) | Workers, Queues, D1 |
-| `api.rjmlaird.co.uk` | Public portfolio API | Proposed | Owner-stated (separate repo); deployment to confirm | Cloudflare Worker (candidate) |
-| `wiki.rjmlaird.co.uk` | Private Notion-backed wiki | Proposed | Architecture agreed; build started | Astro, Workers, D1, Cloudflare Access |
+Hostnames, visibility and lifecycle for every service are held in the canonical catalogue and published as the [generated public service catalogue](./generated/subdomain-catalogue.md). Each service has a page under [Platform services](../services/platform/overview.md). This section does not repeat them.
 
 ## A mental model for non-technical readers
 
@@ -90,40 +80,41 @@ Think of the ecosystem as a shop with four areas:
 | TypeScript, Zod, Vitest, Wrangler | Service code, validation, tests, deployment | Owner-stated |
 | GitHub OAuth, Stripe, Cal.com, HubSpot, Notion, Zotero | Third-party integrations | Owner-stated |
 
-## User journey
+## Estate map
 
 ```mermaid
-flowchart TD
-  visitor([Visitor])
-  owner([Owner])
+flowchart TB
+  visitors([Visitors])
+  owner([Owner and approved clients])
 
-  subgraph live["Live"]
-    root["rjmlaird.co.uk<br/>Main site"]
-    docs["docs.rjmlaird.co.uk<br/>Documentation"]
-    labs["labs.rjmlaird.co.uk<br/>Experiments"]
+  subgraph cf["Cloudflare edge and platform"]
+    subgraph pub["Public services"]
+      pubsvc["web, docs, data, api, status, cdn, apps, tools, labs, booking"]
+    end
+    subgraph res["Restricted services"]
+      ressvc["auth, dam, upload, mcp, hooks, dav"]
+    end
+    subgraph int["Internal services"]
+      intsvc["Private wiki and operational tooling"]
+    end
   end
 
-  subgraph dev["In development or proposed"]
-    auth["auth.rjmlaird.co.uk<br/>Sign-in"]
-    wiki["wiki.rjmlaird.co.uk<br/>Private wiki"]
-    api["api.rjmlaird.co.uk<br/>Public API"]
-  end
+  pubstore[("Public asset storage")]
+  privstore[("Private storage and queues")]
 
-  visitor --> root
-  root --> docs
-  root --> labs
-  docs --> root
-  labs -.-> api
-  owner --> auth
-  auth --> wiki
+  visitors --> pub
+  owner --> res
+  owner --> int
+  pub -.->|reads| pubstore
+  res --> privstore
+  int --> privstore
 ```
 
-Dotted lines are candidate relationships. Solid lines to anything in the second group describe the intended design, not a deployed system.
+Services are grouped by visibility, not by hosting. Which of them are active, planned or reserved is in the [generated catalogue](./generated/subdomain-catalogue.md); most are planned. Solid lines are intended access paths and dotted lines are read-only.
 
 :::note[To confirm]
 - Which host serves the main site, and whether it is served from the apex or `www`.
-- Whether `labs.rjmlaird.co.uk` is deployed from its own repository and where.
-- Whether `api.rjmlaird.co.uk` is deployed yet.
+- Where each service is deployed.
 
 See [Domain and DNS model](./domain-model.md) for the full list of open questions.
 :::

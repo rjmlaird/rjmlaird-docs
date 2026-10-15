@@ -1,0 +1,1 @@
+{"tag":{"label":"webhooks","permalink":"/docs/tags/webhooks","allTagsPath":"/docs/tags","count":1,"items":[{"id":"services/platform/hooks","title":"hooks.rjmlaird.co.uk","description":"The verified inbound webhook gateway: it checks provider signatures and routes events to private processing.","permalink":"/docs/services/platform/hooks"}],"unlisted":false}}

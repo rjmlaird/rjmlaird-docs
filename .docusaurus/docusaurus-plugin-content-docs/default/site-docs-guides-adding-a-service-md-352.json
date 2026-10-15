@@ -1,0 +1,21 @@
+{
+  "id": "guides/adding-a-service",
+  "title": "Adding a service",
+  "description": "The checklist for adding a new service or hostname to the rjmlaird.co.uk estate, from justification to documentation, in a single pull request.",
+  "source": "@site/docs/guides/adding-a-service.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/adding-a-service",
+  "permalink": "/docs/guides/adding-a-service",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/guides/adding-a-service.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Adding a service",
+    "description": "The checklist for adding a new service or hostname to the rjmlaird.co.uk estate, from justification to documentation, in a single pull request.",
+    "sidebar_position": 3
+  }
+}

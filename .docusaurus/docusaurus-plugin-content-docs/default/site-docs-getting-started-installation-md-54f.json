@@ -19,10 +19,6 @@
     "sidebar_position": 1
   },
   "sidebar": "docs",
-  "previous": {
-    "title": "Introduction",
-    "permalink": "/docs/intro"
-  },
   "next": {
     "title": "Quickstart",
     "permalink": "/docs/getting-started/quickstart"

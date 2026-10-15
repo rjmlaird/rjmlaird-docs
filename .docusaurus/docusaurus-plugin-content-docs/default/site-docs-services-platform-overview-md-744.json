@@ -1,0 +1,32 @@
+{
+  "id": "services/platform/overview",
+  "title": "Platform services",
+  "description": "The services in the rjmlaird.co.uk estate, grouped by role, with the boundaries that keep them separate.",
+  "source": "@site/docs/services/platform/overview.md",
+  "sourceDirName": "services/platform",
+  "slug": "/services/platform/overview",
+  "permalink": "/docs/services/platform/overview",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/services/platform/overview.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Platform services",
+    "description": "The services in the rjmlaird.co.uk estate, grouped by role, with the boundaries that keep them separate.",
+    "sidebar_position": 1,
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "ADR-0003: Separate the public API from the webhook services",
+    "permalink": "/docs/architecture/adrs/ADR-0003-separate-public-api-from-webhook-services"
+  },
+  "next": {
+    "title": "docs.rjmlaird.co.uk",
+    "permalink": "/docs/services/platform/docs"
+  }
+}

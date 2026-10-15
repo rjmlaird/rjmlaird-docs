@@ -20,11 +20,11 @@
   },
   "sidebar": "docs",
   "previous": {
-    "title": "ADR-0003: Separate the public API from the webhook services",
-    "permalink": "/docs/architecture/adrs/ADR-0003-separate-public-api-from-webhook-services"
+    "title": "Launch checklist",
+    "permalink": "/docs/services/launch-checklist"
   },
   "next": {
-    "title": "API overview",
-    "permalink": "/docs/api/overview"
+    "title": "Writing and versioning docs",
+    "permalink": "/docs/contributing/writing-docs"
   }
 }

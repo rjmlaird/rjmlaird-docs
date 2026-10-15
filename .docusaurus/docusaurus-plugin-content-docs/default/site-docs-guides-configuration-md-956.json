@@ -20,8 +20,8 @@
   },
   "sidebar": "docs",
   "previous": {
-    "title": "API overview",
-    "permalink": "/docs/api/overview"
+    "title": "master (control plane)",
+    "permalink": "/docs/services/platform/master"
   },
   "next": {
     "title": "Deployment",

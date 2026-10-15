@@ -17,14 +17,5 @@
     "id": "overview",
     "title": "API overview",
     "sidebar_position": 1
-  },
-  "sidebar": "docs",
-  "previous": {
-    "title": "Your first tutorial",
-    "permalink": "/docs/tutorials/first-tutorial"
-  },
-  "next": {
-    "title": "Configuration",
-    "permalink": "/docs/guides/configuration"
   }
 }

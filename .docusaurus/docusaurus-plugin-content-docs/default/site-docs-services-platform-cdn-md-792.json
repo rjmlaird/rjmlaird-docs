@@ -1,0 +1,61 @@
+{
+  "id": "services/platform/cdn",
+  "title": "cdn.rjmlaird.co.uk",
+  "description": "Public, read-only delivery of approved assets. It accepts no writes.",
+  "source": "@site/docs/services/platform/cdn.md",
+  "sourceDirName": "services/platform",
+  "slug": "/services/platform/cdn",
+  "permalink": "/docs/services/platform/cdn",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/services/platform/cdn.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "service",
+      "permalink": "/docs/tags/service"
+    },
+    {
+      "inline": true,
+      "label": "public",
+      "permalink": "/docs/tags/public"
+    },
+    {
+      "inline": true,
+      "label": "assets",
+      "permalink": "/docs/tags/assets"
+    },
+    {
+      "inline": true,
+      "label": "read-only",
+      "permalink": "/docs/tags/read-only"
+    }
+  ],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "cdn.rjmlaird.co.uk",
+    "description": "Public, read-only delivery of approved assets. It accepts no writes.",
+    "sidebar_position": 1,
+    "tags": [
+      "service",
+      "public",
+      "assets",
+      "read-only"
+    ],
+    "visibility": "public",
+    "lifecycle": "planned",
+    "confidence": "Unverified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "status.rjmlaird.co.uk",
+    "permalink": "/docs/services/platform/status"
+  },
+  "next": {
+    "title": "dam.rjmlaird.co.uk",
+    "permalink": "/docs/services/platform/dam"
+  }
+}

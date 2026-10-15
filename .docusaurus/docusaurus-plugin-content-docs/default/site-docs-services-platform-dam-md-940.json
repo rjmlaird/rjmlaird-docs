@@ -1,0 +1,61 @@
+{
+  "id": "services/platform/dam",
+  "title": "dam.rjmlaird.co.uk",
+  "description": "Restricted governance of media and document assets: metadata, rights, approval and what is published.",
+  "source": "@site/docs/services/platform/dam.md",
+  "sourceDirName": "services/platform",
+  "slug": "/services/platform/dam",
+  "permalink": "/docs/services/platform/dam",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/services/platform/dam.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "service",
+      "permalink": "/docs/tags/service"
+    },
+    {
+      "inline": true,
+      "label": "restricted",
+      "permalink": "/docs/tags/restricted"
+    },
+    {
+      "inline": true,
+      "label": "assets",
+      "permalink": "/docs/tags/assets"
+    },
+    {
+      "inline": true,
+      "label": "governance",
+      "permalink": "/docs/tags/governance"
+    }
+  ],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "dam.rjmlaird.co.uk",
+    "description": "Restricted governance of media and document assets: metadata, rights, approval and what is published.",
+    "sidebar_position": 2,
+    "tags": [
+      "service",
+      "restricted",
+      "assets",
+      "governance"
+    ],
+    "visibility": "restricted",
+    "lifecycle": "planned",
+    "confidence": "Unverified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "cdn.rjmlaird.co.uk",
+    "permalink": "/docs/services/platform/cdn"
+  },
+  "next": {
+    "title": "upload.rjmlaird.co.uk",
+    "permalink": "/docs/services/platform/upload"
+  }
+}

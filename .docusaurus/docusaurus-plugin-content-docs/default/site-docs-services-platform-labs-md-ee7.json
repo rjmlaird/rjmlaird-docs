@@ -1,0 +1,61 @@
+{
+  "id": "services/platform/labs",
+  "title": "labs.rjmlaird.co.uk",
+  "description": "Experimental and exploratory work, kept clearly separate from production apps and tools.",
+  "source": "@site/docs/services/platform/labs.md",
+  "sourceDirName": "services/platform",
+  "slug": "/services/platform/labs",
+  "permalink": "/docs/services/platform/labs",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/services/platform/labs.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "service",
+      "permalink": "/docs/tags/service"
+    },
+    {
+      "inline": true,
+      "label": "public",
+      "permalink": "/docs/tags/public"
+    },
+    {
+      "inline": true,
+      "label": "experimental",
+      "permalink": "/docs/tags/experimental"
+    },
+    {
+      "inline": true,
+      "label": "labs",
+      "permalink": "/docs/tags/labs"
+    }
+  ],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "labs.rjmlaird.co.uk",
+    "description": "Experimental and exploratory work, kept clearly separate from production apps and tools.",
+    "sidebar_position": 4,
+    "tags": [
+      "service",
+      "public",
+      "experimental",
+      "labs"
+    ],
+    "visibility": "public",
+    "lifecycle": "active",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "tools.rjmlaird.co.uk",
+    "permalink": "/docs/services/platform/tools"
+  },
+  "next": {
+    "title": "auth.rjmlaird.co.uk",
+    "permalink": "/docs/services/platform/auth"
+  }
+}

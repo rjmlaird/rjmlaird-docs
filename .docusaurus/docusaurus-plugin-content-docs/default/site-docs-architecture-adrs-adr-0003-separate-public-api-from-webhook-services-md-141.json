@@ -26,7 +26,7 @@
     "permalink": "/docs/architecture/adrs/ADR-0002-justify-subdomains-before-creating-them"
   },
   "next": {
-    "title": "Your first tutorial",
-    "permalink": "/docs/tutorials/first-tutorial"
+    "title": "Platform services",
+    "permalink": "/docs/services/platform/overview"
   }
 }

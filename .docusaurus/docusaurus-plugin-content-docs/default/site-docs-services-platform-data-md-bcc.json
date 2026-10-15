@@ -1,0 +1,61 @@
+{
+  "id": "services/platform/data",
+  "title": "data.rjmlaird.co.uk",
+  "description": "A curated, attributed, read-only public reference-data API, distinct from the portfolio and estate catalogue API.",
+  "source": "@site/docs/services/platform/data.md",
+  "sourceDirName": "services/platform",
+  "slug": "/services/platform/data",
+  "permalink": "/docs/services/platform/data",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/services/platform/data.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "service",
+      "permalink": "/docs/tags/service"
+    },
+    {
+      "inline": true,
+      "label": "public",
+      "permalink": "/docs/tags/public"
+    },
+    {
+      "inline": true,
+      "label": "data",
+      "permalink": "/docs/tags/data"
+    },
+    {
+      "inline": true,
+      "label": "api",
+      "permalink": "/docs/tags/api"
+    }
+  ],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "data.rjmlaird.co.uk",
+    "description": "A curated, attributed, read-only public reference-data API, distinct from the portfolio and estate catalogue API.",
+    "sidebar_position": 3,
+    "tags": [
+      "service",
+      "public",
+      "data",
+      "api"
+    ],
+    "visibility": "public",
+    "lifecycle": "planned",
+    "confidence": "Unverified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "docs.rjmlaird.co.uk",
+    "permalink": "/docs/services/platform/docs"
+  },
+  "next": {
+    "title": "api.rjmlaird.co.uk",
+    "permalink": "/docs/services/platform/api"
+  }
+}

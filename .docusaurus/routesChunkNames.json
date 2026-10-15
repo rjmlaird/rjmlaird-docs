@@ -5,24 +5,156 @@
       "plugin": "138e0e15"
     }
   },
-  "/docs-e8e": {
+  "/docs-cd6": {
     "__comp": "5e95c892",
     "__context": {
       "plugin": "aba21aa0"
     }
   },
-  "/docs-88c": {
+  "/docs-457": {
     "__comp": "a7bd4aaa",
     "__props": "0058b4c6"
   },
-  "/docs-15b": {
+  "/docs/tags-fce": {
+    "__comp": "3720c009",
+    "__props": "898514b1"
+  },
+  "/docs/tags/access-9b4": {
+    "__comp": "df203c0f",
+    "__props": "45b81ca7"
+  },
+  "/docs/tags/api-0eb": {
+    "__comp": "df203c0f",
+    "__props": "f644aac7"
+  },
+  "/docs/tags/apps-190": {
+    "__comp": "df203c0f",
+    "__props": "787a6b2b"
+  },
+  "/docs/tags/assets-4ea": {
+    "__comp": "df203c0f",
+    "__props": "98896324"
+  },
+  "/docs/tags/booking-d2f": {
+    "__comp": "df203c0f",
+    "__props": "36de1930"
+  },
+  "/docs/tags/catalogue-820": {
+    "__comp": "df203c0f",
+    "__props": "7069d6ba"
+  },
+  "/docs/tags/concept-a14": {
+    "__comp": "df203c0f",
+    "__props": "957cdf92"
+  },
+  "/docs/tags/control-plane-fe5": {
+    "__comp": "df203c0f",
+    "__props": "39258af2"
+  },
+  "/docs/tags/data-c69": {
+    "__comp": "df203c0f",
+    "__props": "46732314"
+  },
+  "/docs/tags/developer-f4e": {
+    "__comp": "df203c0f",
+    "__props": "2994d6b6"
+  },
+  "/docs/tags/documentation-a92": {
+    "__comp": "df203c0f",
+    "__props": "f94d1f5a"
+  },
+  "/docs/tags/experimental-486": {
+    "__comp": "df203c0f",
+    "__props": "c6c63897"
+  },
+  "/docs/tags/governance-811": {
+    "__comp": "df203c0f",
+    "__props": "005d0b65"
+  },
+  "/docs/tags/identity-fd3": {
+    "__comp": "df203c0f",
+    "__props": "9ad822a4"
+  },
+  "/docs/tags/ingestion-875": {
+    "__comp": "df203c0f",
+    "__props": "7654afb2"
+  },
+  "/docs/tags/integration-42d": {
+    "__comp": "df203c0f",
+    "__props": "dec38097"
+  },
+  "/docs/tags/labs-939": {
+    "__comp": "df203c0f",
+    "__props": "ef12feb0"
+  },
+  "/docs/tags/mcp-615": {
+    "__comp": "df203c0f",
+    "__props": "64168548"
+  },
+  "/docs/tags/protocol-8f0": {
+    "__comp": "df203c0f",
+    "__props": "6e4d5e35"
+  },
+  "/docs/tags/public-87a": {
+    "__comp": "df203c0f",
+    "__props": "5ba1db35"
+  },
+  "/docs/tags/read-only-db7": {
+    "__comp": "df203c0f",
+    "__props": "caf398da"
+  },
+  "/docs/tags/reserved-45f": {
+    "__comp": "df203c0f",
+    "__props": "910179da"
+  },
+  "/docs/tags/restricted-168": {
+    "__comp": "df203c0f",
+    "__props": "3407e3ce"
+  },
+  "/docs/tags/service-d15": {
+    "__comp": "df203c0f",
+    "__props": "8d308f55"
+  },
+  "/docs/tags/status-684": {
+    "__comp": "df203c0f",
+    "__props": "c2f8ae3a"
+  },
+  "/docs/tags/storage-86d": {
+    "__comp": "df203c0f",
+    "__props": "b2b800bd"
+  },
+  "/docs/tags/tools-669": {
+    "__comp": "df203c0f",
+    "__props": "4cf26a50"
+  },
+  "/docs/tags/webdav-233": {
+    "__comp": "df203c0f",
+    "__props": "90563a3d"
+  },
+  "/docs/tags/webhooks-c0b": {
+    "__comp": "df203c0f",
+    "__props": "b1b99498"
+  },
+  "/docs/tags/website-8e4": {
+    "__comp": "df203c0f",
+    "__props": "9697e094"
+  },
+  "/docs/tags/write-754": {
+    "__comp": "df203c0f",
+    "__props": "45457edf"
+  },
+  "/docs/tags/zotero-982": {
+    "__comp": "df203c0f",
+    "__props": "36b7640b"
+  },
+  "/docs-15f": {
     "__comp": "a94703ab"
   },
-  "/docs/api/overview-393": {
+  "/docs/api/overview-9f1": {
     "__comp": "17896441",
     "content": "65df3d35"
   },
-  "/docs/architecture/adrs-145": {
+  "/docs/architecture/adrs-7d5": {
     "__comp": "17896441",
     "content": "766aa199"
   },
@@ -38,11 +170,11 @@
     "__comp": "17896441",
     "content": "141024ce"
   },
-  "/docs/architecture/apis-integrations-826": {
+  "/docs/architecture/apis-integrations-c4a": {
     "__comp": "17896441",
     "content": "0576c1a7"
   },
-  "/docs/architecture/automation-workflows-7fa": {
+  "/docs/architecture/automation-workflows-334": {
     "__comp": "17896441",
     "content": "0cd74d9f"
   },
@@ -58,11 +190,15 @@
     "__comp": "17896441",
     "content": "2e137ac4"
   },
+  "/docs/architecture/generated/subdomain-catalogue-d83": {
+    "__comp": "17896441",
+    "content": "3e9dfcdd"
+  },
   "/docs/architecture/media-assets-cdn-a98": {
     "__comp": "17896441",
     "content": "5493c590"
   },
-  "/docs/architecture/observability-status-ced": {
+  "/docs/architecture/observability-status-388": {
     "__comp": "17896441",
     "content": "f7cbf2ba"
   },
@@ -74,7 +210,7 @@
     "__comp": "17896441",
     "content": "df71b374"
   },
-  "/docs/architecture/security-privacy-access-e3d": {
+  "/docs/architecture/security-privacy-access-aee": {
     "__comp": "17896441",
     "content": "314f3103"
   },
@@ -82,11 +218,15 @@
     "__comp": "17896441",
     "content": "d342cbde"
   },
-  "/docs/architecture/subdomain-catalogue-662": {
+  "/docs/architecture/subdomain-catalogue-033": {
     "__comp": "17896441",
     "content": "e31cbed1"
   },
-  "/docs/contributing/writing-docs-e8a": {
+  "/docs/architecture/subdomain-planning-inventory-6b5": {
+    "__comp": "17896441",
+    "content": "791132fe"
+  },
+  "/docs/contributing/writing-docs-63a": {
     "__comp": "17896441",
     "content": "24f9e5ab"
   },
@@ -98,6 +238,10 @@
     "__comp": "17896441",
     "content": "fbd7a87c"
   },
+  "/docs/guides/adding-a-service-ffc": {
+    "__comp": "17896441",
+    "content": "352b639c"
+  },
   "/docs/guides/configuration-4ce": {
     "__comp": "17896441",
     "content": "956ba2e7"
@@ -106,63 +250,147 @@
     "__comp": "17896441",
     "content": "caaf7770"
   },
-  "/docs/intro-c51": {
+  "/docs/guides/incident-response-d1b": {
+    "__comp": "17896441",
+    "content": "76f25983"
+  },
+  "/docs/guides/publishing-data-c63": {
+    "__comp": "17896441",
+    "content": "b8eb2e52"
+  },
+  "/docs/intro-980": {
     "__comp": "17896441",
     "content": "0e384e19"
   },
-  "/docs/services-e5f": {
+  "/docs/services-829": {
     "__comp": "17896441",
     "content": "a70bf486"
   },
-  "/docs/services/architecture/customer-journeys-c64": {
+  "/docs/services/architecture/customer-journeys-a41": {
     "__comp": "17896441",
     "content": "5acb7a5b"
   },
-  "/docs/services/architecture/overview-fc6": {
+  "/docs/services/architecture/overview-0ba": {
     "__comp": "17896441",
     "content": "d03c2a36"
   },
-  "/docs/services/integrations/calcom-5f4": {
+  "/docs/services/integrations/calcom-0a6": {
     "__comp": "17896441",
     "content": "a15fc077"
   },
-  "/docs/services/integrations/hubspot-338": {
+  "/docs/services/integrations/hubspot-1ec": {
     "__comp": "17896441",
     "content": "a48297ab"
   },
-  "/docs/services/integrations/stripe-344": {
+  "/docs/services/integrations/stripe-9b7": {
     "__comp": "17896441",
     "content": "48bd0dac"
   },
-  "/docs/services/launch-checklist-89c": {
+  "/docs/services/launch-checklist-430": {
     "__comp": "17896441",
     "content": "da2e827d"
   },
-  "/docs/services/reference/client-delivery-b68": {
+  "/docs/services/platform/api-5dd": {
+    "__comp": "17896441",
+    "content": "8d0d88e2"
+  },
+  "/docs/services/platform/apps-841": {
+    "__comp": "17896441",
+    "content": "827c513d"
+  },
+  "/docs/services/platform/auth-0d6": {
+    "__comp": "17896441",
+    "content": "fe236c1e"
+  },
+  "/docs/services/platform/booking-c34": {
+    "__comp": "17896441",
+    "content": "094c1379"
+  },
+  "/docs/services/platform/cdn-9bb": {
+    "__comp": "17896441",
+    "content": "792caef0"
+  },
+  "/docs/services/platform/dam-ab4": {
+    "__comp": "17896441",
+    "content": "94077787"
+  },
+  "/docs/services/platform/data-483": {
+    "__comp": "17896441",
+    "content": "bcc31648"
+  },
+  "/docs/services/platform/dav-d98": {
+    "__comp": "17896441",
+    "content": "b70f10ff"
+  },
+  "/docs/services/platform/dev-b68": {
+    "__comp": "17896441",
+    "content": "50fa785a"
+  },
+  "/docs/services/platform/docs-43b": {
+    "__comp": "17896441",
+    "content": "8a658b00"
+  },
+  "/docs/services/platform/hooks-759": {
+    "__comp": "17896441",
+    "content": "73597051"
+  },
+  "/docs/services/platform/labs-cd6": {
+    "__comp": "17896441",
+    "content": "ee7ba5bf"
+  },
+  "/docs/services/platform/master-4c4": {
+    "__comp": "17896441",
+    "content": "1aec3dee"
+  },
+  "/docs/services/platform/mcp-54f": {
+    "__comp": "17896441",
+    "content": "598951c3"
+  },
+  "/docs/services/platform/overview-532": {
+    "__comp": "17896441",
+    "content": "744cf56e"
+  },
+  "/docs/services/platform/status-097": {
+    "__comp": "17896441",
+    "content": "9f8e63a4"
+  },
+  "/docs/services/platform/tools-c52": {
+    "__comp": "17896441",
+    "content": "134e10fe"
+  },
+  "/docs/services/platform/upload-cff": {
+    "__comp": "17896441",
+    "content": "3564d441"
+  },
+  "/docs/services/platform/web-b81": {
+    "__comp": "17896441",
+    "content": "f0921b4e"
+  },
+  "/docs/services/reference/client-delivery-ba9": {
     "__comp": "17896441",
     "content": "fbba95ed"
   },
-  "/docs/services/reference/configuration-22a": {
+  "/docs/services/reference/configuration-21e": {
     "__comp": "17896441",
     "content": "025e8e4e"
   },
-  "/docs/services/reference/data-model-cfc": {
+  "/docs/services/reference/data-model-b2e": {
     "__comp": "17896441",
     "content": "c25efaff"
   },
-  "/docs/services/reference/events-aa9": {
+  "/docs/services/reference/events-32f": {
     "__comp": "17896441",
     "content": "e8fe8a53"
   },
-  "/docs/services/reference/http-contracts-31a": {
+  "/docs/services/reference/http-contracts-91f": {
     "__comp": "17896441",
     "content": "10e9eec9"
   },
-  "/docs/services/runbooks/secret-rotation-6c8": {
+  "/docs/services/runbooks/secret-rotation-c29": {
     "__comp": "17896441",
     "content": "57797905"
   },
-  "/docs/services/runbooks/webhook-failures-098": {
+  "/docs/services/runbooks/webhook-failures-a3b": {
     "__comp": "17896441",
     "content": "e56893ba"
   },

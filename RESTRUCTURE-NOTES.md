@@ -1,39 +1,62 @@
-# Restructure notes
+# Platform services restructure: notes
 
-Not part of the docs site. Delete after reading. Unzip so that `docs/` replaces the repo's `docs/` folder.
+Unzip at the repository root. Delete this file afterwards. Nothing is committed.
 
-## Where each source file went
+## Files created
 
-| Source | New location |
+- `data/subdomains.json`, `schemas/subdomains.schema.json`
+- `scripts/generate-subdomain-catalogue.mjs` (dependency-free, no network; `--check` mode)
+- `docs/architecture/generated/subdomain-catalogue.md` (generated, committed)
+- `docs/architecture/subdomain-planning-inventory.md` (your original inventory analysis, preserved)
+- `docs/services/platform/web.md` (did not exist)
+- `sidebars.proposed.ts` (see below)
+
+## Files rewritten or changed
+
+- `docs/intro.md` restored. It had been moved to `services/platform/intro.md`, where its relative links were wrong; that copy is removed.
+- `docs/services/platform/`: all 13 cloned scaffolds replaced (each showed `data.rjmlaird.co.uk` and `data` endpoints under its own hostname); `auth.md` and `dav.md` kept and reshaped (`dav.md` had an unclosed Mermaid fence and Word-pasted bullets); `overview.md` rewritten.
+- `docs/guides/`: `adding-a-service.md`, `publishing-data.md`, `incident-response.md` were empty files; now written.
+- `docs/architecture/`: `subdomain-catalogue.md` rewritten, `domain-model.md`, `overview.md`, `apis-integrations.md`, `media-assets-cdn.md`, `security-privacy-access.md`, `observability-status.md`, `standards.md`, `adrs/index.md` edited.
+- `docs/services/index.md`: one link updated.
+
+## Merge into package.json (I did not have it)
+
+```json
+"docs:generate": "node scripts/generate-subdomain-catalogue.mjs",
+"docs:check": "node scripts/generate-subdomain-catalogue.mjs --check"
+```
+
+The generated table is committed, so `build` does not need generation. Add `docs:check` to CI. If you want `prebuild` as well, add `"prebuild": "pnpm run docs:generate"` only if you have none; I did not overwrite anything.
+
+## Validation run (stand-in Docusaurus 3.10.2, not your repo)
+
+| Check | Result |
 | --- | --- |
-| `overview.md` | `docs/services/architecture/overview.md` (diagram, trust boundaries, least privilege, delivery semantics); table list moved to `reference/data-model.md` |
-| `customer-flow.md` | `docs/services/architecture/customer-journeys.md` |
-| `contracts.md` | split: `reference/http-contracts.md` and `reference/events.md` |
-| `stripe.md`, `calcom.md`, `hubspot.md` | `docs/services/integrations/` (same headings in each) |
-| `hubspot-sync` README | merged into `integrations/hubspot.md` (it duplicated it entirely) |
-| `client-delivery` README | `reference/client-delivery.md` |
-| `webhook-failures.md`, `secret-rotation.md` | `docs/services/runbooks/` (replay gate moved before replay steps) |
-| Placeholder checklist (end of `secret-rotation.md`) | `docs/services/launch-checklist.md`, plus all `TODO(operator)` items |
-| Secret names scattered across files | `reference/configuration.md` |
-| New | `services/index.md` |
+| `docusaurus build`, Mermaid on, `onBrokenLinks`, `onBrokenAnchors` and `onBrokenMarkdownLinks` all `throw` | Success |
+| Generator, then `--check` | 21 records, up to date |
+| YAML front matter, integer `sidebar_position` | 63 files, 0 problems |
+| Mermaid parse | 10 diagrams, 0 errors |
+| Sidebar IDs vs discovered docs | 0 missing, 0 orphans |
+| `tsc` on `sidebars.ts` | Clean |
+| Trailing whitespace | None |
 
-Duplicate README uploads were collapsed (2 distinct files, each uploaded twice).
+Not run: your own `package.json` scripts, lint, typecheck or CI, because the zip held only `docs/`. Run `pnpm run build` and `git diff --check` in the real repo.
 
-## Edits to existing pages
+## Assumptions
 
-`intro.md`, `contributing/writing-docs.md`, `architecture/apis-integrations.md` (HubSpot scopes answered, routes added), `automation-workflows.md` (DLQ answered), `security-privacy-access.md`, `observability-status.md`, `subdomain-catalogue.md` (`booking` conflict flagged, `billing` row added), `adrs/index.md` (four backlog items). Template pages (`getting-started`, `tutorials`, `api`, `guides`) are untouched.
+- Package manager is pnpm (per your standards page), so the generated header says `pnpm run docs:generate`, not `npm run`.
+- The generated-file notice is YAML comments in front matter, because `<!-- -->` fails in Docusaurus 3 MDX.
+- "Service delivery" in the sidebar is the `docs/services/` section (booking, payments, webhooks).
+- API reference is kept as its own section, placed after Platform services.
+- Lifecycle follows the existing catalogue, with `evidence` recorded per row. Only `docs` is verified from a repository. Where the catalogue says Proposed, the record is `planned`; `dev` is `reserved`; `web` and `labs` are `active` on owner-stated and linked evidence.
 
-## Added by me, not in your sources
+## Decisions needed
 
-- Runbook: D1 Time Travel restore point and a SELECT-before-UPDATE step before the ledger reset.
-- Cal.com rotation: two named paths, plus a note that bookings may be missed during a gap.
-- Launch checklist: "Verify in staging" section assembled from the testing notes; privacy-page link from the existing security page.
-- Quoted the Mermaid labels (parses cleanly).
-
-## Decisions and checks for you
-
-1. **Public exposure.** The docs site is public on GitHub Pages. The runbooks, launch checklist and the `CALCOM_ALLOW_UNSIGNED` detail are operational. `stripe.md` already referenced `docs/runbooks/` in the private repo, so consider keeping `services/runbooks/` and `launch-checklist.md` there.
-2. **Hostnames.** `booking` and `billing` conflict with ADR-0002 and the catalogue's "Merge" recommendation.
-3. **`last_reviewed`** is set to 2026-10-14 (restructure date), and `confidence` to Partly verified. Nothing was checked against the repo or deployment.
-4. **Sidebars.** `_category_.json` files are added for the new folders. If `sidebars.ts` is explicit, add the `services` entries.
-5. **Possible gaps found:** Cal.com retries are assumed, not documented; reschedules leave stale rows; emails persist in queues and DLQs; manual payment links have no stated reconciliation path.
+1. **Source of truth.** If `rjmlaird-master` or another repository owns the catalogue, do not keep this copy; use a sanitised import instead.
+2. **Superseded recommendations.** The planning inventory said avoid `dam` and `upload`, defer `dev` and `mcp`, merge `booking`. The pages carry a To confirm for each; ADR backlog items 9 and 13 cover them. `upload` under the shared cookie scope is the riskiest.
+3. **Canonical host.** The catalogue records the apex. The domain model still has the apex-versus-`www` question open.
+4. **Public exposure.** This site is public. Consider moving `services/runbooks/` and `launch-checklist.md` to the private services repository.
+5. **Wiki** is not in the catalogue because the file is public; keep internal-only entries in a private catalogue.
+6. **`last_reviewed: 2026-10-14`** marks the restructure date, not a verification.
+7. **Health check route.** Service pages do not assert `/health`. The observability page still proposes `GET /v1/status`; pick one.
+8. **Sidebar.** Merge `sidebars.proposed.ts` into your `sidebars.ts`; I could not see yours. The `_category_.json` files only matter if it is autogenerated.

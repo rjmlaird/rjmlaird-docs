@@ -1,7 +1,7 @@
 {
   "id": "architecture/media-assets-cdn",
   "title": "Media, assets and CDN strategy",
-  "description": "How images, files and other static assets are stored, served and cached across rjmlaird.co.uk, with a proposal to use one asset host instead of several.",
+  "description": "How assets move from controlled upload through asset management and approval to public CDN delivery, and how that separation is kept.",
   "source": "@site/docs/architecture/media-assets-cdn.md",
   "sourceDirName": "architecture",
   "slug": "/architecture/media-assets-cdn",
@@ -16,11 +16,11 @@
   "frontMatter": {
     "id": "media-assets-cdn",
     "title": "Media, assets and CDN strategy",
-    "description": "How images, files and other static assets are stored, served and cached across rjmlaird.co.uk, with a proposal to use one asset host instead of several.",
+    "description": "How assets move from controlled upload through asset management and approval to public CDN delivery, and how that separation is kept.",
     "sidebar_position": 6,
     "status": "Proposed",
     "confidence": "Unverified",
-    "last_reviewed": "2026-10-11T00:00:00.000Z"
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
   },
   "sidebar": "docs",
   "previous": {

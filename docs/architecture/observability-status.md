@@ -31,6 +31,8 @@ No monitoring, error-tracking, analytics or status tooling is confirmed. Candida
 
 Each service should offer one cheap endpoint that returns whether it is healthy. The API template in these docs already sketches `GET /status` returning `ok` and `version`; adopt a consistent form such as `GET /v1/status` across every Worker.
 
+Each catalogue entry says whether a service is public. Only public services may publish a health URL, and restricted services' checks stay private. Never list internal health or monitoring URLs in public documentation.
+
 ### Logging
 
 - Log events, not secrets or personal data.
@@ -39,7 +41,7 @@ Each service should offer one cheap endpoint that returns whether it is healthy.
 
 ### Status communication
 
-Host any public status page **outside** the infrastructure it reports on. A status page that goes down with the thing it monitors tells nobody anything.
+Host any public status page **outside** the infrastructure it reports on. A status page that goes down with the thing it monitors tells nobody anything. The page is curated: it reports a service state, drawn from the catalogue's public services, not raw metrics or logs. See [status](../services/platform/status.md).
 
 ### Alerting
 
@@ -47,7 +49,7 @@ Alert on a small number of things you would act on at once: webhook failures, a 
 
 ## Incident response
 
-A pragmatic process for a single maintainer:
+The full guide is [Incident response](../guides/incident-response.md). A pragmatic process for a single maintainer:
 
 1. **Detect.** An alert, a failed workflow run or a report.
 2. **Assess.** What is affected, and is any personal data involved?
@@ -67,5 +69,6 @@ A pragmatic process for a single maintainer:
 
 - [Environments and deployment model](./environments.md)
 - [Automation and workflows](./automation-workflows.md)
+- [Incident response](../guides/incident-response.md)
 - [Webhook failures runbook](../services/runbooks/webhook-failures.md)
 - [Security, privacy and access control](./security-privacy-access.md)

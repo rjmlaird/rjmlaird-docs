@@ -1,0 +1,21 @@
+{
+  "id": "guides/publishing-data",
+  "title": "Publishing data",
+  "description": "The review workflow for publishing a dataset through the public reference-data service, including licence, attribution and withdrawal.",
+  "source": "@site/docs/guides/publishing-data.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/publishing-data",
+  "permalink": "/docs/guides/publishing-data",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/guides/publishing-data.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Publishing data",
+    "description": "The review workflow for publishing a dataset through the public reference-data service, including licence, attribution and withdrawal.",
+    "sidebar_position": 4
+  }
+}

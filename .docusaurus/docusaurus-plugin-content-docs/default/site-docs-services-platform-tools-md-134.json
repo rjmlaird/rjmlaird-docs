@@ -1,0 +1,61 @@
+{
+  "id": "services/platform/tools",
+  "title": "tools.rjmlaird.co.uk",
+  "description": "The catalogue and presentation layer for reusable utilities, which are classified once and linked by relationship.",
+  "source": "@site/docs/services/platform/tools.md",
+  "sourceDirName": "services/platform",
+  "slug": "/services/platform/tools",
+  "permalink": "/docs/services/platform/tools",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/services/platform/tools.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "service",
+      "permalink": "/docs/tags/service"
+    },
+    {
+      "inline": true,
+      "label": "public",
+      "permalink": "/docs/tags/public"
+    },
+    {
+      "inline": true,
+      "label": "catalogue",
+      "permalink": "/docs/tags/catalogue"
+    },
+    {
+      "inline": true,
+      "label": "tools",
+      "permalink": "/docs/tags/tools"
+    }
+  ],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "tools.rjmlaird.co.uk",
+    "description": "The catalogue and presentation layer for reusable utilities, which are classified once and linked by relationship.",
+    "sidebar_position": 3,
+    "tags": [
+      "service",
+      "public",
+      "catalogue",
+      "tools"
+    ],
+    "visibility": "public",
+    "lifecycle": "planned",
+    "confidence": "Unverified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "apps.rjmlaird.co.uk",
+    "permalink": "/docs/services/platform/apps"
+  },
+  "next": {
+    "title": "labs.rjmlaird.co.uk",
+    "permalink": "/docs/services/platform/labs"
+  }
+}

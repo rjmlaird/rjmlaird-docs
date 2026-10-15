@@ -60,6 +60,19 @@ The docs site currently links to the **apex** (`https://rjmlaird.co.uk`) in its 
 | Apex and `www` | Main site | Live; host to confirm |
 | CNAME to an external SaaS | Possibly `newsletter`, `booking` | Deferred; depends on provider support |
 
+## Naming, classification and lifecycle
+
+Every service has one name, one primary classification, one visibility and one lifecycle. The controlled values and their meanings are defined in the [subdomain catalogue](./subdomain-catalogue.md#fields); this page sets the principles.
+
+| Principle | Rule |
+| --- | --- |
+| Naming | The slug names a function, not a vendor or a technology |
+| Classification | Exactly one primary classification. Related services are linked, never duplicated |
+| Visibility | Declared explicitly. Protocol, integration, ingestion and management services are restricted by default |
+| Lifecycle | `planned`, `reserved`, `active` or `retired`. Moving to `active` needs evidence from a repository or a check |
+| Ownership | Each service has a named owner and a place where its code lives. Ownership is recorded in the service's page or repository, not in DNS |
+| Retirement | Remove the DNS record in the same change that retires the service |
+
 ## Certificate management and edge security
 
 | Hostname type | Certificate | Notes |
@@ -95,7 +108,7 @@ Solid lines are confirmed or in development. Dotted lines are proposed or unconf
 
 ## Typographical error in the planning inventory
 
-The original inventory lists `tutoring.rjmlaild.co.uk` (with an extra "l"). That is a different, unowned domain. The intended hostname is `tutoring.rjmlaird.co.uk`, which is itself recommended to be [merged into a path](./subdomain-catalogue.md#recommended-simplification) rather than created.
+The original inventory lists `tutoring.rjmlaild.co.uk` (with an extra "l"). That is a different, unowned domain. The intended hostname is `tutoring.rjmlaird.co.uk`, which is itself recommended to be [merged into a path](./subdomain-planning-inventory.md#recommended-simplification) rather than created.
 
 ## Open questions
 

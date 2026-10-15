@@ -11,7 +11,7 @@
   "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/services/reference/client-delivery.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedAt": null,
+  "lastUpdatedAt": 1792007214000,
   "sidebarPosition": 5,
   "frontMatter": {
     "id": "client-delivery",
@@ -21,5 +21,14 @@
     "status": "In development",
     "confidence": "Partly verified",
     "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Stripe",
+    "permalink": "/docs/services/integrations/stripe"
+  },
+  "next": {
+    "title": "Configuration reference",
+    "permalink": "/docs/services/reference/configuration"
   }
 }

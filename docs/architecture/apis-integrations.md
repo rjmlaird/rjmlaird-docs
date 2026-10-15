@@ -14,6 +14,14 @@ The ecosystem exposes a small number of services, each with a single job. They r
 Everything here is owner-stated. None of it has been checked against deployed configuration. The existing [API overview](../api/overview.md) is still a template.
 :::
 
+## Public APIs and private operations
+
+| Kind | Services | Rule |
+| --- | --- | --- |
+| Public, read-oriented | [api](../services/platform/api.md), [data](../services/platform/data.md) | Serve only content already approved for publication. No customer records, billing, private operations, raw uploads, access tokens or private data |
+| Restricted | [hooks](../services/platform/hooks.md), [mcp](../services/platform/mcp.md), [upload](../services/platform/upload.md), [dav](../services/platform/dav.md), [dam](../services/platform/dam.md) | Denied by default; each states its access model |
+| Browser-facing integration | [booking](../services/platform/booking.md) | A narrow boundary to providers; never exposes customer records |
+
 ## Service inventory
 
 | Service | Hostname | Purpose | Visibility | Status |
@@ -22,7 +30,7 @@ Everything here is owner-stated. None of it has been checked against deployed co
 | `rjmlaird-services` | `hooks`, `booking`, `billing` | Verified webhook ingress; booking and checkout APIs; payment, booking and CRM workflows. See [Services](../services/index.md) | Machine-facing and browser-facing; private repository | In development |
 | `rjmlaird-auth` | `auth` | GitHub sign-in with a user allow-list | Browser-facing | In development |
 | Wiki | `wiki` | Private, read-only Notion-backed wiki | Private | Proposed |
-| Zotero WebDAV | Mount point to confirm | File sync for Zotero, plus a research ingest route | Authenticated clients | In development |
+| Zotero WebDAV | `dav` (intended; to confirm) | File sync for Zotero, plus a research ingest route | Authenticated clients | In development |
 
 ### Why public and commercial services are separate
 
@@ -48,7 +56,7 @@ The public portfolio API and the commercial webhook service are deliberately **d
 | `/v1/webhooks/hubspot` | `hooks` | Verified and acknowledged; enqueues nothing in the MVP |
 | `/v1/services`, `/v1/booking-intents` | `booking` | See [HTTP contracts](../services/reference/http-contracts.md) |
 | `/v1/checkout-sessions`, `/v1/customer-portal-sessions` | `billing` | The portal route returns `501` |
-| `/webdav` and `/v1/webdav` | WebDAV service | OPTIONS, GET, PUT and DELETE, tagged "WebDAV" in OpenAPI |
+| `/webdav` and `/v1/webdav` | WebDAV service | OPTIONS, GET, PUT and DELETE, tagged "WebDAV" in OpenAPI. Intended to live on [dav](../services/platform/dav.md), not the public API |
 | `/v1/research` | WebDAV service codebase | Zotero API ingest into R2 under `papers/` |
 
 ## Authentication patterns
@@ -62,6 +70,25 @@ The public portfolio API and the commercial webhook service are deliberately **d
 | Public API | To confirm; at minimum rate limiting | To confirm |
 
 See [Security, privacy and access control](./security-privacy-access.md) for the trade-offs of the shared cookie.
+
+## Webhook boundaries
+
+1. Provider webhooks enter only through [hooks](../services/platform/hooks.md). No other service accepts them.
+2. A request is untrusted until its signature verifies over the raw body.
+3. The gateway holds webhook secrets and a queue producer, never storage or provider API tokens.
+4. Verified events are normalised into internal events; provider payloads are never passed on as they are.
+5. A redirect or client claim is never proof of an event. Only a verified webhook is.
+
+The contracts are in [HTTP contracts](../services/reference/http-contracts.md) and [Internal events](../services/reference/events.md).
+
+## Contract and versioning rules
+
+- Version the URL (`/v1/`) for HTTP APIs and the type name (`…v1`) for internal events.
+- Additive, optional changes stay in the current version. A breaking change creates a new version, and the old one is removed only after every consumer has moved.
+- Consumers send unknown event types to a dead-letter queue instead of dropping them.
+- Money is an integer in minor units plus an ISO 4217 currency, never a float.
+- Validate every external input with a schema.
+- Publish OpenAPI for any API with external consumers.
 
 ## Third-party integrations
 
@@ -78,48 +105,34 @@ See [Security, privacy and access control](./security-privacy-access.md) for the
 
 ```mermaid
 flowchart LR
-  subgraph ext["External services"]
+  subgraph consumers["Public consumers"]
+    web["web"]
+    apps["apps"]
+    tools["tools"]
+    labs["labs"]
+  end
+  api["api: public catalogue"]
+  data["data: reference data"]
+  web --> api
+  apps --> api
+  tools --> api
+  labs --> api
+  labs -.-> data
+
+  subgraph providers["Webhook providers"]
     stripe["Stripe"]
     calcom["Cal.com"]
     hubspot["HubSpot"]
-    notion["Notion"]
-    zotero["Zotero clients"]
-    github["GitHub OAuth"]
   end
-
-  subgraph edge["Cloudflare Workers (status varies)"]
-    hooks["hooks<br/>in development"]
-    auth["auth<br/>in development"]
-    api["api<br/>to confirm"]
-    wiki["wiki and sync<br/>proposed"]
-    dav["WebDAV and research<br/>in development"]
-  end
-
-  subgraph store["Storage"]
-    queues[("Queues")]
-    d1[("D1")]
-    kv[("KV")]
-    r2[("R2")]
-  end
-
-  stripe -->|"webhook"| hooks
-  calcom -->|"webhook"| hooks
-  hubspot -->|"webhook"| hooks
-  hooks --> queues
-  queues -->|"consumers"| d1
-  queues -->|"sync"| hubspot
-
-  github --> auth
-  auth --> kv
-
-  wiki -->|"daily pull"| notion
-  wiki --> d1
-
-  zotero --> dav
-  dav --> r2
+  hooks["hooks: verified gateway (restricted)"]
+  private["Private processing (restricted)"]
+  stripe -.->|signed events| hooks
+  calcom -.->|signed events| hooks
+  hubspot -.->|signed events| hooks
+  hooks -.->|verified events| private
 ```
 
-Which Worker uses which store is the intended design, not a verified deployment.
+Solid lines show the intended read path for public content. Dotted lines show integrations that are in development or optional; none is verified as live. See the [generated catalogue](./generated/subdomain-catalogue.md) for the lifecycle of each service.
 
 ## To confirm
 
@@ -132,5 +145,6 @@ Which Worker uses which store is the intended design, not a verified deployment.
 
 - [Automation and workflows](./automation-workflows.md)
 - [Security, privacy and access control](./security-privacy-access.md)
+- [Platform services](../services/platform/overview.md)
 - [Services](../services/index.md)
 - [API reference](../api/overview.md)

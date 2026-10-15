@@ -56,7 +56,7 @@ The repository is `rjmlaird-services`. The Worker behind `hooks.rjmlaird.co.uk` 
 ## To confirm
 
 :::note[To confirm]
-1. **Hostnames.** The source documents use `booking.rjmlaird.co.uk` and a `billing` subdomain. The [subdomain catalogue](../architecture/subdomain-catalogue.md) lists `booking` as *Merge into a path* and has no entry for `billing`. Resolve this under [ADR-0002](../architecture/adrs/ADR-0002-justify-subdomains-before-creating-them.md).
+1. **Hostnames.** The source documents use `booking.rjmlaird.co.uk` and a `billing` subdomain. The [planning inventory](../architecture/subdomain-planning-inventory.md) lists `booking` as *Merge into a path*, while the [catalogue](../architecture/generated/subdomain-catalogue.md) lists both `booking` and `billing` as dedicated hostnames. Resolve this under [ADR-0002](../architecture/adrs/ADR-0002-justify-subdomains-before-creating-them.md).
 2. **Booking deployment.** Whether the portal pages and the booking API are one deployable or two, and the exact `billing` hostname.
 :::
 

@@ -1,0 +1,1 @@
+{"tag":{"label":"control-plane","permalink":"/docs/tags/control-plane","allTagsPath":"/docs/tags","count":1,"items":[{"id":"services/platform/master","title":"master (control plane)","description":"A concept, not a deployed hostname: the canonical manifests that describe the estate.","permalink":"/docs/services/platform/master"}],"unlisted":false}}

@@ -1,7 +1,7 @@
 {
   "id": "architecture/subdomain-catalogue",
   "title": "Subdomain catalogue",
-  "description": "The register of every planned, live and deferred subdomain of rjmlaird.co.uk, with status, purpose, hosting pattern, priority and a recommendation to keep, merge, defer or avoid each one.",
+  "description": "How the canonical public service catalogue works, what each field means, when a subdomain is justified and how to change the catalogue.",
   "source": "@site/docs/architecture/subdomain-catalogue.md",
   "sourceDirName": "architecture",
   "slug": "/architecture/subdomain-catalogue",
@@ -11,16 +11,16 @@
   "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/architecture/subdomain-catalogue.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedAt": 1791731429000,
+  "lastUpdatedAt": 1792007214000,
   "sidebarPosition": 3,
   "frontMatter": {
     "id": "subdomain-catalogue",
     "title": "Subdomain catalogue",
-    "description": "The register of every planned, live and deferred subdomain of rjmlaird.co.uk, with status, purpose, hosting pattern, priority and a recommendation to keep, merge, defer or avoid each one.",
+    "description": "How the canonical public service catalogue works, what each field means, when a subdomain is justified and how to change the catalogue.",
     "sidebar_position": 3,
     "status": "Draft",
     "confidence": "Partly verified",
-    "last_reviewed": "2026-10-11T00:00:00.000Z"
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
   },
   "sidebar": "docs",
   "previous": {

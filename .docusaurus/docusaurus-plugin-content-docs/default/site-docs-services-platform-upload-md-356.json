@@ -1,0 +1,61 @@
+{
+  "id": "services/platform/upload",
+  "title": "upload.rjmlaird.co.uk",
+  "description": "Restricted, controlled ingestion of assets and content. It accepts writes and delivers nothing publicly.",
+  "source": "@site/docs/services/platform/upload.md",
+  "sourceDirName": "services/platform",
+  "slug": "/services/platform/upload",
+  "permalink": "/docs/services/platform/upload",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/services/platform/upload.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "service",
+      "permalink": "/docs/tags/service"
+    },
+    {
+      "inline": true,
+      "label": "restricted",
+      "permalink": "/docs/tags/restricted"
+    },
+    {
+      "inline": true,
+      "label": "ingestion",
+      "permalink": "/docs/tags/ingestion"
+    },
+    {
+      "inline": true,
+      "label": "write",
+      "permalink": "/docs/tags/write"
+    }
+  ],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "upload.rjmlaird.co.uk",
+    "description": "Restricted, controlled ingestion of assets and content. It accepts writes and delivers nothing publicly.",
+    "sidebar_position": 3,
+    "tags": [
+      "service",
+      "restricted",
+      "ingestion",
+      "write"
+    ],
+    "visibility": "restricted",
+    "lifecycle": "planned",
+    "confidence": "Unverified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "dam.rjmlaird.co.uk",
+    "permalink": "/docs/services/platform/dam"
+  },
+  "next": {
+    "title": "dev.rjmlaird.co.uk",
+    "permalink": "/docs/services/platform/dev"
+  }
+}

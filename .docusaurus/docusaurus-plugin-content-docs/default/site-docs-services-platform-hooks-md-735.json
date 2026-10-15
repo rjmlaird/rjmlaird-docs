@@ -1,0 +1,61 @@
+{
+  "id": "services/platform/hooks",
+  "title": "hooks.rjmlaird.co.uk",
+  "description": "The verified inbound webhook gateway: it checks provider signatures and routes events to private processing.",
+  "source": "@site/docs/services/platform/hooks.md",
+  "sourceDirName": "services/platform",
+  "slug": "/services/platform/hooks",
+  "permalink": "/docs/services/platform/hooks",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/services/platform/hooks.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "service",
+      "permalink": "/docs/tags/service"
+    },
+    {
+      "inline": true,
+      "label": "restricted",
+      "permalink": "/docs/tags/restricted"
+    },
+    {
+      "inline": true,
+      "label": "integration",
+      "permalink": "/docs/tags/integration"
+    },
+    {
+      "inline": true,
+      "label": "webhooks",
+      "permalink": "/docs/tags/webhooks"
+    }
+  ],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "hooks.rjmlaird.co.uk",
+    "description": "The verified inbound webhook gateway: it checks provider signatures and routes events to private processing.",
+    "sidebar_position": 3,
+    "tags": [
+      "service",
+      "restricted",
+      "integration",
+      "webhooks"
+    ],
+    "visibility": "restricted",
+    "lifecycle": "planned",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "mcp.rjmlaird.co.uk",
+    "permalink": "/docs/services/platform/mcp"
+  },
+  "next": {
+    "title": "booking.rjmlaird.co.uk",
+    "permalink": "/docs/services/platform/booking"
+  }
+}

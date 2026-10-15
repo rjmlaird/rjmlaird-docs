@@ -51,6 +51,8 @@ These choices have already been made, or need making, but are not yet written do
 10. At-least-once queues with idempotent consumers, enqueuing downstream messages before the database commit.
 11. Hand-rolled Stripe signature verification instead of the Stripe SDK.
 12. Manual quote-to-payment for enquiry-only routes in the MVP.
+13. Dedicated `dam`, `upload`, `mcp` and `dev` services, superseding the planning inventory's avoid and defer recommendations, with mitigations for untrusted uploads under the shared cookie scope.
+14. `data/subdomains.json` in this repository as the canonical public catalogue, rather than a separate control-plane repository.
 
 ## Related pages
 

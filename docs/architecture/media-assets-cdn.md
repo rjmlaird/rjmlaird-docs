@@ -1,18 +1,57 @@
 ---
 id: media-assets-cdn
 title: Media, assets and CDN strategy
-description: How images, files and other static assets are stored, served and cached across rjmlaird.co.uk, with a proposal to use one asset host instead of several.
+description: How assets move from controlled upload through asset management and approval to public CDN delivery, and how that separation is kept.
 sidebar_position: 6
 status: Proposed
 confidence: Unverified
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-14
 ---
 
-This page sets out how media and static assets should be stored and delivered. Very little of it is built. The one confirmed use of object storage is a Cloudflare R2 bucket for Zotero files. Everything else is a proposal.
+This page sets out how assets are meant to flow between the asset services, and where public delivery stops. Little of it is built; the one confirmed use of object storage is a Cloudflare R2 bucket for Zotero files.
 
 :::info[Status: Proposed]
-No `cdn`, `images`, `dam` or `upload` subdomain is verified as live. This page recommends against creating most of them.
+No `cdn`, `dam` or `upload` hostname is verified as live. The services are catalogued as planned; see the [generated catalogue](./generated/subdomain-catalogue.md).
 :::
+
+## Roles
+
+| Service | Responsibility | Direction | Access |
+| --- | --- | --- | --- |
+| [upload](../services/platform/upload.md) | Accept and validate controlled writes | Write | Restricted |
+| Processing and approval | Check, transform and approve assets | Write | Restricted |
+| [dam](../services/platform/dam.md) | Hold metadata, rights and approval; release assets for publication | Write and govern | Restricted |
+| [cdn](../services/platform/cdn.md) | Deliver approved public assets | Read | Public, read-only |
+| [dav](../services/platform/dav.md) | Store Zotero attachments privately | Separate | Restricted |
+
+## Asset flow
+
+```mermaid
+flowchart LR
+  subgraph write["Write path (restricted)"]
+    owner([Owner]) -->|authenticated write| upload["upload"]
+    upload -->|validated file| proc["Processing and approval"]
+    proc -->|asset record| dam["dam"]
+  end
+  dam -->|release approved asset| pubstore[("Public asset storage")]
+  subgraph read["Read path (public)"]
+    pubstore --> cdn["cdn"]
+    visitor([Visitors]) -->|GET and HEAD| cdn
+  end
+```
+
+The write path and the read path share nothing except the approved asset that `dam` releases. `cdn` never accepts writes, and `upload` never delivers files.
+
+## Rules
+
+1. **Nothing is public until approved.** An uploaded file stays unpublished until it has passed processing and `dam` releases it.
+2. **Separate storage.** Private buckets, including the Zotero store, never share a bucket, domain or cache rules with public assets.
+3. **No uploaded content is served from the upload host.** The shared session cookie makes every subdomain one trust zone; see [Security, privacy and access](./security-privacy-access.md#the-shared-session-cookie).
+4. **One direction.** Assets move upload, then processing, then `dam`, then `cdn`. Nothing moves back.
+
+## Earlier recommendation
+
+The [planning inventory](./subdomain-planning-inventory.md) recommended against `dam` and `upload` hostnames and for at most one asset host. The platform services plan supersedes that for the asset services. Record the decision and its mitigations in an ADR before moving any of them to `active`.
 
 ## Current state
 
@@ -22,32 +61,6 @@ No `cdn`, `images`, `dam` or `upload` subdomain is verified as live. This page r
 | Assets for the main site | To confirm | None |
 | Object storage | Cloudflare R2, used for Zotero file sync and research ingest | Owner-stated |
 | Image optimisation | To confirm | None |
-
-## Proposal: one asset host, only if needed
-
-The inventory lists four infrastructure hostnames for media: `cdn`, `dam`, `images` and `upload`. They should collapse into **at most one**.
-
-| Hostname | Recommendation | Reason |
-| --- | --- | --- |
-| `cdn` (or `assets`) | Later, if needed | A single public bucket on a custom domain is enough |
-| `images` | Merge into the asset host | Transformations are a feature of the host, not a separate site |
-| `dam` | Avoid | Naming conventions and folders in object storage cover a one-person workflow |
-| `upload` | Avoid | Untrusted uploads under a shared-cookie domain are a risk; if uploads are ever needed, use an authenticated route on the API |
-
-Most images used by a site should simply be built into that site by its generator. A separate asset host is only worth it for large, shared or frequently changing media.
-
-## Candidate delivery flow
-
-```mermaid
-flowchart TD
-  browser([Browser]) -->|"request asset"| edge["Edge cache"]
-  edge -->|"hit"| browser
-  edge -->|"miss"| r2[("R2 bucket<br/>public assets")]
-  r2 --> edge
-  edge --> browser
-```
-
-Image transformation (resizing, format conversion) is a candidate addition between the cache and the bucket. Which tool to use, and its cost on the current Cloudflare plan, is **To confirm**.
 
 ## Caching policy (proposed)
 
@@ -64,5 +77,6 @@ Image transformation (resizing, format conversion) is a candidate addition betwe
 ## Related pages
 
 - [Subdomain catalogue](./subdomain-catalogue.md)
+- [Platform services](../services/platform/overview.md)
 - [Content platform architecture](./content-platform.md)
 - [Security, privacy and access control](./security-privacy-access.md)

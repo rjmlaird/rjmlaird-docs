@@ -70,6 +70,18 @@ ADRs are the exception: their `status` is Proposed, Accepted, Rejected or Supers
 
 The built-in "last updated" footer comes from Git history. `last_reviewed` is separate: it records when someone *verified* the page, not when it was last edited.
 
+### Platform service pages
+
+Each service under `docs/services/platform/` states whether it is public, restricted or internal, names one primary responsibility, says what it does not do and links to shared pages instead of repeating shared rules. Use only the headings that fit the service, for example "Public interface", "Access model", "Security considerations", "Storage architecture", "Catalogue model", "Monitoring model", "Protocol interface" or "Supported methods".
+
+Front matter adds `visibility` and `lifecycle`, which must match `data/subdomains.json`; the generator fails the build step if they differ.
+
+Never write credentials, secrets, account or binding identifiers, internal hostnames, bucket names or private URLs. Link between docs with relative file links ending in `.md`.
+
+### Generated files
+
+Files under `docs/architecture/generated/` are derived. Mark them clearly, never edit them by hand, and regenerate them with `pnpm run docs:generate`.
+
 ### Status labels
 
 Labels are defined in the [architecture overview](./overview.md#status-labels). Use them in tables as plain text, with the evidence in brackets where it matters, for example "Live (repository)".

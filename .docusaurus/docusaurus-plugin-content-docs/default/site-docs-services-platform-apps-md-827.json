@@ -1,0 +1,61 @@
+{
+  "id": "services/platform/apps",
+  "title": "apps.rjmlaird.co.uk",
+  "description": "The catalogue and presentation layer for maintained applications, which are classified once and linked by relationship.",
+  "source": "@site/docs/services/platform/apps.md",
+  "sourceDirName": "services/platform",
+  "slug": "/services/platform/apps",
+  "permalink": "/docs/services/platform/apps",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/services/platform/apps.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "service",
+      "permalink": "/docs/tags/service"
+    },
+    {
+      "inline": true,
+      "label": "public",
+      "permalink": "/docs/tags/public"
+    },
+    {
+      "inline": true,
+      "label": "catalogue",
+      "permalink": "/docs/tags/catalogue"
+    },
+    {
+      "inline": true,
+      "label": "apps",
+      "permalink": "/docs/tags/apps"
+    }
+  ],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "apps.rjmlaird.co.uk",
+    "description": "The catalogue and presentation layer for maintained applications, which are classified once and linked by relationship.",
+    "sidebar_position": 2,
+    "tags": [
+      "service",
+      "public",
+      "catalogue",
+      "apps"
+    ],
+    "visibility": "public",
+    "lifecycle": "planned",
+    "confidence": "Unverified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "dev.rjmlaird.co.uk",
+    "permalink": "/docs/services/platform/dev"
+  },
+  "next": {
+    "title": "tools.rjmlaird.co.uk",
+    "permalink": "/docs/services/platform/tools"
+  }
+}

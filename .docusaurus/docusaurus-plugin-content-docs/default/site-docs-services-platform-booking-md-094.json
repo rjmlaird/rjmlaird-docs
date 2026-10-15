@@ -1,0 +1,61 @@
+{
+  "id": "services/platform/booking",
+  "title": "booking.rjmlaird.co.uk",
+  "description": "The booking integration boundary: service listing, booking intents and hand-off to the scheduling and payment providers.",
+  "source": "@site/docs/services/platform/booking.md",
+  "sourceDirName": "services/platform",
+  "slug": "/services/platform/booking",
+  "permalink": "/docs/services/platform/booking",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/services/platform/booking.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "service",
+      "permalink": "/docs/tags/service"
+    },
+    {
+      "inline": true,
+      "label": "public",
+      "permalink": "/docs/tags/public"
+    },
+    {
+      "inline": true,
+      "label": "integration",
+      "permalink": "/docs/tags/integration"
+    },
+    {
+      "inline": true,
+      "label": "booking",
+      "permalink": "/docs/tags/booking"
+    }
+  ],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "booking.rjmlaird.co.uk",
+    "description": "The booking integration boundary: service listing, booking intents and hand-off to the scheduling and payment providers.",
+    "sidebar_position": 4,
+    "tags": [
+      "service",
+      "public",
+      "integration",
+      "booking"
+    ],
+    "visibility": "public",
+    "lifecycle": "planned",
+    "confidence": "Unverified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "hooks.rjmlaird.co.uk",
+    "permalink": "/docs/services/platform/hooks"
+  },
+  "next": {
+    "title": "dav.rjmlaird.co.uk",
+    "permalink": "/docs/services/platform/dav"
+  }
+}

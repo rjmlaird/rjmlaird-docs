@@ -1,0 +1,61 @@
+{
+  "id": "services/platform/mcp",
+  "title": "mcp.rjmlaird.co.uk",
+  "description": "A restricted Model Context Protocol service that exposes approved tools to approved AI clients.",
+  "source": "@site/docs/services/platform/mcp.md",
+  "sourceDirName": "services/platform",
+  "slug": "/services/platform/mcp",
+  "permalink": "/docs/services/platform/mcp",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/services/platform/mcp.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "service",
+      "permalink": "/docs/tags/service"
+    },
+    {
+      "inline": true,
+      "label": "restricted",
+      "permalink": "/docs/tags/restricted"
+    },
+    {
+      "inline": true,
+      "label": "protocol",
+      "permalink": "/docs/tags/protocol"
+    },
+    {
+      "inline": true,
+      "label": "mcp",
+      "permalink": "/docs/tags/mcp"
+    }
+  ],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "mcp.rjmlaird.co.uk",
+    "description": "A restricted Model Context Protocol service that exposes approved tools to approved AI clients.",
+    "sidebar_position": 2,
+    "tags": [
+      "service",
+      "restricted",
+      "protocol",
+      "mcp"
+    ],
+    "visibility": "restricted",
+    "lifecycle": "planned",
+    "confidence": "Unverified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "auth.rjmlaird.co.uk",
+    "permalink": "/docs/services/platform/auth"
+  },
+  "next": {
+    "title": "hooks.rjmlaird.co.uk",
+    "permalink": "/docs/services/platform/hooks"
+  }
+}

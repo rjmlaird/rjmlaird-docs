@@ -32,13 +32,24 @@ This page documents intended design. It is not a security audit, and it is not l
 | Webhooks | Signature verification on every inbound request | In development |
 | Public data | `hooks` exposes no portfolio data or customer lists | Owner-stated design |
 
+## Estate-wide access rules
+
+| Rule | Detail |
+| --- | --- |
+| Restricted by default | Protocol, integration, ingestion, management and operational services deny anonymous access unless their page says otherwise |
+| Edge first | Cloudflare Access is the primary edge control for protected hostnames where configured. Workers still validate the assertion or apply their own authorisation |
+| Machines are not people | Automated clients use service tokens or scoped credentials, never interactive sign-in |
+| Least privilege | Each Worker is bound only to the storage, queues and secrets it needs |
+| Public means curated | Public services serve only content approved for publication |
+| Nothing sensitive in public docs | No secrets, account or binding identifiers, internal hostnames, bucket names, private URLs or exact access-policy rules |
+
 ## The shared session cookie
 
 The design shares one session cookie across `*.rjmlaird.co.uk`. This gives single sign-on across the ecosystem, but it has a consequence that shapes other decisions: **every subdomain is inside the same trust zone**. Any page on any subdomain receives the cookie.
 
 Practical rules that follow:
 
-1. Never host untrusted or user-generated content on any subdomain. This is one reason to avoid `upload` and `sandbox`.
+1. Never host or serve untrusted or user-generated content on any subdomain. This is why [upload](../services/platform/upload.md) must be restricted, accept programmatic writes only and never deliver what it receives, and why `sandbox` is avoided.
 2. Treat a compromise of any subdomain as a potential compromise of the session.
 3. Keep the number of subdomains small, and keep the cookie `Secure`, `HttpOnly` and `SameSite`-restricted.
 4. Prefer scoping cookies to the narrowest host that needs them wherever sign-in is not required.
@@ -48,6 +59,8 @@ The cookie's exact attributes, its lifetime, and how an administrator is revoked
 :::
 
 ## Secrets management
+
+Secrets are named in documentation but never shown. Store them as Worker secrets, set them from standard input, rotate them on a schedule and on suspicion of leakage, and never place them in a repository, ticket, chat, catalogue or generated file.
 
 - Secrets are held as **Cloudflare Worker secrets**, not in repositories (the wiki's Notion token is the stated case).
 - The docs workflow needs no custom secrets.

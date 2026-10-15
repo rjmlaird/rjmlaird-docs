@@ -11,17 +11,12 @@
   "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/intro.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedAt": 1791550336000,
+  "lastUpdatedAt": 1792007214000,
   "sidebarPosition": 1,
   "frontMatter": {
     "id": "intro",
     "title": "Introduction",
     "slug": "/intro",
     "sidebar_position": 1
-  },
-  "sidebar": "docs",
-  "next": {
-    "title": "Installation",
-    "permalink": "/docs/getting-started/installation"
   }
 }

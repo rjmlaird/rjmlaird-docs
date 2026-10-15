@@ -1,0 +1,55 @@
+{
+  "id": "services/platform/master",
+  "title": "master (control plane)",
+  "description": "A concept, not a deployed hostname: the canonical manifests that describe the estate.",
+  "source": "@site/docs/services/platform/master.md",
+  "sourceDirName": "services/platform",
+  "slug": "/services/platform/master",
+  "permalink": "/docs/services/platform/master",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/services/platform/master.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "service",
+      "permalink": "/docs/tags/service"
+    },
+    {
+      "inline": true,
+      "label": "concept",
+      "permalink": "/docs/tags/concept"
+    },
+    {
+      "inline": true,
+      "label": "control-plane",
+      "permalink": "/docs/tags/control-plane"
+    }
+  ],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "master (control plane)",
+    "description": "A concept, not a deployed hostname: the canonical manifests that describe the estate.",
+    "sidebar_position": 1,
+    "tags": [
+      "service",
+      "concept",
+      "control-plane"
+    ],
+    "visibility": "public",
+    "lifecycle": "planned",
+    "confidence": "Unverified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "dav.rjmlaird.co.uk",
+    "permalink": "/docs/services/platform/dav"
+  },
+  "next": {
+    "title": "Configuration",
+    "permalink": "/docs/guides/configuration"
+  }
+}

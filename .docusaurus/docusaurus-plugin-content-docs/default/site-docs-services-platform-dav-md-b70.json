@@ -1,0 +1,67 @@
+{
+  "id": "services/platform/dav",
+  "title": "dav.rjmlaird.co.uk",
+  "description": "Private WebDAV attachment storage for Zotero. It is not a public file host.",
+  "source": "@site/docs/services/platform/dav.md",
+  "sourceDirName": "services/platform",
+  "slug": "/services/platform/dav",
+  "permalink": "/docs/services/platform/dav",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/services/platform/dav.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "service",
+      "permalink": "/docs/tags/service"
+    },
+    {
+      "inline": true,
+      "label": "restricted",
+      "permalink": "/docs/tags/restricted"
+    },
+    {
+      "inline": true,
+      "label": "storage",
+      "permalink": "/docs/tags/storage"
+    },
+    {
+      "inline": true,
+      "label": "webdav",
+      "permalink": "/docs/tags/webdav"
+    },
+    {
+      "inline": true,
+      "label": "zotero",
+      "permalink": "/docs/tags/zotero"
+    }
+  ],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "dav.rjmlaird.co.uk",
+    "description": "Private WebDAV attachment storage for Zotero. It is not a public file host.",
+    "sidebar_position": 5,
+    "tags": [
+      "service",
+      "restricted",
+      "storage",
+      "webdav",
+      "zotero"
+    ],
+    "visibility": "restricted",
+    "lifecycle": "planned",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "booking.rjmlaird.co.uk",
+    "permalink": "/docs/services/platform/booking"
+  },
+  "next": {
+    "title": "master (control plane)",
+    "permalink": "/docs/services/platform/master"
+  }
+}
