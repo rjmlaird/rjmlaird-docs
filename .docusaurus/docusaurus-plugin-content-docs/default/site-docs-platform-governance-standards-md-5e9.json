@@ -1,0 +1,34 @@
+{
+  "id": "platform/governance/standards",
+  "title": "Naming conventions and standards",
+  "description": "Naming rules for hostnames, repositories, Workers and routes, plus the page template, front matter, status labels and callout conventions for architecture documentation.",
+  "source": "@site/docs/platform/governance/standards.md",
+  "sourceDirName": "platform/governance",
+  "slug": "/platform/governance/standards",
+  "permalink": "/docs/platform/governance/standards",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/platform/governance/standards.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "id": "standards",
+    "title": "Naming conventions and standards",
+    "description": "Naming rules for hostnames, repositories, Workers and routes, plus the page template, front matter, status labels and callout conventions for architecture documentation.",
+    "sidebar_position": 11,
+    "status": "Draft",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-11T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Media, assets and CDN strategy",
+    "permalink": "/docs/platform/architecture/media-assets-cdn"
+  },
+  "next": {
+    "title": "Security, privacy and access control",
+    "permalink": "/docs/platform/governance/security-privacy-access"
+  }
+}

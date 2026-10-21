@@ -1,0 +1,28 @@
+{
+  "id": "start-here/overview",
+  "title": "Start here",
+  "description": "Orientation for contributors and readers of the RJM Laird digital platform documentation.",
+  "source": "@site/docs/start-here/overview.md",
+  "sourceDirName": "start-here",
+  "slug": "/start-here/overview",
+  "permalink": "/docs/start-here/overview",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/start-here/overview.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "title": "Start here",
+    "description": "Orientation for contributors and readers of the RJM Laird digital platform documentation."
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "RJM Laird platform documentation",
+    "permalink": "/docs/"
+  },
+  "next": {
+    "title": "Platform map",
+    "permalink": "/docs/start-here/platform-map"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "catalogue/service-template",
+  "title": "Service documentation template",
+  "description": "Reusable structure for documenting a first-party service.",
+  "source": "@site/docs/catalogue/service-template.md",
+  "sourceDirName": "catalogue",
+  "slug": "/catalogue/service-template",
+  "permalink": "/docs/catalogue/service-template",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/catalogue/service-template.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "title": "Service documentation template",
+    "description": "Reusable structure for documenting a first-party service."
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Customer journeys",
+    "permalink": "/docs/catalogue/first-party/customer-journeys"
+  },
+  "next": {
+    "title": "Cal.com",
+    "permalink": "/docs/catalogue/external-integrations/calcom"
+  }
+}

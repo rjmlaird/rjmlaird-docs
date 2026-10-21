@@ -1,0 +1,34 @@
+{
+  "id": "platform/architecture/content-platform",
+  "title": "Content platform architecture",
+  "description": "How content for rjmlaird.co.uk and docs.rjmlaird.co.uk is authored, validated and rendered, including the shared brand system and its known synchronisation gap.",
+  "source": "@site/docs/platform/architecture/content-platform.md",
+  "sourceDirName": "platform/architecture",
+  "slug": "/platform/architecture/content-platform",
+  "permalink": "/docs/platform/architecture/content-platform",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/platform/architecture/content-platform.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "id": "content-platform",
+    "title": "Content platform architecture",
+    "description": "How content for rjmlaird.co.uk and docs.rjmlaird.co.uk is authored, validated and rendered, including the shared brand system and its known synchronisation gap.",
+    "sidebar_position": 5,
+    "status": "Draft",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-11T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Domain and DNS model",
+    "permalink": "/docs/platform/domain-model"
+  },
+  "next": {
+    "title": "APIs and integrations",
+    "permalink": "/docs/platform/architecture/apis-integrations"
+  }
+}

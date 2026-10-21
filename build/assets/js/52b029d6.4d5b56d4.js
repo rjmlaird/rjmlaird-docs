@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkrjmlaird_docs||=[]).push([[4257],{61162(s){s.exports=JSON.parse('{"to":"/docs/platform/decisions"}')}}]);

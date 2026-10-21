@@ -1,0 +1,28 @@
+{
+  "id": "catalogue/index",
+  "title": "Service catalogue",
+  "description": "Canonical documentation entry points for first-party services and external integrations.",
+  "source": "@site/docs/catalogue/index.md",
+  "sourceDirName": "catalogue",
+  "slug": "/catalogue/",
+  "permalink": "/docs/catalogue/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/catalogue/index.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "title": "Service catalogue",
+    "description": "Canonical documentation entry points for first-party services and external integrations."
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Roadmap and decision log",
+    "permalink": "/docs/platform/roadmap"
+  },
+  "next": {
+    "title": "Services overview",
+    "permalink": "/docs/catalogue/first-party/"
+  }
+}

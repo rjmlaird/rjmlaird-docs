@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkrjmlaird_docs||=[]).push([[7010],{57625(s){s.exports=JSON.parse('{"to":"/docs/platform/governance/environments"}')}}]);

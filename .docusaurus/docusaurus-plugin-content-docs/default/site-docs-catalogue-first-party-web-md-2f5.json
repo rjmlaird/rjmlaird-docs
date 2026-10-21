@@ -1,0 +1,57 @@
+{
+  "id": "catalogue/first-party/web",
+  "title": "rjmlaird.co.uk",
+  "description": "The canonical public site for the rjmlaird.co.uk brand, writing, research, projects and contact routes.",
+  "source": "@site/docs/catalogue/first-party/web.md",
+  "sourceDirName": "catalogue/first-party",
+  "slug": "/catalogue/first-party/web",
+  "permalink": "/docs/catalogue/first-party/web",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/catalogue/first-party/web.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "service",
+      "permalink": "/docs/tags/service"
+    },
+    {
+      "inline": true,
+      "label": "public",
+      "permalink": "/docs/tags/public"
+    },
+    {
+      "inline": true,
+      "label": "website",
+      "permalink": "/docs/tags/website"
+    }
+  ],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "rjmlaird.co.uk",
+    "description": "The canonical public site for the rjmlaird.co.uk brand, writing, research, projects and contact routes.",
+    "owner": "To confirm",
+    "review_cycle": "6 months",
+    "sidebar_position": 1,
+    "tags": [
+      "service",
+      "public",
+      "website"
+    ],
+    "visibility": "public",
+    "lifecycle": "active",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Platform services",
+    "permalink": "/docs/catalogue/first-party/platform-services"
+  },
+  "next": {
+    "title": "docs.rjmlaird.co.uk",
+    "permalink": "/docs/catalogue/first-party/docs"
+  }
+}

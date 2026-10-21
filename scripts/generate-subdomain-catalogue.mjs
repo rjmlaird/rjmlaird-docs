@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Generates docs/architecture/generated/subdomain-catalogue.md from data/subdomains.json.
+// Generates docs/catalogue/generated/subdomain-catalogue.md from data/subdomains.json.
 // No dependencies, no network access. Use --check to fail if the committed output is stale.
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { dirname, relative, resolve, posix } from 'node:path';
@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const SOURCE = 'data/subdomains.json';
 const SCHEMA = 'schemas/subdomains.schema.json';
-const OUTPUT = 'docs/architecture/generated/subdomain-catalogue.md';
+const OUTPUT = 'docs/catalogue/generated/subdomain-catalogue.md';
 const check = process.argv.includes('--check');
 
 const fail = (errors) => {
@@ -92,7 +92,7 @@ const lines = [
   `This table is generated from \`${SOURCE}\`. Edit that file and run \`pnpm run docs:generate\`; changes made here are overwritten.`,
   ':::',
   '',
-  `Catalogue version ${catalogue.version}, dated ${catalogue.updated}. Lifecycle shows intent unless the service page says it is verified. Definitions are in the [subdomain catalogue](../subdomain-catalogue.md).`,
+  `Catalogue version ${catalogue.version}, dated ${catalogue.updated}. Lifecycle shows intent unless the service page says it is verified. Definitions are in the [subdomain catalogue](../../platform/governance/subdomains.md).`,
   '',
   '| Hostname | Service | Purpose | Classification | Visibility | Lifecycle | Documentation |',
   '| --- | --- | --- | --- | --- | --- | --- |',

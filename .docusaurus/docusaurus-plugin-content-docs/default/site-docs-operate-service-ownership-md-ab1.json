@@ -1,0 +1,28 @@
+{
+  "id": "operate/service-ownership",
+  "title": "Service ownership",
+  "description": "Ownership and review expectations for first-party services, integrations and operational documentation.",
+  "source": "@site/docs/operate/service-ownership.md",
+  "sourceDirName": "operate",
+  "slug": "/operate/service-ownership",
+  "permalink": "/docs/operate/service-ownership",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/operate/service-ownership.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "title": "Service ownership",
+    "description": "Ownership and review expectations for first-party services, integrations and operational documentation."
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Client delivery Worker",
+    "permalink": "/docs/build/reference/client-delivery"
+  },
+  "next": {
+    "title": "Launch checklist",
+    "permalink": "/docs/operate/launch-checklist"
+  }
+}

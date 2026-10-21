@@ -1,0 +1,28 @@
+{
+  "id": "start-here/platform-map",
+  "title": "Platform map",
+  "description": "A high-level map of first-party services, integration boundaries and shared platform layers.",
+  "source": "@site/docs/start-here/platform-map.md",
+  "sourceDirName": "start-here",
+  "slug": "/start-here/platform-map",
+  "permalink": "/docs/start-here/platform-map",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/start-here/platform-map.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "title": "Platform map",
+    "description": "A high-level map of first-party services, integration boundaries and shared platform layers."
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Start here",
+    "permalink": "/docs/start-here/overview"
+  },
+  "next": {
+    "title": "Terminology",
+    "permalink": "/docs/start-here/terminology"
+  }
+}

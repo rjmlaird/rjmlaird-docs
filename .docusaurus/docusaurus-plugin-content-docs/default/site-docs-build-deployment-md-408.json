@@ -1,0 +1,30 @@
+{
+  "id": "build/deployment",
+  "title": "Deployment",
+  "description": "Build",
+  "source": "@site/docs/build/deployment.md",
+  "sourceDirName": "build",
+  "slug": "/build/deployment",
+  "permalink": "/docs/build/deployment",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/build/deployment.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "deployment",
+    "title": "Deployment",
+    "sidebar_position": 2
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Configuration",
+    "permalink": "/docs/build/configuration"
+  },
+  "next": {
+    "title": "Adding a service",
+    "permalink": "/docs/build/adding-a-service"
+  }
+}

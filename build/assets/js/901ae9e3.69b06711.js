@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkrjmlaird_docs||=[]).push([[9552],{40222(e){e.exports=JSON.parse('{"to":"/docs/build/reference/client-delivery"}')}}]);

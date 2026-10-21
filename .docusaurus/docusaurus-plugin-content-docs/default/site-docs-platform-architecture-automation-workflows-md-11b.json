@@ -1,0 +1,34 @@
+{
+  "id": "platform/architecture/automation-workflows",
+  "title": "Automation and workflows",
+  "description": "The scheduled jobs, queue consumers and CI workflows that run without manual intervention, and the principles for building new ones safely.",
+  "source": "@site/docs/platform/architecture/automation-workflows.md",
+  "sourceDirName": "platform/architecture",
+  "slug": "/platform/architecture/automation-workflows",
+  "permalink": "/docs/platform/architecture/automation-workflows",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/platform/architecture/automation-workflows.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "id": "automation-workflows",
+    "title": "Automation and workflows",
+    "description": "The scheduled jobs, queue consumers and CI workflows that run without manual intervention, and the principles for building new ones safely.",
+    "sidebar_position": 8,
+    "status": "Draft",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-11T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "APIs and integrations",
+    "permalink": "/docs/platform/architecture/apis-integrations"
+  },
+  "next": {
+    "title": "Media, assets and CDN strategy",
+    "permalink": "/docs/platform/architecture/media-assets-cdn"
+  }
+}

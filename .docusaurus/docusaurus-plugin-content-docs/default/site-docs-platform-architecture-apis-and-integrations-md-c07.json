@@ -1,0 +1,34 @@
+{
+  "id": "platform/architecture/apis-integrations",
+  "title": "APIs and integrations",
+  "description": "The services behind rjmlaird.co.uk, how they are separated, the conventions they follow and the third-party systems they connect to.",
+  "source": "@site/docs/platform/architecture/apis-and-integrations.md",
+  "sourceDirName": "platform/architecture",
+  "slug": "/platform/architecture/apis-integrations",
+  "permalink": "/docs/platform/architecture/apis-integrations",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/platform/architecture/apis-and-integrations.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "id": "apis-integrations",
+    "title": "APIs and integrations",
+    "description": "The services behind rjmlaird.co.uk, how they are separated, the conventions they follow and the third-party systems they connect to.",
+    "sidebar_position": 7,
+    "status": "Draft",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-11T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Content platform architecture",
+    "permalink": "/docs/platform/architecture/content-platform"
+  },
+  "next": {
+    "title": "Automation and workflows",
+    "permalink": "/docs/platform/architecture/automation-workflows"
+  }
+}

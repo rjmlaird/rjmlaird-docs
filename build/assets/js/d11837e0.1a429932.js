@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkrjmlaird_docs||=[]).push([[9036],{58397(s){s.exports=JSON.parse('{"to":"/docs/platform/architecture/media-and-assets"}')}}]);

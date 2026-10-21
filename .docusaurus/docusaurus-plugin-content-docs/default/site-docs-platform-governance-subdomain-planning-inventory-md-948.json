@@ -1,0 +1,34 @@
+{
+  "id": "platform/governance/subdomain-planning-inventory",
+  "title": "Subdomain planning inventory",
+  "description": "The original planning inventory of candidate subdomains with keep, merge, defer or avoid recommendations. Superseded for status by the canonical catalogue.",
+  "source": "@site/docs/platform/governance/subdomain-planning-inventory.md",
+  "sourceDirName": "platform/governance",
+  "slug": "/platform/governance/subdomain-planning-inventory",
+  "permalink": "/docs/platform/governance/subdomain-planning-inventory",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/platform/governance/subdomain-planning-inventory.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "id": "subdomain-planning-inventory",
+    "title": "Subdomain planning inventory",
+    "description": "The original planning inventory of candidate subdomains with keep, merge, defer or avoid recommendations. Superseded for status by the canonical catalogue.",
+    "sidebar_position": 4,
+    "status": "Draft",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Subdomain catalogue",
+    "permalink": "/docs/platform/governance/subdomain-catalogue"
+  },
+  "next": {
+    "title": "Architecture decision records",
+    "permalink": "/docs/platform/decisions/"
+  }
+}

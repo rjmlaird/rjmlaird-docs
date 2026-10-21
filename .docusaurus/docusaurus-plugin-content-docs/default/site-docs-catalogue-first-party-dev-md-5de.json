@@ -1,0 +1,63 @@
+{
+  "id": "catalogue/first-party/dev",
+  "title": "dev.rjmlaird.co.uk",
+  "description": "A reserved hostname for developer-facing resources and release workflow. Nothing is deployed.",
+  "source": "@site/docs/catalogue/first-party/dev.md",
+  "sourceDirName": "catalogue/first-party",
+  "slug": "/catalogue/first-party/dev",
+  "permalink": "/docs/catalogue/first-party/dev",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/catalogue/first-party/dev.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "service",
+      "permalink": "/docs/tags/service"
+    },
+    {
+      "inline": true,
+      "label": "public",
+      "permalink": "/docs/tags/public"
+    },
+    {
+      "inline": true,
+      "label": "developer",
+      "permalink": "/docs/tags/developer"
+    },
+    {
+      "inline": true,
+      "label": "reserved",
+      "permalink": "/docs/tags/reserved"
+    }
+  ],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "dev.rjmlaird.co.uk",
+    "description": "A reserved hostname for developer-facing resources and release workflow. Nothing is deployed.",
+    "owner": "To confirm",
+    "review_cycle": "6 months",
+    "sidebar_position": 1,
+    "tags": [
+      "service",
+      "public",
+      "developer",
+      "reserved"
+    ],
+    "visibility": "public",
+    "lifecycle": "reserved",
+    "confidence": "Unverified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "upload.rjmlaird.co.uk",
+    "permalink": "/docs/catalogue/first-party/upload"
+  },
+  "next": {
+    "title": "apps.rjmlaird.co.uk",
+    "permalink": "/docs/catalogue/first-party/apps"
+  }
+}

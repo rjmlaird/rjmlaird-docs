@@ -1,0 +1,34 @@
+{
+  "id": "operate/launch-checklist",
+  "title": "Launch checklist",
+  "description": "Everything that must be configured, decided or built before the services system goes live, grouped by platform, with links to the detailed pages.",
+  "source": "@site/docs/operate/launch-readiness.md",
+  "sourceDirName": "operate",
+  "slug": "/operate/launch-checklist",
+  "permalink": "/docs/operate/launch-checklist",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/operate/launch-readiness.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "launch-checklist",
+    "title": "Launch checklist",
+    "description": "Everything that must be configured, decided or built before the services system goes live, grouped by platform, with links to the detailed pages.",
+    "sidebar_position": 2,
+    "status": "In development",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Service ownership",
+    "permalink": "/docs/operate/service-ownership"
+  },
+  "next": {
+    "title": "Incident response",
+    "permalink": "/docs/operate/incident-response"
+  }
+}

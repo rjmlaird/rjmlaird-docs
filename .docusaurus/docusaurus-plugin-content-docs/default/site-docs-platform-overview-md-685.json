@@ -1,0 +1,34 @@
+{
+  "id": "platform/overview",
+  "title": "Architecture overview",
+  "description": "A map of the rjmlaird.co.uk ecosystem, showing what is live, what is being built and what is only planned, plus the principles that govern how the pieces fit together.",
+  "source": "@site/docs/platform/overview.md",
+  "sourceDirName": "platform",
+  "slug": "/platform/overview",
+  "permalink": "/docs/platform/overview",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/platform/overview.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "overview",
+    "title": "Architecture overview",
+    "description": "A map of the rjmlaird.co.uk ecosystem, showing what is live, what is being built and what is only planned, plus the principles that govern how the pieces fit together.",
+    "sidebar_position": 1,
+    "status": "Draft",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-11T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Writing and versioning docs",
+    "permalink": "/docs/start-here/writing-docs"
+  },
+  "next": {
+    "title": "Domain and DNS model",
+    "permalink": "/docs/platform/domain-model"
+  }
+}

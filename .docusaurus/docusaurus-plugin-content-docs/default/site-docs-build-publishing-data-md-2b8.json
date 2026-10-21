@@ -1,0 +1,30 @@
+{
+  "id": "build/publishing-data",
+  "title": "Publishing data",
+  "description": "The review workflow for publishing a dataset through the public reference-data service, including licence, attribution and withdrawal.",
+  "source": "@site/docs/build/publishing-data.md",
+  "sourceDirName": "build",
+  "slug": "/build/publishing-data",
+  "permalink": "/docs/build/publishing-data",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/build/publishing-data.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Publishing data",
+    "description": "The review workflow for publishing a dataset through the public reference-data service, including licence, attribution and withdrawal.",
+    "sidebar_position": 4
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Adding a service",
+    "permalink": "/docs/build/adding-a-service"
+  },
+  "next": {
+    "title": "API overview",
+    "permalink": "/docs/build/api/overview"
+  }
+}

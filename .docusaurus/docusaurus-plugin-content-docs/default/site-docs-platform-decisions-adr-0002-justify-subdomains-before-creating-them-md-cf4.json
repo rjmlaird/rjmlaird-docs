@@ -1,0 +1,32 @@
+{
+  "id": "platform/decisions/ADR-0002-justify-subdomains-before-creating-them",
+  "title": "ADR-0002: Justify subdomains before creating them",
+  "description": "A subdomain is created only if it needs a different runtime, security boundary, audience or external platform; otherwise content is delivered as a path.",
+  "source": "@site/docs/platform/decisions/ADR-0002-justify-subdomains-before-creating-them.md",
+  "sourceDirName": "platform/decisions",
+  "slug": "/platform/decisions/ADR-0002-justify-subdomains-before-creating-them",
+  "permalink": "/docs/platform/decisions/ADR-0002-justify-subdomains-before-creating-them",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/platform/decisions/ADR-0002-justify-subdomains-before-creating-them.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "ADR-0002-justify-subdomains-before-creating-them",
+    "title": "ADR-0002: Justify subdomains before creating them",
+    "description": "A subdomain is created only if it needs a different runtime, security boundary, audience or external platform; otherwise content is delivered as a path.",
+    "status": "Proposed",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-11T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "ADR-0001: Docusaurus on GitHub Pages for the docs",
+    "permalink": "/docs/platform/decisions/ADR-0001-docusaurus-on-github-pages"
+  },
+  "next": {
+    "title": "ADR-0003: Separate the public API from the webhook services",
+    "permalink": "/docs/platform/decisions/ADR-0003-separate-public-api-from-webhook-services"
+  }
+}

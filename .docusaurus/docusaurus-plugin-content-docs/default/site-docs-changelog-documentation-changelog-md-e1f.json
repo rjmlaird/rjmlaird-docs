@@ -1,0 +1,24 @@
+{
+  "id": "changelog/documentation-changelog",
+  "title": "Documentation changelog",
+  "description": "Significant changes to the documentation structure, governance and validation.",
+  "source": "@site/docs/changelog/documentation-changelog.md",
+  "sourceDirName": "changelog",
+  "slug": "/changelog/documentation-changelog",
+  "permalink": "/docs/changelog/documentation-changelog",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/changelog/documentation-changelog.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "title": "Documentation changelog",
+    "description": "Significant changes to the documentation structure, governance and validation."
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Webhook failures",
+    "permalink": "/docs/operate/runbooks/webhook-failures"
+  }
+}

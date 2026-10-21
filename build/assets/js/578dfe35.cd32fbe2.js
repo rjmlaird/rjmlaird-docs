@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkrjmlaird_docs||=[]).push([[3316],{589(s){s.exports=JSON.parse('{"to":"/docs/platform/decisions/ADR-0002-justify-subdomains-before-creating-them"}')}}]);

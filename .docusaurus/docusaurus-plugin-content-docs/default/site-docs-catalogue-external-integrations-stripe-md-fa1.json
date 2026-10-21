@@ -1,0 +1,36 @@
+{
+  "id": "catalogue/external-integrations/stripe",
+  "title": "Stripe",
+  "description": "How Stripe Checkout and webhooks are set up for the services system, how signatures are verified, how duplicates are handled and how to recover missed events.",
+  "source": "@site/docs/catalogue/external-integrations/stripe.md",
+  "sourceDirName": "catalogue/external-integrations",
+  "slug": "/catalogue/external-integrations/stripe",
+  "permalink": "/docs/catalogue/external-integrations/stripe",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/catalogue/external-integrations/stripe.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "stripe",
+    "title": "Stripe",
+    "description": "How Stripe Checkout and webhooks are set up for the services system, how signatures are verified, how duplicates are handled and how to recover missed events.",
+    "owner": "To confirm",
+    "review_cycle": "6 months",
+    "sidebar_position": 1,
+    "status": "In development",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "HubSpot",
+    "permalink": "/docs/catalogue/external-integrations/hubspot"
+  },
+  "next": {
+    "title": "Generated service catalogue",
+    "permalink": "/docs/catalogue/generated/subdomain-catalogue"
+  }
+}

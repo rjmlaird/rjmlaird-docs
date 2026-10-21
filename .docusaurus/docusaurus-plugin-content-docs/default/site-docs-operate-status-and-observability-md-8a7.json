@@ -1,0 +1,34 @@
+{
+  "id": "operate/observability-status",
+  "title": "Observability, status and incident response",
+  "description": "How the health of the ecosystem is monitored, how status is communicated and what to do when something breaks. Mostly proposed; little is confirmed.",
+  "source": "@site/docs/operate/status-and-observability.md",
+  "sourceDirName": "operate",
+  "slug": "/operate/observability-status",
+  "permalink": "/docs/operate/observability-status",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/operate/status-and-observability.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "id": "observability-status",
+    "title": "Observability, status and incident response",
+    "description": "How the health of the ecosystem is monitored, how status is communicated and what to do when something breaks. Mostly proposed; little is confirmed.",
+    "sidebar_position": 10,
+    "status": "Proposed",
+    "confidence": "Unverified",
+    "last_reviewed": "2026-10-11T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Incident response",
+    "permalink": "/docs/operate/incident-response"
+  },
+  "next": {
+    "title": "Secret rotation",
+    "permalink": "/docs/operate/runbooks/secret-rotation"
+  }
+}

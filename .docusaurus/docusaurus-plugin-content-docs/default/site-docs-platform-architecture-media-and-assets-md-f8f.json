@@ -1,0 +1,34 @@
+{
+  "id": "platform/architecture/media-assets-cdn",
+  "title": "Media, assets and CDN strategy",
+  "description": "How images, files and static assets are stored, cached and delivered for rjmlaird.co.uk using Cloudflare, with a single public asset host, strictly separate private storage, and explicit trade-offs.",
+  "source": "@site/docs/platform/architecture/media-and-assets.md",
+  "sourceDirName": "platform/architecture",
+  "slug": "/platform/architecture/media-assets-cdn",
+  "permalink": "/docs/platform/architecture/media-assets-cdn",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/platform/architecture/media-and-assets.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "id": "media-assets-cdn",
+    "title": "Media, assets and CDN strategy",
+    "description": "How images, files and static assets are stored, cached and delivered for rjmlaird.co.uk using Cloudflare, with a single public asset host, strictly separate private storage, and explicit trade-offs.",
+    "sidebar_position": 6,
+    "status": "Proposed",
+    "confidence": "Unverified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Automation and workflows",
+    "permalink": "/docs/platform/architecture/automation-workflows"
+  },
+  "next": {
+    "title": "Naming conventions and standards",
+    "permalink": "/docs/platform/governance/standards"
+  }
+}

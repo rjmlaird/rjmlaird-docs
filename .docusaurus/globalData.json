@@ -8,308 +8,344 @@
           "label": "Next",
           "isLast": true,
           "path": "/docs",
-          "mainDocId": "getting-started/installation",
+          "mainDocId": "index",
           "docs": [
             {
-              "id": "api/overview",
-              "path": "/docs/api/overview"
-            },
-            {
-              "id": "architecture/adrs/ADR-0001-docusaurus-on-github-pages",
-              "path": "/docs/architecture/adrs/ADR-0001-docusaurus-on-github-pages",
+              "id": "build/adding-a-service",
+              "path": "/docs/build/adding-a-service",
               "sidebar": "docs"
             },
             {
-              "id": "architecture/adrs/ADR-0002-justify-subdomains-before-creating-them",
-              "path": "/docs/architecture/adrs/ADR-0002-justify-subdomains-before-creating-them",
+              "id": "build/api/overview",
+              "path": "/docs/build/api/overview",
               "sidebar": "docs"
             },
             {
-              "id": "architecture/adrs/ADR-0003-separate-public-api-from-webhook-services",
-              "path": "/docs/architecture/adrs/ADR-0003-separate-public-api-from-webhook-services",
+              "id": "build/configuration",
+              "path": "/docs/build/configuration",
               "sidebar": "docs"
             },
             {
-              "id": "architecture/adrs/index",
-              "path": "/docs/architecture/adrs/",
+              "id": "build/deployment",
+              "path": "/docs/build/deployment",
               "sidebar": "docs"
             },
             {
-              "id": "architecture/apis-integrations",
-              "path": "/docs/architecture/apis-integrations",
+              "id": "build/publishing-data",
+              "path": "/docs/build/publishing-data",
               "sidebar": "docs"
             },
             {
-              "id": "architecture/automation-workflows",
-              "path": "/docs/architecture/automation-workflows",
+              "id": "build/reference/client-delivery",
+              "path": "/docs/build/reference/client-delivery",
               "sidebar": "docs"
             },
             {
-              "id": "architecture/content-platform",
-              "path": "/docs/architecture/content-platform",
+              "id": "build/reference/configuration",
+              "path": "/docs/build/reference/configuration",
               "sidebar": "docs"
             },
             {
-              "id": "architecture/domain-model",
-              "path": "/docs/architecture/domain-model",
+              "id": "build/reference/data-model",
+              "path": "/docs/build/reference/data-model",
               "sidebar": "docs"
             },
             {
-              "id": "architecture/environments",
-              "path": "/docs/architecture/environments",
+              "id": "build/reference/events",
+              "path": "/docs/build/reference/events",
               "sidebar": "docs"
             },
             {
-              "id": "architecture/generated/subdomain-catalogue",
-              "path": "/docs/architecture/generated/subdomain-catalogue"
-            },
-            {
-              "id": "architecture/media-assets-cdn",
-              "path": "/docs/architecture/media-assets-cdn",
+              "id": "build/reference/http-contracts",
+              "path": "/docs/build/reference/http-contracts",
               "sidebar": "docs"
             },
             {
-              "id": "architecture/observability-status",
-              "path": "/docs/architecture/observability-status",
+              "id": "catalogue/external-integrations/calcom",
+              "path": "/docs/catalogue/external-integrations/calcom",
               "sidebar": "docs"
             },
             {
-              "id": "architecture/overview",
-              "path": "/docs/architecture/overview",
+              "id": "catalogue/external-integrations/hubspot",
+              "path": "/docs/catalogue/external-integrations/hubspot",
               "sidebar": "docs"
             },
             {
-              "id": "architecture/roadmap",
-              "path": "/docs/architecture/roadmap",
+              "id": "catalogue/external-integrations/stripe",
+              "path": "/docs/catalogue/external-integrations/stripe",
               "sidebar": "docs"
             },
             {
-              "id": "architecture/security-privacy-access",
-              "path": "/docs/architecture/security-privacy-access",
+              "id": "catalogue/first-party/api",
+              "path": "/docs/catalogue/first-party/api",
               "sidebar": "docs"
             },
             {
-              "id": "architecture/standards",
-              "path": "/docs/architecture/standards",
+              "id": "catalogue/first-party/apps",
+              "path": "/docs/catalogue/first-party/apps",
               "sidebar": "docs"
             },
             {
-              "id": "architecture/subdomain-catalogue",
-              "path": "/docs/architecture/subdomain-catalogue",
+              "id": "catalogue/first-party/auth",
+              "path": "/docs/catalogue/first-party/auth",
               "sidebar": "docs"
             },
             {
-              "id": "architecture/subdomain-planning-inventory",
-              "path": "/docs/architecture/subdomain-planning-inventory"
-            },
-            {
-              "id": "contributing/writing-docs",
-              "path": "/docs/contributing/writing-docs",
+              "id": "catalogue/first-party/booking",
+              "path": "/docs/catalogue/first-party/booking",
               "sidebar": "docs"
             },
             {
-              "id": "getting-started/installation",
-              "path": "/docs/getting-started/installation",
+              "id": "catalogue/first-party/cdn",
+              "path": "/docs/catalogue/first-party/cdn",
               "sidebar": "docs"
             },
             {
-              "id": "getting-started/quickstart",
-              "path": "/docs/getting-started/quickstart",
+              "id": "catalogue/first-party/customer-journeys",
+              "path": "/docs/catalogue/first-party/customer-journeys",
               "sidebar": "docs"
             },
             {
-              "id": "guides/adding-a-service",
-              "path": "/docs/guides/adding-a-service"
-            },
-            {
-              "id": "guides/configuration",
-              "path": "/docs/guides/configuration",
+              "id": "catalogue/first-party/dam",
+              "path": "/docs/catalogue/first-party/dam",
               "sidebar": "docs"
             },
             {
-              "id": "guides/deployment",
-              "path": "/docs/guides/deployment",
+              "id": "catalogue/first-party/data",
+              "path": "/docs/catalogue/first-party/data",
               "sidebar": "docs"
             },
             {
-              "id": "guides/incident-response",
-              "path": "/docs/guides/incident-response"
-            },
-            {
-              "id": "guides/publishing-data",
-              "path": "/docs/guides/publishing-data"
-            },
-            {
-              "id": "intro",
-              "path": "/docs/intro"
-            },
-            {
-              "id": "services/architecture/customer-journeys",
-              "path": "/docs/services/architecture/customer-journeys",
+              "id": "catalogue/first-party/dav",
+              "path": "/docs/catalogue/first-party/dav",
               "sidebar": "docs"
             },
             {
-              "id": "services/architecture/overview",
-              "path": "/docs/services/architecture/overview",
+              "id": "catalogue/first-party/dev",
+              "path": "/docs/catalogue/first-party/dev",
               "sidebar": "docs"
             },
             {
-              "id": "services/index",
-              "path": "/docs/services/",
+              "id": "catalogue/first-party/docs",
+              "path": "/docs/catalogue/first-party/docs",
               "sidebar": "docs"
             },
             {
-              "id": "services/integrations/calcom",
-              "path": "/docs/services/integrations/calcom",
+              "id": "catalogue/first-party/hooks",
+              "path": "/docs/catalogue/first-party/hooks",
               "sidebar": "docs"
             },
             {
-              "id": "services/integrations/hubspot",
-              "path": "/docs/services/integrations/hubspot",
+              "id": "catalogue/first-party/index",
+              "path": "/docs/catalogue/first-party/",
               "sidebar": "docs"
             },
             {
-              "id": "services/integrations/stripe",
-              "path": "/docs/services/integrations/stripe",
+              "id": "catalogue/first-party/labs",
+              "path": "/docs/catalogue/first-party/labs",
               "sidebar": "docs"
             },
             {
-              "id": "services/launch-checklist",
-              "path": "/docs/services/launch-checklist",
+              "id": "catalogue/first-party/master",
+              "path": "/docs/catalogue/first-party/master",
               "sidebar": "docs"
             },
             {
-              "id": "services/platform/api",
-              "path": "/docs/services/platform/api",
+              "id": "catalogue/first-party/mcp",
+              "path": "/docs/catalogue/first-party/mcp",
               "sidebar": "docs"
             },
             {
-              "id": "services/platform/apps",
-              "path": "/docs/services/platform/apps",
+              "id": "catalogue/first-party/overview",
+              "path": "/docs/catalogue/first-party/overview"
+            },
+            {
+              "id": "catalogue/first-party/platform-services",
+              "path": "/docs/catalogue/first-party/platform-services",
               "sidebar": "docs"
             },
             {
-              "id": "services/platform/auth",
-              "path": "/docs/services/platform/auth",
+              "id": "catalogue/first-party/status",
+              "path": "/docs/catalogue/first-party/status",
               "sidebar": "docs"
             },
             {
-              "id": "services/platform/booking",
-              "path": "/docs/services/platform/booking",
+              "id": "catalogue/first-party/tools",
+              "path": "/docs/catalogue/first-party/tools",
               "sidebar": "docs"
             },
             {
-              "id": "services/platform/cdn",
-              "path": "/docs/services/platform/cdn",
+              "id": "catalogue/first-party/upload",
+              "path": "/docs/catalogue/first-party/upload",
               "sidebar": "docs"
             },
             {
-              "id": "services/platform/dam",
-              "path": "/docs/services/platform/dam",
+              "id": "catalogue/first-party/web",
+              "path": "/docs/catalogue/first-party/web",
               "sidebar": "docs"
             },
             {
-              "id": "services/platform/data",
-              "path": "/docs/services/platform/data",
+              "id": "catalogue/generated/subdomain-catalogue",
+              "path": "/docs/catalogue/generated/subdomain-catalogue",
               "sidebar": "docs"
             },
             {
-              "id": "services/platform/dav",
-              "path": "/docs/services/platform/dav",
+              "id": "catalogue/index",
+              "path": "/docs/catalogue/",
               "sidebar": "docs"
             },
             {
-              "id": "services/platform/dev",
-              "path": "/docs/services/platform/dev",
+              "id": "catalogue/service-template",
+              "path": "/docs/catalogue/service-template",
               "sidebar": "docs"
             },
             {
-              "id": "services/platform/docs",
-              "path": "/docs/services/platform/docs",
+              "id": "changelog/documentation-changelog",
+              "path": "/docs/changelog/documentation-changelog",
               "sidebar": "docs"
             },
             {
-              "id": "services/platform/hooks",
-              "path": "/docs/services/platform/hooks",
+              "id": "index",
+              "path": "/docs/",
               "sidebar": "docs"
             },
             {
-              "id": "services/platform/labs",
-              "path": "/docs/services/platform/labs",
+              "id": "operate/incident-response",
+              "path": "/docs/operate/incident-response",
               "sidebar": "docs"
             },
             {
-              "id": "services/platform/master",
-              "path": "/docs/services/platform/master",
+              "id": "operate/launch-checklist",
+              "path": "/docs/operate/launch-checklist",
               "sidebar": "docs"
             },
             {
-              "id": "services/platform/mcp",
-              "path": "/docs/services/platform/mcp",
+              "id": "operate/observability-status",
+              "path": "/docs/operate/observability-status",
               "sidebar": "docs"
             },
             {
-              "id": "services/platform/overview",
-              "path": "/docs/services/platform/overview",
+              "id": "operate/runbooks/secret-rotation",
+              "path": "/docs/operate/runbooks/secret-rotation",
               "sidebar": "docs"
             },
             {
-              "id": "services/platform/status",
-              "path": "/docs/services/platform/status",
+              "id": "operate/runbooks/webhook-failures",
+              "path": "/docs/operate/runbooks/webhook-failures",
               "sidebar": "docs"
             },
             {
-              "id": "services/platform/tools",
-              "path": "/docs/services/platform/tools",
+              "id": "operate/service-ownership",
+              "path": "/docs/operate/service-ownership",
               "sidebar": "docs"
             },
             {
-              "id": "services/platform/upload",
-              "path": "/docs/services/platform/upload",
+              "id": "platform/architecture/apis-integrations",
+              "path": "/docs/platform/architecture/apis-integrations",
               "sidebar": "docs"
             },
             {
-              "id": "services/platform/web",
-              "path": "/docs/services/platform/web"
-            },
-            {
-              "id": "services/reference/client-delivery",
-              "path": "/docs/services/reference/client-delivery",
+              "id": "platform/architecture/automation-workflows",
+              "path": "/docs/platform/architecture/automation-workflows",
               "sidebar": "docs"
             },
             {
-              "id": "services/reference/configuration",
-              "path": "/docs/services/reference/configuration",
+              "id": "platform/architecture/content-platform",
+              "path": "/docs/platform/architecture/content-platform",
               "sidebar": "docs"
             },
             {
-              "id": "services/reference/data-model",
-              "path": "/docs/services/reference/data-model",
+              "id": "platform/architecture/media-assets-cdn",
+              "path": "/docs/platform/architecture/media-assets-cdn",
               "sidebar": "docs"
             },
             {
-              "id": "services/reference/events",
-              "path": "/docs/services/reference/events",
+              "id": "platform/decisions/ADR-0001-docusaurus-on-github-pages",
+              "path": "/docs/platform/decisions/ADR-0001-docusaurus-on-github-pages",
               "sidebar": "docs"
             },
             {
-              "id": "services/reference/http-contracts",
-              "path": "/docs/services/reference/http-contracts",
+              "id": "platform/decisions/ADR-0002-justify-subdomains-before-creating-them",
+              "path": "/docs/platform/decisions/ADR-0002-justify-subdomains-before-creating-them",
               "sidebar": "docs"
             },
             {
-              "id": "services/runbooks/secret-rotation",
-              "path": "/docs/services/runbooks/secret-rotation",
+              "id": "platform/decisions/ADR-0003-separate-public-api-from-webhook-services",
+              "path": "/docs/platform/decisions/ADR-0003-separate-public-api-from-webhook-services",
               "sidebar": "docs"
             },
             {
-              "id": "services/runbooks/webhook-failures",
-              "path": "/docs/services/runbooks/webhook-failures",
+              "id": "platform/decisions/index",
+              "path": "/docs/platform/decisions/",
               "sidebar": "docs"
             },
             {
-              "id": "tutorials/first-tutorial",
-              "path": "/docs/tutorials/first-tutorial",
+              "id": "platform/domain-model",
+              "path": "/docs/platform/domain-model",
+              "sidebar": "docs"
+            },
+            {
+              "id": "platform/governance/environments",
+              "path": "/docs/platform/governance/environments",
+              "sidebar": "docs"
+            },
+            {
+              "id": "platform/governance/security-privacy-access",
+              "path": "/docs/platform/governance/security-privacy-access",
+              "sidebar": "docs"
+            },
+            {
+              "id": "platform/governance/standards",
+              "path": "/docs/platform/governance/standards",
+              "sidebar": "docs"
+            },
+            {
+              "id": "platform/governance/subdomain-catalogue",
+              "path": "/docs/platform/governance/subdomain-catalogue",
+              "sidebar": "docs"
+            },
+            {
+              "id": "platform/governance/subdomain-planning-inventory",
+              "path": "/docs/platform/governance/subdomain-planning-inventory",
+              "sidebar": "docs"
+            },
+            {
+              "id": "platform/overview",
+              "path": "/docs/platform/overview",
+              "sidebar": "docs"
+            },
+            {
+              "id": "platform/roadmap",
+              "path": "/docs/platform/roadmap",
+              "sidebar": "docs"
+            },
+            {
+              "id": "start-here/installation",
+              "path": "/docs/start-here/installation"
+            },
+            {
+              "id": "start-here/overview",
+              "path": "/docs/start-here/overview",
+              "sidebar": "docs"
+            },
+            {
+              "id": "start-here/platform-map",
+              "path": "/docs/start-here/platform-map",
+              "sidebar": "docs"
+            },
+            {
+              "id": "start-here/quickstart",
+              "path": "/docs/start-here/quickstart",
+              "sidebar": "docs"
+            },
+            {
+              "id": "start-here/terminology",
+              "path": "/docs/start-here/terminology",
+              "sidebar": "docs"
+            },
+            {
+              "id": "start-here/writing-docs",
+              "path": "/docs/start-here/writing-docs",
               "sidebar": "docs"
             }
           ],
@@ -317,8 +353,8 @@
           "sidebars": {
             "docs": {
               "link": {
-                "path": "/docs/getting-started/installation",
-                "label": "getting-started/installation"
+                "path": "/docs/",
+                "label": "index"
               }
             }
           }

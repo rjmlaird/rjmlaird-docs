@@ -1,0 +1,34 @@
+{
+  "id": "platform/governance/subdomain-catalogue",
+  "title": "Subdomain catalogue",
+  "description": "How the canonical public service catalogue works, what each field means, when a subdomain is justified and how to change the catalogue.",
+  "source": "@site/docs/platform/governance/subdomains.md",
+  "sourceDirName": "platform/governance",
+  "slug": "/platform/governance/subdomain-catalogue",
+  "permalink": "/docs/platform/governance/subdomain-catalogue",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/platform/governance/subdomains.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "subdomain-catalogue",
+    "title": "Subdomain catalogue",
+    "description": "How the canonical public service catalogue works, what each field means, when a subdomain is justified and how to change the catalogue.",
+    "sidebar_position": 3,
+    "status": "Draft",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Environments and deployment model",
+    "permalink": "/docs/platform/governance/environments"
+  },
+  "next": {
+    "title": "Subdomain planning inventory",
+    "permalink": "/docs/platform/governance/subdomain-planning-inventory"
+  }
+}

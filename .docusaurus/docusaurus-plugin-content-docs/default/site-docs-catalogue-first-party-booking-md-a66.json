@@ -1,0 +1,63 @@
+{
+  "id": "catalogue/first-party/booking",
+  "title": "booking.rjmlaird.co.uk",
+  "description": "The booking integration boundary: service listing, booking intents and hand-off to the scheduling and payment providers.",
+  "source": "@site/docs/catalogue/first-party/booking.md",
+  "sourceDirName": "catalogue/first-party",
+  "slug": "/catalogue/first-party/booking",
+  "permalink": "/docs/catalogue/first-party/booking",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/catalogue/first-party/booking.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "service",
+      "permalink": "/docs/tags/service"
+    },
+    {
+      "inline": true,
+      "label": "public",
+      "permalink": "/docs/tags/public"
+    },
+    {
+      "inline": true,
+      "label": "integration",
+      "permalink": "/docs/tags/integration"
+    },
+    {
+      "inline": true,
+      "label": "booking",
+      "permalink": "/docs/tags/booking"
+    }
+  ],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "booking.rjmlaird.co.uk",
+    "description": "The booking integration boundary: service listing, booking intents and hand-off to the scheduling and payment providers.",
+    "owner": "To confirm",
+    "review_cycle": "6 months",
+    "sidebar_position": 4,
+    "tags": [
+      "service",
+      "public",
+      "integration",
+      "booking"
+    ],
+    "visibility": "public",
+    "lifecycle": "planned",
+    "confidence": "Unverified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "hooks.rjmlaird.co.uk",
+    "permalink": "/docs/catalogue/first-party/hooks"
+  },
+  "next": {
+    "title": "dav.rjmlaird.co.uk",
+    "permalink": "/docs/catalogue/first-party/dav"
+  }
+}

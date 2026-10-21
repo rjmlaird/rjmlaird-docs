@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkrjmlaird_docs||=[]).push([[7445],{11255(s){s.exports=JSON.parse('{"to":"/docs/platform/decisions/ADR-0001-docusaurus-on-github-pages"}')}}]);

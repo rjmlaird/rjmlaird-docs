@@ -1,0 +1,25 @@
+{
+  "id": "catalogue/first-party/overview",
+  "title": "Services architecture",
+  "description": "How the booking, billing and webhook Workers fit together, where the trust boundaries sit, which Worker holds which secret and how delivery stays idempotent.",
+  "source": "@site/docs/catalogue/first-party/service-delivery-architecture.md",
+  "sourceDirName": "catalogue/first-party",
+  "slug": "/catalogue/first-party/overview",
+  "permalink": "/docs/catalogue/first-party/overview",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/catalogue/first-party/service-delivery-architecture.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "overview",
+    "title": "Services architecture",
+    "description": "How the booking, billing and webhook Workers fit together, where the trust boundaries sit, which Worker holds which secret and how delivery stays idempotent.",
+    "sidebar_position": 1,
+    "status": "In development",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "index",
+  "title": "RJM Laird platform documentation",
+  "description": "Public technical overview and contributor knowledge base for the RJM Laird digital platform.",
+  "source": "@site/docs/index.md",
+  "sourceDirName": ".",
+  "slug": "/",
+  "permalink": "/docs/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/index.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "title": "RJM Laird platform documentation",
+    "description": "Public technical overview and contributor knowledge base for the RJM Laird digital platform."
+  },
+  "sidebar": "docs",
+  "next": {
+    "title": "Start here",
+    "permalink": "/docs/start-here/overview"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "build/configuration",
+  "title": "Configuration",
+  "description": "Config file",
+  "source": "@site/docs/build/configuration.md",
+  "sourceDirName": "build",
+  "slug": "/build/configuration",
+  "permalink": "/docs/build/configuration",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/build/configuration.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "configuration",
+    "title": "Configuration",
+    "sidebar_position": 1
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Generated service catalogue",
+    "permalink": "/docs/catalogue/generated/subdomain-catalogue"
+  },
+  "next": {
+    "title": "Deployment",
+    "permalink": "/docs/build/deployment"
+  }
+}

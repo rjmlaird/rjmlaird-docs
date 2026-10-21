@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkrjmlaird_docs||=[]).push([[596],{14939(t){t.exports=JSON.parse('{"to":"/docs/platform/architecture/content-platform"}')}}]);

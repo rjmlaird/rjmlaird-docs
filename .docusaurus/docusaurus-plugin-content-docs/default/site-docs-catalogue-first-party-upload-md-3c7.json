@@ -1,0 +1,63 @@
+{
+  "id": "catalogue/first-party/upload",
+  "title": "upload.rjmlaird.co.uk",
+  "description": "Restricted, controlled ingestion of assets and content. It accepts writes and delivers nothing publicly.",
+  "source": "@site/docs/catalogue/first-party/upload.md",
+  "sourceDirName": "catalogue/first-party",
+  "slug": "/catalogue/first-party/upload",
+  "permalink": "/docs/catalogue/first-party/upload",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/catalogue/first-party/upload.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "service",
+      "permalink": "/docs/tags/service"
+    },
+    {
+      "inline": true,
+      "label": "restricted",
+      "permalink": "/docs/tags/restricted"
+    },
+    {
+      "inline": true,
+      "label": "ingestion",
+      "permalink": "/docs/tags/ingestion"
+    },
+    {
+      "inline": true,
+      "label": "write",
+      "permalink": "/docs/tags/write"
+    }
+  ],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "upload.rjmlaird.co.uk",
+    "description": "Restricted, controlled ingestion of assets and content. It accepts writes and delivers nothing publicly.",
+    "owner": "To confirm",
+    "review_cycle": "6 months",
+    "sidebar_position": 3,
+    "tags": [
+      "service",
+      "restricted",
+      "ingestion",
+      "write"
+    ],
+    "visibility": "restricted",
+    "lifecycle": "planned",
+    "confidence": "Unverified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "dam.rjmlaird.co.uk",
+    "permalink": "/docs/catalogue/first-party/dam"
+  },
+  "next": {
+    "title": "dev.rjmlaird.co.uk",
+    "permalink": "/docs/catalogue/first-party/dev"
+  }
+}

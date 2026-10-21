@@ -1,0 +1,28 @@
+{
+  "id": "start-here/quickstart",
+  "title": "Contributor quickstart",
+  "description": "The shortest safe path to making and validating a documentation change.",
+  "source": "@site/docs/start-here/quickstart.md",
+  "sourceDirName": "start-here",
+  "slug": "/start-here/quickstart",
+  "permalink": "/docs/start-here/quickstart",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/start-here/quickstart.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "title": "Contributor quickstart",
+    "description": "The shortest safe path to making and validating a documentation change."
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Environments and deployment model",
+    "permalink": "/docs/platform/governance/environments"
+  },
+  "next": {
+    "title": "Writing and versioning docs",
+    "permalink": "/docs/start-here/writing-docs"
+  }
+}

@@ -18,7 +18,7 @@ const config: Config = {
   projectName: GITHUB_REPO,
 
   onBrokenLinks: 'throw',
-  onBrokenAnchors: 'warn',
+  onBrokenAnchors: 'throw',
 
   markdown: {
     mermaid: true,
@@ -53,7 +53,10 @@ const config: Config = {
     ],
   ],
 
-  plugins: ['docusaurus-plugin-mermaid-pan-zoom'],
+  plugins: [
+    'docusaurus-plugin-mermaid-pan-zoom',
+    './plugins/legacy-redirects',
+  ],
 
   presets: [
     [
@@ -105,7 +108,7 @@ const config: Config = {
           label: 'Documentation',
         },
         {
-          to: '/docs/api/overview',
+          to: '/docs/build/api/overview',
           label: 'API',
           position: 'left',
         },
@@ -141,15 +144,19 @@ const config: Config = {
           items: [
             {
               label: 'Getting started',
-              to: '/docs/getting-started/installation',
+              to: '/docs/start-here/overview',
+            },
+            {
+              label: 'Access and environments',
+              to: '/docs/platform/governance/environments',
             },
             {
               label: 'Architecture',
-              to: '/docs/architecture/overview',
+              to: '/docs/platform/overview',
             },
             {
               label: 'Deployment',
-              to: '/docs/guides/deployment',
+              to: '/docs/build/deployment',
             },
           ],
         },

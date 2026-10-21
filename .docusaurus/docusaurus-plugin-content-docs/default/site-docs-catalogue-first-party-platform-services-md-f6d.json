@@ -1,0 +1,32 @@
+{
+  "id": "catalogue/first-party/platform-services",
+  "title": "Platform services",
+  "description": "The services in the rjmlaird.co.uk estate, grouped by role, with the boundaries that keep them separate.",
+  "source": "@site/docs/catalogue/first-party/platform-services.md",
+  "sourceDirName": "catalogue/first-party",
+  "slug": "/catalogue/first-party/platform-services",
+  "permalink": "/docs/catalogue/first-party/platform-services",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/catalogue/first-party/platform-services.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Platform services",
+    "description": "The services in the rjmlaird.co.uk estate, grouped by role, with the boundaries that keep them separate.",
+    "sidebar_position": 1,
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Services overview",
+    "permalink": "/docs/catalogue/first-party/"
+  },
+  "next": {
+    "title": "rjmlaird.co.uk",
+    "permalink": "/docs/catalogue/first-party/web"
+  }
+}

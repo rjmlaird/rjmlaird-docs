@@ -1,0 +1,34 @@
+{
+  "id": "platform/decisions/index",
+  "title": "Architecture decision records",
+  "description": "The log of significant architecture decisions for rjmlaird.co.uk, with status, and the backlog of decisions still to be written down.",
+  "source": "@site/docs/platform/decisions/index.md",
+  "sourceDirName": "platform/decisions",
+  "slug": "/platform/decisions/",
+  "permalink": "/docs/platform/decisions/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/platform/decisions/index.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "index",
+    "title": "Architecture decision records",
+    "description": "The log of significant architecture decisions for rjmlaird.co.uk, with status, and the backlog of decisions still to be written down.",
+    "sidebar_position": 1,
+    "status": "Live",
+    "confidence": "Verified",
+    "last_reviewed": "2026-10-11T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Subdomain planning inventory",
+    "permalink": "/docs/platform/governance/subdomain-planning-inventory"
+  },
+  "next": {
+    "title": "ADR-0001: Docusaurus on GitHub Pages for the docs",
+    "permalink": "/docs/platform/decisions/ADR-0001-docusaurus-on-github-pages"
+  }
+}

@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkrjmlaird_docs||=[]).push([[7906],{69862(r){r.exports=JSON.parse('{"to":"/docs/platform/governance/security-and-privacy"}')}}]);

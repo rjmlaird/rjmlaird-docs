@@ -1,0 +1,34 @@
+{
+  "id": "platform/governance/security-privacy-access",
+  "title": "Security, privacy and access control",
+  "description": "Who can reach what across rjmlaird.co.uk, how secrets and sessions are handled, and the privacy considerations that follow from the integrations in use.",
+  "source": "@site/docs/platform/governance/security-and-privacy.md",
+  "sourceDirName": "platform/governance",
+  "slug": "/platform/governance/security-privacy-access",
+  "permalink": "/docs/platform/governance/security-privacy-access",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/platform/governance/security-and-privacy.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "id": "security-privacy-access",
+    "title": "Security, privacy and access control",
+    "description": "Who can reach what across rjmlaird.co.uk, how secrets and sessions are handled, and the privacy considerations that follow from the integrations in use.",
+    "sidebar_position": 9,
+    "status": "Draft",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-11T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Naming conventions and standards",
+    "permalink": "/docs/platform/governance/standards"
+  },
+  "next": {
+    "title": "Environments and deployment model",
+    "permalink": "/docs/platform/governance/environments"
+  }
+}

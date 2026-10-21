@@ -1,0 +1,57 @@
+{
+  "id": "catalogue/first-party/status",
+  "title": "status.rjmlaird.co.uk",
+  "description": "Curated public reporting of the health of public services, hosted independently of what it reports on.",
+  "source": "@site/docs/catalogue/first-party/status.md",
+  "sourceDirName": "catalogue/first-party",
+  "slug": "/catalogue/first-party/status",
+  "permalink": "/docs/catalogue/first-party/status",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/catalogue/first-party/status.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "service",
+      "permalink": "/docs/tags/service"
+    },
+    {
+      "inline": true,
+      "label": "public",
+      "permalink": "/docs/tags/public"
+    },
+    {
+      "inline": true,
+      "label": "status",
+      "permalink": "/docs/tags/status"
+    }
+  ],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "status.rjmlaird.co.uk",
+    "description": "Curated public reporting of the health of public services, hosted independently of what it reports on.",
+    "owner": "To confirm",
+    "review_cycle": "6 months",
+    "sidebar_position": 5,
+    "tags": [
+      "service",
+      "public",
+      "status"
+    ],
+    "visibility": "public",
+    "lifecycle": "planned",
+    "confidence": "Unverified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "api.rjmlaird.co.uk",
+    "permalink": "/docs/catalogue/first-party/api"
+  },
+  "next": {
+    "title": "cdn.rjmlaird.co.uk",
+    "permalink": "/docs/catalogue/first-party/cdn"
+  }
+}

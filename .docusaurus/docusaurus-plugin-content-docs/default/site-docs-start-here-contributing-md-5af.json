@@ -1,0 +1,30 @@
+{
+  "id": "start-here/writing-docs",
+  "title": "Writing and versioning docs",
+  "description": "Local preview",
+  "source": "@site/docs/start-here/contributing.md",
+  "sourceDirName": "start-here",
+  "slug": "/start-here/writing-docs",
+  "permalink": "/docs/start-here/writing-docs",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/start-here/contributing.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "writing-docs",
+    "title": "Writing and versioning docs",
+    "sidebar_position": 1
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Contributor quickstart",
+    "permalink": "/docs/start-here/quickstart"
+  },
+  "next": {
+    "title": "Architecture overview",
+    "permalink": "/docs/platform/overview"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "id": "catalogue/first-party/cdn",
+  "title": "cdn.rjmlaird.co.uk",
+  "description": "Public, read-only delivery of approved assets. It accepts no writes.",
+  "source": "@site/docs/catalogue/first-party/cdn.md",
+  "sourceDirName": "catalogue/first-party",
+  "slug": "/catalogue/first-party/cdn",
+  "permalink": "/docs/catalogue/first-party/cdn",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/catalogue/first-party/cdn.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "service",
+      "permalink": "/docs/tags/service"
+    },
+    {
+      "inline": true,
+      "label": "public",
+      "permalink": "/docs/tags/public"
+    },
+    {
+      "inline": true,
+      "label": "assets",
+      "permalink": "/docs/tags/assets"
+    },
+    {
+      "inline": true,
+      "label": "read-only",
+      "permalink": "/docs/tags/read-only"
+    }
+  ],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "cdn.rjmlaird.co.uk",
+    "description": "Public, read-only delivery of approved assets. It accepts no writes.",
+    "owner": "To confirm",
+    "review_cycle": "6 months",
+    "sidebar_position": 1,
+    "tags": [
+      "service",
+      "public",
+      "assets",
+      "read-only"
+    ],
+    "visibility": "public",
+    "lifecycle": "planned",
+    "confidence": "Unverified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "status.rjmlaird.co.uk",
+    "permalink": "/docs/catalogue/first-party/status"
+  },
+  "next": {
+    "title": "dam.rjmlaird.co.uk",
+    "permalink": "/docs/catalogue/first-party/dam"
+  }
+}

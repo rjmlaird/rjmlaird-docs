@@ -1,0 +1,28 @@
+{
+  "id": "start-here/terminology",
+  "title": "Terminology",
+  "description": "Shared terms used throughout the RJM Laird platform documentation.",
+  "source": "@site/docs/start-here/terminology.md",
+  "sourceDirName": "start-here",
+  "slug": "/start-here/terminology",
+  "permalink": "/docs/start-here/terminology",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/start-here/terminology.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "title": "Terminology",
+    "description": "Shared terms used throughout the RJM Laird platform documentation."
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Platform map",
+    "permalink": "/docs/start-here/platform-map"
+  },
+  "next": {
+    "title": "Environments and deployment model",
+    "permalink": "/docs/platform/governance/environments"
+  }
+}

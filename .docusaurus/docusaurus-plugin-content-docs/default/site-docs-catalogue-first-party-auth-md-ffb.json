@@ -1,0 +1,63 @@
+{
+  "id": "catalogue/first-party/auth",
+  "title": "auth.rjmlaird.co.uk",
+  "description": "The identity and access boundary for protected rjmlaird.co.uk services; Cloudflare Access is the primary edge control.",
+  "source": "@site/docs/catalogue/first-party/auth.md",
+  "sourceDirName": "catalogue/first-party",
+  "slug": "/catalogue/first-party/auth",
+  "permalink": "/docs/catalogue/first-party/auth",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/catalogue/first-party/auth.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "service",
+      "permalink": "/docs/tags/service"
+    },
+    {
+      "inline": true,
+      "label": "restricted",
+      "permalink": "/docs/tags/restricted"
+    },
+    {
+      "inline": true,
+      "label": "identity",
+      "permalink": "/docs/tags/identity"
+    },
+    {
+      "inline": true,
+      "label": "access",
+      "permalink": "/docs/tags/access"
+    }
+  ],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "auth.rjmlaird.co.uk",
+    "description": "The identity and access boundary for protected rjmlaird.co.uk services; Cloudflare Access is the primary edge control.",
+    "owner": "To confirm",
+    "review_cycle": "6 months",
+    "sidebar_position": 1,
+    "tags": [
+      "service",
+      "restricted",
+      "identity",
+      "access"
+    ],
+    "visibility": "restricted",
+    "lifecycle": "planned",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "labs.rjmlaird.co.uk",
+    "permalink": "/docs/catalogue/first-party/labs"
+  },
+  "next": {
+    "title": "mcp.rjmlaird.co.uk",
+    "permalink": "/docs/catalogue/first-party/mcp"
+  }
+}

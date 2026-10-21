@@ -1,0 +1,34 @@
+{
+  "id": "build/reference/client-delivery",
+  "title": "Client delivery Worker",
+  "description": "How the client-delivery consumer records workflows and hands new clients over, and how to add a real handover adapter.",
+  "source": "@site/docs/build/reference/client-delivery.md",
+  "sourceDirName": "build/reference",
+  "slug": "/build/reference/client-delivery",
+  "permalink": "/docs/build/reference/client-delivery",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/build/reference/client-delivery.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "id": "client-delivery",
+    "title": "Client delivery Worker",
+    "description": "How the client-delivery consumer records workflows and hands new clients over, and how to add a real handover adapter.",
+    "sidebar_position": 5,
+    "status": "In development",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "master (control plane)",
+    "permalink": "/docs/catalogue/first-party/master"
+  },
+  "next": {
+    "title": "Customer journeys",
+    "permalink": "/docs/catalogue/first-party/customer-journeys"
+  }
+}

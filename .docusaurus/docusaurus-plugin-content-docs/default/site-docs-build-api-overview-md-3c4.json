@@ -1,0 +1,30 @@
+{
+  "id": "build/api/overview",
+  "title": "API overview",
+  "description": "Document the public interface here. For each endpoint or function, list the purpose, parameters, response and errors.",
+  "source": "@site/docs/build/api/overview.md",
+  "sourceDirName": "build/api",
+  "slug": "/build/api/overview",
+  "permalink": "/docs/build/api/overview",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/build/api/overview.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "overview",
+    "title": "API overview",
+    "sidebar_position": 1
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Publishing data",
+    "permalink": "/docs/build/publishing-data"
+  },
+  "next": {
+    "title": "HTTP contracts",
+    "permalink": "/docs/build/reference/http-contracts"
+  }
+}

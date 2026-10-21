@@ -1,0 +1,34 @@
+{
+  "id": "platform/governance/environments",
+  "title": "Environments and deployment model",
+  "description": "How code moves from a local machine to production for the docs site and the Cloudflare Workers services, with the verified CI/CD pipeline, branching rules and known gaps.",
+  "source": "@site/docs/platform/governance/environments.md",
+  "sourceDirName": "platform/governance",
+  "slug": "/platform/governance/environments",
+  "permalink": "/docs/platform/governance/environments",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/platform/governance/environments.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "id": "environments",
+    "title": "Environments and deployment model",
+    "description": "How code moves from a local machine to production for the docs site and the Cloudflare Workers services, with the verified CI/CD pipeline, branching rules and known gaps.",
+    "sidebar_position": 4,
+    "status": "Draft",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-11T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Terminology",
+    "permalink": "/docs/start-here/terminology"
+  },
+  "next": {
+    "title": "Contributor quickstart",
+    "permalink": "/docs/start-here/quickstart"
+  }
+}

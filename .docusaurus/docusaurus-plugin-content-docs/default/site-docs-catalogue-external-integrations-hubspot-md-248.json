@@ -1,0 +1,36 @@
+{
+  "id": "catalogue/external-integrations/hubspot",
+  "title": "HubSpot",
+  "description": "How contacts are synchronised one way to HubSpot, the private app and properties required, retry behaviour and data minimisation rules.",
+  "source": "@site/docs/catalogue/external-integrations/hubspot.md",
+  "sourceDirName": "catalogue/external-integrations",
+  "slug": "/catalogue/external-integrations/hubspot",
+  "permalink": "/docs/catalogue/external-integrations/hubspot",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/catalogue/external-integrations/hubspot.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "hubspot",
+    "title": "HubSpot",
+    "description": "How contacts are synchronised one way to HubSpot, the private app and properties required, retry behaviour and data minimisation rules.",
+    "owner": "To confirm",
+    "review_cycle": "6 months",
+    "sidebar_position": 3,
+    "status": "In development",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Cal.com",
+    "permalink": "/docs/catalogue/external-integrations/calcom"
+  },
+  "next": {
+    "title": "Stripe",
+    "permalink": "/docs/catalogue/external-integrations/stripe"
+  }
+}

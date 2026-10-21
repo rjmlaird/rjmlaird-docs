@@ -11,7 +11,9 @@
     "serve": "docusaurus serve",
     "clear": "docusaurus clear",
     "typecheck": "tsc --noEmit",
-    "validate": "pnpm run typecheck && pnpm run build",
+    "docs:generate": "node scripts/generate-subdomain-catalogue.mjs",
+    "docs:check": "node scripts/generate-subdomain-catalogue.mjs --check && node scripts/check-docs.mjs",
+    "validate": "pnpm run typecheck && pnpm run docs:check && pnpm run build",
     "version:cut": "docusaurus docs:version"
   },
   "dependencies": {

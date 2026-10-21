@@ -1,8 +1,0 @@
-{
-  "label": "Platform services",
-  "position": 2,
-  "link": {
-    "type": "doc",
-    "id": "services/platform/overview"
-  }
-}

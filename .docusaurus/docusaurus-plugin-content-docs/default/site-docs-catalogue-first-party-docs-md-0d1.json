@@ -1,0 +1,57 @@
+{
+  "id": "catalogue/first-party/docs",
+  "title": "docs.rjmlaird.co.uk",
+  "description": "The public documentation site for the digital estate, built with Docusaurus and deployed to GitHub Pages.",
+  "source": "@site/docs/catalogue/first-party/docs.md",
+  "sourceDirName": "catalogue/first-party",
+  "slug": "/catalogue/first-party/docs",
+  "permalink": "/docs/catalogue/first-party/docs",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/catalogue/first-party/docs.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "service",
+      "permalink": "/docs/tags/service"
+    },
+    {
+      "inline": true,
+      "label": "public",
+      "permalink": "/docs/tags/public"
+    },
+    {
+      "inline": true,
+      "label": "documentation",
+      "permalink": "/docs/tags/documentation"
+    }
+  ],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "docs.rjmlaird.co.uk",
+    "description": "The public documentation site for the digital estate, built with Docusaurus and deployed to GitHub Pages.",
+    "owner": "To confirm",
+    "review_cycle": "6 months",
+    "sidebar_position": 2,
+    "tags": [
+      "service",
+      "public",
+      "documentation"
+    ],
+    "visibility": "public",
+    "lifecycle": "active",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "rjmlaird.co.uk",
+    "permalink": "/docs/catalogue/first-party/web"
+  },
+  "next": {
+    "title": "data.rjmlaird.co.uk",
+    "permalink": "/docs/catalogue/first-party/data"
+  }
+}

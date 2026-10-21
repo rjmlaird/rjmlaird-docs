@@ -1,0 +1,31 @@
+{
+  "id": "catalogue/generated/subdomain-catalogue",
+  "title": "Generated public service catalogue",
+  "description": "Public reference table of the services in the rjmlaird.co.uk estate, generated from the canonical catalogue.",
+  "source": "@site/docs/catalogue/generated/subdomain-catalogue.md",
+  "sourceDirName": "catalogue/generated",
+  "slug": "/catalogue/generated/subdomain-catalogue",
+  "permalink": "/docs/catalogue/generated/subdomain-catalogue",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/catalogue/generated/subdomain-catalogue.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Generated public service catalogue",
+    "sidebar_label": "Generated service catalogue",
+    "description": "Public reference table of the services in the rjmlaird.co.uk estate, generated from the canonical catalogue.",
+    "sidebar_position": 3
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Stripe",
+    "permalink": "/docs/catalogue/external-integrations/stripe"
+  },
+  "next": {
+    "title": "Configuration",
+    "permalink": "/docs/build/configuration"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "id": "platform/domain-model",
+  "title": "Domain and DNS model",
+  "description": "How rjmlaird.co.uk and its subdomains are resolved, which parts of the DNS setup are confirmed, and the rules for adding or retiring a subdomain.",
+  "source": "@site/docs/platform/domain-model.md",
+  "sourceDirName": "platform",
+  "slug": "/platform/domain-model",
+  "permalink": "/docs/platform/domain-model",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/platform/domain-model.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "domain-model",
+    "title": "Domain and DNS model",
+    "description": "How rjmlaird.co.uk and its subdomains are resolved, which parts of the DNS setup are confirmed, and the rules for adding or retiring a subdomain.",
+    "sidebar_position": 2,
+    "status": "Draft",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-11T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Architecture overview",
+    "permalink": "/docs/platform/overview"
+  },
+  "next": {
+    "title": "Content platform architecture",
+    "permalink": "/docs/platform/architecture/content-platform"
+  }
+}

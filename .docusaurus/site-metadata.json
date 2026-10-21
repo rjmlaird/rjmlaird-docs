@@ -32,6 +32,9 @@
       "name": "docusaurus-plugin-mermaid-pan-zoom",
       "version": "1.7.0"
     },
+    "rjmlaird-docs-legacy-redirects": {
+      "type": "project"
+    },
     "docusaurus-theme-mermaid": {
       "type": "package",
       "name": "@docusaurus/theme-mermaid",

@@ -1,0 +1,246 @@
+[
+  {
+    "from": "/docs/intro",
+    "to": "/docs/start-here/overview"
+  },
+  {
+    "from": "/docs/getting-started/installation",
+    "to": "/docs/start-here/access-and-environments"
+  },
+  {
+    "from": "/docs/getting-started/quickstart",
+    "to": "/docs/start-here/quickstart"
+  },
+  {
+    "from": "/docs/contributing/writing-docs",
+    "to": "/docs/start-here/contributing"
+  },
+  {
+    "from": "/docs/architecture/overview",
+    "to": "/docs/platform/overview"
+  },
+  {
+    "from": "/docs/architecture/domain-model",
+    "to": "/docs/platform/domain-model"
+  },
+  {
+    "from": "/docs/architecture/content-platform",
+    "to": "/docs/platform/architecture/content-platform"
+  },
+  {
+    "from": "/docs/architecture/apis-integrations",
+    "to": "/docs/platform/architecture/apis-and-integrations"
+  },
+  {
+    "from": "/docs/architecture/automation-workflows",
+    "to": "/docs/platform/architecture/automation-workflows"
+  },
+  {
+    "from": "/docs/architecture/media-assets-cdn",
+    "to": "/docs/platform/architecture/media-and-assets"
+  },
+  {
+    "from": "/docs/architecture/environments",
+    "to": "/docs/platform/governance/environments"
+  },
+  {
+    "from": "/docs/architecture/security-privacy-access",
+    "to": "/docs/platform/governance/security-and-privacy"
+  },
+  {
+    "from": "/docs/architecture/standards",
+    "to": "/docs/platform/governance/standards"
+  },
+  {
+    "from": "/docs/architecture/subdomain-catalogue",
+    "to": "/docs/platform/governance/subdomains"
+  },
+  {
+    "from": "/docs/architecture/subdomain-planning-inventory",
+    "to": "/docs/platform/governance/subdomain-planning-inventory"
+  },
+  {
+    "from": "/docs/architecture/observability-status",
+    "to": "/docs/operate/status-and-observability"
+  },
+  {
+    "from": "/docs/architecture/roadmap",
+    "to": "/docs/platform/roadmap"
+  },
+  {
+    "from": "/docs/architecture/adrs/ADR-0001-docusaurus-on-github-pages",
+    "to": "/docs/platform/decisions/ADR-0001-docusaurus-on-github-pages"
+  },
+  {
+    "from": "/docs/architecture/adrs/ADR-0002-justify-subdomains-before-creating-them",
+    "to": "/docs/platform/decisions/ADR-0002-justify-subdomains-before-creating-them"
+  },
+  {
+    "from": "/docs/architecture/adrs/ADR-0003-separate-public-api-from-webhook-services",
+    "to": "/docs/platform/decisions/ADR-0003-separate-public-api-from-webhook-services"
+  },
+  {
+    "from": "/docs/services/platform/overview",
+    "to": "/docs/catalogue/first-party/platform-services"
+  },
+  {
+    "from": "/docs/services/platform/web",
+    "to": "/docs/catalogue/first-party/web"
+  },
+  {
+    "from": "/docs/services/platform/docs",
+    "to": "/docs/catalogue/first-party/docs"
+  },
+  {
+    "from": "/docs/services/platform/data",
+    "to": "/docs/catalogue/first-party/data"
+  },
+  {
+    "from": "/docs/services/platform/api",
+    "to": "/docs/catalogue/first-party/api"
+  },
+  {
+    "from": "/docs/services/platform/status",
+    "to": "/docs/catalogue/first-party/status"
+  },
+  {
+    "from": "/docs/services/platform/cdn",
+    "to": "/docs/catalogue/first-party/cdn"
+  },
+  {
+    "from": "/docs/services/platform/dam",
+    "to": "/docs/catalogue/first-party/dam"
+  },
+  {
+    "from": "/docs/services/platform/upload",
+    "to": "/docs/catalogue/first-party/upload"
+  },
+  {
+    "from": "/docs/services/platform/dev",
+    "to": "/docs/catalogue/first-party/dev"
+  },
+  {
+    "from": "/docs/services/platform/apps",
+    "to": "/docs/catalogue/first-party/apps"
+  },
+  {
+    "from": "/docs/services/platform/tools",
+    "to": "/docs/catalogue/first-party/tools"
+  },
+  {
+    "from": "/docs/services/platform/labs",
+    "to": "/docs/catalogue/first-party/labs"
+  },
+  {
+    "from": "/docs/services/platform/auth",
+    "to": "/docs/catalogue/first-party/auth"
+  },
+  {
+    "from": "/docs/services/platform/mcp",
+    "to": "/docs/catalogue/first-party/mcp"
+  },
+  {
+    "from": "/docs/services/platform/hooks",
+    "to": "/docs/catalogue/first-party/hooks"
+  },
+  {
+    "from": "/docs/services/platform/booking",
+    "to": "/docs/catalogue/first-party/booking"
+  },
+  {
+    "from": "/docs/services/platform/dav",
+    "to": "/docs/catalogue/first-party/dav"
+  },
+  {
+    "from": "/docs/services/platform/master",
+    "to": "/docs/catalogue/first-party/master"
+  },
+  {
+    "from": "/docs/services/integrations/calcom",
+    "to": "/docs/catalogue/external-integrations/calcom"
+  },
+  {
+    "from": "/docs/services/integrations/hubspot",
+    "to": "/docs/catalogue/external-integrations/hubspot"
+  },
+  {
+    "from": "/docs/services/integrations/stripe",
+    "to": "/docs/catalogue/external-integrations/stripe"
+  },
+  {
+    "from": "/docs/services/architecture/overview",
+    "to": "/docs/catalogue/first-party/service-delivery-architecture"
+  },
+  {
+    "from": "/docs/services/architecture/customer-journeys",
+    "to": "/docs/catalogue/first-party/customer-journeys"
+  },
+  {
+    "from": "/docs/guides/configuration",
+    "to": "/docs/build/configuration"
+  },
+  {
+    "from": "/docs/guides/deployment",
+    "to": "/docs/build/deployment"
+  },
+  {
+    "from": "/docs/guides/adding-a-service",
+    "to": "/docs/build/adding-a-service"
+  },
+  {
+    "from": "/docs/guides/publishing-data",
+    "to": "/docs/build/publishing-data"
+  },
+  {
+    "from": "/docs/api/overview",
+    "to": "/docs/build/api/overview"
+  },
+  {
+    "from": "/docs/services/reference/http-contracts",
+    "to": "/docs/build/reference/http-contracts"
+  },
+  {
+    "from": "/docs/services/reference/events",
+    "to": "/docs/build/reference/events"
+  },
+  {
+    "from": "/docs/services/reference/data-model",
+    "to": "/docs/build/reference/data-model"
+  },
+  {
+    "from": "/docs/services/reference/configuration",
+    "to": "/docs/build/reference/service-configuration"
+  },
+  {
+    "from": "/docs/services/reference/client-delivery",
+    "to": "/docs/build/reference/client-delivery"
+  },
+  {
+    "from": "/docs/guides/incident-response",
+    "to": "/docs/operate/incident-response"
+  },
+  {
+    "from": "/docs/services/launch-checklist",
+    "to": "/docs/operate/launch-readiness"
+  },
+  {
+    "from": "/docs/services/runbooks/secret-rotation",
+    "to": "/docs/operate/runbooks/secret-rotation"
+  },
+  {
+    "from": "/docs/services/runbooks/webhook-failures",
+    "to": "/docs/operate/runbooks/webhook-failures"
+  },
+  {
+    "from": "/docs/architecture/generated/subdomain-catalogue",
+    "to": "/docs/catalogue/generated/subdomain-catalogue"
+  },
+  {
+    "from": "/docs/architecture/adrs",
+    "to": "/docs/platform/decisions"
+  },
+  {
+    "from": "/docs/services",
+    "to": "/docs/catalogue/first-party"
+  }
+]

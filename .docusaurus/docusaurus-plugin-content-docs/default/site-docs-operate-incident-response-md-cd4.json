@@ -1,0 +1,30 @@
+{
+  "id": "operate/incident-response",
+  "title": "Incident response",
+  "description": "How to detect, contain, communicate and learn from an incident affecting the rjmlaird.co.uk estate, written for a single maintainer.",
+  "source": "@site/docs/operate/incident-response.md",
+  "sourceDirName": "operate",
+  "slug": "/operate/incident-response",
+  "permalink": "/docs/operate/incident-response",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/operate/incident-response.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Incident response",
+    "description": "How to detect, contain, communicate and learn from an incident affecting the rjmlaird.co.uk estate, written for a single maintainer.",
+    "sidebar_position": 5
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Launch checklist",
+    "permalink": "/docs/operate/launch-checklist"
+  },
+  "next": {
+    "title": "Observability, status and incident response",
+    "permalink": "/docs/operate/observability-status"
+  }
+}

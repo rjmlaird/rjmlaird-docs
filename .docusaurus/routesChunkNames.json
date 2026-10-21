@@ -1,17 +1,444 @@
 {
+  "/docs/api/overview-38e": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "e1fd38fb"
+  },
+  "/docs/architecture/adrs-b7a": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "52b029d6"
+  },
+  "/docs/architecture/adrs/ADR-0001-docusaurus-on-github-pages-718": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "6cf4f577"
+  },
+  "/docs/architecture/adrs/ADR-0002-justify-subdomains-before-creating-them-e9c": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "578dfe35"
+  },
+  "/docs/architecture/adrs/ADR-0003-separate-public-api-from-webhook-services-df3": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "e2fe8846"
+  },
+  "/docs/architecture/apis-integrations-562": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "9ba092ff"
+  },
+  "/docs/architecture/automation-workflows-61e": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "51be549a"
+  },
+  "/docs/architecture/content-platform-cba": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "8a237631"
+  },
+  "/docs/architecture/domain-model-21a": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "39153cf0"
+  },
+  "/docs/architecture/environments-656": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "6c44f4ea"
+  },
+  "/docs/architecture/generated/subdomain-catalogue-95e": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "38f23d8c"
+  },
+  "/docs/architecture/media-assets-cdn-56d": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "d11837e0"
+  },
+  "/docs/architecture/observability-status-a10": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "de433e29"
+  },
+  "/docs/architecture/overview-2a7": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "50900a30"
+  },
+  "/docs/architecture/roadmap-99a": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "e5dcd8a0"
+  },
+  "/docs/architecture/security-privacy-access-8d2": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "8063c8a6"
+  },
+  "/docs/architecture/standards-832": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "5e4df73c"
+  },
+  "/docs/architecture/subdomain-catalogue-8fe": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "61895a69"
+  },
+  "/docs/architecture/subdomain-planning-inventory-42d": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "f047b03c"
+  },
+  "/docs/contributing/writing-docs-ec2": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "197e09ef"
+  },
+  "/docs/getting-started/installation-93b": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "250c52ab"
+  },
+  "/docs/getting-started/quickstart-edf": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "d36ae83a"
+  },
+  "/docs/guides/adding-a-service-efd": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "4bd64a57"
+  },
+  "/docs/guides/configuration-47d": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "6bcbcaf0"
+  },
+  "/docs/guides/deployment-fe4": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "7966c492"
+  },
+  "/docs/guides/incident-response-fd3": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "eeccecd3"
+  },
+  "/docs/guides/publishing-data-459": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "2042cdd2"
+  },
+  "/docs/intro-37c": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "65f31960"
+  },
+  "/docs/services-57a": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "7a67162c"
+  },
+  "/docs/services/architecture/customer-journeys-d65": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "ae406340"
+  },
+  "/docs/services/architecture/overview-664": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "5e71dec4"
+  },
+  "/docs/services/integrations/calcom-a19": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "43c5fbde"
+  },
+  "/docs/services/integrations/hubspot-161": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "ff4b13e6"
+  },
+  "/docs/services/integrations/stripe-63c": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "63f90a1f"
+  },
+  "/docs/services/launch-checklist-538": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "a6a6bed9"
+  },
+  "/docs/services/platform/api-2b3": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "956d7db9"
+  },
+  "/docs/services/platform/apps-5b0": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "534ce1d8"
+  },
+  "/docs/services/platform/auth-8a4": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "386a89b0"
+  },
+  "/docs/services/platform/booking-5a6": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "946df814"
+  },
+  "/docs/services/platform/cdn-86c": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "16d4a558"
+  },
+  "/docs/services/platform/dam-6c5": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "873d6323"
+  },
+  "/docs/services/platform/data-f5b": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "f4272894"
+  },
+  "/docs/services/platform/dav-0bb": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "24545f4b"
+  },
+  "/docs/services/platform/dev-52f": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "8b5783b1"
+  },
+  "/docs/services/platform/docs-ae1": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "5c94a2cf"
+  },
+  "/docs/services/platform/hooks-325": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "4c30b3da"
+  },
+  "/docs/services/platform/labs-10d": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "49434c0b"
+  },
+  "/docs/services/platform/master-db9": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "eada6ba8"
+  },
+  "/docs/services/platform/mcp-632": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "82e1ef3a"
+  },
+  "/docs/services/platform/overview-6ba": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "af52441b"
+  },
+  "/docs/services/platform/status-18d": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "dc98632a"
+  },
+  "/docs/services/platform/tools-2a7": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "635458b7"
+  },
+  "/docs/services/platform/upload-20b": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "278923c1"
+  },
+  "/docs/services/platform/web-962": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "59f72544"
+  },
+  "/docs/services/reference/client-delivery-f96": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "901ae9e3"
+  },
+  "/docs/services/reference/configuration-60d": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "1ca0d2b7"
+  },
+  "/docs/services/reference/data-model-92b": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "2fb30c83"
+  },
+  "/docs/services/reference/events-a9b": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "4494582d"
+  },
+  "/docs/services/reference/http-contracts-b7f": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "62e05ff3"
+  },
+  "/docs/services/runbooks/secret-rotation-aae": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "06ed2d6f"
+  },
+  "/docs/services/runbooks/webhook-failures-6d0": {
+    "__comp": "1363dccb",
+    "__context": {
+      "plugin": "464a5acc"
+    },
+    "__props": "08807a89"
+  },
   "/search-822": {
     "__comp": "1a4e3797",
     "__context": {
       "plugin": "138e0e15"
     }
   },
-  "/docs-cd6": {
+  "/docs-78e": {
     "__comp": "5e95c892",
     "__context": {
       "plugin": "aba21aa0"
     }
   },
-  "/docs-457": {
+  "/docs-c29": {
     "__comp": "a7bd4aaa",
     "__props": "0058b4c6"
   },
@@ -147,256 +574,280 @@
     "__comp": "df203c0f",
     "__props": "36b7640b"
   },
-  "/docs-15f": {
+  "/docs-7a0": {
     "__comp": "a94703ab"
   },
-  "/docs/api/overview-9f1": {
+  "/docs-764": {
     "__comp": "17896441",
-    "content": "65df3d35"
+    "content": "c377a04b"
   },
-  "/docs/architecture/adrs-7d5": {
+  "/docs/build/adding-a-service-73f": {
     "__comp": "17896441",
-    "content": "766aa199"
+    "content": "b624f934"
   },
-  "/docs/architecture/adrs/ADR-0001-docusaurus-on-github-pages-85c": {
+  "/docs/build/api/overview-d7a": {
     "__comp": "17896441",
-    "content": "55345192"
+    "content": "3c45e5b6"
   },
-  "/docs/architecture/adrs/ADR-0002-justify-subdomains-before-creating-them-2d9": {
+  "/docs/build/configuration-c0b": {
     "__comp": "17896441",
-    "content": "33dbdad4"
+    "content": "191ba5e5"
   },
-  "/docs/architecture/adrs/ADR-0003-separate-public-api-from-webhook-services-6c3": {
+  "/docs/build/deployment-706": {
     "__comp": "17896441",
-    "content": "141024ce"
+    "content": "408c4915"
   },
-  "/docs/architecture/apis-integrations-c4a": {
+  "/docs/build/publishing-data-dfa": {
     "__comp": "17896441",
-    "content": "0576c1a7"
+    "content": "2b87deb2"
   },
-  "/docs/architecture/automation-workflows-334": {
+  "/docs/build/reference/client-delivery-ea2": {
     "__comp": "17896441",
-    "content": "0cd74d9f"
+    "content": "8dbd61e4"
   },
-  "/docs/architecture/content-platform-658": {
+  "/docs/build/reference/configuration-c6b": {
     "__comp": "17896441",
-    "content": "89b739cc"
+    "content": "4003f38e"
   },
-  "/docs/architecture/domain-model-8a4": {
+  "/docs/build/reference/data-model-823": {
     "__comp": "17896441",
-    "content": "814e758b"
+    "content": "419bd40c"
   },
-  "/docs/architecture/environments-b31": {
+  "/docs/build/reference/events-04b": {
     "__comp": "17896441",
-    "content": "2e137ac4"
+    "content": "6837291d"
   },
-  "/docs/architecture/generated/subdomain-catalogue-d83": {
+  "/docs/build/reference/http-contracts-e04": {
     "__comp": "17896441",
-    "content": "3e9dfcdd"
+    "content": "2cee5fb9"
   },
-  "/docs/architecture/media-assets-cdn-a98": {
+  "/docs/catalogue-aab": {
     "__comp": "17896441",
-    "content": "5493c590"
+    "content": "e4bda66b"
   },
-  "/docs/architecture/observability-status-388": {
+  "/docs/catalogue/external-integrations/calcom-807": {
     "__comp": "17896441",
-    "content": "f7cbf2ba"
+    "content": "2f5a5e58"
   },
-  "/docs/architecture/overview-963": {
+  "/docs/catalogue/external-integrations/hubspot-dc8": {
     "__comp": "17896441",
-    "content": "0b1ac180"
+    "content": "24890a9d"
   },
-  "/docs/architecture/roadmap-590": {
+  "/docs/catalogue/external-integrations/stripe-5f6": {
     "__comp": "17896441",
-    "content": "df71b374"
+    "content": "fa167e63"
   },
-  "/docs/architecture/security-privacy-access-aee": {
+  "/docs/catalogue/first-party-0f0": {
     "__comp": "17896441",
-    "content": "314f3103"
+    "content": "5801cb4d"
   },
-  "/docs/architecture/standards-8ae": {
+  "/docs/catalogue/first-party/api-4d7": {
     "__comp": "17896441",
-    "content": "d342cbde"
+    "content": "9ceb4279"
   },
-  "/docs/architecture/subdomain-catalogue-033": {
+  "/docs/catalogue/first-party/apps-88d": {
     "__comp": "17896441",
-    "content": "e31cbed1"
+    "content": "9f934aa7"
   },
-  "/docs/architecture/subdomain-planning-inventory-6b5": {
+  "/docs/catalogue/first-party/auth-c0b": {
     "__comp": "17896441",
-    "content": "791132fe"
+    "content": "ffbc12ea"
   },
-  "/docs/contributing/writing-docs-63a": {
+  "/docs/catalogue/first-party/booking-ad9": {
     "__comp": "17896441",
-    "content": "24f9e5ab"
+    "content": "a66838a9"
   },
-  "/docs/getting-started/installation-0b4": {
+  "/docs/catalogue/first-party/cdn-35a": {
     "__comp": "17896441",
-    "content": "54f44165"
+    "content": "34a6db44"
   },
-  "/docs/getting-started/quickstart-9b5": {
+  "/docs/catalogue/first-party/customer-journeys-32f": {
     "__comp": "17896441",
-    "content": "fbd7a87c"
+    "content": "1c8cb577"
   },
-  "/docs/guides/adding-a-service-ffc": {
+  "/docs/catalogue/first-party/dam-d00": {
     "__comp": "17896441",
-    "content": "352b639c"
+    "content": "908386ed"
   },
-  "/docs/guides/configuration-4ce": {
+  "/docs/catalogue/first-party/data-144": {
     "__comp": "17896441",
-    "content": "956ba2e7"
+    "content": "3b48538a"
   },
-  "/docs/guides/deployment-cf7": {
+  "/docs/catalogue/first-party/dav-2cd": {
     "__comp": "17896441",
-    "content": "caaf7770"
+    "content": "287ea12e"
   },
-  "/docs/guides/incident-response-d1b": {
+  "/docs/catalogue/first-party/dev-f40": {
     "__comp": "17896441",
-    "content": "76f25983"
+    "content": "5debe0aa"
   },
-  "/docs/guides/publishing-data-c63": {
+  "/docs/catalogue/first-party/docs-596": {
     "__comp": "17896441",
-    "content": "b8eb2e52"
+    "content": "0d1972fe"
   },
-  "/docs/intro-980": {
+  "/docs/catalogue/first-party/hooks-733": {
     "__comp": "17896441",
-    "content": "0e384e19"
+    "content": "affaa0a2"
   },
-  "/docs/services-829": {
+  "/docs/catalogue/first-party/labs-012": {
     "__comp": "17896441",
-    "content": "a70bf486"
+    "content": "a17c1455"
   },
-  "/docs/services/architecture/customer-journeys-a41": {
+  "/docs/catalogue/first-party/master-0c8": {
     "__comp": "17896441",
-    "content": "5acb7a5b"
+    "content": "b41320d0"
   },
-  "/docs/services/architecture/overview-0ba": {
+  "/docs/catalogue/first-party/mcp-ab4": {
     "__comp": "17896441",
-    "content": "d03c2a36"
+    "content": "36d3367a"
   },
-  "/docs/services/integrations/calcom-0a6": {
+  "/docs/catalogue/first-party/overview-add": {
     "__comp": "17896441",
-    "content": "a15fc077"
+    "content": "156bf4bc"
   },
-  "/docs/services/integrations/hubspot-1ec": {
+  "/docs/catalogue/first-party/platform-services-f3e": {
     "__comp": "17896441",
-    "content": "a48297ab"
+    "content": "f6dc1b4e"
   },
-  "/docs/services/integrations/stripe-9b7": {
+  "/docs/catalogue/first-party/status-8ac": {
     "__comp": "17896441",
-    "content": "48bd0dac"
+    "content": "992abbb6"
   },
-  "/docs/services/launch-checklist-430": {
+  "/docs/catalogue/first-party/tools-b86": {
     "__comp": "17896441",
-    "content": "da2e827d"
+    "content": "b297d921"
   },
-  "/docs/services/platform/api-5dd": {
+  "/docs/catalogue/first-party/upload-aaa": {
     "__comp": "17896441",
-    "content": "8d0d88e2"
+    "content": "3c73ce2d"
   },
-  "/docs/services/platform/apps-841": {
+  "/docs/catalogue/first-party/web-c5d": {
     "__comp": "17896441",
-    "content": "827c513d"
+    "content": "2f56dd74"
   },
-  "/docs/services/platform/auth-0d6": {
+  "/docs/catalogue/generated/subdomain-catalogue-172": {
     "__comp": "17896441",
-    "content": "fe236c1e"
+    "content": "8291bb19"
   },
-  "/docs/services/platform/booking-c34": {
+  "/docs/catalogue/service-template-1ab": {
     "__comp": "17896441",
-    "content": "094c1379"
+    "content": "28356576"
   },
-  "/docs/services/platform/cdn-9bb": {
+  "/docs/changelog/documentation-changelog-7d0": {
     "__comp": "17896441",
-    "content": "792caef0"
+    "content": "e1f37040"
   },
-  "/docs/services/platform/dam-ab4": {
+  "/docs/operate/incident-response-571": {
     "__comp": "17896441",
-    "content": "94077787"
+    "content": "cd4e37d3"
   },
-  "/docs/services/platform/data-483": {
+  "/docs/operate/launch-checklist-80b": {
     "__comp": "17896441",
-    "content": "bcc31648"
+    "content": "194d3d9a"
   },
-  "/docs/services/platform/dav-d98": {
+  "/docs/operate/observability-status-dfb": {
     "__comp": "17896441",
-    "content": "b70f10ff"
+    "content": "8a762ba3"
   },
-  "/docs/services/platform/dev-b68": {
+  "/docs/operate/runbooks/secret-rotation-2e7": {
     "__comp": "17896441",
-    "content": "50fa785a"
+    "content": "e1d3e4e9"
   },
-  "/docs/services/platform/docs-43b": {
+  "/docs/operate/runbooks/webhook-failures-b26": {
     "__comp": "17896441",
-    "content": "8a658b00"
+    "content": "c069d453"
   },
-  "/docs/services/platform/hooks-759": {
+  "/docs/operate/service-ownership-6d1": {
     "__comp": "17896441",
-    "content": "73597051"
+    "content": "ab16ed6b"
   },
-  "/docs/services/platform/labs-cd6": {
+  "/docs/platform/architecture/apis-integrations-d2b": {
     "__comp": "17896441",
-    "content": "ee7ba5bf"
+    "content": "c079b95f"
   },
-  "/docs/services/platform/master-4c4": {
+  "/docs/platform/architecture/automation-workflows-1c7": {
     "__comp": "17896441",
-    "content": "1aec3dee"
+    "content": "11b8dc13"
   },
-  "/docs/services/platform/mcp-54f": {
+  "/docs/platform/architecture/content-platform-e33": {
     "__comp": "17896441",
-    "content": "598951c3"
+    "content": "91fc5d36"
   },
-  "/docs/services/platform/overview-532": {
+  "/docs/platform/architecture/media-assets-cdn-dea": {
     "__comp": "17896441",
-    "content": "744cf56e"
+    "content": "f8fc9b1c"
   },
-  "/docs/services/platform/status-097": {
+  "/docs/platform/decisions-b72": {
     "__comp": "17896441",
-    "content": "9f8e63a4"
+    "content": "27019224"
   },
-  "/docs/services/platform/tools-c52": {
+  "/docs/platform/decisions/ADR-0001-docusaurus-on-github-pages-590": {
     "__comp": "17896441",
-    "content": "134e10fe"
+    "content": "b1155b8d"
   },
-  "/docs/services/platform/upload-cff": {
+  "/docs/platform/decisions/ADR-0002-justify-subdomains-before-creating-them-1a0": {
     "__comp": "17896441",
-    "content": "3564d441"
+    "content": "cf41800e"
   },
-  "/docs/services/platform/web-b81": {
+  "/docs/platform/decisions/ADR-0003-separate-public-api-from-webhook-services-535": {
     "__comp": "17896441",
-    "content": "f0921b4e"
+    "content": "c8ffce01"
   },
-  "/docs/services/reference/client-delivery-ba9": {
+  "/docs/platform/domain-model-b7b": {
     "__comp": "17896441",
-    "content": "fbba95ed"
+    "content": "9c2e909c"
   },
-  "/docs/services/reference/configuration-21e": {
+  "/docs/platform/governance/environments-174": {
     "__comp": "17896441",
-    "content": "025e8e4e"
+    "content": "2263cca5"
   },
-  "/docs/services/reference/data-model-b2e": {
+  "/docs/platform/governance/security-privacy-access-903": {
     "__comp": "17896441",
-    "content": "c25efaff"
+    "content": "8e0afe2e"
   },
-  "/docs/services/reference/events-32f": {
+  "/docs/platform/governance/standards-451": {
     "__comp": "17896441",
-    "content": "e8fe8a53"
+    "content": "5e948e9a"
   },
-  "/docs/services/reference/http-contracts-91f": {
+  "/docs/platform/governance/subdomain-catalogue-62d": {
     "__comp": "17896441",
-    "content": "10e9eec9"
+    "content": "f8f3a2b6"
   },
-  "/docs/services/runbooks/secret-rotation-c29": {
+  "/docs/platform/governance/subdomain-planning-inventory-277": {
     "__comp": "17896441",
-    "content": "57797905"
+    "content": "948beede"
   },
-  "/docs/services/runbooks/webhook-failures-a3b": {
+  "/docs/platform/overview-f4f": {
     "__comp": "17896441",
-    "content": "e56893ba"
+    "content": "6853ba1e"
   },
-  "/docs/tutorials/first-tutorial-a72": {
+  "/docs/platform/roadmap-a96": {
     "__comp": "17896441",
-    "content": "405fbe1d"
+    "content": "daac1386"
+  },
+  "/docs/start-here/installation-c1d": {
+    "__comp": "17896441",
+    "content": "5081bf00"
+  },
+  "/docs/start-here/overview-c03": {
+    "__comp": "17896441",
+    "content": "8388d673"
+  },
+  "/docs/start-here/platform-map-39a": {
+    "__comp": "17896441",
+    "content": "86237f7f"
+  },
+  "/docs/start-here/quickstart-7ab": {
+    "__comp": "17896441",
+    "content": "ff81cd60"
+  },
+  "/docs/start-here/terminology-8b5": {
+    "__comp": "17896441",
+    "content": "493bcff5"
+  },
+  "/docs/start-here/writing-docs-a59": {
+    "__comp": "17896441",
+    "content": "5af574c1"
   },
   "/-e5f": {
     "__comp": "1df93b7f",

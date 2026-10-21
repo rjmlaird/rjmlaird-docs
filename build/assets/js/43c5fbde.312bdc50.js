@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkrjmlaird_docs||=[]).push([[1557],{1586(a){a.exports=JSON.parse('{"to":"/docs/catalogue/external-integrations/calcom"}')}}]);

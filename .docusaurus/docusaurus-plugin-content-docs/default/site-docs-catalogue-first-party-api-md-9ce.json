@@ -1,0 +1,57 @@
+{
+  "id": "catalogue/first-party/api",
+  "title": "api.rjmlaird.co.uk",
+  "description": "The public, read-oriented portfolio and estate catalogue API, separate from private operational services.",
+  "source": "@site/docs/catalogue/first-party/api.md",
+  "sourceDirName": "catalogue/first-party",
+  "slug": "/catalogue/first-party/api",
+  "permalink": "/docs/catalogue/first-party/api",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/catalogue/first-party/api.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "service",
+      "permalink": "/docs/tags/service"
+    },
+    {
+      "inline": true,
+      "label": "public",
+      "permalink": "/docs/tags/public"
+    },
+    {
+      "inline": true,
+      "label": "api",
+      "permalink": "/docs/tags/api"
+    }
+  ],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "api.rjmlaird.co.uk",
+    "description": "The public, read-oriented portfolio and estate catalogue API, separate from private operational services.",
+    "owner": "To confirm",
+    "review_cycle": "6 months",
+    "sidebar_position": 4,
+    "tags": [
+      "service",
+      "public",
+      "api"
+    ],
+    "visibility": "public",
+    "lifecycle": "planned",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "data.rjmlaird.co.uk",
+    "permalink": "/docs/catalogue/first-party/data"
+  },
+  "next": {
+    "title": "status.rjmlaird.co.uk",
+    "permalink": "/docs/catalogue/first-party/status"
+  }
+}

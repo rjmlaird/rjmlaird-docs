@@ -2,185 +2,39 @@ import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
 
 const sidebars: SidebarsConfig = {
   docs: [
-    {
-      type: "category",
-      label: "Getting started",
-      collapsed: false,
-      items: [
-        "getting-started/installation",
-        "getting-started/quickstart"
-      ]
-    },
-
-    {
-      type: "category",
-      label: "Architecture",
-      link: {
-        type: "doc",
-        id: "architecture/overview"
-      },
-      items: [
-        "architecture/domain-model",
-        "architecture/subdomain-catalogue",
-        "architecture/environments",
-        "architecture/content-platform",
-        "architecture/media-assets-cdn",
-        "architecture/apis-integrations",
-        "architecture/automation-workflows",
-        "architecture/security-privacy-access",
-        "architecture/observability-status",
-        "architecture/standards",
-        "architecture/roadmap",
-
-        {
-          type: "category",
-          label: "Decision records",
-          link: {
-            type: "doc",
-            id: "architecture/adrs/index"
-          },
-          items: [
-            "architecture/adrs/ADR-0001-docusaurus-on-github-pages",
-            "architecture/adrs/ADR-0002-justify-subdomains-before-creating-them",
-            "architecture/adrs/ADR-0003-separate-public-api-from-webhook-services"
-          ]
-        }
-      ]
-    },
-
-    {
-      type: "category",
-      label: "Platform services",
-      link: {
-        type: "doc",
-        id: "services/platform/overview"
-      },
-      items: [
-        {
-          type: "category",
-          label: "Public services",
-          items: [
-            "services/platform/docs",
-            "services/platform/data",
-            "services/platform/api",
-            "services/platform/status"
-          ]
-        },
-
-        {
-          type: "category",
-          label: "Assets and content",
-          items: [
-            "services/platform/cdn",
-            "services/platform/dam",
-            "services/platform/upload"
-          ]
-        },
-
-        {
-          type: "category",
-          label: "Developer surfaces",
-          items: [
-            "services/platform/dev",
-            "services/platform/apps",
-            "services/platform/tools",
-            "services/platform/labs"
-          ]
-        },
-
-        {
-          type: "category",
-          label: "Integration services",
-          items: [
-            "services/platform/auth",
-            "services/platform/mcp",
-            "services/platform/hooks",
-            "services/platform/booking",
-            "services/platform/dav"
-          ]
-        },
-
-        {
-          type: "category",
-          label: "Control plane",
-          items: ["services/platform/master"]
-        }
-      ]
-    },
-
-    {
-      type: "category",
-      label: "Guides",
-      items: [
-        "guides/configuration",
-        "guides/deployment"
-      ]
-    },
-
-    {
-      type: "category",
-      label: "Service delivery",
-      link: {
-        type: "doc",
-        id: "services/index"
-      },
-      items: [
-        {
-          type: "category",
-          label: "Architecture",
-          link: {
-            type: "doc",
-            id: "services/architecture/overview"
-          },
-          items: ["services/architecture/customer-journeys"]
-        },
-
-        {
-          type: "category",
-          label: "Integrations",
-          items: [
-            "services/integrations/calcom",
-            "services/integrations/hubspot",
-            "services/integrations/stripe"
-          ]
-        },
-
-        {
-          type: "category",
-          label: "Reference",
-          items: [
-            "services/reference/client-delivery",
-            "services/reference/configuration",
-            "services/reference/data-model",
-            "services/reference/events",
-            "services/reference/http-contracts"
-          ]
-        },
-
-        {
-          type: "category",
-          label: "Runbooks",
-          items: [
-            "services/runbooks/secret-rotation",
-            "services/runbooks/webhook-failures"
-          ]
-        },
-
-        "services/launch-checklist"
-      ]
-    },
-
-    {
-      type: "category",
-      label: "Tutorials",
-      items: ["tutorials/first-tutorial"]
-    },
-
-    {
-      type: "category",
-      label: "Contributing",
-      items: ["contributing/writing-docs"]
-    }
+    "index",
+    { type: "category", label: "Start here", link: { type: "doc", id: "start-here/overview" }, collapsed: false, items: [
+      "start-here/platform-map", "start-here/terminology", "platform/governance/environments", "start-here/quickstart", "start-here/writing-docs"
+    ]},
+    { type: "category", label: "Platform", link: { type: "doc", id: "platform/overview" }, items: [
+      "platform/domain-model",
+      { type: "category", label: "Architecture", items: [
+        "platform/architecture/content-platform", "platform/architecture/apis-integrations", "platform/architecture/automation-workflows", "platform/architecture/media-assets-cdn"
+      ]},
+      { type: "category", label: "Governance", items: [
+        "platform/governance/standards", "platform/governance/security-privacy-access", "platform/governance/environments", "platform/governance/subdomain-catalogue", "platform/governance/subdomain-planning-inventory"
+      ]},
+      { type: "category", label: "Architecture decisions", link: { type: "doc", id: "platform/decisions/index" }, items: [
+        "platform/decisions/ADR-0001-docusaurus-on-github-pages", "platform/decisions/ADR-0002-justify-subdomains-before-creating-them", "platform/decisions/ADR-0003-separate-public-api-from-webhook-services"
+      ]},
+      "platform/roadmap"
+    ]},
+    { type: "category", label: "Catalogue", link: { type: "doc", id: "catalogue/index" }, items: [
+      { type: "category", label: "First-party services", link: { type: "doc", id: "catalogue/first-party/index" }, items: [
+        "catalogue/first-party/platform-services", "catalogue/first-party/web", "catalogue/first-party/docs", "catalogue/first-party/data", "catalogue/first-party/api", "catalogue/first-party/status", "catalogue/first-party/cdn", "catalogue/first-party/dam", "catalogue/first-party/upload", "catalogue/first-party/dev", "catalogue/first-party/apps", "catalogue/first-party/tools", "catalogue/first-party/labs", "catalogue/first-party/auth", "catalogue/first-party/mcp", "catalogue/first-party/hooks", "catalogue/first-party/booking", "catalogue/first-party/dav", "catalogue/first-party/master", "build/reference/client-delivery", "catalogue/first-party/customer-journeys", "catalogue/service-template"
+      ]},
+      { type: "category", label: "External integrations", items: ["catalogue/external-integrations/calcom", "catalogue/external-integrations/hubspot", "catalogue/external-integrations/stripe"]},
+      "catalogue/generated/subdomain-catalogue"
+    ]},
+    { type: "category", label: "Build", items: [
+      "build/configuration", "build/deployment", "build/adding-a-service", "build/publishing-data", "build/api/overview",
+      { type: "category", label: "Technical reference", items: ["build/reference/http-contracts", "build/reference/events", "build/reference/data-model", "build/reference/configuration", "build/reference/client-delivery"]}
+    ]},
+    { type: "category", label: "Operate", items: [
+      "operate/service-ownership", "operate/launch-checklist", "operate/incident-response", "operate/observability-status",
+      { type: "category", label: "Runbooks", items: ["operate/runbooks/secret-rotation", "operate/runbooks/webhook-failures"]}
+    ]},
+    "changelog/documentation-changelog"
   ]
 };
 

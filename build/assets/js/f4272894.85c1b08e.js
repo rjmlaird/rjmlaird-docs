@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkrjmlaird_docs||=[]).push([[7581],{70510(a){a.exports=JSON.parse('{"to":"/docs/catalogue/first-party/data"}')}}]);

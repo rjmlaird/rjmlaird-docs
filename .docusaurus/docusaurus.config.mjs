@@ -13,7 +13,7 @@ export default {
   "organizationName": "rjmlaird",
   "projectName": "rjmlaird-docs",
   "onBrokenLinks": "throw",
-  "onBrokenAnchors": "warn",
+  "onBrokenAnchors": "throw",
   "markdown": {
     "mermaid": true,
     "hooks": {
@@ -59,7 +59,8 @@ export default {
     ]
   ],
   "plugins": [
-    "docusaurus-plugin-mermaid-pan-zoom"
+    "docusaurus-plugin-mermaid-pan-zoom",
+    "./plugins/legacy-redirects"
   ],
   "presets": [
     [
@@ -110,7 +111,7 @@ export default {
           "label": "Documentation"
         },
         {
-          "to": "/docs/api/overview",
+          "to": "/docs/build/api/overview",
           "label": "API",
           "position": "left"
         },
@@ -148,15 +149,19 @@ export default {
           "items": [
             {
               "label": "Getting started",
-              "to": "/docs/getting-started/installation"
+              "to": "/docs/start-here/overview"
+            },
+            {
+              "label": "Access and environments",
+              "to": "/docs/platform/governance/environments"
             },
             {
               "label": "Architecture",
-              "to": "/docs/architecture/overview"
+              "to": "/docs/platform/overview"
             },
             {
               "label": "Deployment",
-              "to": "/docs/guides/deployment"
+              "to": "/docs/build/deployment"
             }
           ]
         },

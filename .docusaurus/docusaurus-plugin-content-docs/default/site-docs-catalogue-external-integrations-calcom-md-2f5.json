@@ -1,0 +1,36 @@
+{
+  "id": "catalogue/external-integrations/calcom",
+  "title": "Cal.com",
+  "description": "How Cal.com booking webhooks are configured and verified for the services system, including the values to enter, the assumptions made and known gaps.",
+  "source": "@site/docs/catalogue/external-integrations/calcom.md",
+  "sourceDirName": "catalogue/external-integrations",
+  "slug": "/catalogue/external-integrations/calcom",
+  "permalink": "/docs/catalogue/external-integrations/calcom",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/catalogue/external-integrations/calcom.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "calcom",
+    "title": "Cal.com",
+    "description": "How Cal.com booking webhooks are configured and verified for the services system, including the values to enter, the assumptions made and known gaps.",
+    "owner": "To confirm",
+    "review_cycle": "6 months",
+    "sidebar_position": 2,
+    "status": "In development",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Service documentation template",
+    "permalink": "/docs/catalogue/service-template"
+  },
+  "next": {
+    "title": "HubSpot",
+    "permalink": "/docs/catalogue/external-integrations/hubspot"
+  }
+}

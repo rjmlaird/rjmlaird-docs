@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkrjmlaird_docs||=[]).push([[5479],{91434(s){s.exports=JSON.parse('{"to":"/docs/platform/decisions/ADR-0003-separate-public-api-from-webhook-services"}')}}]);

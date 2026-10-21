@@ -1,0 +1,34 @@
+{
+  "id": "build/reference/configuration",
+  "title": "Configuration reference",
+  "description": "Every secret, variable and per-environment setting of the services Workers, grouped by Worker, with the rules for setting them.",
+  "source": "@site/docs/build/reference/service-configuration.md",
+  "sourceDirName": "build/reference",
+  "slug": "/build/reference/configuration",
+  "permalink": "/docs/build/reference/configuration",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/build/reference/service-configuration.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "id": "configuration",
+    "title": "Configuration reference",
+    "description": "Every secret, variable and per-environment setting of the services Workers, grouped by Worker, with the rules for setting them.",
+    "sidebar_position": 4,
+    "status": "In development",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Data model",
+    "permalink": "/docs/build/reference/data-model"
+  },
+  "next": {
+    "title": "Client delivery Worker",
+    "permalink": "/docs/build/reference/client-delivery"
+  }
+}

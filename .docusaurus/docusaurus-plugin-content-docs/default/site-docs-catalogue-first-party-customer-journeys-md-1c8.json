@@ -1,0 +1,34 @@
+{
+  "id": "catalogue/first-party/customer-journeys",
+  "title": "Customer journeys",
+  "description": "How each service route moves from first contact to payment, which steps are manual, how return pages work and what is still to build.",
+  "source": "@site/docs/catalogue/first-party/customer-journeys.md",
+  "sourceDirName": "catalogue/first-party",
+  "slug": "/catalogue/first-party/customer-journeys",
+  "permalink": "/docs/catalogue/first-party/customer-journeys",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/catalogue/first-party/customer-journeys.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "customer-journeys",
+    "title": "Customer journeys",
+    "description": "How each service route moves from first contact to payment, which steps are manual, how return pages work and what is still to build.",
+    "sidebar_position": 2,
+    "status": "In development",
+    "confidence": "Partly verified",
+    "last_reviewed": "2026-10-14T00:00:00.000Z"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Client delivery Worker",
+    "permalink": "/docs/build/reference/client-delivery"
+  },
+  "next": {
+    "title": "Service documentation template",
+    "permalink": "/docs/catalogue/service-template"
+  }
+}

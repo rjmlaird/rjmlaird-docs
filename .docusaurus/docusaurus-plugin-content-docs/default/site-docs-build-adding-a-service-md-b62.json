@@ -1,0 +1,30 @@
+{
+  "id": "build/adding-a-service",
+  "title": "Adding a service",
+  "description": "The checklist for adding a new service or hostname to the rjmlaird.co.uk estate, from justification to documentation, in a single pull request.",
+  "source": "@site/docs/build/adding-a-service.md",
+  "sourceDirName": "build",
+  "slug": "/build/adding-a-service",
+  "permalink": "/docs/build/adding-a-service",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rjmlaird/rjmlaird-docs/edit/main/docs/build/adding-a-service.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": null,
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Adding a service",
+    "description": "The checklist for adding a new service or hostname to the rjmlaird.co.uk estate, from justification to documentation, in a single pull request.",
+    "sidebar_position": 3
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Deployment",
+    "permalink": "/docs/build/deployment"
+  },
+  "next": {
+    "title": "Publishing data",
+    "permalink": "/docs/build/publishing-data"
+  }
+}
