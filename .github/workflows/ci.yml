@@ -41,8 +41,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build Docusaurus site
-        run: pnpm run validate
+      - name: Build Astro site
+        run: pnpm run build
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -50,7 +50,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: build
+          path: dist
 
   deploy:
     name: Deploy to GitHub Pages
