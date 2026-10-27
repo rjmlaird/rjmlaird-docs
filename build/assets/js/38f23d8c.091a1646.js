@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkrjmlaird_docs||=[]).push([[8928],{31987(a){a.exports=JSON.parse('{"to":"/docs/catalogue/generated/subdomain-catalogue"}')}}]);

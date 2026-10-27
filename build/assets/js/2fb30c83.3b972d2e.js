@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkrjmlaird_docs||=[]).push([[7538],{20869(e){e.exports=JSON.parse('{"to":"/docs/build/reference/data-model"}')}}]);

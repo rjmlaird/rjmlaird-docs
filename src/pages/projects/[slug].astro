@@ -1,0 +1,87 @@
+---
+// src/pages/projects/[slug].astro
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import {
+  getCollection,
+  render,
+  type CollectionEntry,
+} from "astro:content";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+
+  return projects.map((project) => ({
+    params: {
+      slug: project.id,
+    },
+    props: {
+      project,
+    },
+  }));
+}
+
+interface Props {
+  project: CollectionEntry<"projects">;
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+
+const reviewLabel =
+  project.data.reviewStatus === "reviewed"
+    ? "Reviewed"
+    : "Needs maintainer review";
+---
+
+<BaseLayout
+  title={project.data.title}
+  description={project.data.description}
+>
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="/">Docs</a>
+    <span aria-hidden="true"> / </span>
+
+    <a href="/projects/">Projects</a>
+    <span aria-hidden="true"> / </span>
+
+    <span aria-current="page">{project.data.title}</span>
+  </nav>
+
+  <article class="content">
+    <p class="eyebrow">
+      Project record · <span class="badge">{project.data.status}</span>
+    </p>
+
+    <h1>{project.data.title}</h1>
+
+    {
+      project.data.description && (
+        <p class="muted">{project.data.description}</p>
+      )
+    }
+
+    <p class="meta">
+      Owner: {project.data.owner} · Review: {reviewLabel}
+    </p>
+
+    {
+      (project.data.liveUrl || project.data.repository) && (
+        <div class="toolbar">
+          {project.data.liveUrl && (
+            <a href={project.data.liveUrl}>
+              Open live service <span aria-hidden="true">↗</span>
+            </a>
+          )}
+
+          {project.data.repository && (
+            <a href={project.data.repository}>
+              View repository <span aria-hidden="true">↗</span>
+            </a>
+          )}
+        </div>
+      )
+    }
+
+    <Content />
+  </article>
+</BaseLayout>

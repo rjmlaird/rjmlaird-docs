@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkrjmlaird_docs||=[]).push([[8312],{97132(s){s.exports=JSON.parse('{"to":"/docs/platform/architecture/apis-and-integrations"}')}}]);

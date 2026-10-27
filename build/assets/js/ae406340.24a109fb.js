@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkrjmlaird_docs||=[]).push([[1948],{15379(s){s.exports=JSON.parse('{"to":"/docs/catalogue/first-party/customer-journeys"}')}}]);

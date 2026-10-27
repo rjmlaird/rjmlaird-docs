@@ -1,0 +1,183 @@
+---
+// src/pages/search/index.astro
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const [projects, guides, reference, operations, archive] =
+  await Promise.all([
+    getCollection("projects"),
+    getCollection("guides"),
+    getCollection("reference"),
+    getCollection("operations"),
+    getCollection("archive"),
+  ]);
+
+const items = [
+  ...projects.map((p) => ({
+    title: p.data.title,
+    description: p.data.description,
+    url: `/projects/${p.id}/`,
+    type: "Project",
+    body: [
+      p.data.tags.join(" "),
+      p.data.stack.join(" "),
+      p.body ?? "",
+    ].join(" "),
+  })),
+
+  ...guides.map((p) => ({
+    title: p.data.title,
+    description: p.data.description,
+    url: `/docs/${p.id.replace(/\.mdx?$/, "")}/`,
+    type: "Guide",
+    body: p.body ?? "",
+  })),
+
+  ...reference.map((p) => ({
+    title: p.data.title,
+    description: p.data.description,
+    url: `/reference/${p.id.replace(/\.mdx?$/, "")}/`,
+    type: "Reference",
+    body: p.body ?? "",
+  })),
+
+  ...operations.map((p) => ({
+    title: p.data.title,
+    description: p.data.description,
+    url: `/operations/${p.id.replace(/\.mdx?$/, "")}/`,
+    type: "Operations",
+    body: p.body ?? "",
+  })),
+
+  ...archive.map((p) => ({
+    title: p.data.title,
+    description: p.data.description,
+    url: `/archive/${p.id.replace(/\.mdx?$/, "")}/`,
+    type: "Archive",
+    body: p.body ?? "",
+  })),
+].map((item) => ({
+  ...item,
+  searchText: [
+    item.title,
+    item.description,
+    item.type,
+    item.body,
+  ]
+    .join(" ")
+    .toLowerCase(),
+}));
+---
+
+<BaseLayout
+  title="Search"
+  description="Search project records, guides, references and runbooks."
+>
+  <section class="hero">
+    <p class="eyebrow">Find documentation</p>
+
+    <h1>Search</h1>
+
+    <label for="site-search">Search all documentation</label>
+
+    <div class="toolbar">
+      <input
+        id="site-search"
+        class="search"
+        type="search"
+        placeholder="Try a project name, API, deployment or domain"
+        autocomplete="off"
+        aria-controls="search-results"
+        aria-describedby="search-count"
+      />
+    </div>
+
+    <p
+      id="search-count"
+      class="muted"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+    >
+      Enter a search term to find matching pages.
+    </p>
+
+    <noscript>
+      <p>
+        Search requires JavaScript. You can still browse the documentation
+        using the site navigation.
+      </p>
+    </noscript>
+  </section>
+
+  <ol id="search-results" aria-label="Search results"></ol>
+
+  <script define:vars={{ items }}>
+    const input = document.querySelector("#site-search");
+    const results = document.querySelector("#search-results");
+    const count = document.querySelector("#search-count");
+
+    if (
+      input instanceof HTMLInputElement &&
+      results instanceof HTMLOListElement &&
+      count instanceof HTMLElement
+    ) {
+      const resultLimit = 50;
+
+      function updateResults() {
+        const query = input.value.trim().toLowerCase();
+
+        results.replaceChildren();
+
+        if (!query) {
+          count.textContent =
+            "Enter a search term to find matching pages.";
+          return;
+        }
+
+        const matches = items.filter((item) =>
+          item.searchText.includes(query),
+        );
+
+        const visibleMatches = matches.slice(0, resultLimit);
+
+        if (matches.length === 0) {
+          count.textContent =
+            "No matching pages. Try another search term.";
+          return;
+        }
+
+        const noun = matches.length === 1 ? "page" : "pages";
+
+        count.textContent =
+          matches.length > resultLimit
+            ? `${matches.length} matching ${noun}. Showing the first ${resultLimit}.`
+            : `${matches.length} matching ${noun}.`;
+
+        const fragment = document.createDocumentFragment();
+
+        for (const item of visibleMatches) {
+          const li = document.createElement("li");
+
+          const link = document.createElement("a");
+          link.href = item.url;
+          link.textContent = item.title;
+
+          const description = document.createElement("p");
+          description.textContent = item.description
+            ? `${item.type} — ${item.description}`
+            : item.type;
+
+          li.append(link, description);
+          fragment.append(li);
+        }
+
+        results.append(fragment);
+      }
+
+      input.addEventListener("input", updateResults);
+
+      updateResults();
+    }
+  </script>
+</BaseLayout>

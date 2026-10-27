@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+export async function getStaticPaths() {
+  const entries = await getCollection('operations');
+  return entries.map(entry => ({ params: { slug: entry.id.replace(/\.mdx?$/, '') }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+<BaseLayout title={entry.data.title} description={entry.data.description}>
+  <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Docs</a> / <a href="/operations/">Operations</a> / {entry.data.title}</nav>
+  <article class="content"><h1>{entry.data.title}</h1><p class="muted">{entry.data.description}</p><p class="meta">Review: {entry.data.reviewStatus === 'reviewed' ? 'Reviewed' : 'Needs maintainer review'}</p><Content /></article>
+</BaseLayout>

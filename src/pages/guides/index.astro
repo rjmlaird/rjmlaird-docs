@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+const guides = (await getCollection('guides')).sort((a,b) => a.data.title.localeCompare(b.data.title));
+---
+<BaseLayout title="Guides" description="Getting started, build guides and migrated technical documentation.">
+  <section class="hero"><p class="eyebrow">How-to and orientation</p><h1>Guides</h1><p class="muted">Task-oriented guidance and the existing documentation migrated from the Docusaurus site.</p><div class="toolbar"><label for="guide-search">Search guides</label><input class="search" id="guide-search" type="search" placeholder="Filter by title or description" /></div></section>
+  <ul id="guide-list">{guides.map(g => <li data-search={`${g.data.title} ${g.data.description} ${g.id}`.toLowerCase()}><a href={`/docs/${g.id.replace(/\.mdx?$/, '')}/`}>{g.data.title}</a> <span class="meta">— {g.data.description}</span></li>)}</ul>
+  <script>
+    const input = document.querySelector<HTMLInputElement>('#guide-search');
+    const items = [...document.querySelectorAll<HTMLElement>('#guide-list li')];
+    input?.addEventListener('input', () => { const q = input.value.trim().toLowerCase(); items.forEach(item => item.hidden = !item.dataset.search?.includes(q)); });
+  </script>
+</BaseLayout>

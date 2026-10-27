@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkrjmlaird_docs||=[]).push([[4374],{18313(s){s.exports=JSON.parse('{"to":"/docs/catalogue/first-party/apps"}')}}]);

@@ -1,0 +1,10 @@
+---
+interface Props { title: string; description: string; status: string; href: string; repository?: string; liveUrl?: string }
+const { title, description, status, href, repository, liveUrl } = Astro.props;
+---
+<article class="card">
+  <p><span class="badge">{status}</span></p>
+  <h2><a href={href}>{title}</a></h2>
+  <p>{description}</p>
+  <p class="meta">{liveUrl && <a href={liveUrl}>Live service ↗</a>}{liveUrl && repository && ' · '}{repository && <a href={repository}>GitHub repository ↗</a>}</p>
+</article>

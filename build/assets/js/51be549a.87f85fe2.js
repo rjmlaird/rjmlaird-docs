@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkrjmlaird_docs||=[]).push([[1303],{84545(o){o.exports=JSON.parse('{"to":"/docs/platform/architecture/automation-workflows"}')}}]);

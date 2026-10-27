@@ -1,0 +1,9 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+const entries = (await getCollection('reference')).sort((a,b) => a.data.title.localeCompare(b.data.title));
+---
+<BaseLayout title="Reference" description="Reference material for the RJM Laird ecosystem.">
+  <section class="hero"><p class="eyebrow">Knowledge base</p><h1>Reference</h1><p class="muted">Stable facts, schemas and architecture references.</p></section>
+  {entries.length > 0 ? <ul>{entries.map(entry => <li><a href={`/reference/${entry.id.replace(/\.mdx?$/, '')}/`}>{entry.data.title}</a> <span class="meta">— {entry.data.description}</span></li>)}</ul> : <p class="empty">No reference pages have been published yet. Add Markdown files to <code>src/content/reference/</code>.</p>}
+</BaseLayout>

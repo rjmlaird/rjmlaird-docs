@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkrjmlaird_docs||=[]).push([[2710],{13974(s){s.exports=JSON.parse('{"to":"/docs/platform/governance/standards"}')}}]);

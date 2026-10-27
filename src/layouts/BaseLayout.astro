@@ -1,0 +1,30 @@
+---
+import '../styles/global.css';
+interface Props { title: string; description?: string }
+const { title, description = 'Technical documentation, project references and operational guides for the RJM Laird ecosystem.' } = Astro.props;
+---
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0B0F1A" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title} · RJM Laird Docs</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header"><div class="shell header-inner">
+      <a class="brand" href="/">RJM Laird Docs</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/projects/">Projects</a><a href="/guides/">Guides</a><a href="/reference/">Reference</a><a href="/operations/">Operations</a><a href="/archive/">Archive</a><a href="/search/">Search</a><a href="https://rjmlaird.co.uk">Main site ↗</a>
+      </nav>
+    </div></header>
+    <main id="main" class="shell"><slot /></main>
+    <footer class="site-footer"><div class="shell">
+      <p>Technical documentation for the RJM Laird ecosystem.</p>
+      <p><a href="https://github.com/rjmlaird/rjmlaird-docs">Repository</a> · <a href="https://rjmlaird.co.uk">Main site</a> · Documentation licensed under CC BY 4.0.</p>
+    </div></footer>
+  </body>
+</html>

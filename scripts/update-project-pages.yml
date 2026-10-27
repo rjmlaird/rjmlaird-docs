@@ -1,0 +1,30 @@
+# .github/workflows/update-project-pages.yml
+name: Update project pages
+on:
+  schedule: [{ cron: "0 6 * * 1" }]   # Mondays 06:00 UTC
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install pyyaml
+      - uses: actions/cache@v4
+        with:
+          path: .cache/github
+          key: gh-etags-${{ github.run_id }}
+          restore-keys: gh-etags-
+      - run: python scripts/gh_project_pages.py --repos-file projects.txt --ext mdx
+        env:
+          GITHUB_TOKEN: ${{ secrets.PROJECTS_READ_TOKEN }}  # PAT with read access to listed repos
+      - uses: peter-evans/create-pull-request@v6
+        with:
+          branch: chore/update-project-pages
+          title: "Update generated project pages"
+          body: "Review the diff, then set `reviewed: true` on pages you have edited."
+          commit-message: "chore: regenerate project pages"

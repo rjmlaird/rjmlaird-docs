@@ -1,0 +1,122 @@
+{
+  "$ref": "#/definitions/projects",
+  "definitions": {
+    "projects": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string",
+          "default": ""
+        },
+        "status": {
+          "type": "string",
+          "default": "active"
+        },
+        "reviewStatus": {
+          "type": "string",
+          "enum": [
+            "reviewed",
+            "needs-review"
+          ],
+          "default": "needs-review"
+        },
+        "owner": {
+          "type": "string",
+          "default": "Ryan Laird"
+        },
+        "lastReviewed": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "integer",
+              "format": "unix-time"
+            }
+          ]
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "visibility": {
+          "type": "string",
+          "enum": [
+            "public",
+            "internal",
+            "private"
+          ],
+          "default": "public"
+        },
+        "audience": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "developer"
+          ]
+        },
+        "repository": {
+          "type": "string",
+          "format": "uri"
+        },
+        "liveUrl": {
+          "$ref": "#/definitions/projects/properties/repository"
+        },
+        "docsUrl": {
+          "type": "string"
+        },
+        "stagingUrl": {
+          "$ref": "#/definitions/projects/properties/repository"
+        },
+        "version": {
+          "type": "string"
+        },
+        "docVersion": {
+          "type": "string"
+        },
+        "stack": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "relatedProjects": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "relatedPages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

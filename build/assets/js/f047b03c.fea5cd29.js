@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkrjmlaird_docs||=[]).push([[4174],{21963(n){n.exports=JSON.parse('{"to":"/docs/platform/governance/subdomain-planning-inventory"}')}}]);

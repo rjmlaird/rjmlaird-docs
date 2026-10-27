@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkrjmlaird_docs||=[]).push([[8241],{98064(o){o.exports=JSON.parse('{"to":"/docs/platform/domain-model"}')}}]);

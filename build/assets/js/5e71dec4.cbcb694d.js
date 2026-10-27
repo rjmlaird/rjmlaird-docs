@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkrjmlaird_docs||=[]).push([[589],{28119(e){e.exports=JSON.parse('{"to":"/docs/catalogue/first-party/service-delivery-architecture"}')}}]);
