@@ -16,7 +16,7 @@ tags: ["getting-started", "orientation"]
 
 ## Where to begin
 
-1. Browse the [project index](/projects/).
+1. Browse the [repository index](/repos/), the [builds](/builds/) (labs, tools and apps) and the [GitHub Projects boards](/boards/).
 2. Read the [repository ecosystem](/reference/ecosystem/).
 3. Follow the [documentation authoring guide](/docs/guides/getting-started/docs-authoring/).
 4. Check the [domain inventory](/reference/domains/domain-inventory/) before making infrastructure changes.

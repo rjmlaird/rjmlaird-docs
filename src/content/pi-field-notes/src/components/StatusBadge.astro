@@ -1,0 +1,11 @@
+---
+import { STATUS_LABELS } from '../lib/content';
+interface Props {
+  status: string;
+}
+const { status } = Astro.props;
+---
+
+<span class="badge" data-status={status}>
+  {STATUS_LABELS[status] ?? status}
+</span>

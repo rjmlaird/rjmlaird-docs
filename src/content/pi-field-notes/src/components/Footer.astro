@@ -1,0 +1,18 @@
+---
+import { SITE, url } from '../lib/site';
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <p>
+      Written content and diagrams are licensed
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Code is MIT
+      licensed. &copy; {year}
+      {SITE.author}.
+    </p>
+    <p>
+      <a href={url('/rss.xml')}>RSS feed</a>
+    </p>
+  </div>
+</footer>

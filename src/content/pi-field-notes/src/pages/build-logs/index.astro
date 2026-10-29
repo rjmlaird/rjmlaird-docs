@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EntryItem from '../../components/EntryItem.astro';
+import { url } from '../../lib/site';
+import { byDateDesc, formatDate, getPublished, isoDate, STAGE_LABELS } from '../../lib/content';
+
+const logs = (await getPublished('build-logs')).sort(byDateDesc);
+const years = [...new Set(logs.map((l) => l.data.date.getUTCFullYear()))];
+---
+
+<BaseLayout
+  title="Build logs"
+  description="Dated, incremental updates from Raspberry Pi builds, newest first."
+>
+  <div class="container page">
+    <header class="page-header">
+      <h1>Build logs</h1>
+      <p class="lede">
+        Working notes, newest first. They are less polished than the{' '}
+        <a href={url('/projects/')}>project pages</a> and more honest about what is going on right
+        now.
+      </p>
+    </header>
+
+    {logs.length === 0 && <p class="empty">No build logs yet.</p>}
+
+    {years.map((year) => (
+      <section class="group" aria-labelledby={`year-${year}`}>
+        <h2 id={`year-${year}`}>{year}</h2>
+        <ul class="entry-list">
+          {logs
+            .filter((l) => l.data.date.getUTCFullYear() === year)
+            .map((l) => (
+              <EntryItem
+                href={url(`/build-logs/${l.id}/`)}
+                title={l.data.title}
+                description={l.data.description}
+                tags={l.data.tags}
+              >
+                <Fragment slot="meta">
+                  <time datetime={isoDate(l.data.date)}>{formatDate(l.data.date)}</time>
+                  <span>{STAGE_LABELS[l.data.stage]}</span>
+                  <span>
+                    Project:{' '}
+                    <a href={url(`/projects/${l.data.project.id}/`)}>{l.data.project.id}</a>
+                  </span>
+                  {l.data.draft && <span>Draft</span>}
+                </Fragment>
+              </EntryItem>
+            ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+</BaseLayout>

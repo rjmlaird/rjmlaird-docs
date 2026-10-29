@@ -1,0 +1,18 @@
+# .project/project.yml - only what GitHub cannot tell us
+title: Climate Visualiser
+summary: Evidence-based climate science communication site.
+audience: Educators, journalists and curious non-specialists
+status: in-progress          # idea | planning | in-progress | maintained | archived
+tags: [climate, science-communication]
+disciplines: [Climate science, Data visualisation]
+links:
+  - label: Live demo
+    url: https://example.com
+objectives:
+  - Present climate indicators with sourced, dated evidence
+roadmap:
+  - phase: Data pipeline
+    status: active           # done | active | next | blocked | paused
+    items: [Automate ingestion, Add validation]
+notes: |
+  Context that is not inferable from the repo.

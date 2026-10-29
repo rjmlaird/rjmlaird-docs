@@ -1,0 +1,398 @@
+---
+// src/components/BuildCard.astro
+import techStack from "../../data/techstack.json";
+import {
+  buildHref,
+  buildsSnapshot,
+  kindMeta,
+  kindOf,
+  statusMeta,
+  type Build,
+} from "../lib/builds";
+
+type StackItem = {
+  name: string;
+  url: string;
+  logo?: string;
+  color: string;
+  logoColor?: string;
+  context?: string;
+};
+
+type StackCategory = {
+  name: string;
+  items: StackItem[];
+};
+
+const categories = techStack.categories as StackCategory[];
+
+function normalise(value: string): string {
+  return value.trim().toLowerCase();
+}
+
+const stackByName = new Map<string, StackItem>();
+
+for (const category of categories) {
+  for (const item of category.items) {
+    const key = normalise(item.name);
+    if (!stackByName.has(key)) {
+      stackByName.set(key, item);
+    }
+  }
+}
+
+function badgeUrl(item: StackItem): string {
+  const label = encodeURIComponent(item.name);
+  const color = encodeURIComponent(item.color);
+  const logo = item.logo ? `&logo=${encodeURIComponent(item.logo)}` : "";
+  const logoColor = encodeURIComponent(item.logoColor ?? "white");
+
+  return (
+    `https://img.shields.io/badge/-${label}-${color}` +
+    `?style=flat-square${logo}&logoColor=${logoColor}`
+  );
+}
+
+interface Props {
+  build: Build;
+  showKind?: boolean;
+}
+
+const { build, showKind = false } = Astro.props;
+const kind = kindOf(build);
+const singular = kindMeta(kind)?.singular ?? "Build";
+const status = statusMeta(buildsSnapshot, kind, build.status);
+
+const clean = (v: unknown) => (v === null || v === undefined ? "" : String(v).trim());
+
+const title = clean(build.title) || "Untitled Build";
+const description = clean(build.description) || "No description provided.";
+const detailLink = buildHref(build);
+const homepage = clean(build.url);
+
+const fmtDate = (value?: string) =>
+  value ? new Date(value).toLocaleDateString("en-GB", { dateStyle: "medium" }) : "";
+const updated = fmtDate(build.updated ?? build.updatedAt ?? build.pushedAt);
+
+// Language tech stack item
+const languageItem = build.language ? stackByName.get(normalise(build.language)) : null;
+const languageBadge = languageItem ? badgeUrl(languageItem) : null;
+
+// Topic tags (excluding language if duplicated)
+const rawTech = [
+  ...(build.topics ?? []),
+  ...(build.tools ?? []),
+  ...(build.tech ?? []),
+].filter((t): t is string => Boolean(t && t.trim()));
+
+const seenTopics = new Set<string>();
+if (build.language) seenTopics.add(normalise(build.language));
+
+const topics = (build.technologies ?? rawTech)
+  .filter((topic) => {
+    const name = typeof topic === "string" ? topic : (topic as any).name;
+    const key = normalise(name);
+    if (!key || seenTopics.has(key)) return false;
+    seenTopics.add(key);
+    return true;
+  })
+  .map((topic) => {
+    const name = typeof topic === "string" ? topic : (topic as any).name;
+    const item = typeof topic === "object" && topic !== null && "item" in topic ? (topic as any).item : stackByName.get(normalise(name));
+    const badge = item ? badgeUrl(item) : (typeof topic === "object" && topic !== null && "badgeUrl" in topic ? (topic as any).badgeUrl : null);
+    
+    return {
+      name,
+      item: item ?? null,
+      badgeUrl: badge,
+      topicUrl: `https://github.com/topics/${encodeURIComponent(name.toLowerCase())}`,
+    };
+  });
+---
+
+<article class="pr pub">
+  <div class="pm">
+    <div class="pub-top">
+      <div class="pub-type-status">
+        {showKind && <span class="pub-kind">{singular}</span>}
+        <span class="pub-status" data-status={build.status}>{status.label}</span>
+      </div>
+
+      <div class="pub-title-row">
+        <h3>
+          <a href={detailLink}>
+            {title}
+          </a>
+        </h3>
+      </div>
+    </div>
+
+    {description && <p>{description}</p>}
+
+    {(build.language || topics.length > 0) && (
+      <div class="tech-stack-section">
+        <p class="stack-label">Built with</p>
+        
+        {build.language && (
+          <div class="stack-line language-line">
+            {languageItem && languageBadge ? (
+              <a
+                class="inline-flex max-w-full vertical-middle"
+                href={languageItem.url}
+                title={languageItem.context || languageItem.name}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={languageBadge}
+                  alt={languageItem.name}
+                  height="20"
+                  loading="lazy"
+                  decoding="async"
+                  style="display: block; max-width: 100%; height: auto; min-height: 20px;"
+                />
+              </a>
+            ) : (
+              <a
+                class="tag tag-link"
+                href={`https://github.com/topics/${encodeURIComponent(build.language.toLowerCase())}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {build.language}
+              </a>
+            )}
+          </div>
+        )}
+
+        {topics.length > 0 && (
+          <div class="stack-line topics-line">
+            <div class="pt">
+              {topics.map((tech) => (
+                <>
+                  {tech.item && tech.badgeUrl ? (
+                    <a
+                      class="inline-flex max-w-full vertical-middle"
+                      href={tech.item.url}
+                      title={tech.item.context || tech.item.name}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={tech.badgeUrl}
+                        alt={tech.item.name}
+                        height="20"
+                        loading="lazy"
+                        decoding="async"
+                        style="display: block; max-width: 100%; height: auto; min-height: 20px;"
+                      />
+                    </a>
+                  ) : (
+                    <a
+                      class="tag tag-link"
+                      href={tech.topicUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {tech.name}
+                    </a>
+                  )}
+                </>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    )}
+  </div>
+
+  <div class="card-footer-section">
+    <div class="card-footer-links">
+      {homepage && (
+        <a href={homepage} class="pa secondary-pa" target="_blank" rel="noopener noreferrer">
+          <span>Live site</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+      )}
+      <a href={detailLink} class="pa secondary-pa">
+        <span>Details</span>
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    {updated && (
+      <p class="updated-date">
+        Updated {updated}
+      </p>
+    )}
+  </div>
+</article>
+
+<style>
+  .pub {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+    background: color-mix(in srgb, currentColor 2%, transparent);
+    transition:
+      transform 180ms ease,
+      box-shadow 180ms ease,
+      border-color 180ms ease;
+  }
+
+  .pub::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.02));
+    opacity: 0;
+    transition: opacity 180ms ease;
+    z-index: 0;
+  }
+
+  .pub:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+    border-color: color-mix(in srgb, currentColor 24%, transparent);
+  }
+
+  .pub:hover::before {
+    opacity: 1;
+  }
+
+  .pm,
+  .card-footer-section {
+    position: relative;
+    z-index: 2;
+  }
+
+  .pub-type-status {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0.35rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: color-mix(in srgb, currentColor 65%, transparent);
+  }
+
+  .pub-top {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.7rem;
+  }
+
+  .pub-title-row h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+
+  .pub-title-row h3 a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .pub-title-row h3 a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.16em;
+  }
+
+  .tech-stack-section {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .stack-label {
+    margin: 0 0 0.2rem;
+    color: color-mix(in srgb, currentColor 70%, transparent);
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .stack-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .pt {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .pm p {
+    margin: 0;
+    color: color-mix(in srgb, currentColor 75%, transparent);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .tag,
+  .pa {
+    display: inline-flex;
+    width: fit-content;
+    padding: 0.35rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    line-height: 1;
+    border: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+    background: color-mix(in srgb, currentColor 4%, transparent);
+    align-items: center;
+  }
+
+  .tag-link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .tag-link:hover {
+    background: color-mix(in srgb, currentColor 10%, transparent);
+    text-decoration: underline;
+    text-underline-offset: 0.12em;
+  }
+
+  .card-footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid color-mix(in srgb, currentColor 10%, transparent);
+  }
+
+  .card-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .pa {
+    text-decoration: none;
+    gap: 0.3rem;
+  }
+
+  .pa:hover {
+    background: color-mix(in srgb, currentColor 10%, transparent);
+  }
+
+  .updated-date {
+    margin: 0;
+    font-size: 0.75rem;
+    color: color-mix(in srgb, currentColor 60%, transparent);
+  }
+</style>

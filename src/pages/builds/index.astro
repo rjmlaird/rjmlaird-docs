@@ -1,0 +1,86 @@
+---
+// src/pages/builds/index.astro
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BuildList from "../../components/BuildList.astro";
+import {
+  BUILDS_API_URL,
+  KINDS,
+  buildsOfKind,
+  buildsSnapshot,
+  formatDay,
+  sectionsByKind,
+} from "../../lib/builds";
+
+const sections = sectionsByKind(buildsSnapshot);
+const total = buildsSnapshot.builds.length;
+const synced = formatDay(buildsSnapshot.syncedAt);
+---
+
+<BaseLayout
+  title="Builds"
+  description="Labs, tools and apps published across the RJM Laird ecosystem, from the builds API."
+>
+  <section class="hero">
+    <p class="eyebrow">Labs · Tools · Apps</p>
+
+    <h1>Builds</h1>
+
+    <p class="muted">
+      Things you can open and use. Each build lives in a source repository (see
+      <a href="/repos/">Repositories</a>) and is planned on a
+      <a href="/boards/">GitHub Projects board</a>.
+    </p>
+
+    <ul class="kind-summary">
+      {
+        KINDS.map((k) => (
+          <li>
+            <a href={`/builds/${k.kind}/`}>{k.label}</a>
+            <span class="muted"> · {buildsOfKind(buildsSnapshot, k.kind).length}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <BuildList sections={sections} />
+
+  <section class="source-note">
+    <h2>Where this data comes from</h2>
+
+    <p class="muted">
+      Builds are published by the builds API and snapshotted into
+      <code>data/builds.json</code>{synced && <> (last synced {synced})</>}. The site build
+      never calls the API; refresh the snapshot with <code>pnpm sync:builds</code>.
+    </p>
+
+    <pre><code>curl -X 'GET' \
+  '{BUILDS_API_URL}' \
+  -H 'accept: application/json'</code></pre>
+
+    <p class="meta">{total} builds in the current snapshot.</p>
+  </section>
+</BaseLayout>
+
+<style>
+  .kind-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    list-style: none;
+    margin: 1rem 0 0;
+    padding: 0;
+  }
+
+  .source-note {
+    padding: 2rem 0 4rem;
+  }
+
+  .source-note pre {
+    overflow: auto;
+    padding: 1rem;
+    background: #080b12;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+  }
+</style>

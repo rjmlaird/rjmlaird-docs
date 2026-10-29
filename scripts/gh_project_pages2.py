@@ -7,7 +7,7 @@ Evidence comes from the GitHub API. An optional .project/project.yml
 
 Usage:
   export GITHUB_TOKEN=ghp_...        # optional for public repos, needed for private
-  python gh_project_pages.py owner/repo [owner/repo2 ...] -o src/content/projects
+  python gh_project_pages.py owner/repo [owner/repo2 ...] -o src/content/repos
   python gh_project_pages.py --repos-file projects.txt --ext mdx
 
 Design notes:
@@ -268,7 +268,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("repos", nargs="*", help="owner/repo")
     ap.add_argument("--repos-file", help="text file, one owner/repo per line (# comments allowed)")
-    ap.add_argument("-o", "--out", default="src/content/projects")
+    ap.add_argument("-o", "--out", default="src/content/repos")
     ap.add_argument("--ext", choices=["md", "mdx"], default="md")
     ap.add_argument("--no-cache", action="store_true")
     ap.add_argument("--force", action="store_true", help="overwrite pages marked reviewed: true")

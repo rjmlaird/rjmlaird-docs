@@ -16,15 +16,15 @@ for(const file of files) {
   const text=fs.readFileSync(file,'utf8');
   for(const match of text.matchAll(/\]\((\/[^)#?]*)\)/g)) {
     const url=match[1].replace(/^\//,'').replace(/\/$/,'');
-    if(!url || ['projects','guides','reference','operations','archive'].includes(url)) continue;
+    if(!url || ['repos','builds','boards','guides','reference','operations','archive'].includes(url)) continue;
     // Dynamic docs routes are based on content IDs; catch broken internal links without rejecting external roots.
     if(url.startsWith('docs/')) {
       const slug=url.slice(5);
       if(!known.has(`guides/${slug}`) && !known.has(slug)) errors.push(`${file}: unresolved internal link ${match[1]}`);
     } else if(url.startsWith('reference/') && !known.has(url)) errors.push(`${file}: unresolved internal link ${match[1]}`);
-    else if(url.startsWith('projects/') && url !== 'projects') {
-      const slug=url.slice('projects/'.length);
-      if(!fs.existsSync(`src/content/projects/${slug}.md`)) errors.push(`${file}: unresolved internal link ${match[1]}`);
+    else if(url.startsWith('repos/') && url !== 'repos') {
+      const slug=url.slice('repos/'.length);
+      if(!fs.existsSync(`src/content/repos/${slug}.md`)) errors.push(`${file}: unresolved internal link ${match[1]}`);
     }
   }
 }

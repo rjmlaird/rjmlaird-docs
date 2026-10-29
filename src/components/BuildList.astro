@@ -1,0 +1,231 @@
+---
+// src/components/BuildList.astro
+//
+// A filterable list of builds split into titled sections using the tech stack resolution.
+import BuildCard from "./BuildCard.astro";
+import type { BuildSection } from "../lib/builds";
+import techStack from "../../data/techstack.json";
+
+type StackItem = {
+  name: string;
+  url: string;
+  logo?: string;
+  color: string;
+  logoColor?: string;
+  context?: string;
+};
+
+type StackCategory = {
+  name: string;
+  items: StackItem[];
+};
+
+const categories = techStack.categories as StackCategory[];
+
+function normalise(value: string): string {
+  return value.trim().toLowerCase();
+}
+
+const stackByName = new Map<string, StackItem>();
+
+for (const category of categories) {
+  for (const item of category.items) {
+    const key = normalise(item.name);
+    if (!stackByName.has(key)) {
+      stackByName.set(key, item);
+    }
+  }
+}
+
+function badgeUrl(item: StackItem): string {
+  const label = encodeURIComponent(item.name);
+  const color = encodeURIComponent(item.color);
+  const logo = item.logo ? `&logo=${encodeURIComponent(item.logo)}` : "";
+  const logoColor = encodeURIComponent(item.logoColor ?? "white");
+
+  return (
+    `https://img.shields.io/badge/-${label}-${color}` +
+    `?style=flat-square${logo}&logoColor=${logoColor}`
+  );
+}
+
+interface Props {
+  sections: BuildSection[];
+  showKind?: boolean;
+  emptyNoun?: string;
+}
+
+const { sections, showKind = false } = Astro.props;
+
+// Process sections and builds to resolve tech stack items for search and rendering
+const processedSections = sections.map((section) => ({
+  ...section,
+  builds: section.builds.map((build) => {
+    const techCandidates = [
+      build.language,
+      ...(build.topics ?? []),
+      ...(build.tools ?? []),
+      ...(build.tech ?? []),
+    ].filter((t): t is string => Boolean(t && t.trim()));
+
+    const seenTech = new Set<string>();
+    const technologies = techCandidates
+      .filter((tech) => {
+        const key = normalise(tech);
+        if (!key || seenTech.has(key)) return false;
+        seenTech.add(key);
+        return true;
+      })
+      .map((tech) => {
+        const item = stackByName.get(normalise(tech));
+        return {
+          name: tech,
+          item: item ?? null,
+          badgeUrl: item ? badgeUrl(item) : null,
+          topicUrl: `https://github.com/topics/${encodeURIComponent(tech.toLowerCase())}`,
+        };
+      });
+
+    return {
+      ...build,
+      technologies,
+    };
+  }),
+}));
+
+const searchText = (b: any) =>
+  [
+    b.title,
+    b.description,
+    b.status,
+    b.group,
+    b.type,
+    b.language,
+    ...(b.topics ?? []),
+    ...(b.tools ?? []),
+    ...(b.tech ?? []),
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+
+const total = processedSections.reduce((n, s) => n + s.builds.length, 0);
+---
+
+<div data-build-filter hidden>
+  <label for="build-search">Filter builds</label>
+
+  <div class="toolbar">
+    <input
+      class="search"
+      id="build-search"
+      type="search"
+      placeholder="Search by name, technology, status or group"
+      autocomplete="off"
+      aria-controls="build-list"
+      aria-describedby="build-count"
+    />
+  </div>
+</div>
+
+<p id="build-count" class="muted" role="status" aria-live="polite" aria-atomic="true">
+  {total} {total === 1 ? "build" : "builds"}
+</p>
+
+<div id="build-list">
+  {
+    processedSections.map((section) => (
+      <section class="build-section" data-build-section aria-labelledby={`section-${section.id}`}>
+        <h2 id={`section-${section.id}`}>
+          {section.href ? <a href={section.href}>{section.title}</a> : section.title}
+          <span class="count">{section.builds.length}</span>
+        </h2>
+
+        {section.blurb && <p class="muted">{section.blurb}</p>}
+
+        {
+          section.builds.length > 0 ? (
+            <div class="grid">
+              {section.builds.map((build) => (
+                <div data-build-card data-search={searchText(build)}>
+                  <BuildCard build={build} showKind={showKind} />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p class="empty">
+              Nothing published in the builds API yet. This list updates when the API does.
+            </p>
+          )
+        }
+      </section>
+    ))
+  }
+
+  <p id="build-empty" class="muted" hidden>No matching builds. Try another search term.</p>
+</div>
+
+<script>
+  function initialiseBuildFilter() {
+    const controls = document.querySelector<HTMLElement>("[data-build-filter]");
+    const input = document.querySelector<HTMLInputElement>("#build-search");
+    const count = document.querySelector<HTMLElement>("#build-count");
+    const empty = document.querySelector<HTMLElement>("#build-empty");
+
+    if (!controls || !input || !count || !empty || input.dataset.initialised === "true") return;
+
+    const cards = Array.from(document.querySelectorAll<HTMLElement>("[data-build-card]"));
+    const sections = Array.from(document.querySelectorAll<HTMLElement>("[data-build-section]"));
+
+    const update = () => {
+      const query = input.value.trim().toLowerCase();
+      let visible = 0;
+
+      for (const card of cards) {
+        const matches = (card.dataset.search ?? "").includes(query);
+        card.hidden = !matches;
+        if (matches) visible += 1;
+      }
+
+      for (const section of sections) {
+        const hasCards = section.querySelector("[data-build-card]") !== null;
+        const anyVisible = section.querySelector("[data-build-card]:not([hidden])") !== null;
+        section.hidden = query ? !anyVisible : hasCards ? !anyVisible : false;
+      }
+
+      const noun = cards.length === 1 ? "build" : "builds";
+      count.textContent = query ? `${visible} of ${cards.length} ${noun}` : `${cards.length} ${noun}`;
+      empty.hidden = visible !== 0 || !query;
+    };
+
+    input.addEventListener("input", update);
+    input.dataset.initialised = "true";
+    controls.hidden = false;
+    update();
+  }
+
+  initialiseBuildFilter();
+</script>
+
+<style>
+  [data-build-filter][hidden],
+  [data-build-card][hidden],
+  [data-build-section][hidden],
+  #build-empty[hidden] {
+    display: none;
+  }
+
+  [data-build-card] {
+    min-width: 0;
+  }
+
+  .build-section h2 a {
+    text-decoration: none;
+  }
+
+  .count {
+    margin-left: 0.5rem;
+    color: var(--muted);
+    font: 500 0.9rem "JetBrains Mono", monospace;
+  }
+</style>

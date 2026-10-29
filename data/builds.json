@@ -1,0 +1,1634 @@
+{
+  "syncedAt": "2026-10-29T14:20:05.034Z",
+  "source": "https://api.rjmlaird.co.uk/v1/builds",
+  "schemaVersion": 1,
+  "catalogues": {
+    "apps": {
+      "schemaVersion": 1,
+      "origin": "https://apps.rjmlaird.co.uk",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "sourceRef": "main",
+      "groups": [
+        {
+          "id": "space",
+          "name": "Space & Astronomy",
+          "blurb": "Dashboards and planners for observing and space data."
+        },
+        {
+          "id": "places",
+          "name": "Places & Infrastructure",
+          "blurb": "Weather and local data dashboards."
+        },
+        {
+          "id": "home",
+          "name": "Home & Everyday",
+          "blurb": "Personal inventory and planning apps for around the house."
+        }
+      ],
+      "statuses": {
+        "active": {
+          "label": "Active",
+          "order": 1
+        },
+        "in-progress": {
+          "label": "In progress",
+          "order": 2
+        },
+        "planned": {
+          "label": "Planned",
+          "order": 3
+        },
+        "archived": {
+          "label": "Archived",
+          "order": 4
+        }
+      }
+    },
+    "tools": {
+      "schemaVersion": 1,
+      "origin": "https://tools.rjmlaird.co.uk",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "sourceRef": "main",
+      "groups": [
+        {
+          "id": "space",
+          "name": "Space & Astronomy",
+          "blurb": "Orbital mechanics, satellite passes and astronomy utilities."
+        },
+        {
+          "id": "maths-physics",
+          "name": "Maths & Physics",
+          "blurb": "Calculators and converters for physics, engineering and maths."
+        },
+        {
+          "id": "places",
+          "name": "Places & Infrastructure",
+          "blurb": "Coordinates, postcodes and local data lookups."
+        },
+        {
+          "id": "sustainability",
+          "name": "Sustainability & Climate",
+          "blurb": "Emissions reporting and planning tools."
+        },
+        {
+          "id": "productivity",
+          "name": "Focus & Wellbeing",
+          "blurb": "Small tools for focus, breaks and everyday routines."
+        },
+        {
+          "id": "web-dev",
+          "name": "Web & Development",
+          "blurb": "Accessibility and sustainability checks and developer utilities."
+        }
+      ],
+      "statuses": {
+        "active": {
+          "label": "Active",
+          "order": 1
+        },
+        "in-progress": {
+          "label": "In progress",
+          "order": 2
+        },
+        "planned": {
+          "label": "Planned",
+          "order": 3
+        },
+        "archived": {
+          "label": "Archived",
+          "order": 4
+        }
+      }
+    },
+    "labs": {
+      "schemaVersion": 1,
+      "origin": "https://labs.rjmlaird.co.uk",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "sourceRef": "main",
+      "groups": [
+        {
+          "id": "physics",
+          "name": "Physics & Space",
+          "blurb": "Interactive demonstrations of mechanics, electricity, matter, waves and orbital dynamics."
+        },
+        {
+          "id": "climate",
+          "name": "Climate & Earth",
+          "blurb": "Evidence-based explorations of the climate system, fluid dynamics, and environmental indicators."
+        },
+        {
+          "id": "focus",
+          "name": "Focus & Everyday",
+          "blurb": "Small experiments for choosing breaks, visualization, and understanding attention."
+        }
+      ],
+      "statuses": {
+        "active": {
+          "label": "Active",
+          "order": 1
+        },
+        "in-progress": {
+          "label": "In progress",
+          "order": 2
+        },
+        "planned": {
+          "label": "Planned",
+          "order": 3
+        },
+        "archived": {
+          "label": "Archived",
+          "order": 4
+        }
+      }
+    }
+  },
+  "total": 76,
+  "builds": [
+    {
+      "id": "apps/astrodash",
+      "sourceId": "astrodash",
+      "type": "app",
+      "title": "Astro Mission Control",
+      "description": "An observing dashboard: what is up tonight, the Moon and darkness, weather, planets, meteor showers, aurora and solar activity.",
+      "group": "space",
+      "tech": [
+        "JavaScript",
+        "Leaflet",
+        "Open-Meteo",
+        "NOAA SWPC",
+        "NASA DONKI"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-11",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "url": "https://astrodash.apps.rjmlaird.co.uk",
+      "sourcePath": "apps/astrodash",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/astrodash"
+    },
+    {
+      "id": "apps/launches",
+      "sourceId": "launches",
+      "type": "app",
+      "title": "Upcoming Rocket Launches",
+      "description": "A live countdown to the next rocket launch and a list of the following ten, with status.",
+      "group": "space",
+      "tech": [
+        "JavaScript",
+        "Launch Library 2"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-21",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "url": "https://launches.apps.rjmlaird.co.uk",
+      "sourcePath": "apps/launches",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/launches"
+    },
+    {
+      "id": "apps/earth-explorer",
+      "sourceId": "earth-explorer",
+      "type": "app",
+      "title": "Earth Explorer",
+      "description": "Explore satellite imagery, global environmental indicators, and Earth observation datasets.",
+      "group": "space",
+      "tech": [
+        "JavaScript",
+        "Tailwind CSS"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "url": "https://earth-explorer.apps.rjmlaird.co.uk",
+      "sourcePath": "apps/earth-explorer",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/earth-explorer"
+    },
+    {
+      "id": "apps/atmosphere-explorer",
+      "sourceId": "atmosphere-explorer",
+      "type": "app",
+      "title": "Atmosphere Explorer",
+      "description": "Monitor atmospheric conditions, air quality indices, and meteorological telemetry.",
+      "group": "space",
+      "tech": [
+        "JavaScript",
+        "Tailwind CSS"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "url": "https://atmosphere-explorer.apps.rjmlaird.co.uk",
+      "sourcePath": "apps/atmosphere-explorer",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/atmosphere-explorer"
+    },
+    {
+      "id": "apps/sun-explorer",
+      "sourceId": "sun-explorer",
+      "type": "app",
+      "title": "Sun Explorer",
+      "description": "Real-time solar monitoring, sunspot tracking, and solar flare telemetry.",
+      "group": "space",
+      "tech": [
+        "JavaScript",
+        "Tailwind CSS",
+        "NOAA SWPC"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "url": "https://sun-explorer.apps.rjmlaird.co.uk",
+      "sourcePath": "apps/sun-explorer",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/sun-explorer"
+    },
+    {
+      "id": "apps/solar-system-explorer",
+      "sourceId": "solar-system-explorer",
+      "type": "app",
+      "title": "Solar System Explorer",
+      "description": "Interactive Orrery and planetary position tracker across the solar system.",
+      "group": "space",
+      "tech": [
+        "JavaScript",
+        "Tailwind CSS"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "url": "https://solar-system-explorer.apps.rjmlaird.co.uk",
+      "sourcePath": "apps/solar-system-explorer",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/solar-system-explorer"
+    },
+    {
+      "id": "apps/space-trend-keeper",
+      "sourceId": "space-trend-keeper",
+      "type": "app",
+      "title": "Space Trend Keeper",
+      "description": "Track macroeconomic, technological, and policy trends across the global space economy.",
+      "group": "space",
+      "tech": [
+        "JavaScript",
+        "Tailwind CSS"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "url": "https://space-trend-keeper.apps.rjmlaird.co.uk",
+      "sourcePath": "apps/space-trend-keeper",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/space-trend-keeper"
+    },
+    {
+      "id": "apps/weatherdash",
+      "sourceId": "weatherdash",
+      "type": "app",
+      "title": "Weather Dashboard",
+      "description": "Weather for any place: current conditions, the next 24 hours, radar, a 7-day forecast, air quality and pollen.",
+      "group": "places",
+      "tech": [
+        "JavaScript",
+        "Open-Meteo",
+        "RainViewer"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-11",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "url": "https://weatherdash.apps.rjmlaird.co.uk",
+      "sourcePath": "apps/weatherdash",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/weatherdash"
+    },
+    {
+      "id": "apps/council-watch",
+      "sourceId": "council-watch",
+      "type": "app",
+      "title": "Council Watch",
+      "description": "Monitor local government agendas, committee minutes, and municipal planning applications.",
+      "group": "places",
+      "tech": [
+        "JavaScript",
+        "Tailwind CSS"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "url": "https://council-watch.apps.rjmlaird.co.uk",
+      "sourcePath": "apps/council-watch",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/council-watch"
+    },
+    {
+      "id": "apps/spice-cupboard",
+      "sourceId": "spice-cupboard",
+      "type": "app",
+      "title": "Spice Cupboard & Mix Manager",
+      "description": "Keep track of the spices you have, and see which spice mixes you can make now or are one ingredient short of, with batch scaling.",
+      "group": "home",
+      "tech": [
+        "JavaScript",
+        "Tailwind CSS",
+        "localStorage"
+      ],
+      "status": "active",
+      "updated": "2026-10-11",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "url": "https://spice-cupboard.apps.rjmlaird.co.uk",
+      "sourcePath": "apps/spice-cupboard",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/spice-cupboard"
+    },
+    {
+      "id": "apps/mini-bar",
+      "sourceId": "mini-bar",
+      "type": "app",
+      "title": "Mini Bar",
+      "description": "A home bar inventory and cocktail manager: record what you have and see which drinks you can make now.",
+      "group": "home",
+      "tech": [
+        "JavaScript",
+        "Tailwind CSS",
+        "localStorage"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-11",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "url": "https://mini-bar.apps.rjmlaird.co.uk",
+      "sourcePath": "apps/mini-bar",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/mini-bar"
+    },
+    {
+      "id": "apps/first-aid-kit",
+      "sourceId": "first-aid-kit",
+      "type": "app",
+      "title": "First Aid Kit Inventory",
+      "description": "Track the contents of your first aid kits: expiry dates, minimum quantities, inspection checklists and an automatic restock list.",
+      "group": "home",
+      "tech": [
+        "JavaScript",
+        "localStorage"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "url": "https://first-aid-kit.apps.rjmlaird.co.uk",
+      "sourcePath": "apps/first-aid-kit",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/first-aid-kit"
+    },
+    {
+      "id": "apps/kinship-notes",
+      "sourceId": "kinship-notes",
+      "type": "app",
+      "title": "Kinship Notes",
+      "description": "Import a GEDCOM family tree, explore it as a whole tree, hourglass, pedigree, descendants or fan chart, and keep private research notes, questions and tasks against each person. Everything stays in your browser.",
+      "group": "home",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript",
+        "Vitest"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-apps",
+      "url": "https://kinship-notes.apps.rjmlaird.co.uk",
+      "sourcePath": "apps/kinship-notes",
+      "source": "https://github.com/rjmlaird/rjmlaird-apps/tree/main/apps/kinship-notes"
+    },
+    {
+      "id": "tools/julian-date",
+      "sourceId": "julian-date",
+      "type": "tool",
+      "title": "Julian Date & Sidereal Time",
+      "description": "Convert between UTC, Julian date, modified Julian date and Unix time, and calculate Greenwich and local mean sidereal time. Also available as a small JSON API.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-11",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/julian-date",
+      "url": "https://tools.rjmlaird.co.uk/julian-date",
+      "sourcePath": "apps/julian-date",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/julian-date"
+    },
+    {
+      "id": "tools/orbital-calc",
+      "sourceId": "orbital-calc",
+      "type": "tool",
+      "title": "Orbital Calculator",
+      "description": "Two-body orbit calculator. Enter a semi-major axis and eccentricity to get the period, periapsis and apoapsis radii and the speeds at each, using the vis-viva equation. Defaults to Earth's gravitational parameter.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-09",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/orbital-calc",
+      "url": "https://tools.rjmlaird.co.uk/orbital-calc",
+      "sourcePath": "apps/orbital-calc",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/orbital-calc"
+    },
+    {
+      "id": "tools/hohmann-transfer",
+      "sourceId": "hohmann-transfer",
+      "type": "tool",
+      "title": "Hohmann Transfer Calculator",
+      "description": "Delta-v and transfer time for a two-impulse Hohmann transfer between two circular, coplanar orbits around the same body.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-11",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/hohmann-transfer",
+      "url": "https://tools.rjmlaird.co.uk/hohmann-transfer",
+      "sourcePath": "apps/hohmann-transfer",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/hohmann-transfer"
+    },
+    {
+      "id": "tools/astro-calc",
+      "sourceId": "astro-calc",
+      "type": "tool",
+      "title": "Astronomy Calculator",
+      "description": "Observing and optics calculations for amateur astronomy, such as magnification, field of view, exit pupil and limiting magnitude.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-25",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/astro-calc",
+      "url": "https://tools.rjmlaird.co.uk/astro-calc",
+      "sourcePath": "apps/astro-calc",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/astro-calc"
+    },
+    {
+      "id": "tools/deep-sky-objects",
+      "sourceId": "deep-sky-objects",
+      "type": "tool",
+      "title": "Deep-Sky Objects",
+      "description": "Explore deep-sky objects, coordinates, magnitudes, and visibility from your observing site.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-24",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/deep-sky-objects",
+      "url": "https://tools.rjmlaird.co.uk/deep-sky-objects",
+      "sourcePath": "apps/deep-sky-objects",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/deep-sky-objects"
+    },
+    {
+      "id": "tools/light-pollution",
+      "sourceId": "light-pollution",
+      "type": "tool",
+      "title": "Light Pollution Estimator",
+      "description": "Estimate local sky brightness and Bortle class from a UK location, with practical guidance for visual observing.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-25",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/light-pollution",
+      "url": "https://tools.rjmlaird.co.uk/light-pollution",
+      "sourcePath": "apps/light-pollution",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/light-pollution"
+    },
+    {
+      "id": "tools/optics-visualiser",
+      "sourceId": "optics-visualiser",
+      "type": "tool",
+      "title": "Optics Visualiser",
+      "description": "Move sliders for aperture, focal length and eyepiece to see magnification, exit pupil, field of view and resolution update beside a schematic ray diagram.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-24",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/optics-visualiser",
+      "url": "https://tools.rjmlaird.co.uk/optics-visualiser",
+      "sourcePath": "apps/optics-visualiser",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/optics-visualiser"
+    },
+    {
+      "id": "tools/orbit-simulator",
+      "sourceId": "orbit-simulator",
+      "type": "tool",
+      "title": "Orbit Simulator",
+      "description": "Animate a two-body orbit from a central body, semi-major axis and eccentricity, with live distance, speed and true anomaly alongside the vis-viva quantities.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-24",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/orbit-simulator",
+      "url": "https://tools.rjmlaird.co.uk/orbit-simulator",
+      "sourcePath": "apps/orbit-simulator",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/orbit-simulator"
+    },
+    {
+      "id": "tools/moon-sun-calc",
+      "sourceId": "moon-sun-calc",
+      "type": "tool",
+      "title": "Moon & Sun Calculator",
+      "description": "Calculate sunrise, sunset, twilight times, moonrise and moonset, Moon phase and illumination for a location and date.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/moon-sun-calc",
+      "url": "https://tools.rjmlaird.co.uk/moon-sun-calc",
+      "sourcePath": "apps/moon-sun-calc",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/moon-sun-calc"
+    },
+    {
+      "id": "tools/how-satellites-see-earth",
+      "sourceId": "how-satellites-see-earth",
+      "type": "tool",
+      "title": "How Satellites See Earth",
+      "description": "Explore Earth observation imaging bands, spatial resolution, and swath widths across satellite sensors.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-24",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/how-satellites-see-earth",
+      "url": "https://tools.rjmlaird.co.uk/how-satellites-see-earth",
+      "sourcePath": "apps/how-satellites-see-earth",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/how-satellites-see-earth"
+    },
+    {
+      "id": "tools/satellite-link-budget",
+      "sourceId": "satellite-link-budget",
+      "type": "tool",
+      "title": "Satellite Link Budget Calculator",
+      "description": "Calculate free space path loss, received power, and link margins for Earth-to-space RF communications.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-24",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/satellite-link-budget",
+      "url": "https://tools.rjmlaird.co.uk/satellite-link-budget",
+      "sourcePath": "apps/satellite-link-budget",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/satellite-link-budget"
+    },
+    {
+      "id": "tools/galaxy-morphology",
+      "sourceId": "galaxy-morphology",
+      "type": "tool",
+      "title": "Galaxy Morphology Explorer",
+      "description": "Classify and explore galaxy types using the Hubble tuning fork sequence and structural parameters.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-24",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/galaxy-morphology",
+      "url": "https://tools.rjmlaird.co.uk/galaxy-morphology",
+      "sourcePath": "apps/galaxy-morphology",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/galaxy-morphology"
+    },
+    {
+      "id": "tools/active-passive-satellites",
+      "sourceId": "active-passive-satellites",
+      "type": "tool",
+      "title": "Active vs Passive Satellites",
+      "description": "Compare active radar (SAR) and passive optical Earth observation payloads and their observational capabilities.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-24",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/active-passive-satellites",
+      "url": "https://tools.rjmlaird.co.uk/active-passive-satellites",
+      "sourcePath": "apps/active-passive-satellites",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/active-passive-satellites"
+    },
+    {
+      "id": "tools/magnitude-dfference",
+      "sourceId": "magnitude-dfference",
+      "type": "tool",
+      "title": "Magnitude Difference Calculator",
+      "description": "Calculate brightness ratios and magnitude differences for stellar astronomy.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-24",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/magnitude-dfference",
+      "url": "https://tools.rjmlaird.co.uk/magnitude-dfference",
+      "sourcePath": "apps/magnitude-dfference",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/magnitude-dfference"
+    },
+    {
+      "id": "tools/jupiter-moon-visualiser",
+      "sourceId": "jupiter-moon-visualiser",
+      "type": "tool",
+      "title": "Jupiter Moon Visualiser",
+      "description": "Simulate and visualise the orbital positions of Jupiter's Galilean moons (Io, Europa, Ganymede, Callisto).",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-24",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/jupiter-moon-visualiser",
+      "url": "https://tools.rjmlaird.co.uk/jupiter-moon-visualiser",
+      "sourcePath": "apps/jupiter-moon-visualiser",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/jupiter-moon-visualiser"
+    },
+    {
+      "id": "tools/angular-size-calculator",
+      "sourceId": "angular-size-calculator",
+      "type": "tool",
+      "title": "Angular Size Calculator",
+      "description": "Calculate the angular diameter or physical size of astronomical objects using distance and subtended angle.",
+      "group": "space",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-24",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/angular-size-calculator",
+      "url": "https://tools.rjmlaird.co.uk/angular-size-calculator",
+      "sourcePath": "apps/angular-size-calculator",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/angular-size-calculator"
+    },
+    {
+      "id": "tools/unit-converter",
+      "sourceId": "unit-converter",
+      "type": "tool",
+      "title": "Unit Converter",
+      "description": "Convert between physics, engineering and astronomy units, from newtons and pascals to parsecs, solar masses and electronvolts. Also available as a small JSON API.",
+      "group": "maths-physics",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-09",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/unit-converter",
+      "url": "https://tools.rjmlaird.co.uk/unit-converter",
+      "sourcePath": "apps/unit-converter",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/unit-converter"
+    },
+    {
+      "id": "tools/physical-limits",
+      "sourceId": "physical-limits",
+      "type": "tool",
+      "title": "Physical Limits",
+      "description": "Four gravitational limits in one calculator: escape velocity, Hill sphere, Roche limit and Schwarzschild radius.",
+      "group": "maths-physics",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-11",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/physical-limits",
+      "url": "https://tools.rjmlaird.co.uk/physical-limits",
+      "sourcePath": "apps/physical-limits",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/physical-limits"
+    },
+    {
+      "id": "tools/chilli-heat-scale",
+      "sourceId": "chilli-heat-scale",
+      "type": "tool",
+      "title": "Chilli Heat Scale Explorer",
+      "description": "Slide along the Scoville scale, compare 14 peppers, find your comfort zone with a short quiz and estimate how much pepper a sauce needs.",
+      "group": "maths-physics",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-25",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/chilli-heat-scale",
+      "url": "https://tools.rjmlaird.co.uk/chilli-heat-scale",
+      "sourcePath": "apps/chilli-heat-scale",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/chilli-heat-scale"
+    },
+    {
+      "id": "tools/cup-delta",
+      "sourceId": "cup-delta",
+      "type": "tool",
+      "title": "Cup Delta",
+      "description": "Calculate extraction yield, brew ratios, and TDS for espresso and filter coffee.",
+      "group": "maths-physics",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-25",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/cup-delta",
+      "url": "https://tools.rjmlaird.co.uk/cup-delta",
+      "sourcePath": "apps/cup-delta",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/cup-delta"
+    },
+    {
+      "id": "tools/escape-velocity",
+      "sourceId": "escape-velocity",
+      "type": "tool",
+      "title": "Escape Velocity Calculator",
+      "description": "Calculate the escape velocity and gravitational binding energy for planets and celestial bodies.",
+      "group": "maths-physics",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-24",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/escape-velocity",
+      "url": "https://tools.rjmlaird.co.uk/escape-velocity",
+      "sourcePath": "apps/escape-velocity",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/escape-velocity"
+    },
+    {
+      "id": "tools/carbon-reduction-plan",
+      "sourceId": "carbon-reduction-plan",
+      "type": "tool",
+      "title": "Carbon Reduction Plan Builder",
+      "description": "Record Scope 1, 2 and 3 emissions, track progress against a reduction target and export a printable Carbon Reduction Plan aligned with PPN 006.",
+      "group": "sustainability",
+      "tech": [
+        "React",
+        "Vite",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-12",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/carbon-reduction-plan",
+      "url": "https://tools.rjmlaird.co.uk/carbon-reduction-plan",
+      "sourcePath": "apps/carbon-reduction-plan",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/carbon-reduction-plan"
+    },
+    {
+      "id": "tools/flight-emissions",
+      "sourceId": "flight-emissions",
+      "type": "tool",
+      "title": "Flight Emissions Estimator",
+      "description": "Estimate greenhouse-gas emissions for a flight from origin and destination airports, cabin class and trip type. A modelled estimate, not a measurement.",
+      "group": "sustainability",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-23",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/flight-emissions",
+      "url": "https://tools.rjmlaird.co.uk/flight-emissions",
+      "sourcePath": "apps/flight-emissions",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/flight-emissions"
+    },
+    {
+      "id": "tools/home-energy-baseline",
+      "sourceId": "home-energy-baseline",
+      "type": "tool",
+      "title": "Home Energy Baseline",
+      "description": "Record electricity and gas use, estimate annual emissions, compare against UK benchmarks and identify practical reduction opportunities.",
+      "group": "sustainability",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-23",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/home-energy-baseline",
+      "url": "https://tools.rjmlaird.co.uk/home-energy-baseline",
+      "sourcePath": "apps/home-energy-baseline",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/home-energy-baseline"
+    },
+    {
+      "id": "tools/greenhouse-effect",
+      "sourceId": "greenhouse-effect",
+      "type": "tool",
+      "title": "Greenhouse Effect Model",
+      "description": "Interactive zero-dimensional energy balance climate model demonstrating radiative forcing and greenhouse gas warming.",
+      "group": "sustainability",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-24",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/greenhouse-effect",
+      "url": "https://tools.rjmlaird.co.uk/greenhouse-effect",
+      "sourcePath": "apps/greenhouse-effect",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/greenhouse-effect"
+    },
+    {
+      "id": "tools/dopamine-menu",
+      "sourceId": "dopamine-menu",
+      "type": "tool",
+      "title": "Dopamine Menu",
+      "description": "Pick a short, enjoyable or restorative break from your own menu, filtered by type, time and place. Your menu stays in your browser.",
+      "group": "productivity",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-12",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/dopamine-menu",
+      "url": "https://tools.rjmlaird.co.uk/dopamine-menu",
+      "sourcePath": "apps/dopamine-menu",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/dopamine-menu"
+    },
+    {
+      "id": "tools/waiting-on-tracker",
+      "sourceId": "waiting-on-tracker",
+      "type": "tool",
+      "title": "Waiting-On Tracker",
+      "description": "Keep track of what you are waiting on and see what needs a nudge today. Snooze, resolve and reopen items, with a calm mode. Your list stays in your browser.",
+      "group": "productivity",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-26",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/waiting-on-tracker",
+      "url": "https://tools.rjmlaird.co.uk/waiting-on-tracker",
+      "sourcePath": "apps/waiting-on-tracker",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/waiting-on-tracker"
+    },
+    {
+      "id": "tools/habit-streak",
+      "sourceId": "habit-streak",
+      "type": "tool",
+      "title": "Habit Streak Tracker",
+      "description": "Track simple daily habits with streaks, weekly summaries and local-browser storage. No account required.",
+      "group": "productivity",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-23",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/habit-streak",
+      "url": "https://tools.rjmlaird.co.uk/habit-streak",
+      "sourcePath": "apps/habit-streak",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/habit-streak"
+    },
+    {
+      "id": "tools/context-switcher",
+      "sourceId": "context-switcher",
+      "type": "tool",
+      "title": "Context Switcher",
+      "description": "Quickly switch between workspace contexts and environments.",
+      "group": "productivity",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-24",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/context-switcher",
+      "url": "https://tools.rjmlaird.co.uk/context-switcher",
+      "sourcePath": "apps/context-switcher",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/context-switcher"
+    },
+    {
+      "id": "tools/coordinate-converter",
+      "sourceId": "coordinate-converter",
+      "type": "tool",
+      "title": "Coordinate Converter",
+      "description": "Convert between latitude/longitude, British National Grid and other coordinate formats.",
+      "group": "places",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/coordinate-converter",
+      "url": "https://tools.rjmlaird.co.uk/coordinate-converter",
+      "sourcePath": "apps/coordinate-converter",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/coordinate-converter"
+    },
+    {
+      "id": "tools/postcode-lookup",
+      "sourceId": "postcode-lookup",
+      "type": "tool",
+      "title": "Postcode Lookup",
+      "description": "Look up a UK postcode for its coordinates, constituency and LSOA.",
+      "group": "places",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "planned",
+      "updated": "2026-10-11",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools"
+    },
+    {
+      "id": "tools/colour-contrast",
+      "sourceId": "colour-contrast",
+      "type": "tool",
+      "title": "Colour Contrast Checker",
+      "description": "WCAG contrast ratios for foreground and background colours, with AA and AAA results and fix suggestions.",
+      "group": "web-dev",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/colour-contrast",
+      "url": "https://tools.rjmlaird.co.uk/colour-contrast",
+      "sourcePath": "apps/colour-contrast",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/colour-contrast"
+    },
+    {
+      "id": "tools/seo-meta-tag",
+      "sourceId": "seo-meta-tag",
+      "type": "tool",
+      "title": "SEO Meta Tag Checker",
+      "description": "Check a page’s title, description, Open Graph, Twitter card, canonical URL and robots directives against common SEO and sharing requirements.",
+      "group": "web-dev",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-24",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/seo-meta-tag",
+      "url": "https://tools.rjmlaird.co.uk/seo-meta-tag",
+      "sourcePath": "apps/seo-meta-tag",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/seo-meta-tag"
+    },
+    {
+      "id": "tools/marketing-dash",
+      "sourceId": "marketing-dash",
+      "type": "tool",
+      "title": "Marketing Dashboard",
+      "description": "Overview of campaign performance metrics, funnel conversion rates, and channel ROI.",
+      "group": "web-dev",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-24",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/marketing-dash",
+      "url": "https://tools.rjmlaird.co.uk/marketing-dash",
+      "sourcePath": "apps/marketing-dash",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/marketing-dash"
+    },
+    {
+      "id": "tools/marketing-funnel",
+      "sourceId": "marketing-funnel",
+      "type": "tool",
+      "title": "Marketing Funnel Calculator",
+      "description": "Model conversion rates, lead volumes, and customer acquisition costs across marketing funnel stages.",
+      "group": "web-dev",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "active",
+      "updated": "2026-10-24",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools",
+      "path": "/marketing-funnel",
+      "url": "https://tools.rjmlaird.co.uk/marketing-funnel",
+      "sourcePath": "apps/marketing-funnel",
+      "source": "https://github.com/rjmlaird/rjmlaird-tools/tree/main/apps/marketing-funnel"
+    },
+    {
+      "id": "tools/page-weight",
+      "sourceId": "page-weight",
+      "type": "tool",
+      "title": "Page Weight Audit",
+      "description": "Inspect a web page’s transferred bytes, largest assets, request count and caching headers, with practical performance and sustainability suggestions.",
+      "group": "web-dev",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "planned",
+      "updated": "2026-10-22",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools"
+    },
+    {
+      "id": "tools/web-carbon",
+      "sourceId": "web-carbon",
+      "type": "tool",
+      "title": "Website Carbon Checker",
+      "description": "Estimate the carbon footprint of a web page from its transfer size, and check whether it is served from green hosting. A modelled estimate, not a measurement.",
+      "group": "web-dev",
+      "tech": [
+        "TypeScript",
+        "Hono",
+        "Cloudflare Workers"
+      ],
+      "status": "planned",
+      "updated": "2026-10-11",
+      "repository": "https://github.com/rjmlaird/rjmlaird-tools"
+    },
+    {
+      "id": "labs/mechanics",
+      "sourceId": "mechanics",
+      "type": "lab",
+      "title": "Mechanics Lab",
+      "description": "Interactive demonstrations of forces, motion and energy, built to be explored rather than read.",
+      "group": "physics",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "active",
+      "updated": "2026-10-09",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://mechanics.labs.rjmlaird.co.uk/",
+      "url": "https://mechanics.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/mechanics",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/mechanics"
+    },
+    {
+      "id": "labs/electricity",
+      "sourceId": "electricity",
+      "type": "lab",
+      "title": "Electricity Lab",
+      "description": "A companion to the Mechanics Lab for exploring circuits, current, voltage and resistance.",
+      "group": "physics",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-09",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://electricity.labs.rjmlaird.co.uk/",
+      "url": "https://electricity.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/electricity",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/electricity"
+    },
+    {
+      "id": "labs/elements",
+      "sourceId": "elements",
+      "type": "lab",
+      "title": "Elements Lab",
+      "description": "An interactive periodic table with a card for each element, for browsing properties and patterns.",
+      "group": "physics",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-09",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://elements.labs.rjmlaird.co.uk/",
+      "url": "https://elements.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/elements",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/elements"
+    },
+    {
+      "id": "labs/astronomy",
+      "sourceId": "astronomy",
+      "type": "lab",
+      "title": "Astronomy Lab",
+      "description": "Visualisations and calculators for celestial coordinates, stellar properties, and sky mechanics.",
+      "group": "physics",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-15",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://astronomy.labs.rjmlaird.co.uk/",
+      "url": "https://astronomy.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/astronomy",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/astronomy"
+    },
+    {
+      "id": "labs/n-body",
+      "sourceId": "n-body",
+      "type": "lab",
+      "title": "N-Body Gravitational Simulator",
+      "description": "Interactive gravitational simulation of multiple bodies interacting under Newtonian mechanics.",
+      "group": "physics",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-18",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://n-body.labs.rjmlaird.co.uk/",
+      "url": "https://n-body.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/n-body",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/n-body"
+    },
+    {
+      "id": "labs/satellites",
+      "sourceId": "satellites",
+      "type": "lab",
+      "title": "Satellite Orbit Viewer",
+      "description": "Visualising satellite trajectories, ground tracks, and orbital parameters in real time.",
+      "group": "physics",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-20",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://satellites.labs.rjmlaird.co.uk/",
+      "url": "https://satellites.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/satellites",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/satellites"
+    },
+    {
+      "id": "labs/maths",
+      "sourceId": "maths",
+      "type": "lab",
+      "title": "Maths Explorer",
+      "description": "Interactive mathematical functions, geometry, and transformation visualisers.",
+      "group": "physics",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "planned",
+      "updated": "2026-10-09",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://maths.labs.rjmlaird.co.uk/",
+      "url": "https://maths.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/maths",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/maths"
+    },
+    {
+      "id": "labs/equations",
+      "sourceId": "equations",
+      "type": "lab",
+      "title": "Equation Solver",
+      "description": "Plot and explore physical and mathematical equations with live parameter adjustments.",
+      "group": "physics",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-09",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://equations.labs.rjmlaird.co.uk/",
+      "url": "https://equations.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/equations",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/equations"
+    },
+    {
+      "id": "labs/graphs",
+      "sourceId": "graphs",
+      "type": "lab",
+      "title": "Graph Explorer",
+      "description": "A focused space for visualising data, testing ideas, and exploring charts in a clean, dark interface.",
+      "group": "physics",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-09",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://graphs.labs.rjmlaird.co.uk/",
+      "url": "https://graphs.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/graphs",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/graphs"
+    },
+    {
+      "id": "labs/doppler",
+      "sourceId": "doppler",
+      "type": "lab",
+      "title": "Doppler & Redshift Visualiser",
+      "description": "Wavefronts and spectral lines showing Doppler shift, with a toggle between Doppler and cosmological redshift.",
+      "group": "physics",
+      "tech": [
+        "HTML",
+        "JavaScript"
+      ],
+      "status": "planned",
+      "updated": "2026-10-09",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "sourcePath": "apps/doppler",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/doppler"
+    },
+    {
+      "id": "labs/climate-visualiser",
+      "sourceId": "climate-visualiser",
+      "type": "lab",
+      "title": "Climate Visualiser",
+      "description": "An evidence-based look at the climate system, from atmosphere and ocean to sea level, including policy successes such as the Montreal Protocol.",
+      "group": "climate",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-08-16",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://climate-visualiser.labs.rjmlaird.co.uk/",
+      "url": "https://climate-visualiser.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/climate-visualiser",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/climate-visualiser"
+    },
+    {
+      "id": "labs/climate-time-machine",
+      "sourceId": "climate-time-machine",
+      "type": "lab",
+      "title": "Climate Time Machine",
+      "description": "Historical and projected climate metrics visualization over decades and centuries.",
+      "group": "climate",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-08-20",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://climate-time-machine.labs.rjmlaird.co.uk/",
+      "url": "https://climate-time-machine.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/climate-time-machine",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/climate-time-machine"
+    },
+    {
+      "id": "labs/cfd",
+      "sourceId": "cfd",
+      "type": "lab",
+      "title": "Fluid Dynamics (CFD) Simulator",
+      "description": "Simplified computational fluid dynamics browser simulation for airflow and fluid flow around obstacles.",
+      "group": "climate",
+      "tech": [
+        "TypeScript",
+        "HTML5 Canvas"
+      ],
+      "status": "in-progress",
+      "updated": "2026-09-10",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://cfd.labs.rjmlaird.co.uk/",
+      "url": "https://cfd.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/cfd",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/cfd"
+    },
+    {
+      "id": "labs/biodiversity",
+      "sourceId": "biodiversity",
+      "type": "lab",
+      "title": "Biodiversity & Ecosystems",
+      "description": "Modelling population dynamics and habitat resilience under environmental stress.",
+      "group": "climate",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-09-12",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://biodiversity.labs.rjmlaird.co.uk/",
+      "url": "https://biodiversity.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/biodiversity",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/biodiversity"
+    },
+    {
+      "id": "labs/drought",
+      "sourceId": "drought",
+      "type": "lab",
+      "title": "Drought & Precipitation Index",
+      "description": "Tracking meteorological and hydrological drought indicators across regional datasets.",
+      "group": "climate",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-09-15",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://drought.labs.rjmlaird.co.uk/",
+      "url": "https://drought.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/drought",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/drought"
+    },
+    {
+      "id": "labs/wildfires",
+      "sourceId": "wildfires",
+      "type": "lab",
+      "title": "Wildfire Spread Model",
+      "description": "Cellular automaton model simulating wildfire propagation based on wind, terrain, and moisture.",
+      "group": "climate",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-09-18",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://wildfires.labs.rjmlaird.co.uk/",
+      "url": "https://wildfires.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/wildfires",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/wildfires"
+    },
+    {
+      "id": "labs/sewage",
+      "sourceId": "sewage",
+      "type": "lab",
+      "title": "Water Quality & Discharge Monitor",
+      "description": "Visualising river catchment data, rainfall events, and storm overflow impact models.",
+      "group": "climate",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-09-20",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://sewage.labs.rjmlaird.co.uk/",
+      "url": "https://sewage.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/sewage",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/sewage"
+    },
+    {
+      "id": "labs/earthquakes",
+      "sourceId": "earthquakes",
+      "type": "lab",
+      "title": "Earthquake Activity Monitor",
+      "description": "Real-time tracking and visualising global seismic activity and magnitude metrics.",
+      "group": "climate",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-25",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://earthquakes.labs.rjmlaird.co.uk/",
+      "url": "https://earthquakes.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/earthquakes",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/earthquakes"
+    },
+    {
+      "id": "labs/earth",
+      "sourceId": "earth",
+      "type": "lab",
+      "title": "Earth System Model",
+      "description": "Interactive visualization of global energy balance, atmospheric circulation, and cryosphere dynamics.",
+      "group": "climate",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-26",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://earth.labs.rjmlaird.co.uk/",
+      "url": "https://earth.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/earth",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/earth"
+    },
+    {
+      "id": "labs/components",
+      "sourceId": "components",
+      "type": "lab",
+      "title": "Components Sandbox",
+      "description": "A working gallery of the Astro UI blocks used across rjmlaird.co.uk — rendered live, with the source snippet underneath each one.",
+      "group": "focus",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-09-03",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://components.labs.rjmlaird.co.uk/",
+      "url": "https://components.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/components",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/components"
+    },
+    {
+      "id": "labs/contrast",
+      "sourceId": "contrast",
+      "type": "lab",
+      "title": "Colour Contrast Checker",
+      "description": "WCAG 2.x colour contrast checker.",
+      "group": "focus",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-09-03",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://contrast.labs.rjmlaird.co.uk/",
+      "url": "https://contrast.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/contrast",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/contrast"
+    },
+    {
+      "id": "labs/rubiks",
+      "sourceId": "rubiks",
+      "type": "lab",
+      "title": "Rubik's Cube State Analyser",
+      "description": "Interactive 3D cube manipulation and algorithm visualization.",
+      "group": "focus",
+      "tech": [
+        "Three.js",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-14",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://rubiks.labs.rjmlaird.co.uk/",
+      "url": "https://rubiks.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/rubiks",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/rubiks"
+    },
+    {
+      "id": "labs/blueprint",
+      "sourceId": "blueprint",
+      "type": "lab",
+      "title": "Blueprint Layout Grid",
+      "description": "Architectural and typographic grid layout prototyping utility.",
+      "group": "focus",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-01",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://blueprint.labs.rjmlaird.co.uk/",
+      "url": "https://blueprint.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/blueprint",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/blueprint"
+    },
+    {
+      "id": "labs/marketing",
+      "sourceId": "marketing",
+      "type": "lab",
+      "title": "Marketing",
+      "description": "Visualising multi-channel marketing touchpoints and conversion paths.",
+      "group": "focus",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-02",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://marketing.labs.rjmlaird.co.uk/",
+      "url": "https://marketing.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/marketing",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/marketing"
+    },
+    {
+      "id": "labs/eo-dash",
+      "sourceId": "eo-dash",
+      "type": "lab",
+      "title": "Earth Observation Dashboard",
+      "description": "Satellite telemetry and environmental metrics monitoring dashboard.",
+      "group": "physics",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-27",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://eo-dash.labs.rjmlaird.co.uk/",
+      "url": "https://eo-dash.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/eo-dash",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/eo-dash"
+    },
+    {
+      "id": "labs/storytelling",
+      "sourceId": "storytelling",
+      "type": "lab",
+      "title": "Data Storytelling Studio",
+      "description": "Tools and templates for crafting narrative-driven data visualisations and reports.",
+      "group": "focus",
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript"
+      ],
+      "status": "in-progress",
+      "updated": "2026-10-27",
+      "repository": "https://github.com/rjmlaird/rjmlaird-labs",
+      "path": "https://storytelling.labs.rjmlaird.co.uk/",
+      "url": "https://storytelling.labs.rjmlaird.co.uk/",
+      "sourcePath": "apps/storytelling",
+      "source": "https://github.com/rjmlaird/rjmlaird-labs/tree/main/apps/storytelling"
+    }
+  ]
+}

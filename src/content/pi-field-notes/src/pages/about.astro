@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../lib/site';
+---
+
+<BaseLayout
+  title="About"
+  description="Who writes these notes, what background they come from, and why the site exists."
+>
+  <div class="container page">
+    <header class="page-header">
+      <h1>About</h1>
+      <p class="lede">
+        I am a science communicator and marketing professional based in the UK, and I build things
+        in my spare time.
+      </p>
+    </header>
+
+    <div class="prose">
+      {/* TEMPLATE: replace the [bracketed] placeholders below with your own words. */}
+      <p>
+        I studied astrophysics, and that background still shapes how I work: I like to know what a
+        measurement means, how it was made and how far to trust it. [Add a sentence or two on your
+        degree, where you studied and what you worked on.]
+      </p>
+      <p>
+        My interests are space sustainability, climate data, Earth observation and open technology.
+        I build websites, automation workflows, data systems and content platforms, and I use a
+        Raspberry Pi when a small, quiet, low-power computer is the right tool for the job. [Add the
+        projects, roles or organisations you want people to know about.]
+      </p>
+
+      <h2>Why this site exists</h2>
+      <p>
+        I started {SITE.name} to keep a public record of Raspberry Pi builds: all-sky imaging,
+        environmental sensing, self-hosted infrastructure and Earth-observation experiments. Writing
+        things down makes me design more carefully, and it might save someone else a weekend.
+      </p>
+
+      <h2>Get in touch</h2>
+      <p>
+        [Add an email address, social profile or contact form link. Corrections and suggestions are
+        welcome.]
+      </p>
+    </div>
+  </div>
+</BaseLayout>

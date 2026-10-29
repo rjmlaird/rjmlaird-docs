@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EntryItem from '../../components/EntryItem.astro';
+import { url } from '../../lib/site';
+import { byDateDesc, formatDate, getPublished, isoDate, readingTime } from '../../lib/content';
+
+const essays = (await getPublished('essays')).sort(byDateDesc);
+---
+
+<BaseLayout
+  title="Essays"
+  description="Longer reflective and science-communication pieces connected to the Raspberry Pi projects."
+>
+  <div class="container page">
+    <header class="page-header">
+      <h1>Essays</h1>
+      <p class="lede">
+        Longer pieces on documentation, science communication and what building small computers
+        teaches. Newest first.
+      </p>
+    </header>
+
+    {essays.length === 0 && <p class="empty">No essays yet.</p>}
+
+    <ul class="entry-list">
+      {essays.map((e) => (
+        <EntryItem
+          href={url(`/essays/${e.id}/`)}
+          title={e.data.title}
+          description={e.data.description}
+          tags={e.data.tags}
+        >
+          <Fragment slot="meta">
+            <time datetime={isoDate(e.data.date)}>{formatDate(e.data.date)}</time>
+            <span>{readingTime(e.body)} min read</span>
+            {e.data.draft && <span>Draft</span>}
+          </Fragment>
+        </EntryItem>
+      ))}
+    </ul>
+  </div>
+</BaseLayout>

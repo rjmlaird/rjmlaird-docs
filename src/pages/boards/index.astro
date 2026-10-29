@@ -1,0 +1,53 @@
+---
+// src/pages/boards/index.astro
+//
+// Index of GitHub Projects (v2) boards. Data: data/github-projects.json,
+// written by `pnpm sync:boards`.
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BoardCard from "../../components/BoardCard.astro";
+import { boardsSnapshot, formatDate, getBoards } from "../../lib/github-projects";
+
+const boards = await getBoards();
+const items = boards.reduce((n, b) => n + b.counts.total, 0);
+const open = boards.reduce((n, b) => n + b.counts.open, 0);
+const synced = boardsSnapshot.syncedAt ? formatDate(boardsSnapshot.syncedAt) : "";
+const profile = `https://github.com/${boardsSnapshot.owner}?tab=projects`;
+---
+
+<BaseLayout
+  title="GitHub Projects"
+  description="Planning boards from GitHub Projects: every board with its README, fields, issues, pull requests and draft items."
+>
+  <section class="hero">
+    <p class="eyebrow">Planning</p>
+
+    <h1>GitHub Projects</h1>
+
+    <p class="muted">
+      Planning boards across the ecosystem, snapshotted from
+      <a href={profile}>GitHub Projects</a>. Boards track work on
+      <a href="/repos/">repositories</a> and <a href="/builds/">builds</a>.
+    </p>
+
+    <p class="meta" role="status">
+      {boards.length} {boards.length === 1 ? "board" : "boards"} · {items} items · {open} open
+      {synced && <> · synced {synced}</>}
+    </p>
+  </section>
+
+  {
+    boards.length > 0 ? (
+      <div class="grid">
+        {boards.map((board) => (
+          <BoardCard board={board} />
+        ))}
+      </div>
+    ) : (
+      <p class="empty">
+        No boards have been synced yet. Run <code>pnpm sync:boards</code> with a
+        <code>GITHUB_TOKEN</code> that has <code>read:project</code> access, then commit
+        <code>data/github-projects.json</code>.
+      </p>
+    )
+  }
+</BaseLayout>

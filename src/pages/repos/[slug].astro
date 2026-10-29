@@ -1,0 +1,99 @@
+---
+// src/pages/repos/[slug].astro
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import reposData from "../../../data/github-repos.json";
+import { slugify } from "../../lib/slugify";
+
+interface Repo {
+  name: string;
+  description?: string | null;
+  url: string;
+  homepage?: string | null;
+  language?: string | null;
+  topics?: string[];
+  stars?: number;
+  forks?: number;
+  openIssues?: number;
+  license?: string | null;
+  defaultBranch?: string;
+  isPrivate?: boolean;
+  isArchived?: boolean;
+  isFork?: boolean;
+  createdAt?: string;
+  pushedAt?: string;
+  updatedAt?: string;
+}
+
+export async function getStaticPaths() {
+  const seen = new Set<string>();
+
+  return (reposData.repositories as Repo[])
+    .filter((repo) => !repo.isPrivate)
+    .filter((repo) => {
+      const slug = slugify(repo.name);
+      if (seen.has(slug)) return false;
+      seen.add(slug);
+      return true;
+    })
+    .map((repo) => ({
+      params: { slug: slugify(repo.name) },
+      props: { repo },
+    }));
+}
+
+const { repo } = Astro.props as { repo: Repo };
+
+const fmt = (value?: string) =>
+  value ? new Date(value).toLocaleDateString("en-GB", { dateStyle: "medium" }) : null;
+
+const pushed = fmt(repo.pushedAt ?? repo.updatedAt);
+const created = fmt(repo.createdAt);
+
+const title = `${repo.name} | Repositories`;
+const description = repo.description || "";
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="max-w-3xl mx-auto w-full py-8 px-6 lg:px-0">
+    <a href="/repos/" class="text-sky-400 text-sm hover:underline">← Back to Repositories</a>
+
+    <h1 class="text-4xl font-bold mt-4">{repo.name}</h1>
+    <p class="text-slate-400 text-lg mt-2">{repo.description || "No description provided."}</p>
+
+    <div class="mt-6 flex flex-wrap gap-3 text-sm text-slate-300">
+      {repo.language && <span class="bg-sky-950 text-sky-300 px-3 py-1 rounded">Language: {repo.language}</span>}
+      {(repo.stars ?? 0) > 0 && <span class="bg-amber-950 text-amber-300 px-3 py-1 rounded">★ Stars: {repo.stars}</span>}
+      {(repo.forks ?? 0) > 0 && <span class="bg-slate-800 px-3 py-1 rounded">Forks: {repo.forks}</span>}
+      {repo.license && <span class="bg-slate-800 px-3 py-1 rounded">License: {repo.license}</span>}
+      {repo.isArchived && <span class="bg-slate-800 px-3 py-1 rounded">Archived</span>}
+      {repo.isFork && <span class="bg-slate-800 px-3 py-1 rounded">Fork</span>}
+    </div>
+
+    {(repo.topics?.length ?? 0) > 0 && (
+      <ul class="mt-6 flex flex-wrap gap-2 text-xs">
+        {repo.topics!.map((topic) => (
+          <li class="bg-slate-800 text-slate-300 px-2 py-0.5 rounded">{topic}</li>
+        ))}
+      </ul>
+    )}
+
+    {(pushed || created || repo.defaultBranch) && (
+      <dl class="mt-6 grid grid-cols-[max-content_1fr] gap-x-6 gap-y-1 text-sm text-slate-400">
+        {repo.defaultBranch && (<><dt>Default branch</dt><dd class="font-mono">{repo.defaultBranch}</dd></>)}
+        {created && (<><dt>Created</dt><dd>{created}</dd></>)}
+        {pushed && (<><dt>Last pushed</dt><dd>{pushed}</dd></>)}
+      </dl>
+    )}
+
+    <div class="mt-8 flex gap-4">
+      {repo.homepage && (
+        <a href={repo.homepage} target="_blank" rel="noopener noreferrer" class="bg-sky-600 text-white px-4 py-2 rounded font-medium hover:bg-sky-500">
+          Visit Homepage ↗
+        </a>
+      )}
+      <a href={repo.url} target="_blank" rel="noopener noreferrer" class="bg-slate-800 text-slate-200 px-4 py-2 rounded font-medium hover:bg-slate-700">
+        View on GitHub ↗
+      </a>
+    </div>
+  </div>
+</BaseLayout>

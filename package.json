@@ -12,7 +12,10 @@
     "typecheck": "astro check",
     "lint:content": "node scripts/validate-content.mjs",
     "lint:links": "node scripts/check-internal-links.mjs",
-    "new:project": "node scripts/new-project.mjs",
+    "new:repo": "node scripts/new-repo.mjs",
+    "sync:builds": "node scripts/sync-builds.mjs",
+    "sync:boards": "node scripts/sync-github-projects.mjs",
+    "sync": "pnpm run sync:builds && pnpm run sync:boards",
     "test": "node --test",
     "validate": "pnpm run lint:content && pnpm run lint:links && pnpm run typecheck && pnpm run build"
   },
@@ -23,5 +26,8 @@
     "typescript": "5.6.3",
     "zod": "4.6.7"
   },
-  "packageManager": "pnpm@10.34.6"
+  "packageManager": "pnpm@10.34.6",
+  "devDependencies": {
+    "dotenv": "^18.0.9"
+  }
 }

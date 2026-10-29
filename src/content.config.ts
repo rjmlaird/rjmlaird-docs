@@ -3,26 +3,6 @@ import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
 
 /**
- * SHARED HELPERS
- *
- * Allow omitted, null or empty optional URL fields.
- */
-
-const optionalUrl = z.preprocess(
-  (value) => {
-    if (value == null) return undefined;
-
-    if (typeof value === "string") {
-      const trimmed = value.trim();
-      return trimmed === "" ? undefined : trimmed;
-    }
-
-    return value;
-  },
-  z.string().url().optional(),
-);
-
-/**
  * SHARED DOCUMENT METADATA
  */
 
@@ -56,43 +36,6 @@ const guides = defineCollection({
 
   schema: base.extend({
     audience: z.array(z.string()).default([]),
-  }),
-});
-
-/**
- * PROJECTS
- *
- * Source: src/content/projects/
- *
- * Use entry.id for routing and lookups.
- * Do not require a separate slug field in the validated data.
- */
-
-const projects = defineCollection({
-  loader: glob({
-    pattern: "**/*.{md,mdx}",
-    base: "./src/content/projects",
-  }),
-
-  schema: base.extend({
-    visibility: z
-      .enum(["public", "internal", "private"])
-      .default("public"),
-
-    audience: z.array(z.string()).default(["developer"]),
-
-    repository: optionalUrl,
-    liveUrl: optionalUrl,
-    docsUrl: z.string().optional(),
-    stagingUrl: optionalUrl,
-
-    version: z.string().optional(),
-    docVersion: z.string().optional(),
-
-    stack: z.array(z.string()).default([]),
-
-    relatedProjects: z.array(z.string()).default([]),
-    relatedPages: z.array(z.string()).default([]),
   }),
 });
 
@@ -131,8 +74,8 @@ const operations = defineCollection({
  *
  * Source: archive/ at the repository root.
  *
- * Exclude README files because they describe the archive rather
- * than serving as documentation entries.
+ * README files describe the archive itself rather than serving as
+ * documentation entries, so they are excluded.
  */
 
 const archive = defineCollection({
@@ -152,11 +95,13 @@ const archive = defineCollection({
 
 /**
  * COLLECTION REGISTRATION
+ *
+ * Repositories are not a content collection. They are built directly
+ * from data/github-repos.json (see src/pages/repos/).
  */
 
 export const collections = {
   guides,
-  projects,
   reference,
   operations,
   archive,

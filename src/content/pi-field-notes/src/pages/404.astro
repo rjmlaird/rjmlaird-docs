@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { url } from '../lib/site';
+---
+
+<BaseLayout title="Page not found" description="This page does not exist." noindex>
+  <div class="container page">
+    <div class="not-found">
+      <h1>Page not found</h1>
+      <p class="lede">
+        There is nothing at this address. It may have moved, or the link may have a typo.
+      </p>
+      <p>
+        Try the <a href={url('/projects/')}>projects</a>, the{' '}
+        <a href={url('/build-logs/')}>build logs</a>, or go back to the{' '}
+        <a href={url('/')}>home page</a>.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,114 @@
+---
+// src/pages/repos/index.astro
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import RepoCard from "../../components/RepoCard.astro";
+import reposData from "../../../data/github-repos.json";
+import { slugify } from "../../lib/slugify";
+
+interface Repo {
+  name: string;
+  description?: string | null;
+  url: string;
+  homepage?: string | null;
+  language?: string | null;
+  topics?: string[];
+  stars?: number;
+  forks?: number;
+  license?: string | null;
+  isPrivate?: boolean;
+  isArchived?: boolean;
+  isFork?: boolean;
+  pushedAt?: string;
+  updatedAt?: string;
+}
+
+const title = "Repositories";
+const description = `Public codebases and tools from github.com/${reposData.owner}.`;
+
+const repositories = (reposData.repositories as Repo[])
+  .filter((r) => !r.isPrivate)
+  .sort((a, b) => {
+    const dateA = new Date(a.pushedAt ?? a.updatedAt ?? 0).getTime();
+    const dateB = new Date(b.pushedAt ?? b.updatedAt ?? 0).getTime();
+    return dateB - dateA; // Newest to oldest
+  })
+  .map((repo) => ({
+    ...repo,
+    slug: slugify(repo.name),
+  }));
+
+const total = repositories.length;
+const syncedAt = reposData.syncedAt
+  ? new Date(reposData.syncedAt).toLocaleDateString("en-GB", { dateStyle: "medium" })
+  : null;
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="hero">
+    <p class="eyebrow">Codebases · Tools · Libraries</p>
+
+    <h1>{title}</h1>
+
+    <p class="muted">
+      Public codebases and developer tools from github.com/{reposData.owner}. Each repository provides the source for applications and self-hosted services across the ecosystem.
+    </p>
+
+    <ul class="kind-summary">
+      <li>
+        <span>Total Repositories</span>
+        <span class="muted"> · {total}</span>
+      </li>
+      {syncedAt && (
+        <li>
+          <span>Last Synced</span>
+          <span class="muted"> · {syncedAt}</span>
+        </li>
+      )}
+    </ul>
+  </section>
+
+  <main class="py-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {repositories.map((repo) => (
+        <RepoCard repo={repo} />
+      ))}
+    </div>
+  </main>
+
+  <section class="source-note">
+    <h2>Where this data comes from</h2>
+
+    <p class="muted">
+      Repositories are synchronized via script and snapshotted into
+      <code>data/github-repos.json</code>{syncedAt && <> (last synced {syncedAt})</>}. The site build
+      never calls the live GitHub API; refresh the snapshot with <code>pnpm sync:repos</code>.
+    </p>
+
+    <pre><code>node scripts/sync-github-repos.mjs</code></pre>
+
+    <p class="meta">{total} public codebases in the current snapshot.</p>
+  </section>
+</BaseLayout>
+
+<style>
+  .kind-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    list-style: none;
+    margin: 1rem 0 0;
+    padding: 0;
+  }
+
+  .source-note {
+    padding: 2rem 0 4rem;
+  }
+
+  .source-note pre {
+    overflow: auto;
+    padding: 1rem;
+    background: #080b12;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+  }
+</style>

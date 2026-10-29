@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EntryItem from '../../components/EntryItem.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+import { url } from '../../lib/site';
+import { formatDate, getPublished, readingTime, STATUS_LABELS } from '../../lib/content';
+
+const projects = (await getPublished('projects')).sort(
+  (a, b) => b.data.dateUpdated.getTime() - a.data.dateUpdated.getTime(),
+);
+
+const order = ['operational', 'in-progress', 'idea', 'archived'] as const;
+const groups = order
+  .map((status) => ({ status, items: projects.filter((p) => p.data.status === status) }))
+  .filter((g) => g.items.length > 0);
+
+const tagMap = new Map<string, typeof projects>();
+for (const p of projects) {
+  for (const tag of p.data.tags) tagMap.set(tag, [...(tagMap.get(tag) ?? []), p]);
+}
+const tags = [...tagMap.entries()].sort(([a], [b]) => a.localeCompare(b, 'en-GB'));
+---
+
+<BaseLayout
+  title="Projects"
+  description="Raspberry Pi builds, grouped by status and tag: what is operational, what is in progress and what is only an idea."
+>
+  <div class="container page">
+    <header class="page-header">
+      <h1>Projects</h1>
+      <p class="lede">
+        Builds that have a plan, a design and a write-up. Short updates along the way are in the{' '}
+        <a href={url('/build-logs/')}>build logs</a>.
+      </p>
+    </header>
+
+    {projects.length === 0 && (
+      <p class="empty">
+        No projects yet. Run <code>npm run new</code> to add one.
+      </p>
+    )}
+
+    {groups.map((g) => (
+      <section class="group" aria-labelledby={`status-${g.status}`}>
+        <h2 id={`status-${g.status}`}>{STATUS_LABELS[g.status]}</h2>
+        <ul class="entry-list">
+          {g.items.map((p) => (
+            <EntryItem
+              href={url(`/projects/${p.id}/`)}
+              title={p.data.title}
+              description={p.data.description}
+              tags={p.data.tags}
+            >
+              <Fragment slot="meta">
+                <StatusBadge status={p.data.status} />
+                <span>Updated {formatDate(p.data.dateUpdated)}</span>
+                <span>{readingTime(p.body)} min read</span>
+                {p.data.draft && <span>Draft</span>}
+              </Fragment>
+            </EntryItem>
+          ))}
+        </ul>
+      </section>
+    ))}
+
+    {tags.length > 0 && (
+      <section class="group" aria-labelledby="by-tag">
+        <h2 id="by-tag">By tag</h2>
+        <dl class="facts">
+          {tags.map(([tag, items]) => (
+            <div>
+              <dt>#{tag}</dt>
+              <dd>
+                <ul>
+                  {items.map((p) => (
+                    <li>
+                      <a href={url(`/projects/${p.id}/`)}>{p.data.title}</a>
+                    </li>
+                  ))}
+                </ul>
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+    )}
+  </div>
+</BaseLayout>

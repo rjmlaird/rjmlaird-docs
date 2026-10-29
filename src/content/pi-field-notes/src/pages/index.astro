@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AllSkyDisc from '../components/AllSkyDisc.astro';
+import StatusBadge from '../components/StatusBadge.astro';
+import { SITE, url } from '../lib/site';
+import { byDateDesc, formatDate, getPublished, isoDate } from '../lib/content';
+
+const projects = await getPublished('projects');
+const logs = (await getPublished('build-logs')).sort(byDateDesc);
+const ideas = await getPublished('ideas');
+const essays = await getPublished('essays');
+
+const sections = [
+  {
+    href: '/projects/',
+    label: 'Projects',
+    text: 'Builds in progress and finished, written up with hardware, code and honest notes.',
+    count: projects.length,
+  },
+  {
+    href: '/build-logs/',
+    label: 'Build logs',
+    text: 'Short, dated updates as a project moves along, including the things that went wrong.',
+    count: logs.length,
+  },
+  {
+    href: '/ideas/',
+    label: 'Ideas',
+    text: 'Concepts and future experiments that are not yet projects.',
+    count: ideas.length,
+  },
+  {
+    href: '/essays/',
+    label: 'Essays',
+    text: 'Longer pieces on science communication, open documentation and what the builds teach.',
+    count: essays.length,
+  },
+];
+const latest = logs.slice(0, 3);
+const active = projects.filter((p) => p.data.status === 'in-progress');
+---
+
+<BaseLayout title={SITE.name} description={SITE.description}>
+  <div class="container">
+    <section class="hero" aria-labelledby="home-title">
+      <div>
+        <h1 id="home-title">{SITE.tagline}</h1>
+        <p class="lede">
+          A Raspberry Pi costs little, draws a few watts and runs all night. That makes it a good
+          tool for watching the sky, logging the weather, keeping backups and sorting through
+          satellite data.
+        </p>
+        <p>
+          These notes record what I build with them: the plans, the parts, the configuration and the
+          mistakes. Everything is written so that you can repeat it, or decide not to.
+        </p>
+      </div>
+      <AllSkyDisc />
+    </section>
+
+    <section class="block" aria-labelledby="sections-title">
+      <h2 id="sections-title">Where to start</h2>
+      <ul class="section-links">
+        {sections.map((s) => (
+          <li>
+            <a href={url(s.href)}>{s.label}</a>
+            <p>
+              {s.text} ({s.count} {s.count === 1 ? 'entry' : 'entries'})
+            </p>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    {(active.length > 0 || latest.length > 0) && (
+      <section class="block" aria-labelledby="latest-title">
+        <h2 id="latest-title">Currently</h2>
+        <ul class="entry-list">
+          {active.map((p) => (
+            <li class="entry">
+              <div class="meta">
+                <StatusBadge status={p.data.status} />
+                <span>Updated {formatDate(p.data.dateUpdated)}</span>
+              </div>
+              <h3>
+                <a href={url(`/projects/${p.id}/`)}>{p.data.title}</a>
+              </h3>
+              <p>{p.data.description}</p>
+            </li>
+          ))}
+          {latest.map((l) => (
+            <li class="entry">
+              <div class="meta">
+                <span>Build log</span>
+                <time datetime={isoDate(l.data.date)}>{formatDate(l.data.date)}</time>
+              </div>
+              <h3>
+                <a href={url(`/build-logs/${l.id}/`)}>{l.data.title}</a>
+              </h3>
+              <p>{l.data.description}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <section class="block" aria-labelledby="approach-title">
+      <h2 id="approach-title">How these notes are written</h2>
+      <ul class="principles">
+        <li>
+          <strong>Honest about results.</strong> If something has not been measured, the page says
+          so.
+        </li>
+        <li>
+          <strong>Reproducible.</strong> Parts, versions and configuration are listed, so a build
+          can be repeated.
+        </li>
+        <li>
+          <strong>Failures included.</strong> Dead ends and bad assumptions are part of the record.
+        </li>
+        <li>
+          <strong>Low power, low cost.</strong> Trade-offs are stated, not hidden.
+        </li>
+      </ul>
+    </section>
+  </div>
+</BaseLayout>

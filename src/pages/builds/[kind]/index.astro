@@ -1,0 +1,68 @@
+---
+// src/pages/builds/[kind]/index.astro
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BuildList from "../../../components/BuildList.astro";
+import {
+  KINDS,
+  buildsOfKind,
+  buildsSnapshot,
+  sectionsByGroup,
+  type KindMeta,
+} from "../../../lib/builds";
+
+export function getStaticPaths() {
+  return KINDS.map((meta) => ({ params: { kind: meta.kind }, props: { meta } }));
+}
+
+interface Props {
+  meta: KindMeta;
+}
+
+const { meta } = Astro.props;
+const catalogue = buildsSnapshot.catalogues[meta.kind];
+const count = buildsOfKind(buildsSnapshot, meta.kind).length;
+
+const sections = sectionsByGroup(buildsSnapshot, meta.kind);
+---
+
+<BaseLayout title={meta.label} description={meta.blurb}>
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="/">Docs</a>
+    <span aria-hidden="true"> / </span>
+    <a href="/builds/">Builds</a>
+    <span aria-hidden="true"> / </span>
+    <span aria-current="page">{meta.label}</span>
+  </nav>
+
+  <section class="hero">
+    <p class="eyebrow">Builds</p>
+
+    <h1>{meta.label}</h1>
+
+    <p class="muted">{meta.blurb}</p>
+
+    <p class="meta">
+      {count} {count === 1 ? meta.singular.toLowerCase() : meta.label.toLowerCase()}
+      {
+        catalogue && (
+          <>
+            {" "}
+            · <a href={catalogue.origin}>{catalogue.origin.replace("https://", "")} ↗</a> ·{" "}
+            <a href={catalogue.repository}>Source repository ↗</a>
+          </>
+        )
+      }
+    </p>
+  </section>
+
+  {
+    count > 0 ? (
+      <BuildList sections={sections} />
+    ) : (
+      <p class="empty">
+        No {meta.label.toLowerCase()} are published in the builds API yet. This page fills in
+        automatically after the next <code>pnpm sync:builds</code> once the API lists them.
+      </p>
+    )
+  }
+</BaseLayout>

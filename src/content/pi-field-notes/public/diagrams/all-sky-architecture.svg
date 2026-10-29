@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 518" role="img" aria-labelledby="t d" font-family="system-ui, Segoe UI, sans-serif">
+<title id="t">All-sky camera architecture</title>
+<desc id="d">A vertical flow: Raspberry Pi and camera module, then image capture service, local storage, image compression and processing, and finally an optional web gallery or dashboard.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6b7f8f"/></marker></defs>
+<rect x="20" y="16" width="420" height="70" rx="6" fill="#f4f7f8" stroke="#b9791a" stroke-width="2"/>
+<text x="38" y="46" font-size="18" font-weight="600" fill="#14212b">Raspberry Pi + camera module</text>
+<text x="38" y="69" font-size="14" fill="#46596a">Capture hardware in the enclosure</text>
+<line x1="230.0" y1="88" x2="230.0" y2="116" stroke="#6b7f8f" stroke-width="2" marker-end="url(#a)"/>
+<rect x="20" y="120" width="420" height="70" rx="6" fill="#f4f7f8" stroke="#b9791a" stroke-width="2"/>
+<text x="38" y="150" font-size="18" font-weight="600" fill="#14212b">Image capture service</text>
+<text x="38" y="173" font-size="14" fill="#46596a">Scheduled exposures, timestamped files</text>
+<line x1="230.0" y1="192" x2="230.0" y2="220" stroke="#6b7f8f" stroke-width="2" marker-end="url(#a)"/>
+<rect x="20" y="224" width="420" height="70" rx="6" fill="#f4f7f8" stroke="#b9791a" stroke-width="2"/>
+<text x="38" y="254" font-size="18" font-weight="600" fill="#14212b">Local storage</text>
+<text x="38" y="277" font-size="14" fill="#46596a">Frames kept on the device first</text>
+<line x1="230.0" y1="296" x2="230.0" y2="324" stroke="#6b7f8f" stroke-width="2" marker-end="url(#a)"/>
+<rect x="20" y="328" width="420" height="70" rx="6" fill="#f4f7f8" stroke="#b9791a" stroke-width="2"/>
+<text x="38" y="358" font-size="18" font-weight="600" fill="#14212b">Image compression / processing</text>
+<text x="38" y="381" font-size="14" fill="#46596a">Convert, resize and archive to limit growth</text>
+<line x1="230.0" y1="400" x2="230.0" y2="428" stroke="#6b7f8f" stroke-width="2" marker-end="url(#a)"/>
+<rect x="20" y="432" width="420" height="70" rx="6" fill="#f4f7f8" stroke="#b9791a" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="38" y="462" font-size="18" font-weight="600" fill="#14212b">Web gallery / dashboard</text>
+<text x="38" y="485" font-size="14" fill="#46596a">Optional: view recent images remotely</text>
+</svg>

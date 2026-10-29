@@ -7,7 +7,7 @@ Evidence comes from the GitHub API. An optional .project/project.yml
 
 Usage:
   export GITHUB_TOKEN=ghp_...        # optional for public repos, needed for private
-  python gh_project_pages.py owner/repo [owner/repo2 ...] -o src/content/projects
+  python gh_project_pages.py owner/repo [owner/repo2 ...] -o src/content/repos
 
 Requires: Python 3.9+. Optional: pip install pyyaml (needed to read the YAML file).
 """
@@ -217,7 +217,7 @@ def build(full, d):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("repos", nargs="+", help="owner/repo")
-    ap.add_argument("-o", "--out", default="src/content/projects")
+    ap.add_argument("-o", "--out", default="src/content/repos")
     a = ap.parse_args()
     Path(a.out).mkdir(parents=True, exist_ok=True)
     for full in a.repos:

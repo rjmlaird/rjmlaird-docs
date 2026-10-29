@@ -1,0 +1,27 @@
+---
+import { NAV, SITE, url } from '../lib/site';
+import ThemeToggle from './ThemeToggle.astro';
+
+const path = Astro.url.pathname;
+const isCurrent = (href: string) => path.startsWith(url(href));
+---
+
+<header class="site-header">
+  <div class="container">
+    <a class="site-name" href={url('/')}>
+      {SITE.name}
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        {NAV.map((item) => (
+          <li>
+            <a href={url(item.href)} aria-current={isCurrent(item.href) ? 'page' : undefined}>
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <ThemeToggle />
+    </nav>
+  </div>
+</header>

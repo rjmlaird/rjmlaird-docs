@@ -2,28 +2,36 @@
 // src/pages/search/index.astro
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
+import reposData from "../../../data/github-repos.json";
+import { slugify } from "../../lib/slugify";
 
-const [projects, guides, reference, operations, archive] =
-  await Promise.all([
-    getCollection("projects"),
-    getCollection("guides"),
-    getCollection("reference"),
-    getCollection("operations"),
-    getCollection("archive"),
-  ]);
+interface Repo {
+  name: string;
+  description?: string | null;
+  language?: string | null;
+  topics?: string[];
+  isPrivate?: boolean;
+}
+
+const [guides, reference, operations, archive] = await Promise.all([
+  getCollection("guides"),
+  getCollection("reference"),
+  getCollection("operations"),
+  getCollection("archive"),
+]);
+
+const repoItems = (reposData.repositories as Repo[])
+  .filter((r) => !r.isPrivate)
+  .map((r) => ({
+    title: r.name,
+    description: r.description ?? "",
+    url: `/repos/${slugify(r.name)}/`,
+    type: "Repository",
+    body: [r.language ?? "", (r.topics ?? []).join(" ")].join(" "),
+  }));
 
 const items = [
-  ...projects.map((p) => ({
-    title: p.data.title,
-    description: p.data.description,
-    url: `/projects/${p.id}/`,
-    type: "Project",
-    body: [
-      p.data.tags.join(" "),
-      p.data.stack.join(" "),
-      p.body ?? "",
-    ].join(" "),
-  })),
+  ...repoItems,
 
   ...guides.map((p) => ({
     title: p.data.title,
@@ -58,12 +66,7 @@ const items = [
   })),
 ].map((item) => ({
   ...item,
-  searchText: [
-    item.title,
-    item.description,
-    item.type,
-    item.body,
-  ]
+  searchText: [item.title, item.description, item.type, item.body]
     .join(" ")
     .toLowerCase(),
 }));
@@ -71,7 +74,7 @@ const items = [
 
 <BaseLayout
   title="Search"
-  description="Search project records, guides, references and runbooks."
+  description="Search repositories, guides, references and runbooks."
 >
   <section class="hero">
     <p class="eyebrow">Find documentation</p>
@@ -85,7 +88,7 @@ const items = [
         id="site-search"
         class="search"
         type="search"
-        placeholder="Try a project name, API, deployment or domain"
+        placeholder="Try a repository name, API, deployment or domain"
         autocomplete="off"
         aria-controls="search-results"
         aria-describedby="search-count"
@@ -130,20 +133,15 @@ const items = [
         results.replaceChildren();
 
         if (!query) {
-          count.textContent =
-            "Enter a search term to find matching pages.";
+          count.textContent = "Enter a search term to find matching pages.";
           return;
         }
 
-        const matches = items.filter((item) =>
-          item.searchText.includes(query),
-        );
-
+        const matches = items.filter((item) => item.searchText.includes(query));
         const visibleMatches = matches.slice(0, resultLimit);
 
         if (matches.length === 0) {
-          count.textContent =
-            "No matching pages. Try another search term.";
+          count.textContent = "No matching pages. Try another search term.";
           return;
         }
 

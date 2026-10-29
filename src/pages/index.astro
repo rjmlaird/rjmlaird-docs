@@ -1,29 +1,86 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import ProjectCard from '../components/ProjectCard.astro';
-import { getCollection } from 'astro:content';
-const projects = (await getCollection('projects')).filter(p => p.data.visibility === 'public').sort((a,b) => a.data.title.localeCompare(b.data.title));
-const guides = await getCollection('guides');
-const refs = await getCollection('reference');
-const ops = await getCollection('operations');
+// src/pages/index.astro
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import reposData from "../../data/github-repos.json";
+import { slugify } from "../lib/slugify";
+
+interface Repo {
+  name: string;
+  description?: string | null;
+  url: string;
+  homepage?: string | null;
+  language?: string | null;
+  topics?: string[];
+  stars?: number;
+  isPrivate?: boolean;
+}
+
+const repos = (reposData.repositories as Repo[])
+  .filter((r) => !r.isPrivate)
+  .sort((a, b) => a.name.localeCompare(b.name, "en-GB"));
+
+const guides = await getCollection("guides");
+const refs = await getCollection("reference");
+const ops = await getCollection("operations");
 ---
-<BaseLayout title="Documentation home" description="Projects, technical guides, reference material and operational runbooks for the RJM Laird ecosystem.">
+
+<BaseLayout
+  title="Documentation home"
+  description="Repositories, technical guides, reference material and operational runbooks for the RJM Laird ecosystem."
+>
   <section class="hero">
     <p class="eyebrow">Systems · Software · Operations</p>
     <h1>Understand the systems behind the sites.</h1>
-    <p class="muted">A Markdown-first technical knowledge base for websites, APIs, tools, integrations and infrastructure across the RJM Laird ecosystem.</p>
-    <div class="toolbar"><a href="/projects/">Explore projects →</a><a href="/guides/">Read the guides →</a><a href="/reference/ecosystem/">Repository ecosystem →</a></div>
+    <p class="muted">
+      A Markdown-first technical knowledge base for websites, APIs, tools,
+      integrations and infrastructure across the RJM Laird ecosystem.
+    </p>
+    <div class="toolbar">
+      <a href="/repos/">Explore repositories →</a>
+      <a href="/builds/">Browse builds →</a>
+      <a href="/guides/">Read the guides →</a>
+      <a href="/reference/ecosystem/">Repository ecosystem →</a>
+    </div>
   </section>
+
   <section class="section">
-    <h2>Projects and services</h2>
-    <p class="muted">Project records include known public URLs and repositories. Entries marked for verification are starting records, not independently verified service-health claims.</p>
-    <div class="grid">{projects.slice(0,6).map(p => <ProjectCard title={p.data.title} description={p.data.description} status={p.data.status} href={`/projects/${p.id}/`}
-    repository={p.data.repository} liveUrl={p.data.liveUrl} />)}</div>
-    <p><a href="/projects/">View all projects →</a></p>
+    <h2>Repositories</h2>
+    <p class="muted">
+      Public codebases synced from github.com/{reposData.owner}.
+    </p>
+    <div class="grid">
+      {
+        repos.slice(0, 6).map((repo) => (
+          <article class="card">
+            <h3><a href={`/repos/${slugify(repo.name)}/`}>{repo.name}</a></h3>
+            <p>{repo.description || "No description provided."}</p>
+            <p class="meta">
+              {repo.language ?? "—"}
+              {(repo.stars ?? 0) > 0 && ` · ★ ${repo.stars}`}
+            </p>
+          </article>
+        ))
+      }
+    </div>
+    <p><a href="/repos/">View all {repos.length} repositories →</a></p>
   </section>
+
   <section class="section grid">
-    <article class="card"><h2><a href="/guides/">Guides</a></h2><p>Getting started, building and deploying systems, and the migrated technical documentation.</p><p class="meta">{guides.length} pages</p></article>
-    <article class="card"><h2><a href="/reference/">Reference</a></h2><p>Stable facts, schemas, domains, repository relationships and technical contracts.</p><p class="meta">{refs.length} pages</p></article>
-    <article class="card"><h2><a href="/operations/">Operations</a></h2><p>Runbooks and procedures for deployment, maintenance and recovery.</p><p class="meta">{ops.length} pages</p></article>
+    <article class="card">
+      <h2><a href="/guides/">Guides</a></h2>
+      <p>Getting started, building and deploying systems, and the migrated technical documentation.</p>
+      <p class="meta">{guides.length} pages</p>
+    </article>
+    <article class="card">
+      <h2><a href="/reference/">Reference</a></h2>
+      <p>Stable facts, schemas, domains, repository relationships and technical contracts.</p>
+      <p class="meta">{refs.length} pages</p>
+    </article>
+    <article class="card">
+      <h2><a href="/operations/">Operations</a></h2>
+      <p>Runbooks and procedures for deployment, maintenance and recovery.</p>
+      <p class="meta">{ops.length} pages</p>
+    </article>
   </section>
 </BaseLayout>

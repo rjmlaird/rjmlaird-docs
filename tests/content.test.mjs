@@ -2,9 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 
-test('project registry includes core documentation project', () => {
-  const project = fs.readFileSync('src/content/projects/rjmlaird-docs.md', 'utf8');
-  assert.match(project, /title: "RJM Laird Docs"/);
+test('repo registry includes core documentation repo', () => {
+  const project = fs.readFileSync('src/content/repos/rjmlaird-docs.md', 'utf8');
+  assert.match(project, /title: "Docs"/);
   assert.match(project, /https:\/\/github\.com\/rjmlaird\/rjmlaird-docs/);
 });
 

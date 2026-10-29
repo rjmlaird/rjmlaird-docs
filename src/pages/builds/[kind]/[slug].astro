@@ -1,0 +1,137 @@
+---
+// src/pages/builds/[kind]/[slug].astro
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import reposData from "../../../../data/github-repos.json";
+import { slugify } from "../../../lib/slugify";
+import {
+  BUILDS_API_URL,
+  buildHref,
+  buildsSnapshot,
+  formatDay,
+  groupName,
+  kindMeta,
+  kindOf,
+  slugOf,
+  sortedBuilds,
+  statusMeta,
+  type Build,
+} from "../../../lib/builds";
+
+export function getStaticPaths() {
+  return buildsSnapshot.builds.map((build) => ({
+    params: { kind: kindOf(build), slug: slugOf(build) },
+    props: { build },
+  }));
+}
+
+interface Props {
+  build: Build;
+}
+
+interface Repo {
+  name: string;
+  url: string;
+}
+
+const { build } = Astro.props;
+const kind = kindOf(build);
+const meta = kindMeta(kind)!;
+const status = statusMeta(buildsSnapshot, kind, build.status);
+const catalogue = buildsSnapshot.catalogues[kind];
+const group = catalogue?.groups.find((g) => g.id === build.group);
+
+const norm = (url?: string) => (url ?? "").toLowerCase().replace(/\/+$/, "");
+const typedReposData = reposData as { repositories: Repo[] };
+const repoRecord = typedReposData.repositories.find(
+  (r: Repo) => norm(r.url) === norm(build.repository)
+);
+
+const related = sortedBuilds(buildsSnapshot)
+  .filter((b) => b.id !== build.id && kindOf(b) === kind && b.group === build.group)
+  .slice(0, 6);
+
+const synced = formatDay(buildsSnapshot.syncedAt);
+---
+
+<BaseLayout title={build.title} description={build.description}>
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="/">Docs</a>
+    <span aria-hidden="true"> / </span>
+    <a href="/builds/">Builds</a>
+    <span aria-hidden="true"> / </span>
+    <a href={`/builds/${kind}/`}>{meta.label}</a>
+    <span aria-hidden="true"> / </span>
+    <span aria-current="page">{build.title}</span>
+  </nav>
+
+  <article class="content">
+    <p class="eyebrow">
+      {meta.singular} · <span class="badge" data-status={build.status}>{status.label}</span>
+    </p>
+
+    <h1>{build.title}</h1>
+
+    <p class="muted">{build.description}</p>
+
+    <div class="toolbar">
+      {
+        build.url ? (
+          <a href={build.url}>
+            Open {meta.singular.toLowerCase()} <span aria-hidden="true">↗</span>
+          </a>
+        ) : (
+          <span class="muted">Not live yet</span>
+        )
+      }
+      {
+        build.source && (
+          <a href={build.source}>
+            View source <span aria-hidden="true">↗</span>
+          </a>
+        )
+      }
+    </div>
+
+    <h2>Details</h2>
+
+    <table>
+      <tbody>
+        <tr><th scope="row">Kind</th><td><a href={`/builds/${kind}/`}>{meta.singular}</a></td></tr>
+        <tr>
+          <th scope="row">Group</th>
+          <td>{groupName(buildsSnapshot, build)}{group?.blurb && <> — {group.blurb}</>}</td>
+        </tr>
+        <tr><th scope="row">Status</th><td>{status.label}</td></tr>
+        <tr><th scope="row">Last updated</th><td>{formatDay(build.updated)}</td></tr>
+        {build.tech.length > 0 && <tr><th scope="row">Technology</th><td>{build.tech.join(", ")}</td></tr>}
+        {build.url && <tr><th scope="row">Live URL</th><td><a href={build.url}>{build.url}</a></td></tr>}
+        {build.sourcePath && <tr><th scope="row">Source path</th><td><code>{build.sourcePath}</code></td></tr>}
+        <tr>
+          <th scope="row">Repository</th>
+          <td>
+            {repoRecord ? <a href={`/repos/${slugify(repoRecord.name)}/`}>{repoRecord.name}</a> : null}
+            {repoRecord ? " · " : ""}
+            <a href={build.repository}>{build.repository.replace("https://github.com/", "")} ↗</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    {
+      related.length > 0 && (
+        <section aria-labelledby="related-h">
+          <h2 id="related-h">More in {groupName(buildsSnapshot, build)}</h2>
+          <ul>
+            {related.map((b) => (
+              <li><a href={buildHref(b)}>{b.title}</a></li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    <p class="meta">
+      Source of truth: <code>GET {BUILDS_API_URL}</code>{synced && <> · snapshot synced {synced}</>}.
+    </p>
+  </article>
+</BaseLayout>

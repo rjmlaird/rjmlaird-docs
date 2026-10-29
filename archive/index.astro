@@ -1,0 +1,49 @@
+---
+// src/pages/boards/index.astro
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getBoards } from "../../lib/github-projects";
+
+const boards = await getBoards();
+---
+
+<BaseLayout
+  title="Project boards"
+  description="GitHub project boards for the RJM Laird ecosystem: roadmaps, builds and their issues."
+>
+  <section class="hero">
+    <p class="eyebrow">Planning</p>
+    <h1>Project boards</h1>
+    <p class="muted">
+      Live snapshots of the GitHub projects that plan the platform and its builds. Rebuilt on every deploy.
+    </p>
+  </section>
+
+  <section class="section" aria-label="Boards">
+    {
+      boards.length === 0 ? (
+        <p class="empty">No boards are available in this build.</p>
+      ) : (
+        <div class="grid">
+          {boards.map((b) => (
+            <article class="card">
+              <p>
+                <span class="badge">#{b.number}</span> <span class="badge">{b.isPublic ? "Public" : "Private"}</span>
+              </p>
+              <h2>
+                <a href={`/boards/${b.slug}/`}>{b.title}</a>
+              </h2>
+              {b.description && <p>{b.description}</p>}
+              <p class="meta">
+                {b.counts.total} items
+                {b.range && <> · {b.range.start.slice(0, 7)} to {b.range.end.slice(0, 7)}</>}
+              </p>
+              <p class="meta">
+                <a href={b.url}>Open on GitHub ↗</a>
+              </p>
+            </article>
+          ))}
+        </div>
+      )
+    }
+  </section>
+</BaseLayout>

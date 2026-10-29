@@ -1,0 +1,37 @@
+---
+---
+
+<button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch colour theme">
+  <span id="theme-toggle-label">Theme</span>
+</button>
+
+<script is:inline>
+  (() => {
+    const root = document.documentElement;
+    const button = document.getElementById('theme-toggle');
+    const label = document.getElementById('theme-toggle-label');
+    if (!button || !label) return;
+
+    const current = () =>
+      root.getAttribute('data-theme') ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+    const render = () => {
+      const next = current() === 'dark' ? 'light' : 'dark';
+      label.textContent = next === 'light' ? 'Light theme' : 'Dark theme';
+      button.setAttribute('aria-label', 'Switch to ' + next + ' theme');
+    };
+
+    button.addEventListener('click', () => {
+      const next = current() === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try {
+        localStorage.setItem('theme', next);
+      } catch {
+        // Storage unavailable: the choice lasts for this page view only.
+      }
+      render();
+    });
+    render();
+  })();
+</script>

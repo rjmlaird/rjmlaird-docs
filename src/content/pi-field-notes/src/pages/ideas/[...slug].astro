@@ -1,0 +1,39 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+import TagList from '../../components/TagList.astro';
+import { url } from '../../lib/site';
+import { formatDate, getPublished, isoDate } from '../../lib/content';
+
+export async function getStaticPaths() {
+  const ideas = await getPublished('ideas');
+  return ideas.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+---
+
+<BaseLayout title={d.title} description={d.description} type="article" published={d.date}>
+  <div class="container page">
+    <a class="back-link" href={url('/ideas/')}>
+      Back to ideas
+    </a>
+    <header class="article-header article">
+      <h1>{d.title}</h1>
+      <p class="lede">{d.description}</p>
+      <div class="meta">
+        <StatusBadge status={d.status} />
+        <span>Priority: {d.priority}</span>
+        <time datetime={isoDate(d.date)}>{formatDate(d.date)}</time>
+        {d.draft && <span>Draft</span>}
+      </div>
+      <TagList tags={d.tags} />
+    </header>
+    <div class="prose">
+      <Content />
+    </div>
+  </div>
+</BaseLayout>
