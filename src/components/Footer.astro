@@ -1,0 +1,17 @@
+---
+import Default from '@astrojs/starlight/components/Footer.astro';
+const year = new Date().getFullYear();
+---
+
+<Default {...Astro.props}><slot /></Default>
+<div class="brand-footer">
+  <p>
+    © {year} Ryan Laird. Documentation licensed under
+    <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a>.
+  </p>
+  <ul>
+    <li><a href="https://rjmlaird.co.uk">Main site</a></li>
+    <li><a href="https://rjmlaird.co.uk/policies/">Policies</a></li>
+    <li><a href="https://github.com/rjmlaird/rjmlaird-docs">Source</a></li>
+  </ul>
+</div>

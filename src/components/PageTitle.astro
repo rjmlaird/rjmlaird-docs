@@ -1,0 +1,26 @@
+---
+import Default from '@astrojs/starlight/components/PageTitle.astro';
+import { statusLabel } from '../lib/labels';
+
+const { entry } = (Astro.locals as any).starlightRoute;
+const d = entry.data as Record<string, any>;
+const fmt = (v?: Date) => v?.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
+
+// Splash/landing pages and generated directory pages stay uncluttered.
+const show = entry.data.template !== 'splash' && d.kind !== 'catalogue' && (d.status || d.confidence || d.visibility || d.reviewStatus);
+const items: { text: string; tone?: 'review' | 'ok' }[] = [];
+if (show) {
+  if (d.status) items.push({ text: statusLabel(d.status) });
+  if (d.visibility && d.visibility !== 'public') items.push({ text: statusLabel(d.visibility) });
+  if (d.confidence) items.push({ text: statusLabel(d.confidence), tone: d.confidence === 'verified' ? 'ok' : undefined });
+  if (d.reviewStatus === 'reviewed') items.push({ text: `Reviewed${d.lastReviewed ? ' ' + fmt(d.lastReviewed) : ''}`, tone: 'ok' });
+  else if (d.reviewStatus === 'needs-review') items.push({ text: 'Needs review', tone: 'review' });
+}
+---
+
+<Default {...Astro.props}><slot /></Default>
+{items.length > 0 && (
+  <ul class="doc-meta" aria-label="Page status">
+    {items.map((i) => <li data-tone={i.tone}>{i.text}</li>)}
+  </ul>
+)}

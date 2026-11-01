@@ -1,0 +1,145 @@
+/*
+ * RJM Laird brand theme for Starlight.
+ * Tokens come from the estate's existing palette (Ink #0B0F1A, Teal #00C2A8,
+ * Amber #F5A623, Ivory #EDEAE3). Dark is the brand default; the light theme
+ * uses darker teals so text and buttons keep WCAG AA contrast:
+ *   dark  text #EDEAE3 on #0B0F1A  15.9:1   link #7FE6D4 on #0B0F1A 12.9:1
+ *   light text #141A28 on #FFFFFF  17.4:1   link #00695C on #FFFFFF  6.4:1
+ *   light button: white on #007A6B  5.3:1   dark button: #0B0F1A on #00C2A8 8.5:1
+ */
+:root {
+  --sl-font: 'Inter Variable', system-ui, sans-serif;
+  --sl-font-mono: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --brand-font-display: 'Space Grotesk Variable', 'Inter Variable', system-ui, sans-serif;
+  --sl-content-width: 50rem;
+  --sl-sidebar-width: 18rem;
+
+  /* Dark (default) */
+  --sl-color-white: #edeae3;
+  --sl-color-gray-1: #d6d5cf;
+  --sl-color-gray-2: #b9bdc8;
+  --sl-color-gray-3: #9aa4b8;
+  --sl-color-gray-4: #7a86a0;
+  --sl-color-gray-5: #2b3549;
+  --sl-color-gray-6: #0f1520;
+  --sl-color-black: #0b0f1a;
+  --sl-color-accent-low: #0d3b3c;
+  --sl-color-accent: #00c2a8;
+  --sl-color-accent-high: #7fe6d4;
+  --sl-color-text-accent: var(--sl-color-accent-high);
+  --sl-color-bg-inline-code: #1a2236;
+  --sl-color-orange-low: #3a2a0a;
+  --sl-color-orange: #f5a623;
+  --sl-color-orange-high: #fcd58f;
+
+  --brand-surface-2: #141b29;
+  --brand-amber: #f5a623;
+  --brand-amber-bg: rgb(245 166 35 / 0.12);
+  --brand-teal-bg: rgb(0 194 168 / 0.12);
+}
+
+:root[data-theme='light'] {
+  --sl-color-white: #141a28;
+  --sl-color-gray-1: #232b3d;
+  --sl-color-gray-2: #3a4458;
+  --sl-color-gray-3: #4a5568;
+  --sl-color-gray-4: #5a6478;
+  --sl-color-gray-5: #c9d0dc;
+  --sl-color-gray-6: #eef1f6;
+  --sl-color-gray-7: #f6f8fb;
+  --sl-color-black: #ffffff;
+  --sl-color-accent-low: #d6f2ec;
+  --sl-color-accent: #007a6b;
+  --sl-color-accent-high: #00695c;
+  --sl-color-text-accent: var(--sl-color-accent-high);
+  --sl-color-bg-inline-code: #eef1f6;
+  --sl-color-orange-low: #fbeacb;
+  --sl-color-orange: #b26b00;
+  --sl-color-orange-high: #6b4200;
+
+  --brand-surface-2: #f6f8fb;
+  --brand-amber: #8a5600;
+  --brand-amber-bg: rgb(178 107 0 / 0.1);
+  --brand-teal-bg: rgb(0 122 107 / 0.1);
+}
+
+/* Display type */
+.sl-markdown-content :is(h1, h2, h3, h4),
+.hero h1,
+.site-title,
+h1#_top {
+  font-family: var(--brand-font-display);
+  letter-spacing: -0.01em;
+}
+.site-title { font-weight: 700; }
+.sl-markdown-content h2 { margin-top: 2.5rem; }
+
+/* Links keep an underline cue inside prose (not colour alone) */
+.sl-markdown-content a:not(:where(.not-content *)) {
+  text-underline-offset: 0.2em;
+}
+
+/* Visible, consistent focus */
+:focus-visible {
+  outline: 3px solid var(--sl-color-accent-high);
+  outline-offset: 3px;
+}
+
+/* Tables scroll inside their own box on small screens */
+.sl-markdown-content table { display: block; overflow-x: auto; }
+
+/* Landing hero */
+.hero .tagline { color: var(--sl-color-gray-3); }
+
+/* ---- Document meta line (PageTitle override) ---- */
+.doc-meta {
+  display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none;
+  margin: 0.75rem 0 0; padding: 0; font-size: var(--sl-text-xs);
+}
+.doc-meta li {
+  margin: 0; padding: 0.1rem 0.6rem; border: 1px solid var(--sl-color-gray-5);
+  border-radius: 999px; color: var(--sl-color-gray-3); font-family: var(--sl-font-mono);
+}
+.doc-meta li[data-tone='review'] { border-color: var(--brand-amber); color: var(--brand-amber); background: var(--brand-amber-bg); }
+.doc-meta li[data-tone='ok'] { border-color: var(--sl-color-accent); color: var(--sl-color-accent-high); background: var(--brand-teal-bg); }
+
+/* ---- ToolCard / ToolGrid ---- */
+.tool-grid {
+  display: grid; gap: 1rem; margin-block: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+}
+.tool-card {
+  display: flex; flex-direction: column; gap: 0.5rem; padding: 1.1rem;
+  border: 1px solid var(--sl-color-gray-5); border-radius: 8px;
+  background: var(--sl-color-gray-6); text-decoration: none; color: inherit;
+  transition: border-color 0.15s;
+}
+.tool-card:hover { border-color: var(--sl-color-accent); }
+.tool-card h3 { margin: 0 !important; font-size: var(--sl-text-lg); color: var(--sl-color-white); }
+.tool-card p { margin: 0 !important; color: var(--sl-color-gray-3); font-size: var(--sl-text-sm); }
+.tool-card .tool-card__meta { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: auto; padding-top: 0.5rem; }
+.tool-card .chip {
+  font: 500 var(--sl-text-xs) var(--sl-font-mono); padding: 0.05rem 0.5rem;
+  border: 1px solid var(--sl-color-gray-5); border-radius: 999px; color: var(--sl-color-gray-3);
+}
+.tool-card .chip[data-status='active'], .tool-card .chip[data-status='live'] { border-color: var(--sl-color-accent); color: var(--sl-color-accent-high); }
+.tool-card .chip[data-status='in-progress'], .tool-card .chip[data-status='in-development'], .tool-card .chip[data-status='planned'] { border-color: var(--brand-amber); color: var(--brand-amber); }
+
+/* ---- Since / Until version badge ---- */
+.version-badge {
+  display: inline-block; font: 500 0.78em var(--sl-font-mono); padding: 0.05rem 0.5rem;
+  border-radius: 4px; border: 1px solid var(--sl-color-accent); color: var(--sl-color-accent-high); background: var(--brand-teal-bg);
+}
+.version-badge[data-until] { border-color: var(--brand-amber); color: var(--brand-amber); background: var(--brand-amber-bg); }
+
+/* ---- Brand footer row ---- */
+.brand-footer {
+  margin-top: 1rem; padding-top: 1.25rem; border-top: 1px solid var(--sl-color-gray-5);
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 2rem;
+  font-size: var(--sl-text-sm); color: var(--sl-color-gray-3);
+}
+.brand-footer ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; list-style: none; margin: 0; padding: 0; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }

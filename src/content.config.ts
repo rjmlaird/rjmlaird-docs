@@ -1,108 +1,37 @@
-// src/content.config.ts
-import { defineCollection, z } from "astro:content";
-import { glob } from "astro/loaders";
+import { defineCollection } from 'astro:content';
+import { z } from 'astro/zod';
+import { docsLoader } from '@astrojs/starlight/loaders';
+import { docsSchema } from '@astrojs/starlight/schema';
 
 /**
- * SHARED DOCUMENT METADATA
+ * Front matter beyond Starlight's own fields. Keep these in step with
+ * docs: /contribute/authoring/ and scripts/validate-content.mjs.
  */
-
-const base = z.object({
-  title: z.string(),
-
-  description: z.string().default(""),
-  status: z.string().default("active"),
-
-  reviewStatus: z
-    .enum(["reviewed", "needs-review"])
-    .default("needs-review"),
-
-  owner: z.string().default("Ryan Laird"),
-  lastReviewed: z.coerce.date().optional(),
-
-  tags: z.array(z.string()).default([]),
-});
-
-/**
- * GUIDES
- *
- * Source: src/content/guides/
- */
-
-const guides = defineCollection({
-  loader: glob({
-    pattern: "**/*.{md,mdx}",
-    base: "./src/content/guides",
-  }),
-
-  schema: base.extend({
-    audience: z.array(z.string()).default([]),
-  }),
-});
-
-/**
- * REFERENCE
- *
- * Source: src/content/reference/
- */
-
-const reference = defineCollection({
-  loader: glob({
-    pattern: "**/*.{md,mdx}",
-    base: "./src/content/reference",
-  }),
-
-  schema: base,
-});
-
-/**
- * OPERATIONS
- *
- * Source: src/content/operations/
- */
-
-const operations = defineCollection({
-  loader: glob({
-    pattern: "**/*.{md,mdx}",
-    base: "./src/content/operations",
-  }),
-
-  schema: base,
-});
-
-/**
- * ARCHIVE
- *
- * Source: archive/ at the repository root.
- *
- * README files describe the archive itself rather than serving as
- * documentation entries, so they are excluded.
- */
-
-const archive = defineCollection({
-  loader: glob({
-    pattern: [
-      "**/*.{md,mdx}",
-      "!**/README.md",
-      "!**/README.mdx",
-      "!**/readme.md",
-      "!**/readme.mdx",
-    ],
-    base: "./archive",
-  }),
-
-  schema: base,
-});
-
-/**
- * COLLECTION REGISTRATION
- *
- * Repositories are not a content collection. They are built directly
- * from data/github-repos.json (see src/pages/repos/).
- */
-
 export const collections = {
-  guides,
-  reference,
-  operations,
-  archive,
+  docs: defineCollection({
+    loader: docsLoader(),
+    schema: docsSchema({
+      extend: z.object({
+        /** Lifecycle of the thing the page describes (or of the decision, for ADRs). */
+        status: z
+          .enum(['active', 'live', 'in-development', 'planned', 'proposed', 'accepted', 'superseded', 'draft', 'deprecated', 'retired'])
+          .optional(),
+        /** How well the page's claims are evidenced. */
+        confidence: z.enum(['verified', 'partly-verified', 'unverified']).optional(),
+        /** Service visibility, where the page describes a service. */
+        visibility: z.enum(['public', 'restricted', 'internal']).optional(),
+        lifecycle: z.enum(['active', 'planned', 'reserved', 'retired']).optional(),
+        /** Defaults to needs-review: set to `reviewed` only after a maintainer has checked the page. */
+        reviewStatus: z.enum(['reviewed', 'needs-review']).default('needs-review'),
+        owner: z.string().optional(),
+        reviewCycle: z.string().optional(),
+        /** Only set when a review has actually happened. Not the same as Starlight's git-derived lastUpdated. */
+        lastReviewed: z.coerce.date().optional(),
+        audience: z.array(z.string()).optional(),
+        tags: z.array(z.string()).optional(),
+        /** Diátaxis-style page type, used for filtering and the style guide. */
+        kind: z.enum(['guide', 'tutorial', 'reference', 'explanation', 'runbook', 'decision', 'catalogue']).optional(),
+      }),
+    }),
+  }),
 };

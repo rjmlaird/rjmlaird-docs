@@ -1,0 +1,27 @@
+---
+/**
+ * Link card for a tool, app, lab or service.
+ * Use inside <ToolGrid> in MDX.
+ */
+import { statusLabel } from '../lib/labels';
+interface Props {
+  title: string;
+  href: string;
+  description?: string;
+  status?: string;
+  kind?: string;
+  tech?: string[];
+}
+const { title, href, description, status, kind, tech = [] } = Astro.props;
+const external = /^https?:\/\//.test(href);
+---
+
+<a class="tool-card" href={href} {...(external ? { rel: 'noopener', target: '_blank' } : {})}>
+  <h3>{title}{external && <span aria-hidden="true"> ↗</span>}{external && <span class="sr-only"> (opens in a new tab)</span>}</h3>
+  {description && <p>{description}</p>}
+  <div class="tool-card__meta">
+    {kind && <span class="chip">{kind}</span>}
+    {status && <span class="chip" data-status={status}>{statusLabel(status)}</span>}
+    {tech.slice(0, 4).map((t) => <span class="chip">{t}</span>)}
+  </div>
+</a>

@@ -1,0 +1,15 @@
+# Usage: caddy run --config deploy/Caddyfile  (after `pnpm build`)
+import generated/security-headers.caddy
+import generated/redirects.caddy
+
+docs.rjmlaird.co.uk {
+	root * dist
+	import security_headers
+	import legacy_redirects
+	encode zstd gzip
+	file_server
+	handle_errors {
+		rewrite * /404.html
+		file_server
+	}
+}

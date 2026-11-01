@@ -1,0 +1,12 @@
+---
+/**
+ * Inline version marker for "versioned instructions" without full doc versioning.
+ *   <Since version="1.4" />            -> Since v1.4
+ *   <Since until="2.0" />              -> Removed in v2.0
+ */
+interface Props { version?: string; until?: string }
+const { version, until } = Astro.props;
+---
+
+{version && <span class="version-badge">Since v{version.replace(/^v/, '')}</span>}
+{until && <span class="version-badge" data-until>Removed in v{until.replace(/^v/, '')}</span>}

@@ -1,0 +1,16 @@
+---
+title: Operate
+description: Ownership, launch checks, incident response and runbooks for the rjmlaird.co.uk services.
+sidebar: { hidden: true }
+---
+
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid>
+  <LinkCard title="Launch readiness" description="Checks before a service goes live." href="/operate/launch-readiness/" />
+  <LinkCard title="Incident response" description="First steps when something goes wrong." href="/operate/incident-response/" />
+  <LinkCard title="Status and observability" description="What is monitored and what is published." href="/operate/status-and-observability/" />
+  <LinkCard title="Service ownership" description="Who owns what, and how reviews work." href="/operate/service-ownership/" />
+  <LinkCard title="Secret rotation" description="Rotate credentials without downtime." href="/operate/runbooks/secret-rotation/" />
+  <LinkCard title="Documentation deployment" description="How this site is built, checked and published." href="/operate/docs-deployment/" />
+</CardGrid>

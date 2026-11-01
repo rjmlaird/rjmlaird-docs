@@ -1,0 +1,55 @@
+---
+title: RJM Laird Docs
+description: Public technical documentation for the rjmlaird.co.uk digital estate — services, APIs, tools, architecture and operating practice.
+template: splash
+hero:
+  tagline: How the rjmlaird.co.uk estate is built, run and documented. Public, plain-spoken and clear about what is verified and what is only planned.
+  actions:
+    - text: Start here
+      link: /start-here/overview/
+      icon: right-arrow
+    - text: Browse the service catalogue
+      link: /catalogue/
+      variant: minimal
+      icon: open-book
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import ToolCard from '../../components/ToolCard.astro';
+import ToolGrid from '../../components/ToolGrid.astro';
+
+## Find your way
+
+<CardGrid>
+  <Card title="Understand the platform" icon="puzzle">
+    Service boundaries, the domain model and the decisions behind them.
+    [Platform overview](/platform/overview/) · [Platform map](/start-here/platform-map/)
+  </Card>
+  <Card title="Look up a service" icon="list-format">
+    Every hostname in the estate, with purpose, visibility and lifecycle.
+    [Service catalogue](/catalogue/) · [Generated table](/catalogue/generated/subdomain-catalogue/)
+  </Card>
+  <Card title="Build and integrate" icon="rocket">
+    Configuration, deployment, API contracts and data publishing.
+    [Build guides](/build/) · [API overview](/build/api/overview/)
+  </Card>
+  <Card title="Run it safely" icon="setting">
+    Launch checks, incident response and runbooks.
+    [Operate](/operate/) · [Runbooks](/operate/runbooks/secret-rotation/)
+  </Card>
+</CardGrid>
+
+## What is published
+
+<ToolGrid>
+  <ToolCard title="Apps" href="/builds/apps/" description="Maintained applications: observing dashboards, weather and everyday planners." kind="catalogue" />
+  <ToolCard title="Tools" href="/builds/tools/" description="Single-purpose calculators and utilities for space, physics, web and sustainability." kind="catalogue" />
+  <ToolCard title="Labs" href="/builds/labs/" description="Interactive experiments and explainers, kept apart from production apps." kind="catalogue" />
+  <ToolCard title="Repositories" href="/repos/" description="The public source repositories behind the estate." kind="catalogue" />
+</ToolGrid>
+
+:::note[Evidence, not assertion]
+A hostname in the catalogue is not proof a service is deployed. Each page shows its status, confidence and review state under the title. Anything marked **To confirm** has not been checked.
+:::
+
+<LinkCard title="Contribute to these docs" description="Style guide, front matter, components and the public-content safety checklist." href="/contribute/" />

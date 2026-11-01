@@ -1,0 +1,56 @@
+---
+title: Component examples
+description: Tabs, code blocks, callouts, version markers and ToolCard, as used in these docs.
+status: active
+reviewStatus: needs-review
+owner: Ryan Laird
+kind: reference
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import ToolCard from '../../../components/ToolCard.astro';
+import ToolGrid from '../../../components/ToolGrid.astro';
+import Since from '../../../components/Since.astro';
+
+## Tabs
+
+<Tabs syncKey="pm">
+  <TabItem label="pnpm">
+```bash
+pnpm add astro
+```
+  </TabItem>
+  <TabItem label="npm">
+```bash
+npm install astro
+```
+  </TabItem>
+</Tabs>
+
+## Code block with title and copy button
+
+```ts title="src/example.ts" {2}
+const greeting = 'hello';
+console.log(greeting);
+```
+
+## Callouts
+
+:::tip[Tip]
+Tips are for optional shortcuts.
+:::
+
+:::caution[Check first]
+Cautions are for things that can go wrong.
+:::
+
+## Versioned instructions
+
+Starlight has no built-in versioning. For a single feature, mark it: <Since version="1.4" /> and <Since until="2.0" />. For different procedures per release, use tabs labelled by version.
+
+## ToolCard
+
+<ToolGrid>
+  <ToolCard title="Orbital calculator" href="/builds/tools/orbital-calc/" description="Orbital mechanics utilities." status="active" kind="tool" tech={['TypeScript']} />
+  <ToolCard title="Live example" href="https://tools.rjmlaird.co.uk" description="External cards open in a new tab." kind="site" />
+</ToolGrid>
